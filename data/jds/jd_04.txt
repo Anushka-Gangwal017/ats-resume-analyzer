@@ -1,0 +1,28 @@
+About the job
+Job Description
+
+We are looking for a talented Cloud Security Engineer Security Operations to take charge of vulnerability management, threat detection, and incident response across our multi-cloud environments. In this role, you will be a key driver in securing our cloud infrastructure, collaborating closely with cloud engineering, DevOps, and security teams to ensure a safe, compliant, and resilient cloud ecosystem.
+
+Key Responsibilities
+
+ Lead cloud vulnerability management programs across AWS, Azure, and GCP
+ Perform routine vulnerability scans using cloud-native and third-party security tools such as AWS Inspector, Azure Security Center, and Prisma Cloud
+ Analyze vulnerability findings and prioritize remediation based on risk severity and business impact
+ Partner with cloud engineering and DevOps teams to deploy patches, security fixes, and configuration improvements
+ Continuously monitor cloud environments for suspicious activity and potential security breaches
+ Lead cloud security incident response, including containment, investigation, and recovery
+ Develop, maintain, and enhance cloud security policies, procedures, and response playbooks
+ Ensure adherence to security standards and compliance frameworks including CIS Benchmarks, NIST, ISO 27001, and regulatory requirements
+ Generate regular reports on vulnerability trends, risk posture, and remediation progress
+ Stay updated on emerging cloud threats, vulnerabilities, and security & Qualifications :
+ Bachelors degree in Computer Science, Cybersecurity, or a related field
+ Minimum of 5 years experience in cloud security, vulnerability management (Qualys, Nessus, Tenable), or incident response
+ Strong knowledge of cloud platforms and architectures (AWS, Azure, GCP)
+ Hands-on experience with cloud security tools such as AWS Inspector, Azure Defender, Prisma Cloud, or similar platforms
+ Experience working with SIEM and monitoring solutions including Splunk, Azure Sentinel, and AWS CloudTrail
+ Relevant certifications preferred (AWS Security Specialty, Azure Security Engineer, CISSP, CCSP, etc.)
+ Excellent analytical, communication, and problem-solving Skills (Preferred) :
+ Experience with container security technologies such as Kubernetes and Docker
+ Knowledge of cloud compliance frameworks and audit practices
+ Familiarity with automation and infrastructure-as-code tools like Terraform and Ansible
+ Strong understanding of cloud IAM best practices

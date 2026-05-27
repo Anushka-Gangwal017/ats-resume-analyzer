@@ -1,0 +1,55 @@
+About the job
+The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The overall objective of this role is to contribute to applications systems analysis and programming activities.
+
+Responsibilities:
+
+Conduct tasks related to feasibility studies, time and cost estimates, IT planning, risk technology, applications development, model development, and establish and implement new or revised applications systems and programs to meet specific business needs or user areas
+Monitor and control all phases of development process and analysis, design, construction, testing, and implementation as well as provide user and operational support on applications to business users
+Utilize in-depth specialty knowledge of applications development to analyze complex problems/issues, provide evaluation of business process, system process, and industry standards, and make evaluative judgement
+Recommend and develop security measures in post implementation analysis of business usage to ensure successful system design and functionality
+Consult with users/clients and other technology groups on issues, recommend advanced programming solutions, and install and assist customer exposure systems
+Ensure essential procedures are followed and help define operating standards and processes
+Serve as advisor or coach to new or lower level analysts
+Has the ability to operate with a limited level of direct supervision. 
+Can exercise independence of judgement and autonomy. 
+Acts as SME to senior stakeholders and /or other team members.
+Appropriately assess risk when business decisions are made, demonstrating particular consideration for the firm's reputation and safeguarding Citigroup, its clients and assets, by driving compliance with applicable laws, rules and regulations, adhering to Policy, applying sound ethical judgment regarding personal behavior, conduct and business practices, and escalating, managing and reporting control issues with transparency.
+
+Recommended Qualifications:
+
+8+ years of experience working in full stack technologies including Java
+Solid working knowledge of Oracle and at least 1 No SQL DB like Mongo
+Experience working in distributed processing technology like Spark
+Knowledge working on Apache Iceberg preferred
+As part of full stack tech, knowledge of developing UI with Angular/React preferred.
+Must have the willingness and energy to work as part of a large, distributed team in collaborative way.
+
+Education:
+
+Bachelor’s degree/University degree or equivalent experience
+
+This job description provides a high-level review of the types of work performed. Other job-related duties may be assigned as required.
+
+------------------------------------------------------
+
+Job Family Group: 
+
+Technology
+
+------------------------------------------------------
+
+Job Family:
+
+Applications Development
+
+------------------------------------------------------
+
+Time Type:
+
+Full time
+
+------------------------------------------------------
+
+Most Relevant Skills
+
+Please see the requirements listed above.

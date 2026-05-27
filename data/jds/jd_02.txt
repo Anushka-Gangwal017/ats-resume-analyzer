@@ -1,0 +1,67 @@
+About the job
+Join us as a Clouds DevOps Engineer at Barclays, where you will spearhead the evolution of our infrastructure and deployment pipelines, driving innovation and operational excellence. You will harness cutting-edge technology to build and manage robust, scalable and secure infrastructure, ensuring seamless delivery of our digital solutions.
+
+To be successful as a Clouds DevOps Engineer, you should have experience with:
+
+
+Strong expertise in Kubernetes and Docker, including cluster operations, workload orchestration, scaling, and troubleshooting.
+Hands-on experience in building and managing CI/CD pipelines using GitLab for automated build, test, and deployment workflows.
+Solid understanding of container orchestration patterns, including multi-container pods, init containers, and deployment strategies.
+Experience with Infrastructure as Code (IaC) using tools such as Terraform, Helm, or Kubernetes manifests.
+Strong scripting and automation capabilities using Python and/or Bash.
+Good understanding of platform engineering practices, enabling reusable components and self-service deployment models.
+Knowledge of Kubernetes networking, security (RBAC, secrets), and resource optimization techniques.
+
+
+Some Other Highly Valued Skills May Include
+
+
+Exposure to cloud platforms (AWS preferred) and managed Kubernetes services like EKS.
+Experience with observability and monitoring tools such as Prometheus, Grafana, Loki, or OpenSearch.
+Familiarity with GitOps practices, Helm charts, and enterprise-grade secure platform design.
+
+
+You may be assessed on key critical skills relevant for success in role, such as risk and controls, change and transformation, business acumen, strategic thinking and digital and technology, as well as job-specific technical skills.
+
+The role is based out of Pune.
+
+Purpose of the role
+
+To build and maintain infrastructure platforms and products that support applications and data systems, using hardware, software, networks, and cloud computing platforms as required with the aim of ensuring that the infrastructure is reliable, scalable, and secure. Ensure the reliability, availability, and scalability of the systems, platforms, and technology through the application of software engineering techniques, automation, and best practices in incident response.
+
+Accountabilities
+
+
+Build Engineering: Development, delivery, and maintenance of high-quality infrastructure solutions to fulfil business requirements ensuring measurable reliability, performance, availability, and ease of use. Including the identification of the appropriate technologies and solutions to meet business, optimisation, and resourcing requirements.
+Incident Management: Monitoring of IT infrastructure and system performance to measure, identify, address, and resolve any potential issues, vulnerabilities, or outages. Use of data to drive down mean time to resolution.
+Automation: Development and implementation of automated tasks and processes to improve efficiency and reduce manual intervention, utilising software scripting/coding disciplines.
+Security: Implementation of a secure configuration and measures to protect infrastructure against cyber-attacks, vulnerabilities, and other security threats, including protection of hardware, software, and data from unauthorised access.
+Teamwork: Cross-functional collaboration with product managers, architects, and other engineers to define IT Infrastructure requirements, devise solutions, and ensure seamless integration and alignment with business objectives via a data driven approach.
+Learning: Stay informed of industry technology trends and innovations, and actively contribute to the organization's technology communities to foster a culture of technical excellence and growth.
+
+
+Analyst Expectations
+
+
+To perform prescribed activities in a timely manner and to a high standard consistently driving continuous improvement.
+Requires in-depth technical knowledge and experience in their assigned area of expertise
+Thorough understanding of the underlying principles and concepts within the area of expertise
+They lead and supervise a team, guiding and supporting professional development, allocating work requirements and coordinating team resources.
+If the position has leadership responsibilities, People Leaders are expected to demonstrate a clear set of leadership behaviours to create an environment for colleagues to thrive and deliver to a consistently excellent standard. The four LEAD behaviours are: L – Listen and be authentic, E – Energise and inspire, A – Align across the enterprise, D – Develop others.
+OR for an individual contributor, they develop technical expertise in work area, acting as an advisor where appropriate.
+Will have an impact on the work of related teams within the area.
+Partner with other functions and business areas.
+Takes responsibility for end results of a team’s operational processing and activities.
+Escalate breaches of policies / procedure appropriately.
+Take responsibility for embedding new policies/ procedures adopted due to risk mitigation.
+Advise and influence decision making within own area of expertise.
+Take ownership for managing risk and strengthening controls in relation to the work you own or contribute to. Deliver your work and areas of responsibility in line with relevant rules, regulation and codes of conduct.
+Maintain and continually build an understanding of how own sub-function integrates with function, alongside knowledge of the organisations products, services and processes within the function.
+Demonstrate understanding of how areas coordinate and contribute to the achievement of the objectives of the organisation sub-function.
+Make evaluative judgements based on the analysis of factual information, paying attention to detail.
+Resolve problems by identifying and selecting solutions through the application of acquired technical experience and will be guided by precedents.
+Guide and persuade team members and communicate complex / sensitive information.
+Act as contact point for stakeholders outside of the immediate function, while building a network of contacts outside team and external to the organisation.
+
+
+All colleagues will be expected to demonstrate the Barclays Values of Respect, Integrity, Service, Excellence and Stewardship – our moral compass, helping us do what we believe is right. They will also be expected to demonstrate the Barclays Mindset – to Empower, Challenge and Drive – the operating manual for how we behave.

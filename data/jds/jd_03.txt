@@ -1,0 +1,35 @@
+About the job
+Systems Engineer- Cloud Platforms, 3-5 years: Hybrid, Pune, India
+
+Welcome to Veradigm! Our Mission is to be the most trusted provider of innovative solutions that empower all stakeholders across the healthcare continuum to deliver world-class outcomes. Our Vision is a Connected Community of Health that spans continents and borders. With the largest community of clients in healthcare, Veradigm is able to deliver an integrated platform of clinical, financial, connectivity and information solutions to facilitate enhanced collaboration and exchange of critical patient information.
+
+Veradigm
+
+Veradigm is here to transform health, insightfully. Veradigm delivers a unique combination of point-of-care clinical and financial solutions, a commitment to open interoperability, a large and diverse healthcare provider footprint, along with industry proven expert insights. We are dedicated to simplifying the complicated healthcare system with next-generation technology and solutions, transforming healthcare from the point-of-patient care to everyday life.
+
+For more information, please explore www.veradigm.com.
+
+How You Will Make An Impact:
+
+We are seeking a Cloud Engineer with expertise in Amazon Web Services (AWS) and Microsoft Azure. This position involves collaborating with various teams to maintain secure and dependable cloud environments, monitoring system performance, and proactively addressing any issues that arise.
+
+ Key Responsibilities
+
+Deploy and maintain cloud resources across multiple platforms, ensuring their security and efficient operation.
+Configure and manage core cloud services, including virtual machines, storage solutions, databases, serverless computing, and networking components.
+Leverage automation tools and command-line interfaces to streamline deployment and management tasks within the cloud environment.
+Monitor cloud systems, identify and resolve issues promptly, and escalate when necessary to ensure optimal performance.
+Collaborate with development, operations, and security teams to support ongoing projects and daily operations.
+Stay informed about advancements and best practices in cloud technology, contributing to team discussions on potential improvements
+
+Ideal Candidate Profile:
+
+Demonstrated experience managing AWS and Azure cloud services and infrastructure.
+Familiarity with tools and programming languages such as Terraform, Python, Bash, or PowerShell.
+Strong understanding of networking, security, and cloud infrastructure concepts.
+Excellent problem-solving and communication skills.
+
+Qualifications:
+
+A bachelor’s degree in computer science, Information Technology, or related technical discipline.
+Relevant AWS or Azure certifications are preferred; associate-level certifications (such as AWS Solutions Architect Associate or Microsoft Azure Administrator Associate) are highly desirable."
