@@ -1,0 +1,13 @@
+About the job
+Experience: 5+ years
+
+Looking for following skillsets
+
+ Experience in Automotive embedded software, CAN protocol, Ethernet etc.
+ Knowledge and experience of Automotive/embedded systems and control systems
+ Experience of doing Security Threat Assessment and Risk Analysis (TARA) on Embedded/Automotive products
+ Experience/knowledge about Embedded security cryptography software/algorithm development and testing
+ Ability and passion to learn new things and adaptive to needs of business goals.
+
+
+CAN, Ethernet, TARA, Embedded security cryptography software/algorithm development and testing

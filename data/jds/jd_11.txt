@@ -1,0 +1,45 @@
+About the job
+Project Role : Application Developer
+
+Project Role Description : Design, build and configure applications to meet business process and application requirements.
+
+Must have skills : Workday HCM Security
+
+Good to have skills : NA
+
+Minimum 3 Year(s) Of Experience Is Required
+
+Educational Qualification : Preferred to have workday related Certification for the Primary skill 15 years full time education
+
+Summary:
+
+As an Application Developer, a typical day involves designing, building, and configuring applications tailored to fulfill specific business process and application needs. This role requires a thoughtful approach to understanding organizational requirements and translating them into effective application solutions. The workday often includes collaborating with various stakeholders to ensure that the applications align with business goals, while continuously refining and enhancing the system to support evolving demands. Attention to detail and a proactive mindset are essential to deliver reliable and efficient application configurations that drive operational success.
+
+Roles & Responsibilities:
+
+ Expected to perform independently and become an SME.
+ Required active participation/contribution in team discussions.
+ Contribute in providing solutions to work related problems.
+ Collaborate with cross-functional teams to gather and analyze business requirements for application development.
+ Maintain and update application configurations to ensure optimal performance and compliance with business standards.
+ Assist junior team members by sharing knowledge and providing guidance on application development best practices.
+ Continuously monitor application functionality and recommend improvements to enhance user experience and system efficiency.
+
+
+Professional & Technical Skills:
+
+ Must To Have Skills: Proficiency in Workday HCM Security.
+ Strong understanding of security frameworks and access control models within enterprise applications.
+ Experience in configuring and managing user roles, permissions, and security policies in Workday environments.
+ Ability to troubleshoot and resolve security-related issues effectively while maintaining system integrity.
+ Familiarity with integration processes and data security considerations in cloud-based human capital management systems.
+
+
+Additional Information:
+
+ The candidate should have minimum 3 years of experience in Workday HCM Security.
+ This position is based at our Pune office.
+ Preferred to have workday related Certification for the Primary skill with 15 years full time education.
+
+
+, Preferred to have workday related Certification for the Primary skill 15 years full time education

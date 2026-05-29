@@ -1,0 +1,35 @@
+About Position
+
+We are seeking highly skilled SRE ? AWS DevOps professionals who thrive in fast-paced, high-availability environments and are passionate about building resilient, scalable, and automated cloud solutions. This role is ideal for experts who can balance system reliability with delivery velocity, ensuring seamless operations in production landscapes. As a key contributor, you will operate at the intersection of development, operations, and cloud engineering, translating architectural vision into robust, automated infrastructure. You will drive CI/CD maturity, observability, and incident management practices, while continuously improving system performance and reliability.
+
+Role: AWS DevOps Engineer
+Location: All Persistent Location
+Experience: 8 + years
+Job Type: Full Time Employment
+
+What You'll Do
+
+Design, implement, and operate reliable, scalable, and secure production systems on AWS with strong focus on availability and performance.
+Build and maintain CI/CD pipelines (Jenkins/GitHub Actions/GitLab CI/Azure DevOps) for automated build, test, security scanning, and deployments.
+Manage containerized workloads using Kubernetes (EKS) and/or ECS; handle upgrades, scaling, and workload resiliency.
+Implement Infrastructure as Code (IaC) using Terraform/CloudFormation; enforce standards via reusable modules and policy controls.
+Define and manage SRE practices: SLOs/SLIs, error budgets, incident response, postmortems (blameless), and continuous reliability improvements.
+Set up end-to-end monitoring, logging, and alerting using CloudWatch, Prometheus/Grafana, ELK/OpenSearch, Datadog/New Relic (as applicable).
+Automate operational tasks using scripting (Bash/Python) and AWS-native automation (Lambda, Step Functions) to reduce toil.
+Lead incident management and RCA for critical issues; drive preventive actions and implement stability improvements.
+Ensure security best practices: IAM least privilege, secrets management, vulnerability remediation, and compliance (CIS benchmarks where relevant).
+Collaborate with application teams on release planning, performance testing, capacity planning, and deployment strategies (blue/green, canary).
+Participate in change management, release governance, and on-call rotations; maintain runbooks, SOPs, and operational documentation.
+
+Expertise You'll Bring
+
+8+ years of experience in DevOps/SRE/Cloud Operations with strong hands-on background in production environments. 
+Strong expertise in AWS core services: VPC, EC2, ALB/NLB, Auto Scaling, Route53, S3, RDS/Aurora, IAM, CloudWatch, EKS/ECS.
+Proven experience with CI/CD and release orchestration, including artifact management (Nexus/Artifactory/ECR) and deployment automation.
+Hands-on experience with Kubernetes (EKS preferred): deployments, services/ingress, Helm, scaling, networking, troubleshooting.
+Solid understanding of Linux administration, networking fundamentals (DNS, TCP/IP, TLS, load balancing), and performance tuning.
+Strong skills in IaC (Terraform preferred) and configuration management (Ansible/Chef/Puppet as applicable).
+Experience with observability and incident response: alert tuning, dashboards, log correlation, postmortem writing, and reliability metrics.
+Scripting and automation skills in Python/Bash, plus working knowledge of PowerShell is a plus.
+Experience with security tooling and practices: secrets (Vault/Secrets Manager), container image scanning, patching/remediation, IAM governance.
+ Experience using ticketing/ITSM tools like ServiceNow/Jira, and working within ITIL/change management processes.

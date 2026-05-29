@@ -1,0 +1,46 @@
+About the job
+Specialist - Product Security - IN
+
+Professionals in this group specialize in designing and developing security features of products including systems, applications and/or solutions during the development stage of the application or product.
+
+Key Responsibilities And Duties
+
+They ensure that the security of all products is maintained throughout the product lifecycle. 
+They integrate new security features, updates into existing products, and resolve integration and testing issues.
+
+Educational Requirements
+
+University (Degree) Preferred
+
+Work Experience
+
+3+ Years Required; 5+ Years Preferred
+
+Physical Requirements
+
+Physical Requirements: Sedentary Work
+
+Career Level
+
+7IC
+
+Key Responsibilities And Duties
+
+Provides engineering support for critical security systems and services including servers, endpoint security, computer forensics, vulnerability/penetration assessment/mitigation, and security event management.
+Leads the cost/benefit evaluation of cloud solutions compared to virtual private networks, dedicated hosting, and in-house solutions.
+Reviews technical feasibility of adopting external cloud based IT platform and infrastructure services within the organization.
+Leads the identification of portions of the organization's IT platform/infrastructure with the highest potential return for cloud deployment.
+Facilitates implementation of the organization's global strategies and initiatives to enhance Information Technology plans, operations and procedures.
+Ensures the execution of vulnerability analysis and exploitation of applications, operating systems and networks.
+Reports identified intrusion or incident paths and methods discovered through testing and evaluation procedures.
+Designs, develops and implements countermeasures, systems integration and tools specific to cyber and information operations.
+Resolves and documents complex malware and intrusion issues within the system as they occur.
+Functions as an internal information security consultant on the standards, complex issues and best practices for the organization.
+Conducts testing and analysis of complex software systems to determine both the functionality and intent of the systems.
+Communicates with cybersecurity risk and security operation teams to enhance the overall security posture of the enterprise.
+Coaches, reviews and delegates work to lower level professionals to enhance their knowledge and performance related to information technology (IT) Security
+Should have worked on to AppViewX Cert+, Fortanix DSM, Thales Luna HSM, Keyfactor EJBCA or ADCS PKI, and strong programming skills including Python and Powershell. Programming skills would be required for all candidates
+
+Related Skills
+
+Accountability, Adaptability, Business Continuity Planning, Cloud Computing Security, Collaboration, Communication, Compliance, Consultative Communication, Cybersecurity, Detail-Oriented, General Risk Management, Network Security, Prioritizes Effectively

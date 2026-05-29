@@ -1,0 +1,54 @@
+About the job
+ZS is a place where passion changes lives. As a management consulting and technology firm focused on improving life and how we live it, our most valuable asset is our people. Here you’ll work side-by-side with a powerful collective of thinkers and experts shaping life-changing solutions for patients, caregivers and consumers, worldwide. ZSers drive impact by bringing a client first mentality to each and every engagement. We partner collaboratively with our clients to develop custom solutions and technology products that create value and deliver company results across critical areas of their business. Bring your curiosity for learning; bold ideas; courage and passion to drive life-changing impact to ZS.
+
+Application Security Specialist 
+
+We are seeking an experienced professional to join us as an Application Security Specialist in our Pune, India office. This professional will be responsible for Implementing DevSecOps Practices across cloud environments & mature ZS’s Application Security Program. This role requires strategic and out-of-box thinking, high technical expertise, and effective communication skills to proactively identify and address security risks.
+
+What you'll do:
+
+As an Application Security Specialist in the Enterprise you will -
+
+Lead the design and implementation of DevSecOps framework, integrating security seamlessly into CI/CD pipelines across multiple environments and platforms.
+Collaborate with developers, SREs, and security teams to embed security controls and testing at build, deployment, and runtime stages.
+Build and manage automation for SAST, DAST, SCA, container security, and IaC scanning tools (e.g., SonarQube, Checkmarx, Snyk, Trivy, Terraform Scan).
+Analyze results from SAST, SCA, and DAST scans to validate findings, eliminate false positives, and work with development teams to prioritize and remediate security issues.
+Leverage expertise in TeamCity and AWS to build secure, scalable CI/CD pipelines and enforce security controls throughout the software delivery lifecycle
+Champion “shift-left” security practices by developing reusable pipelines, templates, and toolchains that promote secure coding and rapid feedback loops.
+Ensure ongoing visibility and reporting of security posture in cloud-native workloads, container platforms, and serverless environments.
+Lead training sessions and build developer-friendly resources to raise DevSecOps awareness across engineering teams.
+Stay current with evolving tools, threats, and best practices in secure software delivery, continuously innovating to improve security effectiveness and developer experience.
+Partner with product owners, developers, architects, and QA engineers to build secure-by-design applications.
+Provide mentorship and security guidance to internal stakeholders to raise overall security maturity.
+Collaborate closely with Application Security teams to align on secure development standards, threat modeling efforts, and triaging complex vulnerabilities identified during code and runtime analysis.
+
+What you'll bring:
+
+Bachelor’s in computer science /management of computer information/information assurance or Cybersecurity
+6+ years of DevSecOps / Secure DevOps /Security Engineer/ Application & Cloud Security roles
+Must have Certifications: OSWE/CSSLP/ AWS Certified Solutions Architect / AWS Security Specialty
+Preferred Certifications: AWS CLP, GIAC (GCSA), GIAC (GWAPT), OSCP, OSWA, OSEP, eWPT
+Expertise in implementing DevSecOps practices in cloud-native CI/CD pipelines (e.g., GitLab CI, GitHub Actions, Jenkins, TeamCity, Azure DevOps, Bit-Bucket).
+Strong hands-on experience with application security tools such as SonarQube, Fortify, Checkmarx, Snyk, Veracode, BlackDuck, Burp Suite, OWASP ZAP.
+Knowledge of containerization and orchestration security (Docker, Kubernetes, Helm) and tools like Trivy, Kube-bench, and Aqua.
+Working knowledge of programming/scripting languages like Python, Java, JavaScript, C#, .Net or go.
+Familiarity with cloud-native security controls (AWS Security Hub, Azure Defender, GCP Security Command Center).
+Strong scripting skills in Python, Bash, or PowerShell for automation and tool integration.
+Ability to develop and enforce security guardrails, policies, and standards in automated and scalable ways.
+In-depth understanding of OWASP, CWE, CVE scoring, and secure SDLC methodologies.
+Ability to clearly document findings and communicate risk effectively to technical and non-technical stakeholders.
+Fluency in English 
+Client-first mentality 
+Intense work ethic 
+Collaborative spirit and problem-solving approach
+
+Additional Skills:
+
+Knowledge of policy-as-code frameworks (e.g., OPA/Gatekeeper, Sentinel).
+Familiarity with DevSecOps Maturity Models and experience driving measurable security improvements across teams.
+Exposure to compliance automation for frameworks such as SOC 2, HIPAA, GDPR.
+Experience in chaos engineering, resilience testing, or runtime application self-protection (RASP).
+Experience with Infrastructure as Code (IaC) security using Terraform, CloudFormation, and tools like tfsec or Checkov.
+Experience and expertise in application penetration testing, including business logic abuse, authentication/authorization flaws, and client-side vulnerabilities
+Familiarity with common reconnaissance, exploitation, and post exploitation techniques.
+Experience in API security testing, including assessment of REST and GraphQL endpoints for issues such as broken object-level authorization (BOLA), mass assignment, injection flaws, and improper rate limiting
