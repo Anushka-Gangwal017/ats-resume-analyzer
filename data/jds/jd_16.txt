@@ -1,0 +1,88 @@
+About the job
+Project Role : AI / ML Engineer
+
+Project Role Description : Develops applications and systems that utilize AI tools, Cloud AI services, with proper cloud or on-prem application pipeline with production ready quality. Be able to apply GenAI models as part of the solution. Could also include but not limited to deep learning, neural networks, chatbots, image processing.
+
+Must have skills : Machine Learning Operations
+
+Good to have skills : NA
+
+Minimum 3 Year(s) Of Experience Is Required
+
+Educational Qualification : 15 years full time education
+
+Role Summary
+
+We are seeking a hands-on AI Native Engineer who can design, build, and deploy end-to-end agentic and LLM-powered systems. This includes constructing RAG pipelines, working with vector databases, building autonomous or semi-autonomous agents, integrating tools and skills, and developing evaluation frameworks for high-quality AI behaviour. You will prototype rapidly, experiment with models, and evolve solutions from PoC to production while working closely with cross-functional teams.
+
+AI Powered Tech Talent
+
+Key Responsibilities
+
+Agentic & LLM System Development
+
+Build agentic AI systems, including agent orchestration, planning loops, tool calling, and memory modules.
+
+Implement LLM toolchains, custom prompts, templates, evaluators, and multi-step reasoning workflows.
+
+Develop autonomous/semi-autonomous agents for retrieval, summarization, decision support, or workflow automation.
+
+RAG Pipelines & Vector Intelligence
+
+Design and implement RAG pipelines end-to-end: ingestion, chunking, embeddings, indexing, vector search, hybrid retrieval, and grounding.
+
+Integrate vector databases such as pgvector, Pinecone, Weaviate, or Milvus.
+
+Optimize retrieval quality, latency, and factual accuracy using rerankers, retrieval evaluators, and freshness pipelines.
+
+Model Integration & AI Ops
+
+Integrate enterprise-grade AI APIs, foundation models, and transformer models into scalable systems.
+
+Implement robust evaluation frameworks including offline and online evals, regression tests, content safety checks, and red-team scenarios.
+
+Build monitoring for model drift, agent failure modes, hallucination detection, and end-to-end system health.
+
+Full-Stack & Cloud Alignment
+
+Deploy services using Python/Node/Java microservices, serverless functions, or containerized workloads.
+
+Integrate event streams, API gateways, and cloud-native patterns across Azure/AWS/GCP.
+
+Build CI/CD pipelines for AI services with safe rollouts, versioning, and feature flags for model updates.
+
+Prototyping & Rapid Iteration
+
+Rapidly experiment with models, embeddings, architectures, and agentic patterns.
+
+Translate business requirements into AI-native technical architectures and communicate trade-offs via demos and deep-dives.
+
+Document designs, experiments, and evaluation results for reproducibility and knowledge sharing.
+
+Professional & Technical Skills
+
+Must-Have (AI Native Core)
+
+Hands-on experience with LLMs, agent frameworks (LangChain, LlamaIndex, Semantic Kernel, LangGraph, AutoGen), and vector DBs.
+
+Strong Python skills for building agents, RAG services, data pipelines, and evaluation harnesses.
+
+Deep understanding of transformer models, embeddings, prompt engineering, and model fine-tuning workflows.
+
+Experience deploying AI systems to production with monitoring, error handling, retries, and fallback strategies.
+
+Good to Have
+
+Experience with cloud AI platforms (Azure OpenAI, Bedrock, Vertex AI).
+
+Knowledge of multimodal models, reinforcement learning, or advanced reasoning agents.
+
+Familiarity with evaluation frameworks (pytest, JUnit) and custom eval harnesses.
+
+Additional Information
+
+Minimum 3 years of experience in ML/AI engineering (AI-native experience preferred).
+
+Location: Bengaluru.
+
+Education: 15 years full-time education., 15 years full time education

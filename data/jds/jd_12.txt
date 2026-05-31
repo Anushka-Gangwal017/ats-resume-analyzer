@@ -1,0 +1,79 @@
+About the job
+Project Role : Cloud Platform Engineer
+
+Project Role Description : Designs, builds, tests, and deploys cloud application solutions that integrate cloud and non-cloud infrastructure. Can deploy infrastructure and platform environments, creates a proof of architecture to test architecture viability, security and performance.
+
+Must have skills : Microsoft 365
+
+Good to have skills : NA
+
+Minimum 3 Year(s) Of Experience Is Required
+
+Educational Qualification : 15 years full time education
+
+Summary:
+
+AI Powered Tech Talent
+
+We are seeking a forward-thinking professional with AI-first mindset to design, develop, and deploy intelligent frameworks leveraging Generative AI (GenAI) and Agentic AI frameworks within Workplace Collaboration Platforms. The ideal candidate should have a strong understanding of various Business Functions, a passion for innovation in AI, and rich experience with delivering enterprise grade technology solutions using Gen AI / Agentic AI Frameworks. This role requires the ability to conceptualize and implement AI-driven enhancements to traditional Workplace Collaboration processes, driving the next generation of enterprise automation and intelligence.
+
+The role involves designing, implementing, and managing enterprise-grade collaboration platforms and unified communication services across Microsoft 365 platform. The engineer will work closely with cross-functional IT teams, business stakeholders, and vendor partners to deliver secure, scalable, and high-performing collaboration solutions that enable seamless communication and productivity for our global workforce.
+
+Key Responsibilities:
+
+ Expected to perform independently and become an SME.
+ Engage in end-to-end AI-enabled project delivery: requirement gathering, solution design, implementation, testing, and business adoption.
+ Work with real-time AI platforms, integrating AI insights into enterprise decision-making workflows
+ Engage with multiple teams and contribute on key decisions
+ Expected to provide solutions to problems that apply across multiple teams
+ Facilitate workshops and discussions to gather requirements and feedback from stakeholders
+ Mentor junior professionals and assist in their development and understanding of application processes
+
+
+Professional & Technical Skills:
+
+ Connects AI concepts to business objectives for on-time delivery
+ Hands-on experience in GenAI (LLMs, embeddings, vector databases) and Agentic AI applications (multi-agent systems, planning, reasoning) demonstrated through project implementations
+ Strong fundamental knowledge of AI lifecycle, data analysis, statistical concepts of ML algorithms (supervised and unsupervised learning) and AI concepts of NN (Neural Networks) and NLP (Natural Language Processing)
+ Build Copilot prompts and copilots for workplace scenarios orchestrating LangChain RAG workflows grounded in approved content
+ Solid grasp of prompt engineering, AI evaluation frameworks, value realization in AI projects
+ Experience in Implementing collaboration governance frameworks including retention, compliance, and DLP
+ Hands on experience in automation leveraging Devops pipelines and manage CI/CD workflows with tools such as Jenkins, GitLab CI, or GitHub Actions
+ Worked on improving the Digital Experience scores for business
+
+
+Must Have Skills:
+
+ Proficiency in Entra ID & Microsoft 365 Services including Productivity Apps, Collaboration Apps such as:
+Microsoft 365 (EXO, Sharepoint, Onedrive, PowerApps, PowerBI, Viva)
+Microsoft CoPilot
+Microsoft Azure AD
+Microsoft Teams EV & Rooms
+ Azure DevOps
+ PowerShell, Ansible, Python & Terraform
+ Experience with Enterprise Voice & Contact Center solutions like Teams, Cisco, Zoom etc
+ Ability to analyze business requirements and translate them into technical specifications.
+ Familiarity with integration techniques and tools within the Workplace Cloud Platforms ecosystem
+ Strong problem-solving skills, analytical thinking, and ability to manage complex hybrid environments.
+ Excellent communication and stakeholder management skills.
+
+
+Certifications (Required / Preferred):
+
+Required:
+
+ Microsoft Certified: Teams Administrator Associate (MS-700)
+ Microsoft 365 Certified: Fundamentals (MS-900)
+ Azure Fundamentals (AZ-900)
+
+
+Preferred:
+
+ Microsoft 365 Certified: Enterprise Administrator Expert (MS-100/MS-102)
+ Microsoft Security, Compliance, and Identity Fundamentals (SC-900)
+ Quest / Sharegate product certifications (if available)
+
+
+Additional Information: -
+
+The candidate should have minimum 3-4 years of experience in Workplace collaboration services with Microsoft 365 for L10. Resource needs to be AI Ready., 15 years full time education

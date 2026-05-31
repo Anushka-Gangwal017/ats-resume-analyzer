@@ -1,0 +1,31 @@
+About the job
+About Us
+
+nCircle Tech Private Limited (Incorporated in 2012) empowers passionate innovators to create impactful 3D visualization software for desktop, mobile and cloud. Our domain expertise in CAD and BIM customization is driving automation with the ability to integrate advanced technologies like AI/ML and AR/VR, which empowers our clients to reduce time to market and meet business goals. nCircle has a proven track record of technology consulting and advisory services for AEC and Manufacturing industry across the globe. Our team of dedicated engineers, partner ecosystem and industry veterans are on a mission to redefine how you design and visualize.
+
+Job Description
+
+Develop and maintain applications using Python and .NET
+Build and integrate LangChain & LangGraph based workflows for LLM-powered applications
+Work with Vector Databases for embedding storage and similarity search
+Assist in developing retrieval-augmented generation (RAG) pipelines
+Write clean, testable, and well-structured code
+Collaborate with senior engineers on AI/ML solution design
+Participate in code reviews and contribute to engineering best practices
+
+Requirements
+
+1+ years of experience in software development
+Proficiency in Python (core language, data libraries — NumPy, Pandas)
+Working knowledge of .NET (C#, ASP.NET Core, Web API)
+Hands-on experience with LangChain and LangGraph for building LLM chains and agent workflows
+Understanding of Vector Databases — indexing, querying, and embedding management
+Familiarity with REST APIs, Git, and CI/CD basics
+Basic understanding of LLMs, prompt engineering, and embedding models
+
+Nice to Have
+
+Exposure to cloud platforms (Azure, AWS, or GCP)
+Familiarity with Docker/containerization
+Understanding of RAG architecture patterns
+Basic knowledge of ML concepts (supervised/unsupervised learning)

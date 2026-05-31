@@ -1,0 +1,58 @@
+About the job
+About Cyble
+
+Cyble is revolutionizing the landscape of cybersecurity intelligence. Founded in 2019, Cyble began as a visionary college project and has quickly transformed into a leading force in proactive cyber threat detection and mitigation, that is now globally significant, with people in 20 countries - Headquartered in Alpharetta, Georgia, and with offices in Australia, Malaysia, Singapore, Dubai, Saudi Arabia and India
+
+Our mission is clear: to provide visibility, intelligence and cybersecurity protection using cutting-edge advanced technology, giving enterprises a powerful advantage. We democratize real-time intelligence about cyber threats and vulnerabilities, enabling organizations to take proactive measures and maintain robust cybersecurity. We strive to make the digital world a safer place for everyone.
+
+At Cyble, artificial intelligence (AI) and innovation are central to all operations, with a commitment to continuous improvement and excellence in both products and business practices. Cyble values inclusivity, offering team members autonomy and flexibility to balance their professional and personal lives. Cyble fosters a culture where employees voices are heard, contributions are recognized, and everyone is encouraged to be part of something extraordinary.
+
+About The Role
+
+We are a fast-growing technology company leveraging large language models and AI to power next-generation applications. Our teams deliver high-impact solutions across diverse domains while maintaining a culture of curiosity, collaboration, and continuous learning.
+
+We’re seeking a skilled Prompt / AI Engineer to design, implement, and optimize natural-language prompts, chains, and retrieval-augmented workflows. You’ll partner with engineering, product, and data science teams to ensure seamless integration of LLM capabilities into our services.
+
+What You'll Do At CYBLE
+
+ Prompt Design & Optimization
+Craft and iterate prompt templates for a variety of use cases (summarization, classification, Q&A)
+Implement few-shot examples, chain-of-thought techniques, and dynamic parameterization
+Benchmark, profile, and refine prompts to balance accuracy, latency, and cost
+ Workflow & Chain Development
+Build multi-step LLM pipelines using frameworks like LangChain, LlamaIndex, or equivalent
+Integrate retrieval-augmented generation (RAG) with vector stores and document loaders
+Develop agentic workflows that orchestrate API calls, data enrichment, and user interactions
+ Model Integration & Testing
+Integrate with public and private LLM services (e.g., OpenAI, Anthropic, self-hosted models)
+Automate performance tests, error-handling routines, and hallucination checks
+Monitor usage metrics, implement rate-limits, and optimize token budgets
+ Collaboration & Documentation
+Work closely with backend/frontend engineers to expose LLM endpoints
+Create and maintain a prompt library, testing suite, and best-practice guidelines
+Conduct reviews, knowledge transfers, and training sessions on prompt engineering
+What You’ll Need
+
+3+ years of experience in AI/ML, NLP, or software engineering with a focus on prompt or LLM integration
+Strong proficiency in Python and familiarity with LLM client libraries
+Hands-on with at least one orchestration framework (LangChain, LlamaIndex, Dify, etc.)
+Experience working with vector databases (Pinecone, Weaviate, Qdrant) or embedding services
+Solid understanding of prompt-engineering techniques, chain-of-thought, and RAG concepts
+Ability to benchmark, profile, and optimize model calls for performance and cost
+Excellent written communication for clear documentation and prompt examples
+
+Preferred (Nice-to-Have)
+
+Experience fine-tuning or prompt-tuning domain-specific models
+Familiarity with self-hosted LLM deployments (Hugging Face, OpenAI local runtimes)
+Background in automated evaluation metrics (ROUGE, BLEU, custom tests)
+Contributions to open-source prompt libraries or agent frameworks
+Exposure to CI/CD for AI services and observability tools
+
+What We Offer
+
+ Impactful Projects: Shape core LLM-driven capabilities across diverse applications
+ Innovative Environment: Work with cutting-edge models, RAG pipelines, and agent frameworks
+ Growth & Learning: Access to mentorship, training budgets, and conference support
+
+Apply now to help us define the future of AI-driven applications through expert prompt engineering!
