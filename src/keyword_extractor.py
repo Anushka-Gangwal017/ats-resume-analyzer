@@ -1,5 +1,28 @@
 import spacy
 import re
+import json
+import os
+
+# Load the skill graph
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SKILL_GRAPH_PATH = os.path.join(PROJECT_ROOT, "skill_graph.json")
+
+def load_skill_graph():
+    try:
+        print(f"Loading skill graph from: {SKILL_GRAPH_PATH}")
+
+        with open(SKILL_GRAPH_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    except FileNotFoundError:
+        print("Warning: skill_graph.json not found.")
+        return {}
+
+    except json.JSONDecodeError as e:
+        print(f"JSON Error: {e}")
+        return {}
+
+SKILL_GRAPH = load_skill_graph()
 
 # Load the English language model
 # This was downloaded on Day 2 setup
@@ -111,25 +134,44 @@ def extract_keywords_from_resume(resume_sections):
     """
     Takes the sections dictionary from section_extractor.py
     and extracts keywords from the most important sections.
+    NOW includes skill graph normalization automatically.
     Returns keywords per section AND a combined total list.
     """
 
-    results = {}
+    results      = {}
     all_keywords = set()
 
-    # We care most about these sections for keyword matching
-    important_sections = ['skills', 'experience', 'projects',
-                          'summary', 'certifications', 'research']
+    # Most important sections for keyword matching
+    important_sections = [
+        'skills', 'experience', 'projects',
+        'summary', 'certifications', 'research'
+    ]
 
     for section in important_sections:
         section_text = resume_sections.get(section, '')
         if section_text.strip():
-            keywords = extract_keywords_from_text(section_text)
-            results[section] = keywords
-            all_keywords.update(keywords)
+            # Step 1 — extract raw keywords using spaCy + master list
+            raw_keywords = extract_keywords_from_text(section_text)
 
-    results['ALL_KEYWORDS'] = sorted(list(all_keywords))
+            # Step 2 — normalize using skill graph (NEW)
+            normalized   = normalize_keywords(raw_keywords)
+
+            results[section] = normalized
+            all_keywords.update(normalized)
+
+    results['ALL_KEYWORDS']            = sorted(list(all_keywords))
+    results['ALL_KEYWORDS_RAW_COUNT']  = len(all_keywords)
+
     return results
+
+
+def extract_keywords_from_jd(jd_text):
+    """
+    Takes a job description text string,
+    extracts keywords AND normalizes them.
+    """
+    raw = extract_keywords_from_text(jd_text)
+    return normalize_keywords(raw)
 
 
 def extract_keywords_from_jd(jd_text):
@@ -140,7 +182,45 @@ def extract_keywords_from_jd(jd_text):
     """
     return extract_keywords_from_text(jd_text)
 
+def normalize_keywords(keywords):
+    """
+    Takes a list of keywords and expands them using
+    the skill graph — informal terms get replaced
+    with their canonical equivalents.
 
+    Example:
+        Input:  ['ml', 'used git', 'dsa']
+        Output: ['machine learning', 'ml algorithms',
+                 'git', 'version control', 'github',
+                 'data structures', 'algorithms']
+    """
+    if not SKILL_GRAPH:
+        return keywords
+
+    expanded = set(keywords)
+
+    for domain_key, domain_data in SKILL_GRAPH.items():
+        if domain_key == "_metadata":
+            continue
+
+        mappings = domain_data.get("mappings", [])
+        for mapping in mappings:
+            informal = mapping.get("informal", "").lower()
+            canonical = mapping.get("canonical", [])
+
+            # Check if any keyword matches this informal term
+            for kw in keywords:
+                kw_lower = kw.lower()
+
+                if (kw_lower == informal or
+                        informal in kw_lower or
+                        kw_lower in informal):
+
+                    # Add all canonical terms
+                    for c in canonical:
+                        expanded.add(c)
+
+    return sorted(list(expanded))
 # ══════════════════════════════════════════════════════════════
 # TEST — run this file directly to see it working
 # ══════════════════════════════════════════════════════════════

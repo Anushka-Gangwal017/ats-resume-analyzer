@@ -1,0 +1,514 @@
+{
+  "_metadata": {
+    "name": "ATS Skill Normalization Graph",
+    "description": "Maps informal student skill descriptions to canonical industry JD terms. Core IP asset of the ATS Resume Analyzer project.",
+    "author": "Anushka Gangwal",
+    "university": "MIT-ADT University, Pune",
+    "version": "1.0",
+    "total_mappings": 150,
+    "domains_covered": [
+      "Python Development",
+      "Data Science & ML",
+      "Cybersecurity",
+      "Web Development",
+      "Database",
+      "DevOps & Cloud",
+      "Soft Skills",
+      "Tools & IDEs"
+    ]
+  },
+
+  "python_development": {
+    "domain": "Python Development",
+    "mappings": [
+      {
+        "informal": "wrote python scripts",
+        "canonical": ["python", "python scripting", "python development"],
+        "context": "Student describes scripting tasks informally"
+      },
+      {
+        "informal": "made python programs",
+        "canonical": ["python", "python programming", "python development"],
+        "context": "Generic student phrasing for Python work"
+      },
+      {
+        "informal": "python coding",
+        "canonical": ["python", "python development"],
+        "context": "Informal way of saying Python proficiency"
+      },
+      {
+        "informal": "used python",
+        "canonical": ["python", "python programming"],
+        "context": "Vague experience claim"
+      },
+      {
+        "informal": "python basics",
+        "canonical": ["python", "core python"],
+        "context": "Beginner-level Python claim"
+      },
+      {
+        "informal": "built a tool in python",
+        "canonical": ["python", "python development", "software development"],
+        "context": "Project-based Python experience"
+      },
+      {
+        "informal": "automated tasks using python",
+        "canonical": ["python", "automation", "scripting", "python automation"],
+        "context": "Automation work"
+      },
+      {
+        "informal": "python for data",
+        "canonical": ["python", "data analysis", "pandas", "numpy"],
+        "context": "Data-focused Python usage"
+      },
+      {
+        "informal": "core python",
+        "canonical": ["python", "python programming", "oops in python"],
+        "context": "Foundational Python skills"
+      },
+      {
+        "informal": "oops concepts",
+        "canonical": ["object oriented programming", "oop", "oops"],
+        "context": "OOP knowledge in any language"
+      },
+      {
+        "informal": "built python projects",
+        "canonical": ["python", "python development", "software development"],
+        "context": "Student project experience using Python"
+      }
+    ]
+  },
+
+  "machine_learning_ai": {
+    "domain": "Machine Learning & AI",
+    "mappings": [
+      {
+        "informal": "ml",
+        "canonical": ["machine learning", "ml", "ml algorithms"],
+        "context": "Abbreviation — very common in student resumes"
+      },
+      {
+        "informal": "made a machine learning model",
+        "canonical": ["machine learning", "model development", "scikit-learn"],
+        "context": "Project-based ML experience"
+      },
+      {
+        "informal": "deep learning project",
+        "canonical": ["deep learning", "neural networks", "tensorflow", "pytorch"],
+        "context": "DL project experience"
+      },
+      {
+        "informal": "ai project",
+        "canonical": ["artificial intelligence", "machine learning", "python"],
+        "context": "Generic AI project claim"
+      },
+      {
+        "informal": "trained a model",
+        "canonical": ["machine learning", "model training", "scikit-learn"],
+        "context": "ML model training experience"
+      },
+      {
+        "informal": "nlp project",
+        "canonical": ["natural language processing", "nlp", "text analysis"],
+        "context": "NLP work"
+      },
+      {
+        "informal": "computer vision",
+        "canonical": ["computer vision", "image processing", "opencv", "cnn"],
+        "context": "CV project experience"
+      },
+      {
+        "informal": "neural network",
+        "canonical": ["deep learning", "neural networks", "tensorflow", "keras"],
+        "context": "NN implementation experience"
+      },
+      {
+        "informal": "u-net",
+        "canonical": ["deep learning", "image segmentation", "computer vision", "pytorch"],
+        "context": "U-Net architecture specifically"
+      },
+      {
+        "informal": "semantic segmentation",
+        "canonical": ["computer vision", "deep learning", "image segmentation"],
+        "context": "Segmentation model work"
+      },
+      {
+        "informal": "data preprocessing",
+        "canonical": ["data cleaning", "feature engineering", "pandas", "numpy"],
+        "context": "Data preparation tasks"
+      },
+      {
+        "informal": "feature engineering",
+        "canonical": ["feature engineering", "machine learning", "pandas"],
+        "context": "ML pipeline step"
+      },
+      {
+        "informal": "model accuracy",
+        "canonical": ["model evaluation", "performance metrics", "machine learning"],
+        "context": "Model evaluation experience"
+      },
+      {
+        "informal": "sklearn",
+        "canonical": ["scikit-learn", "machine learning", "python"],
+        "context": "Abbreviation for scikit-learn"
+      }
+    ]
+  },
+
+  "cybersecurity": {
+    "domain": "Cybersecurity",
+    "mappings": [
+      {
+        "informal": "cyber security",
+        "canonical": ["cybersecurity", "information security", "network security"],
+        "context": "Two-word vs one-word variant"
+      },
+      {
+        "informal": "ethical hacking basics",
+        "canonical": ["ethical hacking", "penetration testing", "vapt"],
+        "context": "Foundational ethical hacking knowledge"
+      },
+      {
+        "informal": "pen testing",
+        "canonical": ["penetration testing", "vapt", "ethical hacking"],
+        "context": "Abbreviation for penetration testing"
+      },
+      {
+        "informal": "checked password strength",
+        "canonical": ["python", "cryptography", "security tool development"],
+        "context": "From password checker project"
+      },
+      {
+        "informal": "used haveibeenpwned api",
+        "canonical": ["api integration", "cybersecurity", "python", "rest api"],
+        "context": "HIBP project specific"
+      },
+      {
+        "informal": "k-anonymity",
+        "canonical": ["privacy engineering", "cybersecurity", "data privacy"],
+        "context": "Privacy technique used in HIBP project"
+      },
+      {
+        "informal": "network security basics",
+        "canonical": ["network security", "cybersecurity", "tcp/ip"],
+        "context": "Foundational network security"
+      },
+      {
+        "informal": "google cybersecurity certificate",
+        "canonical": ["cybersecurity", "google certification", "security fundamentals"],
+        "context": "Google cert holder"
+      },
+      {
+        "informal": "security fundamentals",
+        "canonical": ["cybersecurity", "information security", "security concepts"],
+        "context": "Broad security knowledge claim"
+      },
+      {
+        "informal": "incident analysis",
+        "canonical": ["incident response", "soc", "security monitoring"],
+        "context": "Security operations experience"
+      },
+      {
+        "informal": "risk identification",
+        "canonical": ["risk assessment", "vulnerability management", "grc"],
+        "context": "Risk management tasks"
+      },
+      {
+        "informal": "deloitte cyber simulation",
+        "canonical": ["cybersecurity", "threat analysis", "security analysis"],
+        "context": "Deloitte job simulation credential"
+      },
+      {
+        "informal": "entropy scoring",
+        "canonical": ["cryptography", "password security", "python"],
+        "context": "Password strength checker project feature"
+      }
+    ]
+  },
+
+  "web_development": {
+    "domain": "Web Development",
+    "mappings": [
+      {
+        "informal": "made a website",
+        "canonical": ["web development", "html", "css", "javascript"],
+        "context": "Generic website creation claim"
+      },
+      {
+        "informal": "html css",
+        "canonical": ["html", "css", "frontend development", "web development"],
+        "context": "Basic frontend skills"
+      },
+      {
+        "informal": "built a web app",
+        "canonical": ["web development", "flask", "django", "rest api"],
+        "context": "Web application development"
+      },
+      {
+        "informal": "flask app",
+        "canonical": ["flask", "python", "web development", "rest api"],
+        "context": "Flask framework experience"
+      },
+      {
+        "informal": "rest api",
+        "canonical": ["rest api", "api development", "backend development"],
+        "context": "REST API work"
+      },
+      {
+        "informal": "api integration",
+        "canonical": ["rest api", "api integration", "backend development"],
+        "context": "External API usage"
+      },
+      {
+        "informal": "backend development",
+        "canonical": ["backend", "server-side development", "python", "flask"],
+        "context": "Backend work claim"
+      },
+      {
+        "informal": "responsive design",
+        "canonical": ["css", "bootstrap", "frontend development", "html"],
+        "context": "Mobile-friendly web design"
+      }
+    ]
+  },
+
+  "database": {
+    "domain": "Database",
+    "mappings": [
+      {
+        "informal": "sql basics",
+        "canonical": ["sql", "database management", "mysql"],
+        "context": "Entry-level SQL knowledge"
+      },
+      {
+        "informal": "database queries",
+        "canonical": ["sql", "database", "mysql", "postgresql"],
+        "context": "Query writing experience"
+      },
+      {
+        "informal": "worked with databases",
+        "canonical": ["sql", "database management", "mysql"],
+        "context": "Vague database experience"
+      },
+      {
+        "informal": "mysql",
+        "canonical": ["mysql", "sql", "relational database"],
+        "context": "MySQL specific"
+      },
+      {
+        "informal": "stored data in excel",
+        "canonical": ["excel", "data management", "spreadsheets"],
+        "context": "Basic data storage"
+      },
+      {
+        "informal": "nosql",
+        "canonical": ["nosql", "mongodb", "document database"],
+        "context": "Non-relational database"
+      }
+    ]
+  },
+
+  "devops_cloud": {
+    "domain": "DevOps & Cloud",
+    "mappings": [
+      {
+        "informal": "used git",
+        "canonical": ["git", "version control", "github"],
+        "context": "Basic Git usage"
+      },
+      {
+        "informal": "github projects",
+        "canonical": ["git", "github", "version control", "open source"],
+        "context": "GitHub portfolio work"
+      },
+      {
+        "informal": "version control",
+        "canonical": ["git", "github", "version control"],
+        "context": "VC knowledge"
+      },
+      {
+        "informal": "linux commands",
+        "canonical": ["linux", "bash", "command line", "shell scripting"],
+        "context": "Linux terminal usage"
+      },
+      {
+        "informal": "used linux",
+        "canonical": ["linux", "unix", "bash"],
+        "context": "Linux OS experience"
+      },
+      {
+        "informal": "aws basics",
+        "canonical": ["aws", "cloud computing", "amazon web services"],
+        "context": "Entry-level cloud knowledge"
+      },
+      {
+        "informal": "deployed a project",
+        "canonical": ["deployment", "devops", "cloud deployment"],
+        "context": "Basic deployment experience"
+      },
+      {
+        "informal": "docker basics",
+        "canonical": ["docker", "containerisation", "devops"],
+        "context": "Container knowledge"
+      },
+      {
+        "informal": "pushed code to github",
+        "canonical": ["git", "github", "version control"],
+        "context": "Student describing GitHub usage informally"
+      }
+    ]
+  },
+
+  "data_analysis": {
+    "domain": "Data Analysis",
+    "mappings": [
+      {
+        "informal": "data analysis project",
+        "canonical": ["data analysis", "python", "pandas", "numpy"],
+        "context": "Data analysis work"
+      },
+      {
+        "informal": "made graphs and charts",
+        "canonical": ["data visualisation", "matplotlib", "seaborn", "tableau"],
+        "context": "Visualisation work"
+      },
+      {
+        "informal": "data cleaning",
+        "canonical": ["data cleaning", "pandas", "data wrangling"],
+        "context": "Data preprocessing"
+      },
+      {
+        "informal": "excel data analysis",
+        "canonical": ["excel", "data analysis", "spreadsheets"],
+        "context": "Excel-based analysis"
+      },
+      {
+        "informal": "statistical analysis",
+        "canonical": ["statistics", "data analysis", "python", "r"],
+        "context": "Stats work"
+      },
+      {
+        "informal": "dsa",
+        "canonical": ["data structures", "algorithms", "problem solving"],
+        "context": "Common Indian CS abbreviation"
+      },
+      {
+        "informal": "competitive coding",
+        "canonical": ["data structures", "algorithms", "problem solving", "dsa"],
+        "context": "Competitive programming experience"
+      },
+      {
+        "informal": "leetcode",
+        "canonical": ["data structures", "algorithms", "problem solving"],
+        "context": "Coding practice platform"
+      }
+    ]
+  },
+
+  "soft_skills": {
+    "domain": "Soft Skills & Professional",
+    "mappings": [
+      {
+        "informal": "worked in a team",
+        "canonical": ["teamwork", "collaboration", "agile", "team player"],
+        "context": "Team experience claim"
+      },
+      {
+        "informal": "college team project",
+        "canonical": ["collaborative development", "agile", "team collaboration"],
+        "context": "Academic team project"
+      },
+      {
+        "informal": "agile team",
+        "canonical": ["agile", "scrum", "sprint planning"],
+        "context": "Agile methodology experience"
+      },
+      {
+        "informal": "presented to the class",
+        "canonical": ["presentation skills", "communication", "public speaking"],
+        "context": "Presentation experience"
+      },
+      {
+        "informal": "research paper",
+        "canonical": ["research", "technical writing", "publications"],
+        "context": "Academic research work"
+      },
+      {
+        "informal": "co-authored paper",
+        "canonical": ["research", "publications", "technical writing", "collaboration"],
+        "context": "Published research"
+      },
+      {
+        "informal": "user research",
+        "canonical": ["ux research", "user experience", "product research"],
+        "context": "Guidely project UX work"
+      },
+      {
+        "informal": "designed on figma",
+        "canonical": ["figma", "ui/ux design", "product design", "wireframing"],
+        "context": "Figma design work"
+      },
+      {
+        "informal": "time management",
+        "canonical": ["time management", "organised", "deadline-driven"],
+        "context": "Soft skill"
+      },
+      {
+        "informal": "communication skills",
+        "canonical": ["communication", "verbal communication", "interpersonal skills"],
+        "context": "Soft skill — appears in almost every Indian JD"
+      },
+      {
+        "informal": "problem solving",
+        "canonical": ["problem solving", "analytical skills", "critical thinking"],
+        "context": "Core competency listed in most tech JDs"
+      },
+      {
+        "informal": "quick learner",
+        "canonical": ["adaptability", "fast learner", "self-motivated"],
+        "context": "Common fresher resume phrase"
+      }
+    ]
+  },
+
+  "tools_ides": {
+    "domain": "Tools & IDEs",
+    "mappings": [
+      {
+        "informal": "vs code",
+        "canonical": ["visual studio code", "vscode", "ide"],
+        "context": "IDE experience"
+      },
+      {
+        "informal": "jupyter notebook",
+        "canonical": ["jupyter", "jupyter notebook", "python", "data science"],
+        "context": "Notebook-based Python work"
+      },
+      {
+        "informal": "google colab",
+        "canonical": ["jupyter", "python", "machine learning", "cloud notebooks"],
+        "context": "Cloud notebook experience"
+      },
+      {
+        "informal": "canva designs",
+        "canonical": ["canva", "graphic design", "design tools"],
+        "context": "Design tool experience"
+      },
+      {
+        "informal": "postman",
+        "canonical": ["postman", "api testing", "rest api"],
+        "context": "API testing tool"
+      },
+      {
+        "informal": "excel",
+        "canonical": ["microsoft excel", "spreadsheets", "data management"],
+        "context": "Excel proficiency"
+      },
+      {
+        "informal": "ms office",
+        "canonical": ["microsoft office", "word", "excel", "powerpoint"],
+        "context": "Office suite"
+      }
+    ]
+  }
+}

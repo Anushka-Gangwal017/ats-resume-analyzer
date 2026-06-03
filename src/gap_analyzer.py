@@ -119,57 +119,80 @@ def analyze_section_strength(resume_sections):
     return section_report
 
 
-def generate_suggestions(missing_keywords, section_report):
+def generate_suggestions(missing_keywords,
+                          section_report,
+                          soft_matches=None):
     """
-    Generates specific, actionable suggestions
-    based on missing keywords and weak sections.
+    Generates specific actionable suggestions.
+    Now also accounts for soft matches from
+    the AI similarity engine so we don't
+    suggest things that are already covered
+    semantically.
     """
     suggestions = []
 
-    # ── Suggestions for missing keywords ────────────────────────
-    # Group missing keywords by where they best fit
+    # Keywords covered by soft matches — don't re-suggest
+    soft_covered = set()
+    if soft_matches:
+        for m in soft_matches:
+            soft_covered.add(m.get("jd_keyword", ""))
+
+    # Skills that belong in the Skills section
     skill_keywords = [
-        "python", "sql", "java", "javascript", "html", "css",
-        "flask", "django", "react", "git", "github", "linux",
-        "docker", "aws", "machine learning", "deep learning",
-        "nlp", "pandas", "numpy", "scikit-learn", "tensorflow",
-        "cybersecurity", "vapt", "kali linux", "nmap",
-        "tableau", "power bi", "mysql", "postgresql", "mongodb",
+        "python", "sql", "java", "javascript", "html",
+        "css", "flask", "django", "react", "git", "github",
+        "linux", "docker", "aws", "machine learning",
+        "deep learning", "nlp", "pandas", "numpy",
+        "scikit-learn", "tensorflow", "cybersecurity",
+        "vapt", "tableau", "power bi", "mysql",
+        "postgresql", "mongodb", "rest api", "fastapi",
     ]
 
+    # Skills better mentioned in Projects section
     project_keywords = [
-        "api", "rest api", "database", "backend", "frontend",
-        "web scraping", "automation", "testing", "deployment",
+        "api", "backend", "frontend", "web scraping",
+        "automation", "testing", "deployment", "database",
+        "data pipeline", "model training",
     ]
 
-    for kw in missing_keywords[:10]:   # top 10 missing only
+    for kw in missing_keywords[:12]:
+        # Skip if already covered by a soft match
+        if kw in soft_covered:
+            suggestions.append(
+                f"✅ '{kw}' is semantically covered by "
+                f"your resume — but consider adding the "
+                f"exact term for ATS keyword matching"
+            )
+            continue
+
         if kw in skill_keywords:
             suggestions.append(
-                f"➕ Add '{kw}' to your Skills section "
-                f"— it appears in the job description"
+                f"➕ Add '{kw}' to your Skills section — "
+                f"it appears in the job description"
             )
         elif kw in project_keywords:
             suggestions.append(
-                f"🔧 Mention '{kw}' in your Projects section "
-                f"— describe how you used it"
+                f"🔧 Mention '{kw}' in your Projects "
+                f"section — describe how you used it"
             )
         else:
             suggestions.append(
-                f"📝 Include '{kw}' somewhere in your resume "
-                f"— it is required by this JD"
+                f"📝 Include '{kw}' somewhere in your "
+                f"resume — it is required by this JD"
             )
 
-    # ── Suggestions for weak sections ────────────────────────────
+    # Section-level suggestions
     for section, info in section_report.items():
         if "Missing" in info["status"]:
             suggestions.append(
-                f"🚨 Your resume has NO {section.upper()} section "
-                f"— add one immediately"
+                f"🚨 Your resume has NO "
+                f"{section.upper()} section — add one"
             )
         elif "Weak" in info["status"]:
             suggestions.append(
-                f"✏️  Your {section.upper()} section is too short "
-                f"({info['length']} chars) — expand it with more detail"
+                f"✏️  Your {section.upper()} section is "
+                f"too short ({info['length']} chars) — "
+                f"expand it"
             )
 
     return suggestions
