@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results — ATS Analyzer</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">📄 ATS Analyzer</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div style="max-width:800px;margin:3rem auto;
+              padding:0 1.5rem;text-align:center;">
+
+    <h1 style="font-size:4rem;margin-bottom:0.5rem;">
+      {{ final_score }}/100
+    </h1>
+    <p style="font-size:1.2rem;color:#555;
+              margin-bottom:2rem;">
+      {{ final_grade }}
+    </p>
+
+    <div style="background:#fff;border-radius:12px;
+                padding:2rem;text-align:left;
+                box-shadow:0 2px 12px rgba(0,0,0,0.07);
+                margin-bottom:1.5rem;">
+
+      <h2 style="margin-bottom:1rem;">
+        ✅ Matched Keywords
+      </h2>
+      <p style="color:#27ae60;">
+        {{ matched_keywords | join(', ') }}
+      </p>
+
+      <h2 style="margin:1.5rem 0 1rem;">
+        ❌ Missing Keywords
+      </h2>
+      <p style="color:#e74c3c;">
+        {{ missing_keywords | join(', ') }}
+      </p>
+
+      <h2 style="margin:1.5rem 0 1rem;">
+        💡 Top Suggestions
+      </h2>
+      <ul style="padding-left:1.5rem;color:#555;">
+        {% for s in suggestions[:5] %}
+          <li style="margin-bottom:0.5rem;">{{ s }}</li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+    <a href="/"
+       style="display:inline-block;
+              background:#2e86de;color:#fff;
+              padding:0.7rem 1.8rem;border-radius:8px;
+              text-decoration:none;font-weight:600;">
+      ← Analyze Another Resume
+    </a>
+
+  </div>
+
+  <footer>
+    <p>Built by Anushka Gangwal · MIT-ADT University</p>
+  </footer>
+
+</body>
+</html>
