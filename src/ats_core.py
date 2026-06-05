@@ -12,6 +12,7 @@ import os
 import sys
 import json
 from datetime import datetime
+from suggestion_engine import generate_full_suggestions
 
 # Make sure Python can find all our src/ files
 sys.path.append(os.path.dirname(__file__))
@@ -95,26 +96,32 @@ def run_full_analysis(resume_pdf_path, jd_text):
         jd_kw         = []
 
     # ── STEP 4: Keyword gap analysis ─────────────────────────
-    print("  [4/6] Analysing keyword gap...")
-    try:
-        gap_report     = analyze_gap(resume_kw_all, jd_kw)
-        section_report = analyze_section_strength(sections)
-        suggestions    = generate_suggestions(
-                             gap_report["missing_keywords"],
-                             section_report
-                         )
-        verb_check     = check_action_verbs(sections)
-        keyword_score  = gap_report["match_score"]
+    # ── STEP 4: Keyword gap analysis ─────────────────────────
+# Replace the old suggestions line with this:
+        soft_matches = results.get(
+            "synonym_analysis", {}
+        ).get("soft_matches", [])
 
-        results["gap_report"]     = gap_report
-        results["section_report"] = section_report
-        results["suggestions"]    = suggestions
-        results["verb_check"]     = verb_check
-        results["keyword_score"]  = keyword_score
-    except Exception as e:
-        errors.append(f"Gap analysis failed: {str(e)}")
-        keyword_score = 0
+        full_suggestions = generate_full_suggestions(
+            gap_report,
+            section_report,
+            sections,
+            soft_matches=soft_matches
+        )
 
+        results["suggestions"]    = full_suggestions[
+                                        "suggestions"
+                                    ]
+        results["verb_analysis"]  = full_suggestions[
+                                        "verb_analysis"
+                                    ]
+        results["quant_analysis"] = full_suggestions[
+                                        "quant_analysis"
+                                    ]
+        results["high_priority_count"] = full_suggestions[
+                                             "high_priority"
+                                         ]
+        
     # ── STEP 5: AI semantic similarity ───────────────────────
     print("  [5/6] Running AI semantic analysis...")
     try:
