@@ -5,7 +5,12 @@ import os
 
 # Load the skill graph
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKILL_GRAPH_PATH = os.path.join(PROJECT_ROOT, "skill_graph.json")
+SKILL_GRAPH_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__)
+    )),
+    "skill_graph.json"
+)
 
 def load_skill_graph():
     try:

@@ -1,0 +1,426 @@
+/* ── Result page specific styles ─────────────── */
+
+.result-wrap {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Score card ──────────────────────────────── */
+.score-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
+.score-left {
+  flex-shrink: 0;
+}
+
+.score-circle-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.score-svg {
+  width: 140px;
+  height: 140px;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #ecf0f1;
+  stroke-width: 10;
+}
+
+.circle-fill {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.05s linear;
+}
+
+.score-number-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.score-number {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+}
+
+.score-denom {
+  font-size: 0.9rem;
+  color: #95a5a6;
+}
+
+.score-right {
+  flex: 1;
+}
+
+.score-label-big {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.score-grade {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.score-meta {
+  font-size: 0.8rem;
+  color: #95a5a6;
+  margin-bottom: 1.25rem;
+}
+
+/* Score breakdown bars */
+.score-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.breakdown-label {
+  font-size: 0.82rem;
+  color: #555;
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.breakdown-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.breakdown-bar {
+  height: 8px;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.breakdown-pct {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 36px;
+  text-align: right;
+}
+
+/* ── Two column layout ────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Keyword cards ────────────────────────────── */
+.kw-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.kw-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kw-count {
+  background: #e8f5e9;
+  color: #27ae60;
+  font-size: 0.78rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.kw-count-red {
+  background: #fdecea;
+  color: #e74c3c;
+}
+
+.pill-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pill {
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.pill-green {
+  background: #e8f5e9;
+  color: #1e8449;
+  border: 1px solid #a9dfbf;
+}
+
+.pill-red {
+  background: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f1948a;
+}
+
+.pill-blue {
+  background: #eaf4fb;
+  color: #1a5276;
+  border: 1px solid #85c1e9;
+}
+
+.no-data {
+  font-size: 0.85rem;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* ── Section cards ────────────────────────────── */
+.section-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  margin-bottom: 1.25rem;
+}
+
+.section-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.title-sub {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #95a5a6;
+}
+
+/* ── Soft matches ─────────────────────────────── */
+.soft-match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.soft-match-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.soft-resume {
+  background: #eaf4fb;
+  color: #1a5276;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.soft-arrow {
+  color: #8e44ad;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.soft-jd {
+  background: #e8f5e9;
+  color: #1e8449;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.soft-pct {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: #8e44ad;
+  font-weight: 600;
+}
+
+/* ── Section strength grid ────────────────────── */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.sec-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.sec-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.sec-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.sec-status {
+  font-size: 0.78rem;
+}
+
+.sec-note {
+  font-size: 0.78rem;
+  color: #7f8c8d;
+}
+
+/* ── Section similarity bars ──────────────────── */
+.sim-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.sim-label {
+  font-size: 0.85rem;
+  color: #555;
+  width: 100px;
+  flex-shrink: 0;
+  text-transform: capitalize;
+}
+
+.sim-bar-track {
+  flex: 1;
+  height: 10px;
+  background: #ecf0f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sim-bar-fill {
+  height: 10px;
+  border-radius: 5px;
+  transition: width 1.2s ease;
+}
+
+.sim-pct {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 38px;
+  text-align: right;
+}
+
+/* ── Suggestions ──────────────────────────────── */
+.sugg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sugg-item {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.sugg-high {
+  background: #fef9f9;
+  border-left: 4px solid #e74c3c;
+  color: #2c3e50;
+}
+
+.sugg-med {
+  background: #fffdf5;
+  border-left: 4px solid #f39c12;
+  color: #2c3e50;
+}
+
+.sugg-low {
+  background: #f8fffe;
+  border-left: 4px solid #27ae60;
+  color: #2c3e50;
+}
+
+.priority-badge {
+  background: #fdecea;
+  color: #c0392b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* ── Check verdict ────────────────────────────── */
+.check-verdict {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.check-sub {
+  font-size: 0.82rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 768px) {
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakdown-label {
+    width: 80px;
+  }
+}

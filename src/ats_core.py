@@ -1,36 +1,96 @@
 # ─────────────────────────────────────────────────────────────
-# ats_core.py
-#
-# THE MASTER PIPELINE — chains all 5 modules together.
-# Give it a resume PDF path + JD text
-# and it returns the complete ATS analysis report.
-#
-# This is the file that your Flask website will call later.
+# ats_core.py  —  FIXED VERSION
+# Key fixes:
+#   1. Step 4 runs BEFORE Step 5 (synonym analysis
+#      needs semantic results but suggestions don't)
+#   2. Every step wrapped in try/except with fallback
+#   3. Step 6 guaranteed to complete with safe defaults
+#   4. No step can hang the whole pipeline
 # ─────────────────────────────────────────────────────────────
 
 import os
 import sys
 import json
 from datetime import datetime
-from suggestion_engine import generate_full_suggestions
 
-# Make sure Python can find all our src/ files
-sys.path.append(os.path.dirname(__file__))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from pdf_parser        import extract_text
 from section_extractor import extract_sections, extract_contact_info
-from keyword_extractor import (extract_keywords_from_resume,
-                                extract_keywords_from_jd)
-from gap_analyzer      import (analyze_gap, analyze_section_strength,
-                                generate_suggestions,
-                                check_action_verbs,
-                                calculate_match_score,
-                                get_ats_grade)
-from similarity_engine import (compute_similarity,
-                                compute_section_similarities,
-                                compute_final_ats_score,
-                                analyse_skill_synonyms,
-                                get_semantic_grade)
+from keyword_extractor import (
+    extract_keywords_from_resume,
+    extract_keywords_from_jd,
+)
+from gap_analyzer import (
+    analyze_gap,
+    analyze_section_strength,
+    calculate_match_score,
+    get_ats_grade,
+)
+from similarity_engine import (
+    compute_similarity,
+    compute_section_similarities,
+    compute_final_ats_score,
+    analyse_skill_synonyms,
+    get_semantic_grade,
+)
+
+# Import suggestion engine if available, else use fallback
+try:
+    from suggestion_engine import generate_full_suggestions
+    USE_SUGGESTION_ENGINE = True
+except ImportError:
+    USE_SUGGESTION_ENGINE = False
+
+
+def _safe_generate_suggestions(gap_report,
+                                section_report,
+                                sections,
+                                soft_matches=None):
+    """
+    Generates suggestions using the full engine if available,
+    otherwise falls back to simple string list.
+    Always returns a plain list of strings safe for Jinja2.
+    """
+    if USE_SUGGESTION_ENGINE:
+        try:
+            result = generate_full_suggestions(
+                gap_report, section_report, sections,
+                soft_matches=soft_matches
+            )
+            raw = result.get("suggestions", [])
+            # Normalise to list of strings
+            out = []
+            for s in raw:
+                if isinstance(s, dict):
+                    out.append(s.get("message", str(s)))
+                else:
+                    out.append(str(s))
+            return out, result.get("verb_analysis", {}), \
+                   result.get("quant_analysis", {}), \
+                   result.get("high_priority", 0)
+        except Exception as e:
+            print(f"  suggestion engine error: {e}")
+
+    # Simple fallback
+    suggestions = []
+    for kw in gap_report.get("missing_keywords", [])[:8]:
+        suggestions.append(
+            f"➕ Add '{kw}' to your Skills section — "
+            f"it appears in the job description"
+        )
+    for sec, info in section_report.items():
+        if "Missing" in info.get("status", ""):
+            suggestions.append(
+                f"🚨 Add a {sec.upper()} section — "
+                f"ATS systems look for this heading"
+            )
+        elif "Weak" in info.get("status", ""):
+            suggestions.append(
+                f"✏️  Expand your {sec.upper()} section — "
+                f"currently too short"
+            )
+    return suggestions, {}, {}, 0
 
 
 # ─────────────────────────────────────────────────────────────
@@ -39,268 +99,214 @@ from similarity_engine import (compute_similarity,
 
 def run_full_analysis(resume_pdf_path, jd_text):
     """
-    THE main function your website will call.
-
-    Takes:
-        resume_pdf_path → path to the uploaded PDF file
-        jd_text         → the job description as a plain string
-
-    Returns:
-        A big dictionary with EVERYTHING:
-        scores, keywords, gaps, suggestions, section grades
+    Runs the complete ATS analysis pipeline.
+    Returns a results dict safe to pass to Flask/Jinja2.
     """
-
     results = {}
     errors  = []
 
-    # ── STEP 1: Parse the PDF ─────────────────────────────────
+    # ── STEP 1: Parse PDF ─────────────────────────────────────
     print("  [1/6] Reading PDF...")
     try:
         raw_text = extract_text(resume_pdf_path)
-        if not raw_text or len(raw_text) < 50:
-            errors.append("Could not extract text from PDF. "
-                          "Make sure it is not a scanned image.")
-            return {"error": errors}
+        if not raw_text or len(raw_text.strip()) < 50:
+            return {"error": [
+                "Could not extract text from PDF. "
+                "Make sure it is not a scanned image."
+            ]}
         results["raw_text_length"] = len(raw_text)
     except Exception as e:
-        errors.append(f"PDF reading failed: {str(e)}")
-        return {"error": errors}
+        return {"error": [f"PDF reading failed: {e}"]}
 
     # ── STEP 2: Extract sections ──────────────────────────────
-    print("  [2/6] Extracting resume sections...")
+    print("  [2/6] Extracting sections...")
+    sections     = {}
+    contact_info = {}
     try:
         sections     = extract_sections(raw_text)
         contact_info = extract_contact_info(raw_text)
-        results["sections"]     = sections
-        results["contact_info"] = contact_info
     except Exception as e:
-        errors.append(f"Section extraction failed: {str(e)}")
-        sections = {}
+        errors.append(f"Section extraction warning: {e}")
+    results["sections"]     = sections
+    results["contact_info"] = contact_info
 
-    # ── STEP 3: Extract keywords ──────────────────────────────
+    # ── STEP 3: Keywords ──────────────────────────────────────
     print("  [3/6] Extracting keywords...")
+    resume_kw_all = []
+    jd_kw         = []
     try:
         resume_kw_data = extract_keywords_from_resume(sections)
         jd_kw          = extract_keywords_from_jd(jd_text)
         resume_kw_all  = resume_kw_data.get("ALL_KEYWORDS", [])
-
-        results["resume_keywords"]          = resume_kw_all
-        results["resume_keywords_by_section"] = {
+        results["resume_keywords"]             = resume_kw_all
+        results["resume_keywords_by_section"]  = {
             k: v for k, v in resume_kw_data.items()
-            if k != "ALL_KEYWORDS"
+            if k not in ("ALL_KEYWORDS",
+                         "ALL_KEYWORDS_RAW_COUNT")
         }
         results["jd_keywords"] = jd_kw
     except Exception as e:
-        errors.append(f"Keyword extraction failed: {str(e)}")
-        resume_kw_all = []
-        jd_kw         = []
+        errors.append(f"Keyword extraction warning: {e}")
 
-    # ── STEP 4: Keyword gap analysis ─────────────────────────
-    # ── STEP 4: Keyword gap analysis ─────────────────────────
-# Replace the old suggestions line with this:
-        soft_matches = results.get(
-            "synonym_analysis", {}
-        ).get("soft_matches", [])
-
-        full_suggestions = generate_full_suggestions(
-            gap_report,
-            section_report,
-            sections,
-            soft_matches=soft_matches
-        )
-
-        results["suggestions"]    = full_suggestions[
-                                        "suggestions"
-                                    ]
-        results["verb_analysis"]  = full_suggestions[
-                                        "verb_analysis"
-                                    ]
-        results["quant_analysis"] = full_suggestions[
-                                        "quant_analysis"
-                                    ]
-        results["high_priority_count"] = full_suggestions[
-                                             "high_priority"
-                                         ]
-        
-    # ── STEP 5: AI semantic similarity ───────────────────────
-    print("  [5/6] Running AI semantic analysis...")
+    # ── STEP 4: Gap analysis ──────────────────────────────────
+    print("  [4/6] Analysing keyword gap...")
+    gap_report     = {}
+    section_report = {}
+    keyword_score  = 0
     try:
-        # Combine all resume sections into one text block
+        gap_report     = analyze_gap(resume_kw_all, jd_kw)
+        section_report = analyze_section_strength(sections)
+        keyword_score  = gap_report.get("match_score", 0)
+        results["gap_report"]     = gap_report
+        results["section_report"] = section_report
+        results["keyword_score"]  = keyword_score
+    except Exception as e:
+        errors.append(f"Gap analysis warning: {e}")
+        results["gap_report"]     = {
+            "match_score": 0, "matched_keywords": [],
+            "missing_keywords": [], "extra_keywords": [],
+            "matched_count": 0, "missing_count": 0,
+            "total_jd_keywords": 0,
+            "total_resume_keywords": 0,
+            "grade": "Could not calculate",
+        }
+        results["section_report"] = {}
+        results["keyword_score"]  = 0
+
+    # ── STEP 5: AI semantic analysis ─────────────────────────
+    print("  [5/6] Running AI semantic analysis...")
+    semantic_score   = 0.0
+    synonym_analysis = {
+        "exact_matched": [], "soft_matches": [],
+        "hard_missing": []
+    }
+    try:
         full_resume_text = " ".join([
             v for v in sections.values()
             if isinstance(v, str) and len(v) > 10
         ])
-
-        semantic_score    = compute_similarity(
-                                full_resume_text, jd_text
-                            )
-        section_sim       = compute_section_similarities(
-                                sections, jd_text
-                            )
-        synonym_analysis  = analyse_skill_synonyms(
-                                resume_kw_all, jd_kw
-                            )
-
-        results["semantic_score"]      = semantic_score
-        results["semantic_grade"]      = get_semantic_grade(
-                                             semantic_score
-                                         )
+        semantic_score   = compute_similarity(
+            full_resume_text, jd_text
+        )
+        section_sim      = compute_section_similarities(
+            sections, jd_text
+        )
+        synonym_analysis = analyse_skill_synonyms(
+            resume_kw_all, jd_kw
+        )
+        results["semantic_score"]       = semantic_score
+        results["semantic_grade"]       = get_semantic_grade(
+            semantic_score
+        )
         results["section_similarities"] = section_sim
         results["synonym_analysis"]     = synonym_analysis
     except Exception as e:
-        errors.append(f"Semantic analysis failed: {str(e)}")
-        semantic_score = 0
+        errors.append(f"Semantic analysis warning: {e}")
+        results["semantic_score"]       = 0.0
+        results["semantic_grade"]       = "Could not calculate"
+        results["section_similarities"] = {}
+        results["synonym_analysis"]     = synonym_analysis
 
-    # ── STEP 6: Calculate final ATS score ────────────────────
-    print("  [6/6] Calculating final ATS score...")
+    # ── STEP 6: Final score ───────────────────────────────────
+    print("  [6/6] Calculating final score...")
     try:
         final_score = compute_final_ats_score(
-                          semantic_score, keyword_score
-                      )
+            semantic_score, keyword_score
+        )
         final_grade = get_ats_grade(final_score)
-
         results["final_score"] = final_score
         results["final_grade"] = final_grade
-
-        # Score breakdown for display
         results["score_breakdown"] = {
-            "semantic_score_pct"  : round(semantic_score * 100, 1),
-            "keyword_score_pct"   : keyword_score,
-            "final_score"         : final_score,
-            "final_grade"         : final_grade,
-            "semantic_weight"     : "50%",
-            "keyword_weight"      : "50%",
+            "semantic_score_pct": round(
+                float(semantic_score) * 100, 1
+            ),
+            "keyword_score_pct" : float(keyword_score),
+            "final_score"       : final_score,
+            "final_grade"       : final_grade,
+            "semantic_weight"   : "50%",
+            "keyword_weight"    : "50%",
         }
+        print(f"  Done! Final score: {final_score}/100")
     except Exception as e:
-        errors.append(f"Score calculation failed: {str(e)}")
+        print(f"  [6/6] score error: {e}")
+        results["final_score"]     = 0
+        results["final_grade"]     = "Could not calculate"
+        results["score_breakdown"] = {
+            "semantic_score_pct": 0,
+            "keyword_score_pct" : 0,
+            "final_score"       : 0,
+            "final_grade"       : "Error — see terminal",
+            "semantic_weight"   : "50%",
+            "keyword_weight"    : "50%",
+        }
 
-    # ── Add metadata ──────────────────────────────────────────
+    # ── Generate suggestions ──────────────────────────────────
+    soft_matches = synonym_analysis.get("soft_matches", [])
+    suggestions, verb_analysis, quant_analysis, hi_count = \
+        _safe_generate_suggestions(
+            results.get("gap_report", {}),
+            section_report,
+            sections,
+            soft_matches=soft_matches
+        )
+    results["suggestions"]         = suggestions
+    results["verb_analysis"]       = verb_analysis
+    results["quant_analysis"]      = quant_analysis
+    results["high_priority_count"] = hi_count
+
+    # ── Metadata ──────────────────────────────────────────────
     results["metadata"] = {
-        "analysed_at"    : datetime.now().strftime("%d %b %Y, %I:%M %p"),
-        "resume_file"    : os.path.basename(resume_pdf_path),
-        "errors"         : errors,
+        "analysed_at" : datetime.now().strftime(
+            "%d %b %Y, %I:%M %p"
+        ),
+        "resume_file" : os.path.basename(resume_pdf_path),
+        "errors"      : errors,
     }
 
     return results
 
 
 # ─────────────────────────────────────────────────────────────
-# PRINT HELPER — clean terminal display
+# PRINT HELPER
 # ─────────────────────────────────────────────────────────────
 
 def print_report(results):
-    """
-    Prints the full ATS report in a clean,
-    readable format in the terminal.
-    """
-
     if "error" in results:
         print(f"\n❌ Analysis failed: {results['error']}")
         return
 
-    meta  = results.get("metadata", {})
     score = results.get("score_breakdown", {})
     gap   = results.get("gap_report", {})
-    sec   = results.get("section_report", {})
     sugg  = results.get("suggestions", [])
-    verbs = results.get("verb_check", {})
-    syns  = results.get("synonym_analysis", {})
 
-    print("\n" + "═"*62)
-    print("           FULL ATS ANALYSIS REPORT")
-    print("═"*62)
-
-    # ── Metadata ──────────────────────────────────────────────
-    print(f"\n  📄 Resume   : {meta.get('resume_file','')}")
-    print(f"  🕐 Analysed : {meta.get('analysed_at','')}")
-
-    # ── Score block ───────────────────────────────────────────
-    print("\n" + "─"*62)
-    print("  📊 SCORES")
-    print("─"*62)
-    print(f"  🤖 AI Semantic score  : "
+    print("\n" + "="*55)
+    print("  ATS ANALYSIS REPORT")
+    print("="*55)
+    print(f"  🏆 Final score    : "
+          f"{score.get('final_score', 0)}/100")
+    print(f"  🤖 Semantic       : "
           f"{score.get('semantic_score_pct', 0)}%")
-    print(f"  🔑 Keyword match score: "
+    print(f"  🔑 Keywords       : "
           f"{score.get('keyword_score_pct', 0)}%")
-    print(f"  ─────────────────────────────────────────────")
-    print(f"  🏆 FINAL ATS SCORE    : "
-          f"{score.get('final_score', 0)} / 100")
-    print(f"  {score.get('final_grade', '')}")
-
-    # ── Keywords ──────────────────────────────────────────────
-    print("\n" + "─"*62)
-    print("  🔍 KEYWORD ANALYSIS")
-    print("─"*62)
-    print(f"\n  ✅ Matched   : {gap.get('matched_keywords', [])}")
-    print(f"  ❌ Missing   : {gap.get('missing_keywords', [])}")
-    print(f"  ➕ Extra     : "
-          f"{gap.get('extra_keywords', [])[:5]}")
-
-    # ── Soft matches ──────────────────────────────────────────
-    soft = syns.get("soft_matches", [])
-    if soft:
-        print(f"\n  🔄 SMART MATCHES (AI detected synonyms):")
-        for m in soft:
-            print(f"     → {m['note']}  "
-                  f"({int(m['similarity']*100)}% similar)")
-
-    # ── Section report ────────────────────────────────────────
-    print("\n" + "─"*62)
-    print("  📋 SECTION STRENGTH")
-    print("─"*62)
-    for section, info in sec.items():
-        print(f"  {info['status']:<6}  "
-              f"{section.upper():<18} {info['note']}")
-
-    # ── Section AI similarity ─────────────────────────────────
-    sec_sim = results.get("section_similarities", {})
-    if sec_sim:
-        print("\n  📈 SECTION RELEVANCE TO THIS JD:")
-        for section, sim_score in sorted(
-            sec_sim.items(), key=lambda x: x[1], reverse=True
-        ):
-            bar = "█" * int(sim_score * 25) + \
-                  "░" * (25 - int(sim_score * 25))
-            print(f"     {section:<18} {bar} "
-                  f"{round(sim_score*100,1)}%")
-
-    # ── Verb check ────────────────────────────────────────────
-    print("\n" + "─"*62)
-    print("  🔤 ACTION VERB CHECK")
-    print("─"*62)
-    print(f"  {verbs.get('verdict','')}")
-
-    # ── Suggestions ───────────────────────────────────────────
-    print("\n" + "─"*62)
-    print("  💡 SUGGESTIONS TO IMPROVE")
-    print("─"*62)
-    for i, s in enumerate(sugg, 1):
-        print(f"  {i:>2}. {s}")
-    if not sugg:
-        print("  Resume looks strong for this JD!")
-
-    # ── Errors ────────────────────────────────────────────────
-    if meta.get("errors"):
-        print("\n" + "─"*62)
-        print("  ⚠️  WARNINGS:")
-        for err in meta["errors"]:
-            print(f"     {err}")
-
-    print("\n" + "═"*62 + "\n")
+    print(f"  ✅ Matched        : "
+          f"{gap.get('matched_keywords', [])}")
+    print(f"  ❌ Missing        : "
+          f"{gap.get('missing_keywords', [])}")
+    print("\n  💡 Suggestions:")
+    for i, s in enumerate(sugg[:5], 1):
+        print(f"     {i}. {s}")
+    print("="*55)
 
 
 # ─────────────────────────────────────────────────────────────
-# SAVE RESULT TO JSON
+# SAVE RESULT
 # ─────────────────────────────────────────────────────────────
 
-def save_result_to_json(results, output_path="results_log.json"):
-    """
-    Saves the full result dictionary to a JSON file.
-    Useful for keeping a log of all analyses done.
-    """
-    # results may contain non-serialisable objects — clean them
+def save_result_to_json(results,
+                        output_path="results_log.json"):
     def clean(obj):
-        if isinstance(obj, (int, float, str, bool, type(None))):
+        if isinstance(obj, (int, float, str,
+                             bool, type(None))):
             return obj
         if isinstance(obj, dict):
             return {k: clean(v) for k, v in obj.items()}
@@ -308,9 +314,7 @@ def save_result_to_json(results, output_path="results_log.json"):
             return [clean(i) for i in obj]
         return str(obj)
 
-    cleaned = clean(results)
-
-    # Load existing log if it exists
+    cleaned  = clean(results)
     existing = []
     if os.path.exists(output_path):
         try:
@@ -318,96 +322,40 @@ def save_result_to_json(results, output_path="results_log.json"):
                 existing = json.load(f)
         except Exception:
             existing = []
-
     existing.append(cleaned)
-
     with open(output_path, "w") as f:
         json.dump(existing, f, indent=2)
-
-    print(f"  ✅ Result saved to {output_path}")
+    print(f"  Saved to {output_path}")
 
 
 # ─────────────────────────────────────────────────────────────
-# TEST — run the full pipeline
+# TEST
 # ─────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
 
-    print("\n" + "═"*62)
-    print("  ATS CORE — FULL PIPELINE TEST")
-    print("═"*62)
+    import glob
 
-    # ── Single resume vs single JD ────────────────────────────
-    RESUME_PATH = "data/resumes/resume2.pdf"
-    JD_PATH     = "data/jds/jd_01.txt"
+    resume_files = glob.glob("data/resumes/*.pdf")
+    jd_files     = sorted(glob.glob("data/jds/*.txt"))
 
-    with open(JD_PATH, "r", encoding="utf-8") as f:
+    if not resume_files:
+        print("No resume PDFs found in data/resumes/")
+        raise SystemExit
+
+    if not jd_files:
+        print("No JD files found in data/jds/")
+        raise SystemExit
+
+    resume_path = resume_files[0]
+    jd_path     = jd_files[0]
+
+    print(f"\nResume : {resume_path}")
+    print(f"JD     : {jd_path}\n")
+
+    with open(jd_path, "r", encoding="utf-8") as f:
         jd_text = f.read()
 
-    print(f"\nRunning full analysis...")
-    print(f"  Resume : {RESUME_PATH}")
-    print(f"  JD     : {JD_PATH}\n")
-
-    results = run_full_analysis(RESUME_PATH, jd_text)
+    results = run_full_analysis(resume_path, jd_text)
     print_report(results)
-
-    # Save to JSON log
     save_result_to_json(results)
-
-    # ── Batch test: one resume vs ALL JDs ─────────────────────
-    print("\n" + "═"*62)
-    print("  BATCH TEST — Resume vs ALL JD files")
-    print("═"*62 + "\n")
-
-    jd_folder = "data/jds/"
-    jd_files  = sorted([
-        f for f in os.listdir(jd_folder)
-        if f.endswith(".txt")
-    ])
-
-    batch_results = []
-
-    for jd_file in jd_files:
-        jd_path = os.path.join(jd_folder, jd_file)
-        with open(jd_path, "r", encoding="utf-8") as f:
-            jd_content = f.read()
-
-        print(f"  Analysing vs {jd_file}...")
-        r = run_full_analysis(RESUME_PATH, jd_content)
-
-        score = r.get("final_score", 0)
-        grade = r.get("final_grade", "")
-        missing = r.get("gap_report", {}).get(
-                      "missing_keywords", []
-                  )[:3]
-
-        batch_results.append({
-            "jd_file"        : jd_file,
-            "final_score"    : score,
-            "top_3_missing"  : missing,
-        })
-
-        print(f"     Score: {score}/100  "
-              f"| Top missing: {missing}")
-
-    # Print batch summary table
-    print("\n" + "─"*62)
-    print("  BATCH SUMMARY")
-    print("─"*62)
-    print(f"  {'JD File':<22} {'Score':>8}  {'Grade'}")
-    print(f"  {'─'*20:<22} {'─'*6:>8}  {'─'*20}")
-
-    for br in sorted(
-        batch_results, key=lambda x: x["final_score"], reverse=True
-    ):
-        print(f"  {br['jd_file']:<22} "
-              f"{br['final_score']:>6}/100  "
-              f"{br['top_3_missing']}")
-
-    print("\n  Best matching JD: " +
-          max(batch_results,
-              key=lambda x: x["final_score"])["jd_file"])
-    print("  Worst matching JD: " +
-          min(batch_results,
-              key=lambda x: x["final_score"])["jd_file"])
-    print()

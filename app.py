@@ -1,42 +1,40 @@
 # ─────────────────────────────────────────────────────────────
-# app.py  —  Flask website for the ATS Resume Analyzer
-#
-# Routes:
-#   GET  /          → home page (upload form)
-#   POST /analyze   → runs analysis, shows results
-#   GET  /result    → results page
-#   GET  /about     → about the project
+# app.py  —  FIXED VERSION
+# Key fixes:
+#   1. sys.path uses abspath so it works from any directory
+#   2. clean_results_for_template is bulletproof
+#   3. Every key has a safe default — no KeyError in Jinja2
+#   4. Dark mode CSS variable support added
 # ─────────────────────────────────────────────────────────────
 
 import os
 import sys
 import uuid
-from flask import (Flask, render_template, request,
-                   redirect, url_for, session, flash,
-                   jsonify)
-from werkzeug.utils import secure_filename
 
-# So Flask can find our src/ modules
+# ── MUST be before src imports ────────────────────────────────
 sys.path.insert(0, os.path.join(
-    os.path.dirname(__file__), 'src'
+    os.path.dirname(os.path.abspath(__file__)), 'src'
 ))
 
+from flask import (
+    Flask, render_template, request,
+    redirect, url_for, flash, jsonify,
+)
+from werkzeug.utils import secure_filename
 from ats_core import run_full_analysis
 
-# ── App config ────────────────────────────────────────────────
 app = Flask(__name__)
-app.secret_key = "ats_analyzer_secret_key_2026"
+app.secret_key = "resumeiq_secret_2026_change_in_prod"
 
-UPLOAD_FOLDER   = "uploads"
+UPLOAD_FOLDER      = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "uploads"
+)
 ALLOWED_EXTENSIONS = {"pdf"}
+app.config["UPLOAD_FOLDER"]      = UPLOAD_FOLDER
+app.config["MAX_CONTENT_LENGTH"] = 5 * 1024 * 1024  # 5 MB
 
-app.config["UPLOAD_FOLDER"]    = UPLOAD_FOLDER
-app.config["MAX_CONTENT_LENGTH"] = 5 * 1024 * 1024  # 5MB max
 
-
-# ── Helper ────────────────────────────────────────────────────
 def allowed_file(filename):
-    """Check if uploaded file is a PDF."""
     return (
         "." in filename and
         filename.rsplit(".", 1)[1].lower()
@@ -44,223 +42,246 @@ def allowed_file(filename):
     )
 
 
-def clean_results_for_template(results):
-    """
-    Makes the results dictionary safe to
-    pass into HTML templates.
-    Converts any non-serialisable objects to strings.
-    """
-    cleaned = {}
+def safe_get(d, *keys, default=None):
+    """Safely traverse nested dict without KeyError."""
+    for k in keys:
+        if not isinstance(d, dict):
+            return default
+        d = d.get(k, default)
+    return d if d is not None else default
 
-    # Score breakdown
-    score_bd = results.get("score_breakdown", {})
-    cleaned["final_score"]     = score_bd.get(
-        "final_score", 0
+
+def clean_results_for_template(raw):
+    """
+    Converts the raw pipeline output into a flat dict
+    that is 100% safe to pass to Jinja2 templates.
+    Every key has a typed default — no missing variables.
+    """
+    r = {}
+
+    # ── Scores ────────────────────────────────────────────────
+    sb = safe_get(raw, "score_breakdown", default={})
+    r["final_score"]    = float(
+        safe_get(sb, "final_score", default=0) or 0
     )
-    cleaned["semantic_score"]  = score_bd.get(
-        "semantic_score_pct", 0
+    r["semantic_score"] = float(
+        safe_get(sb, "semantic_score_pct", default=0) or 0
     )
-    cleaned["keyword_score"]   = score_bd.get(
-        "keyword_score_pct", 0
+    r["keyword_score"]  = float(
+        safe_get(sb, "keyword_score_pct", default=0) or 0
     )
-    cleaned["final_grade"]     = results.get(
-        "final_grade", ""
+    r["final_grade"]    = str(
+        safe_get(raw, "final_grade",
+                 default="Analysis complete") or ""
     )
 
-    # Determine score colour for UI
-    score = cleaned["final_score"]
-    if score >= 75:
-        cleaned["score_colour"] = "#27AE60"   # green
-        cleaned["score_label"]  = "Strong Match"
-    elif score >= 50:
-        cleaned["score_colour"] = "#F39C12"   # amber
-        cleaned["score_label"]  = "Average Match"
+    # Score colour + label
+    sc = r["final_score"]
+    if sc >= 75:
+        r["score_colour"] = "#16A34A"
+        r["score_label"]  = "Strong Match"
+    elif sc >= 50:
+        r["score_colour"] = "#D97706"
+        r["score_label"]  = "Average Match"
     else:
-        cleaned["score_colour"] = "#E74C3C"   # red
-        cleaned["score_label"]  = "Needs Work"
+        r["score_colour"] = "#DC2626"
+        r["score_label"]  = "Needs Work"
 
-    # Keywords
-    gap = results.get("gap_report", {})
-    cleaned["matched_keywords"] = gap.get(
-        "matched_keywords", []
+    # ── Keywords ──────────────────────────────────────────────
+    gap = safe_get(raw, "gap_report", default={})
+    r["matched_keywords"] = list(
+        safe_get(gap, "matched_keywords", default=[]) or []
     )
-    cleaned["missing_keywords"] = gap.get(
-        "missing_keywords", []
+    r["missing_keywords"] = list(
+        safe_get(gap, "missing_keywords", default=[]) or []
     )
-    cleaned["extra_keywords"]   = gap.get(
-        "extra_keywords", []
+    r["extra_keywords"]   = list(
+        safe_get(gap, "extra_keywords", default=[]) or []
     )[:8]
-    cleaned["matched_count"]    = gap.get(
-        "matched_count", 0
+    r["matched_count"]    = int(
+        safe_get(gap, "matched_count", default=0) or 0
     )
-    cleaned["missing_count"]    = gap.get(
-        "missing_count", 0
-    )
-
-    # Smart synonym matches
-    syns = results.get("synonym_analysis", {})
-    cleaned["soft_matches"] = syns.get(
-        "soft_matches", []
+    r["missing_count"]    = int(
+        safe_get(gap, "missing_count", default=0) or 0
     )
 
-    # Section report
-    sec = results.get("section_report", {})
-    cleaned["section_report"] = sec
+    # ── Soft / synonym matches ────────────────────────────────
+    syns = safe_get(raw, "synonym_analysis", default={})
+    raw_soft = safe_get(syns, "soft_matches", default=[])
+    r["soft_matches"] = [
+        {
+            "resume_keyword": str(
+                m.get("resume_keyword", "")
+            ),
+            "jd_keyword"    : str(m.get("jd_keyword", "")),
+            "similarity"    : float(
+                m.get("similarity", 0) or 0
+            ),
+            "note"          : str(m.get("note", "")),
+        }
+        for m in (raw_soft or [])
+        if isinstance(m, dict)
+    ]
 
-    # Section similarities (bar chart data)
-    sec_sim = results.get("section_similarities", {})
-    cleaned["section_similarities"] = {
-        k: round(v * 100, 1)
-        for k, v in sec_sim.items()
+    # ── Section report ────────────────────────────────────────
+    raw_sec = safe_get(raw, "section_report", default={})
+    r["section_report"] = {
+        str(k): {
+            "status": str(
+                v.get("status", "") if isinstance(v, dict)
+                else ""
+            ),
+            "length": int(
+                v.get("length", 0) if isinstance(v, dict)
+                else 0
+            ),
+            "note"  : str(
+                v.get("note", "") if isinstance(v, dict)
+                else str(v)
+            ),
+        }
+        for k, v in (raw_sec or {}).items()
     }
 
-    # Suggestions
-    sugg_data = results.get("suggestions", [])
-    if isinstance(sugg_data, list):
-        # Could be list of dicts or list of strings
-        if sugg_data and isinstance(sugg_data[0], dict):
-            cleaned["suggestions"] = [
-                s.get("message", str(s))
-                for s in sugg_data
-            ]
-        else:
-            cleaned["suggestions"] = sugg_data
+    # ── Section similarities ──────────────────────────────────
+    raw_sim = safe_get(
+        raw, "section_similarities", default={}
+    )
+    r["section_similarities"] = {
+        str(k): round(float(v or 0) * 100, 1)
+        for k, v in (raw_sim or {}).items()
+    }
+
+    # ── Suggestions ───────────────────────────────────────────
+    raw_sugg = safe_get(raw, "suggestions", default=[])
+    if isinstance(raw_sugg, list):
+        r["suggestions"] = [
+            str(s.get("message", s))
+            if isinstance(s, dict) else str(s)
+            for s in raw_sugg
+        ]
     else:
-        cleaned["suggestions"] = []
+        r["suggestions"] = []
 
-    cleaned["high_priority_count"] = results.get(
-        "high_priority_count", 0
+    r["high_priority_count"] = int(
+        safe_get(raw, "high_priority_count", default=0)
+        or 0
     )
 
-    # Verb analysis
-    verb = results.get("verb_analysis", {})
-    cleaned["verb_verdict"]  = verb.get(
-        "overall_verdict", ""
+    # ── Verb analysis ─────────────────────────────────────────
+    verb = safe_get(raw, "verb_analysis", default={})
+    r["verb_verdict"]  = str(
+        safe_get(verb, "overall_verdict", default="") or ""
     )
-    cleaned["weak_verbs"]    = verb.get("weak_found", [])
-    cleaned["strong_verbs"]  = verb.get("strong_found", [])
-
-    # Quantification
-    quant = results.get("quant_analysis", {})
-    cleaned["quant_verdict"] = quant.get("verdict", "")
-
-    # Contact info
-    contact = results.get("contact_info", {})
-    cleaned["contact_info"] = contact
-
-    # Resume filename
-    meta = results.get("metadata", {})
-    cleaned["resume_filename"] = meta.get(
-        "resume_file", "resume.pdf"
+    r["weak_verbs"]    = list(
+        safe_get(verb, "weak_found", default=[]) or []
     )
-    cleaned["analysed_at"] = meta.get("analysed_at", "")
+    r["strong_verbs"]  = list(
+        safe_get(verb, "strong_found", default=[]) or []
+    )
 
-    return cleaned
+    # ── Quantification ────────────────────────────────────────
+    quant = safe_get(raw, "quant_analysis", default={})
+    r["quant_verdict"] = str(
+        safe_get(quant, "verdict", default="") or ""
+    )
+
+    # ── Metadata ──────────────────────────────────────────────
+    meta = safe_get(raw, "metadata", default={})
+    r["resume_filename"] = str(
+        safe_get(meta, "resume_file",
+                 default="resume.pdf") or "resume.pdf"
+    )
+    r["analysed_at"] = str(
+        safe_get(meta, "analysed_at", default="") or ""
+    )
+
+    return r
 
 
 # ── ROUTES ────────────────────────────────────────────────────
 
 @app.route("/")
 def home():
-    """Home page — shows the upload form."""
     return render_template("index.html")
 
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
-    """
-    Handles the form submission.
-    1. Gets uploaded PDF
-    2. Gets JD text
-    3. Runs full analysis
-    4. Passes results to result.html
-    """
-
-    # ── Validate PDF upload ───────────────────────────────────
+    # Validate file
     if "resume" not in request.files:
-        flash("Please upload a resume PDF file.")
+        flash("Please upload a resume PDF.")
         return redirect(url_for("home"))
 
-    file = request.files["resume"]
-
-    if file.filename == "":
-        flash("No file selected. Please choose a PDF.")
+    f = request.files["resume"]
+    if not f or f.filename == "":
+        flash("No file selected.")
         return redirect(url_for("home"))
 
-    if not allowed_file(file.filename):
+    if not allowed_file(f.filename):
         flash("Only PDF files are allowed.")
         return redirect(url_for("home"))
 
-    # ── Validate JD text ──────────────────────────────────────
+    # Validate JD text
     jd_text = request.form.get("jd_text", "").strip()
-
     if len(jd_text) < 50:
         flash("Please paste a job description "
               "(at least 50 characters).")
         return redirect(url_for("home"))
 
-    # ── Save uploaded PDF ─────────────────────────────────────
-    # Give it a unique name so multiple users don't clash
-    original_name  = secure_filename(file.filename)
-    unique_name    = f"{uuid.uuid4().hex}_{original_name}"
-    save_path      = os.path.join(
-        app.config["UPLOAD_FOLDER"], unique_name
-    )
+    # Save PDF
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+    safe_name   = secure_filename(f.filename)
+    unique_name = f"{uuid.uuid4().hex}_{safe_name}"
+    save_path   = os.path.join(UPLOAD_FOLDER, unique_name)
+    f.save(save_path)
 
-    os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
-    file.save(save_path)
-
-    # ── Run the full ATS analysis ─────────────────────────────
+    # Run pipeline
     try:
-        print(f"\n[WEB] Analysing: {original_name}")
-        raw_results = run_full_analysis(save_path, jd_text)
+        print(f"\n[WEB] Analysing: {safe_name}")
+        raw = run_full_analysis(save_path, jd_text)
 
-        if "error" in raw_results:
-            flash(f"Analysis error: {raw_results['error']}")
+        if "error" in raw:
+            flash(f"Analysis failed: {raw['error']}")
             return redirect(url_for("home"))
 
-        # Clean results for template
-        results = clean_results_for_template(raw_results)
+        cleaned = clean_results_for_template(raw)
 
     except Exception as e:
-        flash(f"Something went wrong: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        flash(f"Something went wrong: {e}")
         return redirect(url_for("home"))
 
     finally:
-        # Delete the uploaded file after analysis
         if os.path.exists(save_path):
-            os.remove(save_path)
+            try:
+                os.remove(save_path)
+            except Exception:
+                pass
 
-    return render_template("result.html", **results)
+    return render_template("result.html", **cleaned)
 
 
 @app.route("/about")
 def about():
-    """About page — explains the project."""
     return render_template("about.html")
 
 
 @app.route("/health")
 def health():
-    """
-    Simple health check endpoint.
-    Useful to confirm the server is running.
-    """
     return jsonify({
-        "status" : "running",
-        "project": "ATS Resume Analyzer",
-        "author" : "Anushka Gangwal",
-        "version": "1.0"
+        "status" : "ok",
+        "project": "ResumeIQ",
+        "version": "1.0",
     })
 
 
-# ── Run the app ───────────────────────────────────────────────
 if __name__ == "__main__":
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    print("\n" + "="*50)
-    print("  ATS Resume Analyzer — Web Server")
-    print("="*50)
-    print("  Open your browser and go to:")
+    print("\n" + "=" * 50)
+    print("  ResumeIQ — Web Server")
+    print("=" * 50)
     print("  http://localhost:5000")
-    print("="*50 + "\n")
+    print("=" * 50 + "\n")
     app.run(debug=True, host="0.0.0.0", port=5000)

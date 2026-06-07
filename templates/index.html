@@ -1,221 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,
-        initial-scale=1.0">
-  <title>ATS Resume Analyzer</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeIQ — ATS Resume Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0A0F1E;--navy2:#111827;--blue:#2563EB;--blue2:#1D4ED8;
+  --blue-light:#EFF6FF;--blue-mid:#BFDBFE;
+  --green:#16A34A;--green-light:#F0FDF4;--green-mid:#BBF7D0;
+  --red:#DC2626;--red-light:#FEF2F2;
+  --amber:#D97706;--amber-light:#FFFBEB;
+  --gray1:#F9FAFB;--gray2:#F3F4F6;--gray3:#E5E7EB;
+  --gray4:#9CA3AF;--gray5:#6B7280;--gray6:#374151;--gray7:#111827;
+  --white:#FFFFFF;--radius:8px;--radius-lg:12px;--radius-xl:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--gray7);line-height:1.6}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray3);padding:0 2rem}
+.nav-inner{max-width:1100px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.15rem;color:var(--navy);text-decoration:none}
+.nav-brand-dot{width:8px;height:8px;background:var(--blue);border-radius:50%}
+.nav-links{display:flex;align-items:center;gap:0.25rem}
+.nav-links a{color:var(--gray5);font-size:0.9rem;font-weight:500;padding:0.5rem 0.875rem;border-radius:var(--radius);text-decoration:none;transition:all 0.15s}
+.nav-links a:hover{color:var(--gray7);background:var(--gray2)}
+.nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem!important;border-radius:var(--radius)!important}
+.nav-cta:hover{background:var(--blue2)!important}
+
+/* HERO */
+.hero{padding:5rem 2rem 4rem;text-align:center;background:var(--white)}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--blue-light);color:var(--blue);font-size:0.78rem;font-weight:600;padding:5px 12px;border-radius:20px;margin-bottom:1.5rem;border:1px solid var(--blue-mid)}
+.hero h1{font-size:3rem;font-weight:700;line-height:1.2;color:var(--navy);margin-bottom:1.25rem;max-width:720px;margin-left:auto;margin-right:auto}
+.hero h1 span{color:var(--blue)}
+.hero-sub{font-size:1.1rem;color:var(--gray5);max-width:580px;margin:0 auto 2.5rem;line-height:1.75}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--blue);color:var(--white);font-weight:600;font-size:1rem;padding:0.875rem 2rem;border-radius:var(--radius);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.15s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-1px)}
+.btn-ghost{color:var(--gray6);font-weight:500;font-size:0.95rem;padding:0.875rem 1.5rem;border-radius:var(--radius);text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--gray3);transition:all 0.15s}
+.btn-ghost:hover{background:var(--gray2)}
+.hero-stats{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--gray3);flex-wrap:wrap}
+.hero-stat-num{font-size:1.75rem;font-weight:700;color:var(--navy)}
+.hero-stat-label{font-size:0.82rem;color:var(--gray5);margin-top:2px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--gray1);border-top:1px solid var(--gray3);border-bottom:1px solid var(--gray3);padding:1.25rem 2rem;text-align:center}
+.trust-label{font-size:0.78rem;color:var(--gray4);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.875rem}
+.trust-items{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.trust-item{font-size:0.88rem;color:var(--gray5);font-weight:500;display:flex;align-items:center;gap:6px}
+.trust-item i{color:var(--blue);font-size:16px}
+
+/* UPLOAD SECTION */
+.upload-section{padding:4rem 2rem;background:var(--white)}
+.upload-inner{max-width:960px;margin:0 auto}
+.section-eyebrow{font-size:0.78rem;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;text-align:center}
+.section-title{font-size:1.875rem;font-weight:700;color:var(--navy);text-align:center;margin-bottom:0.75rem}
+.section-sub{font-size:1rem;color:var(--gray5);text-align:center;max-width:520px;margin:0 auto 2.5rem}
+.upload-form{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.form-panel{background:var(--white);border:1.5px solid var(--gray3);border-radius:var(--radius-xl);padding:1.5rem;transition:border-color 0.2s}
+.form-panel:focus-within{border-color:var(--blue)}
+.panel-label{font-size:0.8rem;font-weight:600;color:var(--gray5);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem;display:flex;align-items:center;gap:6px}
+.panel-label i{font-size:16px;color:var(--blue)}
+.drop-zone{border:2px dashed var(--gray3);border-radius:var(--radius-lg);padding:2rem 1rem;text-align:center;cursor:pointer;transition:all 0.2s;background:var(--gray1);position:relative}
+.drop-zone:hover,.drop-zone.dragging{border-color:var(--blue);background:var(--blue-light)}
+.drop-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.drop-icon{width:44px;height:44px;background:var(--blue-light);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin:0 auto 0.875rem;font-size:20px;color:var(--blue)}
+.drop-title{font-size:0.95rem;font-weight:600;color:var(--gray6);margin-bottom:4px}
+.drop-hint{font-size:0.8rem;color:var(--gray4)}
+.file-chosen{display:none;align-items:center;gap:8px;background:var(--green-light);border:1px solid var(--green-mid);border-radius:var(--radius);padding:0.625rem 0.875rem;margin-top:0.875rem;font-size:0.85rem;color:var(--green);font-weight:500}
+.file-chosen i{font-size:16px}
+textarea{width:100%;min-height:200px;border:none;outline:none;resize:vertical;font-family:inherit;font-size:0.9rem;color:var(--gray7);line-height:1.6;background:transparent}
+textarea::placeholder{color:var(--gray4)}
+.char-bar{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;border-top:1px solid var(--gray3);margin-top:0.5rem}
+.char-count{font-size:0.78rem;color:var(--gray4)}
+.char-ok{color:var(--green);font-size:0.78rem;font-weight:500;display:none}
+.submit-area{grid-column:1/-1;text-align:center;padding:0.5rem 0}
+.submit-btn{background:var(--blue);color:var(--white);font-weight:600;font-size:1.05rem;padding:1rem 3rem;border-radius:var(--radius-lg);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:all 0.15s;box-shadow:0 1px 3px rgba(37,99,235,0.3)}
+.submit-btn:hover:not(:disabled){background:var(--blue2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,0.3)}
+.submit-btn:disabled{background:var(--gray3);color:var(--gray4);cursor:not-allowed;transform:none;box-shadow:none}
+.submit-note{font-size:0.8rem;color:var(--gray4);margin-top:0.625rem}
+.flash{background:var(--red-light);border:1px solid #FECACA;color:var(--red);border-radius:var(--radius);padding:0.75rem 1rem;font-size:0.875rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:8px}
+
+/* HOW IT WORKS */
+.how-section{padding:5rem 2rem;background:var(--gray1);border-top:1px solid var(--gray3)}
+.how-inner{max-width:960px;margin:0 auto}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.step{background:var(--white);border:1px solid var(--gray3);border-radius:var(--radius-xl);padding:1.5rem;position:relative}
+.step-num{width:32px;height:32px;background:var(--blue);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:700;margin-bottom:1rem}
+.step h3{font-size:0.95rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
+.step p{font-size:0.82rem;color:var(--gray5);line-height:1.6}
+
+/* WHY SECTION */
+.why-section{padding:5rem 2rem;background:var(--white)}
+.why-inner{max-width:960px;margin:0 auto}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.feature{padding:1.5rem}
+.feature-icon{width:40px;height:40px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:1rem}
+.feature-icon.blue{background:var(--blue-light);color:var(--blue)}
+.feature-icon.green{background:var(--green-light);color:var(--green)}
+.feature-icon.amber{background:var(--amber-light);color:var(--amber)}
+.feature h3{font-size:0.95rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
+.feature p{font-size:0.85rem;color:var(--gray5);line-height:1.65}
+
+/* COMPARE TABLE */
+.compare-section{padding:5rem 2rem;background:var(--gray1);border-top:1px solid var(--gray3)}
+.compare-inner{max-width:860px;margin:0 auto}
+.compare-table{width:100%;border-collapse:collapse;margin-top:2rem;background:var(--white);border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--gray3)}
+.compare-table th{padding:1rem 1.25rem;font-size:0.82rem;font-weight:600;color:var(--gray5);text-align:left;background:var(--gray1);border-bottom:1px solid var(--gray3)}
+.compare-table th.highlight{background:var(--blue);color:var(--white)}
+.compare-table td{padding:0.875rem 1.25rem;font-size:0.88rem;color:var(--gray6);border-bottom:1px solid var(--gray3)}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table td.highlight{background:var(--blue-light);color:var(--blue);font-weight:600}
+.check-y{color:var(--green)}
+.check-n{color:var(--gray4)}
+
+/* FAQ */
+.faq-section{padding:5rem 2rem;background:var(--white)}
+.faq-inner{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--gray3);padding:1.25rem 0}
+.faq-q{font-size:0.95rem;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-q i{color:var(--gray4);font-size:18px;flex-shrink:0;transition:transform 0.2s}
+.faq-a{font-size:0.88rem;color:var(--gray5);line-height:1.7;margin-top:0.75rem;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+
+/* FOOTER */
+footer{background:var(--navy);padding:3rem 2rem;color:#9CA3AF;font-size:0.85rem}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.footer-brand{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem}
+.footer-copy{font-size:0.8rem;color:#6B7280;margin-top:0.5rem}
+.footer-links{display:flex;flex-direction:column;gap:0.4rem}
+.footer-links a{color:#9CA3AF;text-decoration:none;font-size:0.85rem;transition:color 0.15s}
+.footer-links a:hover{color:var(--white)}
+.footer-col h4{font-size:0.8rem;font-weight:600;color:var(--white);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
+
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .upload-form,.steps-grid,.features-grid{grid-template-columns:1fr}
+  .submit-area{grid-column:1}
+  .nav-links .btn-ghost{display:none}
+}
+</style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-logo">
-        📄 ATS Analyzer
-      </div>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-      </div>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-dot"></div>
+      ResumeIQ
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#why">Why ResumeIQ</a>
+      <a href="#faq">FAQ</a>
+      <a href="#analyze" class="nav-cta">Analyze free</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero section -->
-  <header class="hero">
-    <div class="hero-inner">
-      <h1>ATS Resume Analyzer</h1>
-      <p class="hero-sub">
-        Upload your resume and paste a job description.
-        Get an AI-powered ATS compatibility score,
-        keyword gap report, and specific suggestions
-        to improve your chances.
-      </p>
-      <div class="badges">
-        <span class="badge">🤖 AI Semantic Matching</span>
-        <span class="badge">🔑 Keyword Analysis</span>
-        <span class="badge">💡 Smart Suggestions</span>
-        <span class="badge">🇮🇳 India JD Trained</span>
-      </div>
-    </div>
-  </header>
+<section class="hero">
+  <div class="hero-badge">
+    <i class="ti ti-sparkles" aria-hidden="true"></i>
+    AI-powered · India job market trained
+  </div>
+  <h1>Is your resume getting past the <span>ATS filter?</span></h1>
+  <p class="hero-sub">Upload your resume and a job description. Get your ATS compatibility score, keyword gap report, and specific suggestions to improve your chances — in under 30 seconds.</p>
+  <div class="hero-actions">
+    <a href="#analyze" class="btn-primary">
+      <i class="ti ti-bolt" aria-hidden="true"></i>
+      Check my resume free
+    </a>
+    <a href="#how-it-works" class="btn-ghost">
+      <i class="ti ti-play" aria-hidden="true"></i>
+      See how it works
+    </a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="hero-stat-num">88%</div><div class="hero-stat-label">of employers say ATS filters qualified candidates</div></div>
+    <div style="width:1px;height:40px;background:var(--gray3)"></div>
+    <div><div class="hero-stat-num">10M+</div><div class="hero-stat-label">workers hidden from jobs by ATS systems (Harvard, 2021)</div></div>
+    <div style="width:1px;height:40px;background:var(--gray3)"></div>
+    <div><div class="hero-stat-num">150+</div><div class="hero-stat-label">Indian JD skill mappings in our normalization engine</div></div>
+  </div>
+</section>
 
-  <!-- Flash messages (errors) -->
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <div class="flash-wrap">
+<div class="trust-bar">
+  <div class="trust-label">Built for Indian job seekers — trained on real Naukri & LinkedIn JDs</div>
+  <div class="trust-items">
+    <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i>No account required</span>
+    <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i>Resume never stored</span>
+    <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i>AI semantic matching</span>
+    <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i>Works on any JD</span>
+  </div>
+</div>
+
+<section class="upload-section" id="analyze">
+  <div class="upload-inner">
+    <div class="section-eyebrow">Free ATS checker</div>
+    <h2 class="section-title">Analyze your resume now</h2>
+    <p class="section-sub">No signup. No credit card. Your PDF is deleted immediately after analysis.</p>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
         {% for msg in messages %}
-          <div class="flash-msg">⚠️  {{ msg }}</div>
+          <div class="flash"><i class="ti ti-alert-circle" aria-hidden="true"></i>{{ msg }}</div>
         {% endfor %}
-      </div>
-    {% endif %}
-  {% endwith %}
+      {% endif %}
+    {% endwith %}
 
-  <!-- Main upload form -->
-  <main class="main-wrap">
-    <form action="/analyze"
-          method="POST"
-          enctype="multipart/form-data"
-          class="upload-form">
-
-      <!-- Left: PDF upload -->
-      <div class="form-card">
-        <div class="card-header">
-          <span class="card-icon">📄</span>
-          <h2>Upload Your Resume</h2>
+    <form action="/analyze" method="POST" enctype="multipart/form-data" class="upload-form" id="main-form">
+      <div class="form-panel">
+        <div class="panel-label">
+          <i class="ti ti-file-text" aria-hidden="true"></i>
+          Your resume
         </div>
-        <p class="card-desc">
-          PDF format only. Max 5MB.
-        </p>
-        <div class="upload-area" id="upload-area">
-          <input type="file"
-                 name="resume"
-                 id="resume-input"
-                 accept=".pdf"
-                 required>
-          <label for="resume-input"
-                 class="upload-label"
-                 id="upload-label">
-            <span class="upload-icon">⬆️</span><br>
-            <span class="upload-text">
-              Click to choose PDF
-            </span><br>
-            <span class="upload-hint">
-              or drag and drop here
-            </span>
-          </label>
+        <div class="drop-zone" id="drop-zone">
+          <input type="file" name="resume" id="resume-file" accept=".pdf" required>
+          <div class="drop-icon"><i class="ti ti-upload" aria-hidden="true"></i></div>
+          <div class="drop-title">Drop your PDF here</div>
+          <div class="drop-hint">or click to browse · PDF only · Max 5MB</div>
         </div>
-        <div id="file-name-display"
-             class="file-name-display hidden">
+        <div class="file-chosen" id="file-chosen">
+          <i class="ti ti-check" aria-hidden="true"></i>
+          <span id="file-name"></span>
         </div>
       </div>
 
-      <!-- Right: JD text -->
-      <div class="form-card">
-        <div class="card-header">
-          <span class="card-icon">📋</span>
-          <h2>Paste Job Description</h2>
+      <div class="form-panel">
+        <div class="panel-label">
+          <i class="ti ti-clipboard-text" aria-hidden="true"></i>
+          Job description
         </div>
-        <p class="card-desc">
-          Copy the full JD from Naukri, LinkedIn, or
-          any job board and paste it below.
-        </p>
-        <textarea
-          name="jd_text"
-          id="jd-textarea"
-          placeholder="Paste the full job description here...
+        <textarea name="jd_text" id="jd-text" placeholder="Paste the full job description here — from Naukri, LinkedIn, Indeed, or any company careers page.
 
-Example:
-We are looking for a Python Developer Intern.
-
-Requirements:
-- Strong knowledge of Python and SQL
-- Experience with Flask or Django
-- Understanding of REST APIs and Git
-..."
-          required
-          minlength="50"></textarea>
-        <div class="char-count" id="char-count">
-          0 characters
+The more complete the JD, the more accurate your analysis." required minlength="50"></textarea>
+        <div class="char-bar">
+          <span class="char-count" id="char-count">0 characters</span>
+          <span class="char-ok" id="char-ok"><i class="ti ti-check" style="font-size:14px;vertical-align:-2px"></i> Looks good</span>
         </div>
       </div>
 
-      <!-- Submit button -->
-      <div class="submit-row">
-        <button type="submit"
-                class="analyze-btn"
-                id="analyze-btn">
-          🔍 Analyze My Resume
+      <div class="submit-area">
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <i class="ti ti-search" aria-hidden="true"></i>
+          Analyze my resume
         </button>
-        <p class="submit-hint">
-          Analysis takes 10–20 seconds
-        </p>
+        <p class="submit-note">Analysis takes 15–30 seconds · Your PDF is not stored</p>
       </div>
-
     </form>
+  </div>
+</section>
 
-    <!-- How it works section -->
-    <section class="how-it-works">
-      <h2>How it works</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">1</div>
-          <h3>Upload PDF</h3>
-          <p>Your resume is parsed and split into
-             sections automatically</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">2</div>
-          <h3>Paste JD</h3>
-          <p>The job description is analysed for
-             required keywords and skills</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">3</div>
-          <h3>AI Analysis</h3>
-          <p>NLP semantic matching goes beyond
-             keywords to understand meaning</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">4</div>
-          <h3>Get Report</h3>
-          <p>ATS score, gap report, and specific
-             suggestions to improve your resume</p>
-        </div>
+<section class="how-section" id="how-it-works">
+  <div class="how-inner">
+    <div class="section-eyebrow">The process</div>
+    <h2 class="section-title">How it works</h2>
+    <p class="section-sub">Four steps from upload to actionable report</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Parse your resume</h3>
+        <p>We extract text from your PDF and identify sections — Skills, Experience, Projects, Education — automatically.</p>
       </div>
-    </section>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Analyse the JD</h3>
+        <p>The job description is parsed for required keywords, skill terms, and seniority signals using NLP.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>AI semantic match</h3>
+        <p>Our model computes semantic similarity — so "DSA" still matches "data structures" even when words differ.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Get your report</h3>
+        <p>ATS score out of 100, keyword gaps, section strength, and ranked suggestions to improve your resume.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </main>
+<section class="why-section" id="why">
+  <div class="why-inner">
+    <div class="section-eyebrow">Why ResumeIQ</div>
+    <h2 class="section-title">More than a keyword counter</h2>
+    <p class="section-sub">Most tools just count matching words. We go deeper.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon blue"><i class="ti ti-brain" aria-hidden="true"></i></div>
+        <h3>Semantic AI matching</h3>
+        <p>Uses sentence-transformers (MiniLM) to understand meaning — not just exact keyword matches. "ML engineer" matches "machine learning developer".</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon green"><i class="ti ti-git-branch" aria-hidden="true"></i></div>
+        <h3>Skill normalization engine</h3>
+        <p>Our custom skill graph maps 150+ informal student phrases to the exact terms Indian recruiters search for on Naukri and LinkedIn.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon amber"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
+        <h3>Section-level scoring</h3>
+        <p>Get individual scores for your Skills, Experience, Projects, and Summary sections — so you know exactly where to improve.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon blue"><i class="ti ti-india" aria-hidden="true"></i></div>
+        <h3>India JD trained</h3>
+        <p>Trained on real job descriptions from Naukri.com and LinkedIn India. Understands Indian tech industry vocabulary.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon green"><i class="ti ti-lock" aria-hidden="true"></i></div>
+        <h3>Private by design</h3>
+        <p>Your resume is deleted immediately after analysis. No account needed. No data stored. No emails to verify.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon amber"><i class="ti ti-list-check" aria-hidden="true"></i></div>
+        <h3>Actionable suggestions</h3>
+        <p>Every suggestion is prioritised — critical fixes first, nice-to-haves last. No generic advice, only specific improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>
-      Built by Anushka Gangwal · MIT-ADT University, Pune
-      · B.E. CSE (AI & Analytics) · 2026
-    </p>
-  </footer>
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="section-eyebrow">Comparison</div>
+    <h2 class="section-title" style="text-align:center">How we compare</h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="highlight">ResumeIQ</th>
+          <th>Jobscan</th>
+          <th>Resumeworded</th>
+          <th>Rezi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI semantic matching</td>
+          <td class="highlight"><i class="ti ti-check check-y" aria-hidden="true"></i> Yes</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+        </tr>
+        <tr>
+          <td>India JD vocabulary</td>
+          <td class="highlight"><i class="ti ti-check check-y" aria-hidden="true"></i> Yes</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> US only</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> US only</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> US only</td>
+        </tr>
+        <tr>
+          <td>Free to use</td>
+          <td class="highlight"><i class="ti ti-check check-y" aria-hidden="true"></i> Fully free</td>
+          <td><i class="ti ti-minus" style="color:var(--amber)" aria-hidden="true"></i> Limited free</td>
+          <td><i class="ti ti-minus" style="color:var(--amber)" aria-hidden="true"></i> Limited free</td>
+          <td><i class="ti ti-minus" style="color:var(--amber)" aria-hidden="true"></i> Paid</td>
+        </tr>
+        <tr>
+          <td>No account required</td>
+          <td class="highlight"><i class="ti ti-check check-y" aria-hidden="true"></i> Yes</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> Account needed</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> Account needed</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> Account needed</td>
+        </tr>
+        <tr>
+          <td>Section-level scoring</td>
+          <td class="highlight"><i class="ti ti-check check-y" aria-hidden="true"></i> Yes</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+          <td><i class="ti ti-check check-y" aria-hidden="true"></i> Yes</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+        </tr>
+        <tr>
+          <td>Skill synonym detection</td>
+          <td class="highlight"><i class="ti ti-check check-y" aria-hidden="true"></i> Yes</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+          <td><i class="ti ti-x check-n" aria-hidden="true"></i> No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <script>
-    // Show filename when PDF is chosen
-    const input   = document.getElementById('resume-input');
-    const display = document.getElementById(
-                      'file-name-display'
-                    );
-    const label   = document.getElementById('upload-label');
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-eyebrow" style="text-align:center">FAQ</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:2rem">Common questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What is an ATS and why does it matter? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">An Applicant Tracking System (ATS) is software that companies use to automatically filter resumes before a human recruiter sees them. A 2021 Harvard Business School study found that 88% of employers say qualified candidates are screened out by ATS because their resume doesn't match the exact search terms — not because they lack the skills. Your ATS score tells you how likely your resume is to pass this filter.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is my resume stored or shared? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">No. Your resume PDF is deleted from our server immediately after the analysis completes. We do not store, share, or use your resume for any other purpose. No account is required and no personal data is collected.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What makes this different from just counting keywords? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">Most ATS checkers simply count how many words from the JD appear in your resume. ResumeIQ uses AI semantic matching — it understands that "DSA" means "data structures", that "ML" means "machine learning", and that "built a Python tool" signals "Python development". Our skill normalization graph maps 150+ informal student phrases to the exact terms Indian recruiters search for.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What score should I aim for? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">Aim for 70 or above for roles you are applying to. A score above 75 means strong keyword and semantic alignment. Below 50 means your resume needs significant keyword work before applying. Remember — the score is a guide, not a guarantee. A high score means your resume is more likely to reach a human recruiter.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Why is the analysis taking 15–30 seconds? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">The AI semantic analysis uses a sentence-transformer model (MiniLM) that runs on CPU. It typically takes 15–30 seconds to compute semantic similarity across your resume sections and the job description. This is normal and unavoidable for a genuine AI analysis. Simple keyword counters are faster but much less accurate.</div>
+    </div>
+  </div>
+</section>
 
-    input.addEventListener('change', function() {
-      if (this.files && this.files[0]) {
-        const name = this.files[0].name;
-        const size = (
-          this.files[0].size / 1024
-        ).toFixed(0);
-        display.textContent = `✅ ${name} (${size} KB)`;
-        display.classList.remove('hidden');
-        label.style.borderColor  = '#27AE60';
-        label.style.background   = '#f0fff4';
-      }
-    });
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">ResumeIQ</div>
+      <p>AI-powered ATS resume analyzer<br>trained on Indian job market data.</p>
+      <p class="footer-copy">Built by Anushka Gangwal · MIT-ADT University, Pune<br>B.E. CSE (AI & Analytics) · 2026</p>
+    </div>
+    <div>
+      <h4 class="footer-col">Product</h4>
+      <div class="footer-links">
+        <a href="#analyze">Analyze resume</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#why">Features</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-col">Research</h4>
+      <div class="footer-links">
+        <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=61232" target="_blank">Harvard HBS Hidden Workers study</a>
+        <a href="https://www.jobscan.co/blog/8-things-you-need-to-know-about-applicant-tracking-systems/" target="_blank">How ATS systems work</a>
+        <a href="https://arxiv.org/abs/2009.01484" target="_blank">Resume-JD matching (BERT paper)</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    // Character counter for JD textarea
-    const textarea = document.getElementById('jd-textarea');
-    const counter  = document.getElementById('char-count');
+<script>
+const fileInput  = document.getElementById('resume-file');
+const fileChosen = document.getElementById('file-chosen');
+const fileName   = document.getElementById('file-name');
+const dropZone   = document.getElementById('drop-zone');
+const textarea   = document.getElementById('jd-text');
+const charCount  = document.getElementById('char-count');
+const charOk     = document.getElementById('char-ok');
+const submitBtn  = document.getElementById('submit-btn');
 
-    textarea.addEventListener('input', function() {
-      const n = this.value.length;
-      counter.textContent = `${n} characters`;
-      counter.style.color = n >= 50 ? '#27AE60' : '#e74c3c';
-    });
+fileInput.addEventListener('change', function() {
+  if (this.files && this.files[0]) {
+    fileName.textContent = this.files[0].name + ' (' + (this.files[0].size/1024).toFixed(0) + ' KB)';
+    fileChosen.style.display = 'flex';
+    dropZone.style.borderColor = 'var(--green)';
+    dropZone.style.background  = 'var(--green-light)';
+  }
+});
 
-    // Show loading state on submit
-    const form = document.querySelector('.upload-form');
-    const btn  = document.getElementById('analyze-btn');
+['dragenter','dragover'].forEach(e => dropZone.addEventListener(e, ev => { ev.preventDefault(); dropZone.classList.add('dragging'); }));
+['dragleave','drop'].forEach(e => dropZone.addEventListener(e, ev => { ev.preventDefault(); dropZone.classList.remove('dragging'); }));
+dropZone.addEventListener('drop', e => { if(e.dataTransfer.files[0]) { fileInput.files = e.dataTransfer.files; fileInput.dispatchEvent(new Event('change')); }});
 
-    form.addEventListener('submit', function() {
-      btn.textContent = '⏳ Analysing... please wait';
-      btn.disabled    = true;
-      btn.style.background = '#95a5a6';
-    });
-  </script>
+textarea.addEventListener('input', function() {
+  const n = this.value.length;
+  charCount.textContent = n + ' characters';
+  if (n >= 50) { charOk.style.display='flex'; charCount.style.color='var(--green)'; }
+  else { charOk.style.display='none'; charCount.style.color='var(--gray4)'; }
+});
 
+document.getElementById('main-form').addEventListener('submit', function() {
+  submitBtn.innerHTML = '<i class="ti ti-loader" style="animation:spin 1s linear infinite"></i> Analysing — please wait';
+  submitBtn.disabled = true;
+});
+
+function toggleFaq(el) {
+  el.closest('.faq-item').classList.toggle('open');
+}
+
+const style = document.createElement('style');
+style.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+document.head.appendChild(style);
+</script>
 </body>
 </html>
