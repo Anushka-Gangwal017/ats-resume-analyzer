@@ -1,0 +1,51 @@
+Job description
+Full Stack Trainer Cum Developer Description
+Were looking for a passionate Full Stack Trainer cum Developer who can both deliver cutting-edge training programs and contribute to real-world development projects
+
+This role combines the best of both worlds: teaching and hands-on coding
+
+Key Responsibilities:
+Deliver high-quality training on full stack development (Frontend + Backend)
+
+Create engaging training materials, hands-on exercises, and assessments
+
+Lead live coding sessions and guide real-world capstone projects
+
+Track learners progress and give personalized feedback
+
+Keep pace with emerging technologies and tools
+
+Collaborate with internal training and tech teams to elevate the learning experience
+
+Mentor and support trainees to master core development concepts
+
+Requirements:
+Proven experience in full stack development and technical training
+
+Proficient in back-end: Node
+
+js, Python, MongoDB, MySQL
+
+Comfortable with front-end: HTML, CSS, JavaScript, React or Angular
+
+Clear and engaging communication style simplifies complex topics
+
+Ability to motivate and inspire learners at various skill levels
+
+Offered salary 25,000 - 35,000/month
+Career level: Senior
+Qualification Master s Degree, Bachelor Degree, Certificate
+Vacancies: 2
+
+
+Disclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Technical trainingProject developmentBackendUsageCodingMySQLJavascriptHTMLMongoDBPython

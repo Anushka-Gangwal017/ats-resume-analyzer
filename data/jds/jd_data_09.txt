@@ -1,0 +1,27 @@
+Job description
+Eduluk is looking for Data Analyst Course to join our dynamic team and embark on a rewarding career journey
+Managing master data, including creation, updates, and deletion.
+Managing users and user roles.
+Provide quality assurance of imported data, working with quality assurance analysts if necessary.
+Commissioning and decommissioning of data sets.
+Processing confidential data and information according to guidelines.
+Helping develop reports and analysis.
+Managing and designing the reporting environment, including data sources, security, and metadata.
+Supporting the data warehouse in identifying and revising reporting requirements.
+Supporting initiatives for data integrity and normalization.
+Assessing tests and implementing new or upgraded software and assisting with strategic decisions on new systems.
+Generating reports from single or multiple systems.
+Troubleshooting the reporting database environment and reports.
+Evaluating changes and updates to source production systems.
+Training end-users on new reports and dashboards.
+Providing technical expertise in data storage structures, data mining, and data cleansing.
+Role: Data Analyst
+Industry Type: Education / Training
+Department: Data Science & Analytics
+Employment Type: Full Time, Permanent
+Role Category: Business Intelligence & Analytics
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+master datametadatapythondata analysisdata managementdata analyticsdata validationconfigurationdata miningdata integritydashboardscleansingsqldata cleansingexceltableauquality assuranceadvanced exceldata visualizationreporting

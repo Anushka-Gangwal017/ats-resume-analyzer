@@ -1,0 +1,23 @@
+Job description
+Conduct Vulnerability Assessment and Penetration Testing and configuration review for network, web application, mobile application, and thick -client application
+Perform manual testing of web applications
+Prepare detailed reports
+
+Required Candidate profile
+
+Working knowledge of manual testing of web applications
+Good knowledge of modifying & compiling exploit code
+Experience of working on Windows & Linux
+Good understanding & knowledge of codes languages
+Role: Cyber Security
+Industry Type: IT Services & Consulting
+Department: IT & Information Security
+Employment Type: Full Time, Permanent
+Role Category: IT Security
+Education
+UG: B.C.A. in Computer Applications (General), B.Tech / B.E. in Computer Science and Engineering (CSE), Computer Science and Business System, Cyber Security, B.Sc in Computer Science and Technology, Cyber Security, Information Technology (IT)
+PG: MS/M.Sc(Science) in Computers, Cyber Security Engineering, MCA in Computers
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Penetration TestingOWASPVulnerability ManagementKali Linux
+Mobile SecurityWeb Application SecurityOscpVulnerabilityNMAPVulnerability AssessmentVulnerability Scanning

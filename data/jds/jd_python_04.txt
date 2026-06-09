@@ -1,0 +1,30 @@
+Job description
+Collaborate with the development team to design, develop, and implement new features for the trading platform.
+Write clean, scalable, and efficient code in Node.js and Python.
+Integrate third-party APIs and develop RESTful APIs.
+Participate in code reviews and contribute to the overall improvement of our development processes.
+Assist in troubleshooting, debugging, and upgrading existing software.
+Requirements:
+Recent graduate with a degree in Computer Science, Software Engineering, or a related field.
+Strong knowledge of Node.js and Python.
+Experience or coursework involving REST API development.
+Familiarity with integrating third-party APIs.
+Basic understanding of the stock market (training will be provided if needed).
+Excellent problem-solving skills and a keen eye for detail.
+Good communication skills and ability to work collaboratively in a team environment.
+What We Offer:
+A chance to work on an exciting and innovative project from the ground up.
+Hands-on experience and mentorship from experienced developers.
+Training and support to enhance your understanding of the stock market and trading systems.
+A collaborative and inclusive work environment.
+Competitive salary and potential for growth within the company.
+Role: Full Stack Developer
+Industry Type: Software Product
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+IT servicesTrainingDebuggingJavascriptTroubleshootingStock marketPython

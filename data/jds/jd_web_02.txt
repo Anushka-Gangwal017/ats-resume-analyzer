@@ -1,0 +1,30 @@
+Job description
+Build backend services and APIs using Python + FastAPI.
+Develop cross-platform mobile applications using Flutter.
+Design scalable PostgreSQL database schemas and backend architecture.
+Integrate AI services (OpenAI / Gemini APIs) into production systems.
+Implement caching, background jobs, and performance optimizations using Redis.
+Build and maintain Dockerized services and CI/CD pipelines.
+Collaborate with product, AI, and frontend teams to ship features fast.
+Participate in product brainstorming, architecture design, and feature building.
+Bachelors or Masters degree in Computer Science, Engineering, AI/ML, Data Science, or related fields.
+Strong Python backend development skills.
+Familiarity with FastAPI, REST APIs, and backend architecture.
+Experience or exposure to Flutter mobile development.
+Understanding of databases (PostgreSQL) and backend system design.
+Familiar with Docker, Git, and CI/CD workflows.
+Exposure to LLMs, AI agents, or AI APIs (OpenAI, Gemini) is a strong plus.
+Strong problem-solving mindset and curiosity to build AI-driven products.
+
+
+Disclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: LLM in Law, Any Postgraduate
+Key Skills
+Computer scienceAutomationBackendGITMobile developmentPostgresqlArchitectural designSystem designMobile applicationsPython

@@ -1,0 +1,20 @@
+Job description
+Design, develop, and test software applications using Python.
+Collaborate with cross-functional teams to identify and prioritize project requirements.
+Develop high-quality, efficient, and well-documented code.
+Troubleshoot and resolve technical issues efficiently.
+Participate in code reviews and contribute to improving overall code quality.
+Stay updated with industry trends and emerging technologies.
+
+
+Disclaimer:This job description has been sourced from a public domain and may have been modified by Naukri.com to improve clarity for our users. We encourage job seekers to verify all details directly with the employer via their official channels before applying.
+Role: Data Platform Engineer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+rest python css github python development machine learning javascript sql docker django git postgresql linux oops troubleshooting jsoncode reviewhtml mysql data structures web development aws mongodb

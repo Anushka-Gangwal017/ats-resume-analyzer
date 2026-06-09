@@ -1,0 +1,62 @@
+Job description
+Job Title: Python Developer
+
+Employment Type: Full-Time
+
+
+About WebGo Software Labs:
+
+We are a fast-growing AI automation agency focused on building intelligent workflow automations, custom web applications, and AI-powered digital solutions for clients across various industries. Our mission is to help businesses scale efficiently by leveraging modern technologies, advanced automation, and smart software engineering.
+
+
+Position Overview:
+We are seeking a skilled and motivated Python Developer to join our engineering team.
+This role focuses on building backend systems, automation scripts, AI-integrated workflows, and scalable microservices using Python and related frameworks.
+
+
+As a Python Developer, you will collaborate closely with automation engineers, AI specialists, and frontend developers to design and deliver robust automation solutions.
+
+
+
+Requirements:
+
+- Bachelor s degree or higher in Computer Science, IT, or related discipline.
+- Strong knowledge of Python and experience with backend development.
+- Familiarity with Python frameworks such as Flask , Django , or FastAPI .
+- Experience with MySQL , PostgreSQL , or any relational database.
+- Understanding of REST APIs, JSON, authentication, and integration patterns.
+- Knowledge of automation tools or scripting (Cron, Celery, Python scripts, etc. ).
+- Bonus: Experience with AI/ML libraries (NumPy, Pandas, OpenAI API, LangChain, TensorFlow, or PyTorch).
+- Strong problem-solving, debugging, and analytical skills.
+- Ability to work independently and collaboratively.
+- Clear, effective communication skills.
+
+
+Key Responsibilities:
+
+- Develop and maintain backend systems, services, and APIs using Python.
+- Build automation tools, scripts, and workflows for internal and client projects.
+- Integrate AI models, automation platforms, and external APIs into applications.
+- Optimize and scale backend performance, reliability, and security.
+- Collaborate with cross-functional teams to understand requirements and deliver solutions.
+- Create database schemas, write efficient queries, and maintain data integrity.
+- Troubleshoot, debug, and resolve technical issues across the stack.
+- Stay updated with emerging Python technologies, AI advancements, and automation trends.
+
+
+Qualifications:
+
+- Passion for backend engineering, automation, and AI-driven development.
+- Strong logical and analytical thinking.
+- Ability to work in a fast-moving environment.
+- Willingness to learn and adopt new tools and frameworks.
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Computer scienceAutomationBackendPostgresqlDjangoMySQLDebuggingWorkflowJSONPython

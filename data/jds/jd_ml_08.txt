@@ -1,0 +1,50 @@
+Job description
+Role & Responsibilities
+
+Build ML models for trading signals, investment research, and market prediction
+Develop data science pipelines from raw market data to features to model outputs
+Build AI tools to assist traders and researchers in decision-making
+Prototype, test, and iterate fast — idea to production with minimal hand-holding
+Support backtesting, model evaluation, and live monitoring
+
+Preferred Candidate Profile
+
+
+Who We're Looking For
+
+A builder and self-starter — side projects, Kaggle, open source, anything you've shipped
+Thrives in a fast-paced, high-signal environment — cuts through noise, focuses on what moves the needle
+Innovates without being asked — reads papers, tries new tools, shows up with ideas
+Comfortable with ambiguity and inequality constraints — not every problem has a clean solution
+No finance background needed — intellectual curiosity wins over credentials
+
+Technical Skills
+
+Python — NumPy, pandas, scikit-learn, PyTorch / TensorFlow
+ML fundamentals — supervised/unsupervised learning, evaluation, regularization, time-series
+Optimization basics — constrained optimization, inequality constraints, objective tuning
+Statistics — probability, distributions, hypothesis testing
+SQL, Git, experiment tracking (MLflow or W&B)
+GCP / AWS basics
+
+AI & Emerging Tools (Bonus)
+
+LLMs, prompt engineering, or AI agent building
+RAG pipelines, vector databases, or fine-tuning experience
+
+Mindset
+
+High signal, low noise thinker — knows what matters and moves fast on it
+Innovates under constraints — finds clever solutions within boundaries
+Low ego, high output — ships working things, learns from what breaks
+Role: Trading, Asset & Wealth Management - Other
+Industry Type: Financial Services (Asset Management)
+Department: BFSI, Investments & Trading
+Employment Type: Full Time, Permanent
+Role Category: Trading, Asset & Wealth Management
+Education
+UG: Any Graduate
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Machine LearningData SciencePython
+Predictive ModelingArtificial IntelligenceNatural Language ProcessingRegressionProbabilityStatisticsDeep LearningAlgorithmsLarge Language ModelGCPTime Series AnalysisLow LatencyTime SeriesAWS

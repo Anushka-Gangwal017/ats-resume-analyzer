@@ -1,0 +1,36 @@
+Job description
+POSITION SUMMARY
+
+As a Fintech company where Machine Learning (ML) is one of the key features, our operations highly rely on machine learning models, from business decisions to customer experiences. Therefore, ensuring our machine learning systems health and scalability is critical.
+
+To guarantee the success of machine learning systems, work needs to be done around transforming ML models to high-performance production-level code. This includes not only implementing sophisticated machine learning algorithms but also robustness monitoring, system logging/alarming, and DevOps. This position will be based in Bengaluru,which is part of our expanding site location.
+
+WHAT YOUll DO
+
+Design, build, and launch efficient and reliable machine learning (ML) models to drive business impact.
+Train and validate state-of-the-art multi-modal, multi-task deep learning models as well as statistical models considering use-case, complexity, performance, and robustness
+Demonstrate an end-to-end understanding of applications and develop a deep understanding of the why behind our models and systems.
+Work closely with data platform teams to enable robust, scalable batch and real-time data pipeline.s
+Drive the teams high ML and engineering standards through learning and knowledge sharing. Drive engineering best practices around code reviews, automated testing, and monitoring
+WHAT WERE LOOKING FOR
+
+Bachelors, MS degree, or PhD degree in Computer Science or a related technical field
+0-1 year of experience in ML engineering
+Strong programming skills in Python and data engineering skills
+In-depth knowledge of machine learning algorithms
+Knowledge of or ability to quickly learn architectural patterns for large, high-scale software applications
+Strong oral and written communication skills
+Experience in NLP or CV is a plus
+
+
+Disclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Blockchain Quality Assurance Engineer
+Industry Type: Financial Services
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Quality Assurance and Testing
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Computer sciencedeep learningAutomation testingArchitectureFinanceMachine learningProgrammingApplication softwareMonitoringPython

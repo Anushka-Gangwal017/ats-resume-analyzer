@@ -75,6 +75,46 @@
         "informal": "built python projects",
         "canonical": ["python", "python development", "software development"],
         "context": "Student project experience using Python"
+      },
+      {
+        "informal": "api calls",
+        "canonical": ["rest api", "api integration", "http requests"],
+        "context": "Student way of saying API work"
+      },
+      {
+        "informal": "data structures and algorithms",
+        "canonical": ["dsa", "algorithms", "data structures", "problem solving"],
+        "context": "Full phrase vs abbreviation"
+      },
+      {
+        "informal": "python 3",
+        "canonical": ["python", "python3", "python programming"],
+        "context": "Version-specific Python mention"
+      },
+      {
+        "informal": "scripting",
+        "canonical": ["python scripting", "automation", "bash scripting"],
+        "context": "Generic scripting claim"
+      },
+      {
+        "informal": "written clean code",
+        "canonical": ["software development", "coding best practices", "clean code"],
+        "context": "Code quality claim"
+      },
+      {
+        "informal": "worked with json",
+        "canonical": ["json", "rest api", "data parsing", "python"],
+        "context": "Data format experience"
+      },
+      {
+        "informal": "exception handling",
+        "canonical": ["python", "error handling", "debugging"],
+        "context": "Python programming concept"
+      },
+      {
+        "informal": "pip packages",
+        "canonical": ["python", "package management", "dependencies"],
+        "context": "Python ecosystem experience"
       }
     ]
   },
@@ -151,7 +191,57 @@
         "informal": "sklearn",
         "canonical": ["scikit-learn", "machine learning", "python"],
         "context": "Abbreviation for scikit-learn"
-      }
+      },
+      {
+  "informal": "worked with datasets",
+  "canonical": ["data analysis", "pandas", "numpy", "machine learning"],
+  "context": "Dataset handling experience"
+},
+{
+  "informal": "model deployment",
+  "canonical": ["mlops", "model deployment", "flask", "fastapi", "docker"],
+  "context": "ML deployment experience"
+},
+{
+  "informal": "accuracy of model",
+  "canonical": ["model evaluation", "performance metrics", "machine learning"],
+  "context": "Model performance claim"
+},
+{
+  "informal": "transfer learning",
+  "canonical": ["deep learning", "pytorch", "tensorflow", "pretrained models"],
+  "context": "Advanced DL technique"
+},
+{
+  "informal": "generative ai",
+  "canonical": ["generative ai", "llm", "langchain", "openai api", "rag"],
+  "context": "GenAI work"
+},
+{
+  "informal": "llm",
+  "canonical": ["large language models", "generative ai", "transformers", "nlp"],
+  "context": "LLM abbreviation"
+},
+{
+  "informal": "rag",
+  "canonical": ["retrieval augmented generation", "llm", "vector database", "langchain"],
+  "context": "RAG pipeline experience"
+},
+{
+  "informal": "fine tuning",
+  "canonical": ["fine-tuning", "transfer learning", "pytorch", "huggingface"],
+  "context": "Model fine-tuning work"
+},
+{
+  "informal": "huggingface",
+  "canonical": ["hugging face", "transformers", "nlp", "deep learning"],
+  "context": "HuggingFace platform"
+},
+{
+  "informal": "vector database",
+  "canonical": ["pinecone", "weaviate", "chroma", "vector store", "rag"],
+  "context": "Vector DB for RAG"
+}
     ]
   },
 
@@ -222,7 +312,42 @@
         "informal": "entropy scoring",
         "canonical": ["cryptography", "password security", "python"],
         "context": "Password strength checker project feature"
-      }
+      },
+      {
+  "informal": "network basics",
+  "canonical": ["networking", "tcp/ip", "dns", "http", "network security"],
+  "context": "Networking fundamentals"
+},
+{
+  "informal": "security tools",
+  "canonical": ["nmap", "wireshark", "metasploit", "burp suite", "kali linux"],
+  "context": "Security tooling experience"
+},
+{
+  "informal": "web security",
+  "canonical": ["owasp", "xss", "sql injection", "web application security"],
+  "context": "Web app security knowledge"
+},
+{
+  "informal": "log analysis",
+  "canonical": ["siem", "splunk", "log monitoring", "soc analysis"],
+  "context": "Security log analysis"
+},
+{
+  "informal": "cloud security",
+  "canonical": ["aws security", "iam", "cloud security", "zero trust"],
+  "context": "Cloud security domain"
+},
+{
+  "informal": "compliance",
+  "canonical": ["grc", "iso 27001", "nist", "regulatory compliance", "audit"],
+  "context": "Security compliance work"
+},
+{
+  "informal": "bug bounty",
+  "canonical": ["penetration testing", "ethical hacking", "vulnerability research"],
+  "context": "Bug bounty participation"
+}
     ]
   },
 
@@ -268,7 +393,42 @@
         "informal": "responsive design",
         "canonical": ["css", "bootstrap", "frontend development", "html"],
         "context": "Mobile-friendly web design"
-      }
+      },
+      {
+  "informal": "made api",
+  "canonical": ["rest api", "api development", "backend development", "flask", "fastapi"],
+  "context": "API building experience"
+},
+{
+  "informal": "frontend work",
+  "canonical": ["frontend development", "html", "css", "javascript", "react"],
+  "context": "Frontend experience"
+},
+{
+  "informal": "responsive website",
+  "canonical": ["responsive design", "css", "bootstrap", "mobile-first"],
+  "context": "Responsive web design"
+},
+{
+  "informal": "database integration",
+  "canonical": ["sql", "mysql", "postgresql", "orm", "sqlalchemy"],
+  "context": "DB integration in web apps"
+},
+{
+  "informal": "authentication system",
+  "canonical": ["jwt", "oauth", "session management", "flask-login"],
+  "context": "Auth implementation"
+},
+{
+  "informal": "deployed on cloud",
+  "canonical": ["aws", "heroku", "render", "cloud deployment", "devops"],
+  "context": "Cloud deployment experience"
+},
+{
+  "informal": "mvc architecture",
+  "canonical": ["mvc", "software architecture", "design patterns", "django"],
+  "context": "MVC framework experience"
+}
     ]
   },
 
@@ -401,7 +561,42 @@
         "informal": "leetcode",
         "canonical": ["data structures", "algorithms", "problem solving"],
         "context": "Coding practice platform"
-      }
+      },
+      {
+  "informal": "made dashboards",
+  "canonical": ["tableau", "power bi", "data visualisation", "dashboard development"],
+  "context": "Dashboard creation experience"
+},
+{
+  "informal": "excel formulas",
+  "canonical": ["microsoft excel", "vlookup", "pivot tables", "data analysis"],
+  "context": "Advanced Excel usage"
+},
+{
+  "informal": "data visualisation",
+  "canonical": ["tableau", "power bi", "matplotlib", "seaborn", "plotly"],
+  "context": "Visualisation skill"
+},
+{
+  "informal": "pivot tables",
+  "canonical": ["microsoft excel", "data analysis", "reporting"],
+  "context": "Excel pivot table skill"
+},
+{
+  "informal": "etl",
+  "canonical": ["etl pipeline", "data engineering", "data transformation", "airflow"],
+  "context": "ETL process experience"
+},
+{
+  "informal": "data pipeline",
+  "canonical": ["data engineering", "etl", "apache spark", "airflow"],
+  "context": "Data pipeline work"
+},
+{
+  "informal": "business intelligence",
+  "canonical": ["bi", "tableau", "power bi", "data analysis", "reporting"],
+  "context": "BI domain experience"
+}
     ]
   },
 
@@ -467,7 +662,47 @@
         "informal": "quick learner",
         "canonical": ["adaptability", "fast learner", "self-motivated"],
         "context": "Common fresher resume phrase"
-      }
+      },
+      {
+  "informal": "good communication",
+  "canonical": ["communication skills", "verbal communication", "written communication"],
+  "context": "Soft skill claim"
+},
+{
+  "informal": "fast learner",
+  "canonical": ["quick learner", "adaptability", "self-motivated", "continuous learning"],
+  "context": "Learning ability claim"
+},
+{
+  "informal": "attention to detail",
+  "canonical": ["detail-oriented", "quality assurance", "thoroughness"],
+  "context": "Quality-focused work claim"
+},
+{
+  "informal": "worked independently",
+  "canonical": ["independent worker", "self-starter", "proactive"],
+  "context": "Independent work experience"
+},
+{
+  "informal": "deadline oriented",
+  "canonical": ["time management", "deadline-driven", "project delivery"],
+  "context": "Delivery-focused claim"
+},
+{
+  "informal": "open source contribution",
+  "canonical": ["open source", "github", "community contribution", "git"],
+  "context": "OSS work"
+},
+{
+  "informal": "hackathon",
+  "canonical": ["hackathon", "problem solving", "team collaboration", "rapid prototyping"],
+  "context": "Hackathon participation"
+},
+{
+  "informal": "internship experience",
+  "canonical": ["work experience", "professional experience", "industry exposure"],
+  "context": "Internship claim"
+}
     ]
   },
 
@@ -508,7 +743,42 @@
         "informal": "ms office",
         "canonical": ["microsoft office", "word", "excel", "powerpoint"],
         "context": "Office suite"
-      }
+      },
+      {
+  "informal": "slack",
+  "canonical": ["slack", "team communication", "collaboration tools"],
+  "context": "Team communication tool"
+},
+{
+  "informal": "trello",
+  "canonical": ["trello", "project management", "agile boards", "kanban"],
+  "context": "Project management tool"
+},
+{
+  "informal": "notion",
+  "canonical": ["notion", "documentation", "knowledge management"],
+  "context": "Documentation tool"
+},
+{
+  "informal": "google colab",
+  "canonical": ["jupyter", "python", "machine learning", "cloud computing"],
+  "context": "Cloud notebook for ML work"
+},
+{
+  "informal": "docker container",
+  "canonical": ["docker", "containerisation", "devops", "microservices"],
+  "context": "Container technology"
+},
+{
+  "informal": "linux terminal",
+  "canonical": ["linux", "bash", "command line", "shell scripting"],
+  "context": "Linux CLI experience"
+},
+{
+  "informal": "jira tickets",
+  "canonical": ["jira", "agile", "project management", "issue tracking"],
+  "context": "Jira tool experience"
+}
     ]
   }
 }

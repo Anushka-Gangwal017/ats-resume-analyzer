@@ -1,0 +1,753 @@
+resume,jd,final_score,semantic_score_pct,keyword_score_pct,grade,matched_count,missing_count,matched_keywords,top_missing,high_priority_fixes,timestamp
+resume1.pdf,jd_01.txt,18.2,35.5,0.9,🔴 Poor — Resume needs significant keyword work,1,114,sql,"a high-level review, a limited level, acts, advanced programming solutions, advisor",3,2026-06-09 21:11
+resume1.pdf,jd_02.txt,19.3,36.5,2.2,🔴 Poor — Resume needs significant keyword work,5,225,"activities, automation, aws, bash, python","a clear set, a culture, a high standard, a network, a secure configuration",2,2026-06-09 21:11
+resume1.pdf,jd_03.txt,23.9,44.6,3.3,🔴 Poor — Resume needs significant keyword work,3,88,"aws, bash, python","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",1,2026-06-09 21:11
+resume1.pdf,jd_04.txt,26.8,47.5,6.2,🔴 Poor — Resume needs significant keyword work,5,76,"automation, aws, cloud security, cybersecurity, devops","(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",2,2026-06-09 21:11
+resume1.pdf,jd_05.txt,25.6,47.6,3.6,🔴 Poor — Resume needs significant keyword work,8,214,"automation, aws, bash, certifications, cybersecurity","(docker, + years, .net, a client, a place",4,2026-06-09 21:11
+resume1.pdf,jd_06.txt,26.7,49.6,3.7,🔴 Poor — Resume needs significant keyword work,4,105,"adaptability, cloud deployment, cybersecurity, python","(degree, 3+ years, adcs pki, all candidates, all products",1,2026-06-09 21:11
+resume1.pdf,jd_07.txt,20.3,35.2,5.5,🔴 Poor — Resume needs significant keyword work,8,137,"aws, bash, deployments, github, iam","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",1,2026-06-09 21:11
+resume1.pdf,jd_08.txt,26.2,46.4,6.1,🔴 Poor — Resume needs significant keyword work,4,62,"accuracy, machine learning, python, software development","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",4,2026-06-09 21:11
+resume1.pdf,jd_09.txt,24.7,43.9,5.6,🔴 Poor — Resume needs significant keyword work,1,17,cryptography,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",1,2026-06-09 21:11
+resume1.pdf,jd_10.txt,18.6,37.1,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",1,2026-06-09 21:12
+resume1.pdf,jd_11.txt,21.2,42.4,0.0,🔴 Poor — Resume needs significant keyword work,0,68,,"3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",1,2026-06-09 21:12
+resume1.pdf,jd_12.txt,26.3,46.9,5.7,🔴 Poor — Resume needs significant keyword work,8,132,"algorithms, automation, certifications, cloud, data analysis","(exo, (genai, (neural networks, (required / preferred, 15 years",2,2026-06-09 21:12
+resume1.pdf,jd_13.txt,30.7,51.7,9.6,🔴 Poor — Resume needs significant keyword work,7,66,"automation, aws, cloud, git, numpy","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",2,2026-06-09 21:12
+resume1.pdf,jd_14.txt,25.1,44.7,5.4,🔴 Poor — Resume needs significant keyword work,10,176,"agile, aws, git, python, pytorch","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",4,2026-06-09 21:12
+resume1.pdf,jd_15.txt,25.0,47.8,2.2,🔴 Poor — Resume needs significant keyword work,3,132,"accuracy, cybersecurity, python","(rag, , profile, -thought, 20 countries, a commitment",2,2026-06-09 21:12
+resume1.pdf,jd_cyber_01.txt,23.2,42.2,4.3,🔴 Poor — Resume needs significant keyword work,2,45,"cloud, cybersecurity","/b.tech, 2-5 years, any specialization
+pg, attitude, authority",1,2026-06-09 21:12
+resume1.pdf,jd_cyber_02.txt,26.1,49.2,3.1,🔴 Poor — Resume needs significant keyword work,3,95,"cybersecurity, information security, records","0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",1,2026-06-09 21:12
+resume1.pdf,jd_cyber_03.txt,27.1,48.2,5.9,🔴 Poor — Resume needs significant keyword work,3,48,"bash, cybersecurity, excel","6 months, a must
+min, agent-based deployment, b.tech / b.e., channel partners",1,2026-06-09 21:12
+resume1.pdf,jd_cyber_04.txt,28.3,50.3,6.2,🔴 Poor — Resume needs significant keyword work,4,60,"cybersecurity, information security, linux, research","a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",1,2026-06-09 21:12
+resume1.pdf,jd_cyber_05.txt,27.0,48.7,5.3,🔴 Poor — Resume needs significant keyword work,1,18,linux,"any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",1,2026-06-09 21:13
+resume1.pdf,jd_cyber_06.txt,26.5,51.5,1.6,🔴 Poor — Resume needs significant keyword work,1,61,information security,"a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",1,2026-06-09 21:13
+resume1.pdf,jd_cyber_07.txt,28.0,53.1,2.9,🔴 Poor — Resume needs significant keyword work,1,34,cybersecurity,"any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity incidents",1,2026-06-09 21:13
+resume1.pdf,jd_cyber_08.txt,28.3,51.5,5.1,🔴 Poor — Resume needs significant keyword work,2,37,"information security, linux","(cse, b.c.a., b.sc, b.tech / b.e., computer applications",1,2026-06-09 21:13
+resume1.pdf,jd_cyber_09.txt,25.6,47.9,3.3,🔴 Poor — Resume needs significant keyword work,2,58,"cloud security, information security","(added advantage, (servers, 1 year, added advantage, analytical skills",1,2026-06-09 21:13
+resume1.pdf,jd_cyber_10.txt,24.0,46.8,1.1,🔴 Poor — Resume needs significant keyword work,1,88,information security,"a timely manner, alerts, anomalies, any graduate
+pg, applications",1,2026-06-09 21:13
+resume1.pdf,jd_data_01.txt,26.1,45.1,7.0,🔴 Poor — Resume needs significant keyword work,3,40,"excel, python, sql","a data analyst, actionable insights, analytics, analyzing, any graduate
+pg",1,2026-06-09 21:13
+resume1.pdf,jd_data_02.txt,20.2,40.5,0.0,🔴 Poor — Resume needs significant keyword work,0,27,,"2yr, a desire, a passion, analytics, any graduate
+pg",1,2026-06-09 21:13
+resume1.pdf,jd_data_03.txt,27.0,44.6,9.3,🔴 Poor — Resume needs significant keyword work,8,78,"aws, data analysis, excel, git, machine learning","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",1,2026-06-09 21:13
+resume1.pdf,jd_data_04.txt,20.1,40.2,0.0,🔴 Poor — Resume needs significant keyword work,0,28,,"2yr, a desire, a passion, anagoogle suitedata, analytics",1,2026-06-09 21:13
+resume1.pdf,jd_data_05.txt,27.0,44.6,9.3,🔴 Poor — Resume needs significant keyword work,8,78,"aws, data analysis, excel, git, machine learning","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",1,2026-06-09 21:14
+resume1.pdf,jd_data_06.txt,26.8,44.1,9.5,🔴 Poor — Resume needs significant keyword work,8,76,"aws, data analysis, excel, git, machine learning","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",1,2026-06-09 21:14
+resume1.pdf,jd_data_07.txt,24.2,41.3,7.0,🔴 Poor — Resume needs significant keyword work,5,66,"data analysis, excel, python, spreadsheets, sql","(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",1,2026-06-09 21:14
+resume1.pdf,jd_data_08.txt,25.9,46.1,5.8,🔴 Poor — Resume needs significant keyword work,3,49,"excel, python, sql","(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",1,2026-06-09 21:14
+resume1.pdf,jd_data_09.txt,22.4,44.8,0.0,🔴 Poor — Resume needs significant keyword work,0,46,,"analysis, any graduate
+pg, changes, confidential data, creation",1,2026-06-09 21:14
+resume1.pdf,jd_data_10.txt,21.6,43.1,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"(deployment, analysis, any graduate
+pg, changes, confidential data",1,2026-06-09 21:14
+resume1.pdf,jd_ml_01.txt,3.7,7.3,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,1,2026-06-09 21:14
+resume1.pdf,jd_ml_02.txt,27.2,46.3,8.0,🔴 Poor — Resume needs significant keyword work,2,23,"machine learning, python","application, applications, b.c.a., b.tech / b.e., client",1,2026-06-09 21:14
+resume1.pdf,jd_ml_03.txt,16.6,30.2,3.0,🔴 Poor — Resume needs significant keyword work,4,131,"deep learning, machine learning, problem solving, research","(iq, (irs, (mandaveli, 12
+eligible batches, access",3,2026-06-09 21:14
+resume1.pdf,jd_ml_04.txt,16.8,32.5,1.2,🔴 Poor — Resume needs significant keyword work,1,80,python,"a genuine interest, a process engineer, a university degree, act, an ambassador",1,2026-06-09 21:14
+resume1.pdf,jd_ml_05.txt,24.9,44.4,5.3,🔴 Poor — Resume needs significant keyword work,4,72,"accuracy, deep learning, machine learning, python","- other, 0 2 years, a passion, a solid understanding, academic projects",1,2026-06-09 21:14
+resume1.pdf,jd_ml_06.txt,22.5,38.2,6.8,🔴 Poor — Resume needs significant keyword work,4,55,"algorithms, deep learning, machine learning, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",2,2026-06-09 21:14
+resume1.pdf,jd_ml_07.txt,28.2,45.4,11.0,🔴 Poor — Resume needs significant keyword work,15,121,"agile, algorithms, collaborative development, deep learning, github","(langchain, .net, 0-5 years, a remote position, a remote setting",5,2026-06-09 21:14
+resume1.pdf,jd_ml_08.txt,30.8,47.5,14.1,🔴 Poor — Resume needs significant keyword work,10,61,"aws, git, model evaluation, numpy, open source","a builder, a clean solution, ambiguity, anything, asset",2,2026-06-09 21:14
+resume1.pdf,jd_ml_09.txt,22.5,43.8,1.2,🔴 Poor — Resume needs significant keyword work,1,82,automation,"- other, a willingness, agentic systems, ai agent workflows, ai agents",1,2026-06-09 21:15
+resume1.pdf,jd_ml_10.txt,3.7,7.3,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,1,2026-06-09 21:15
+resume1.pdf,jd_python_01.txt,27.6,45.8,9.4,🔴 Poor — Resume needs significant keyword work,3,29,"aws, computer vision, python","- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",1,2026-06-09 21:15
+resume1.pdf,jd_python_02.txt,31.1,51.5,10.7,🔴 Poor — Resume needs significant keyword work,11,92,"aws, css, database management, devops, git","2 years, a crucial role, a plus, a python developer, a related field",7,2026-06-09 21:15
+resume1.pdf,jd_python_03.txt,27.3,52.5,2.0,🔴 Poor — Resume needs significant keyword work,1,49,python,"a day, a python developer, a team, any graduate
+pg, applications",4,2026-06-09 21:15
+resume1.pdf,jd_python_04.txt,20.9,39.8,1.9,🔴 Poor — Resume needs significant keyword work,1,53,python,"a chance, a degree, a keen eye, a related field, a team environment",2,2026-06-09 21:15
+resume1.pdf,jd_python_05.txt,30.3,53.8,6.8,🔴 Poor — Resume needs significant keyword work,4,55,"git, python, sql, version control","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, api integrations",2,2026-06-09 21:15
+resume1.pdf,jd_python_06.txt,27.4,47.7,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",1,2026-06-09 21:15
+resume1.pdf,jd_python_07.txt,29.7,51.3,8.1,🔴 Poor — Resume needs significant keyword work,6,68,"algorithms, aws, github, information security, problem solving","30 days, a passionate, a problem end, a value, advanced github features",3,2026-06-09 21:15
+resume1.pdf,jd_python_08.txt,39.1,53.1,25.0,🔴 Poor — Resume needs significant keyword work,11,33,"aws, css, data structures, git, github","a public domain, all details, any graduate
+pg, clarity, code reviews",5,2026-06-09 21:15
+resume1.pdf,jd_python_09.txt,32.3,51.6,12.9,🔴 Poor — Resume needs significant keyword work,8,54,"core python, css, git, html, nosql","(core python, any specialization, api integration, applicants, availability",4,2026-06-09 21:15
+resume1.pdf,jd_python_10.txt,33.0,57.3,8.7,🔴 Poor — Resume needs significant keyword work,8,84,"automation, mysql, numpy, pandas, python","- ability, - bonus, - familiarity, - knowledge, - passion",4,2026-06-09 21:15
+resume1.pdf,jd_web_01.txt,29.9,48.9,11.0,🔴 Poor — Resume needs significant keyword work,14,113,"agile, automation, aws, css, data analysis","actionable business insights, agile development workflows, an ownership mindset, analysis, analytics pipelines",5,2026-06-09 21:16
+resume1.pdf,jd_web_02.txt,27.2,51.5,2.9,🔴 Poor — Resume needs significant keyword work,2,68,"git, python","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",3,2026-06-09 21:16
+resume1.pdf,jd_web_03.txt,26.6,40.0,13.3,🔴 Poor — Resume needs significant keyword work,13,85,"agile, aws, css, devops, git","(react, - other, .net, a plus, a related field",5,2026-06-09 21:16
+resume1.pdf,jd_web_04.txt,30.0,52.1,8.0,🔴 Poor — Resume needs significant keyword work,9,103,"algorithms, data structures, git, github, linux","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",7,2026-06-09 21:16
+resume1.pdf,jd_web_05.txt,26.8,45.1,8.6,🔴 Poor — Resume needs significant keyword work,5,53,"agile, aws, nosql, python, sql","(e.g., openai, (offshore, agile development processes, agile methodologies, ai/ml models",2,2026-06-09 21:16
+resume1.pdf,jd_web_06.txt,31.5,48.2,14.8,🔴 Poor — Resume needs significant keyword work,4,23,"aws, python, pytorch, tensorflow","- other, ai/ml developers, ai/ml technologies, apis, azure",2,2026-06-09 21:16
+resume1.pdf,jd_web_07.txt,23.1,36.5,9.6,🔴 Poor — Resume needs significant keyword work,5,47,"css, html, mongodb, mysql, python","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",3,2026-06-09 21:16
+resume1.pdf,jd_web_08.txt,21.7,38.8,4.5,🔴 Poor — Resume needs significant keyword work,11,232,"activities, agile, aws, css, git","(aws/openshift, a align, a clear set, a culture, a high standard",5,2026-06-09 21:16
+resume1.pdf,jd_web_09.txt,25.0,47.2,2.9,🔴 Poor — Resume needs significant keyword work,2,67,"mongodb, python","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",2,2026-06-09 21:16
+resume1.pdf,jd_web_10.txt,28.5,45.1,11.9,🔴 Poor — Resume needs significant keyword work,8,59,"agile, aws, css, github, html","0-4 years, a plus
+role, advantage
+experience, all phases, amazon cloud",3,2026-06-09 21:16
+resume2.pdf,jd_01.txt,21.6,39.6,3.5,🔴 Poor — Resume needs significant keyword work,4,111,"advisor, model development, react, sql","a high-level review, a limited level, acts, advanced programming solutions, all phases",3,2026-06-09 21:16
+resume2.pdf,jd_02.txt,14.1,25.6,2.6,🔴 Poor — Resume needs significant keyword work,6,224,"automation, bash, docker, python, teamwork","a clear set, a culture, a high standard, a network, a secure configuration",3,2026-06-09 21:17
+resume2.pdf,jd_03.txt,12.4,21.6,3.3,🔴 Poor — Resume needs significant keyword work,3,88,"bash, networking, python","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",3,2026-06-09 21:17
+resume2.pdf,jd_04.txt,16.9,25.2,8.6,🔴 Poor — Resume needs significant keyword work,7,74,"automation, cloud security, communication, cybersecurity, devops","(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",3,2026-06-09 21:17
+resume2.pdf,jd_05.txt,14.8,25.1,4.5,🔴 Poor — Resume needs significant keyword work,10,212,"automation, bash, burp suite, cybersecurity, deployment","(docker, + years, .net, a client, a place",4,2026-06-09 21:17
+resume2.pdf,jd_06.txt,16.2,25.2,7.3,🔴 Poor — Resume needs significant keyword work,8,101,"adaptability, cloud deployment, collaboration, communication, cybersecurity","(degree, 3+ years, adcs pki, all candidates, all products",2,2026-06-09 21:17
+resume2.pdf,jd_07.txt,16.7,28.5,4.8,🔴 Poor — Resume needs significant keyword work,7,138,"bash, dns, github, iam, jira","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",3,2026-06-09 21:17
+resume2.pdf,jd_08.txt,23.7,39.8,7.6,🔴 Poor — Resume needs significant keyword work,5,61,"artificial intelligence, javascript, machine learning, python, software development","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",4,2026-06-09 21:17
+resume2.pdf,jd_09.txt,16.9,28.2,5.6,🔴 Poor — Resume needs significant keyword work,1,17,cryptography,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",2,2026-06-09 21:17
+resume2.pdf,jd_10.txt,11.6,23.3,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",2,2026-06-09 21:17
+resume2.pdf,jd_11.txt,19.6,34.8,4.4,🔴 Poor — Resume needs significant keyword work,3,65,"skills, them, user experience","3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",2,2026-06-09 21:18
+resume2.pdf,jd_12.txt,22.4,37.7,7.1,🔴 Poor — Resume needs significant keyword work,10,130,"algorithms, automation, data analysis, generative ai, github","(exo, (genai, (neural networks, (required / preferred, 15 years",2,2026-06-09 21:18
+resume2.pdf,jd_13.txt,20.6,31.5,9.6,🔴 Poor — Resume needs significant keyword work,7,66,"automation, docker, git, langchain, numpy","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",3,2026-06-09 21:18
+resume2.pdf,jd_14.txt,20.1,31.6,8.6,🔴 Poor — Resume needs significant keyword work,16,170,"agile, api development, data science, generative ai, git","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",4,2026-06-09 21:18
+resume2.pdf,jd_15.txt,13.8,21.7,5.9,🔴 Poor — Resume needs significant keyword work,8,127,"artificial intelligence, collaboration, continuous learning, cybersecurity, data science","(rag, , profile, -thought, 20 countries, a commitment",2,2026-06-09 21:18
+resume2.pdf,jd_cyber_01.txt,20.0,37.8,2.1,🔴 Poor — Resume needs significant keyword work,1,46,cybersecurity,"/b.tech, 2-5 years, any specialization
+pg, attitude, authority",2,2026-06-09 21:18
+resume2.pdf,jd_cyber_02.txt,11.5,20.0,3.1,🔴 Poor — Resume needs significant keyword work,3,95,"cybersecurity, information security, vulnerability management","0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",2,2026-06-09 21:18
+resume2.pdf,jd_cyber_03.txt,20.9,34.1,7.8,🔴 Poor — Resume needs significant keyword work,4,47,"bash, cybersecurity, excel, microsoft office","6 months, a must
+min, agent-based deployment, b.tech / b.e., channel partners",2,2026-06-09 21:18
+resume2.pdf,jd_cyber_04.txt,20.9,29.2,12.5,🔴 Poor — Resume needs significant keyword work,8,56,"cybersecurity, information security, interpersonal skills, linux, network security","a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",2,2026-06-09 21:18
+resume2.pdf,jd_cyber_05.txt,23.1,30.4,15.8,🔴 Poor — Resume needs significant keyword work,3,16,"kali linux, linux, owasp","any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",2,2026-06-09 21:18
+resume2.pdf,jd_cyber_06.txt,16.8,28.7,4.8,🔴 Poor — Resume needs significant keyword work,3,59,"information security, skills, them","a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",2,2026-06-09 21:19
+resume2.pdf,jd_cyber_07.txt,20.1,34.5,5.7,🔴 Poor — Resume needs significant keyword work,2,33,"cybersecurity, skills","any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity incidents",2,2026-06-09 21:19
+resume2.pdf,jd_cyber_08.txt,19.5,34.0,5.1,🔴 Poor — Resume needs significant keyword work,2,37,"information security, linux","(cse, b.c.a., b.sc, b.tech / b.e., computer applications",2,2026-06-09 21:19
+resume2.pdf,jd_cyber_09.txt,22.1,30.8,13.3,🔴 Poor — Resume needs significant keyword work,8,52,"analytical skills, cloud security, information security, metasploit, network security","(added advantage, (servers, 1 year, added advantage, any graduate
+pg",2,2026-06-09 21:19
+resume2.pdf,jd_cyber_10.txt,11.6,21.0,2.2,🔴 Poor — Resume needs significant keyword work,2,87,"collaboration, information security","a timely manner, alerts, anomalies, any graduate
+pg, applications",2,2026-06-09 21:19
+resume2.pdf,jd_data_01.txt,30.0,43.8,16.3,🔴 Poor — Resume needs significant keyword work,7,36,"data cleaning, data science, excel, power bi, python","a data analyst, actionable insights, analytics, analyzing, any graduate
+pg",2,2026-06-09 21:19
+resume2.pdf,jd_data_02.txt,22.7,41.7,3.7,🔴 Poor — Resume needs significant keyword work,1,26,data science,"2yr, a desire, a passion, analytics, any graduate
+pg",2,2026-06-09 21:19
+resume2.pdf,jd_data_03.txt,22.3,33.0,11.6,🔴 Poor — Resume needs significant keyword work,10,76,"data analysis, data science, excel, git, machine learning","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",3,2026-06-09 21:19
+resume2.pdf,jd_data_04.txt,22.5,41.5,3.6,🔴 Poor — Resume needs significant keyword work,1,27,data science,"2yr, a desire, a passion, anagoogle suitedata, analytics",2,2026-06-09 21:19
+resume2.pdf,jd_data_05.txt,22.3,33.0,11.6,🔴 Poor — Resume needs significant keyword work,10,76,"data analysis, data science, excel, git, machine learning","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",3,2026-06-09 21:19
+resume2.pdf,jd_data_06.txt,23.2,34.6,11.9,🔴 Poor — Resume needs significant keyword work,10,74,"data analysis, data science, excel, git, machine learning","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",3,2026-06-09 21:19
+resume2.pdf,jd_data_07.txt,28.4,42.7,14.1,🔴 Poor — Resume needs significant keyword work,10,61,"data analysis, data science, excel, microsoft excel, pivot tables","(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",2,2026-06-09 21:19
+resume2.pdf,jd_data_08.txt,27.1,40.6,13.5,🔴 Poor — Resume needs significant keyword work,7,45,"data science, excel, power bi, python, skills","(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",2,2026-06-09 21:19
+resume2.pdf,jd_data_09.txt,19.5,36.7,2.2,🔴 Poor — Resume needs significant keyword work,1,45,data science,"analysis, any graduate
+pg, changes, confidential data, creation",2,2026-06-09 21:19
+resume2.pdf,jd_data_10.txt,18.7,35.4,2.1,🔴 Poor — Resume needs significant keyword work,1,46,data science,"(deployment, analysis, any graduate
+pg, changes, confidential data",2,2026-06-09 21:19
+resume2.pdf,jd_ml_01.txt,1.9,3.8,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:19
+resume2.pdf,jd_ml_02.txt,19.0,30.0,8.0,🔴 Poor — Resume needs significant keyword work,2,23,"machine learning, python","application, applications, b.c.a., b.tech / b.e., client",2,2026-06-09 21:20
+resume2.pdf,jd_ml_03.txt,13.0,23.0,3.0,🔴 Poor — Resume needs significant keyword work,4,131,"deep learning, machine learning, problem solving, research","(iq, (irs, (mandaveli, 12
+eligible batches, access",4,2026-06-09 21:20
+resume2.pdf,jd_ml_04.txt,12.1,21.7,2.5,🔴 Poor — Resume needs significant keyword work,2,79,"project delivery, python","a genuine interest, a process engineer, a university degree, act, an ambassador",2,2026-06-09 21:20
+resume2.pdf,jd_ml_05.txt,24.4,42.3,6.6,🔴 Poor — Resume needs significant keyword work,5,71,"deep learning, feature engineering, generative ai, machine learning, python","- other, 0 2 years, a passion, a solid understanding, academic projects",2,2026-06-09 21:20
+resume2.pdf,jd_ml_06.txt,17.3,26.1,8.5,🔴 Poor — Resume needs significant keyword work,5,54,"algorithms, deep learning, machine learning, nlp, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",2,2026-06-09 21:20
+resume2.pdf,jd_ml_07.txt,24.6,30.8,18.4,🔴 Poor — Resume needs significant keyword work,25,111,"agile, algorithms, artificial intelligence, collaborative development, data science","(langchain, .net, 0-5 years, a remote position, a remote setting",2,2026-06-09 21:20
+resume2.pdf,jd_ml_08.txt,24.4,33.3,15.5,🔴 Poor — Resume needs significant keyword work,11,60,"data science, git, model evaluation, numpy, open source","a builder, a clean solution, ambiguity, anything, asset",3,2026-06-09 21:20
+resume2.pdf,jd_ml_09.txt,17.9,34.6,1.2,🔴 Poor — Resume needs significant keyword work,1,82,automation,"- other, a willingness, agentic systems, ai agent workflows, ai agents",2,2026-06-09 21:20
+resume2.pdf,jd_ml_10.txt,1.9,3.8,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:20
+resume2.pdf,jd_python_01.txt,25.6,41.8,9.4,🔴 Poor — Resume needs significant keyword work,3,29,"computer vision, generative ai, python","- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",3,2026-06-09 21:20
+resume2.pdf,jd_python_02.txt,24.0,27.6,20.4,🔴 Poor — Resume needs significant keyword work,21,82,"api integration, collaboration, communication, communication skills, css","2 years, a crucial role, a plus, a python developer, a related field",4,2026-06-09 21:20
+resume2.pdf,jd_python_03.txt,21.1,32.2,10.0,🔴 Poor — Resume needs significant keyword work,5,45,"django, javascript, orm, python, work experience","a day, a python developer, a team, any graduate
+pg, applications",3,2026-06-09 21:20
+resume2.pdf,jd_python_04.txt,17.5,29.3,5.6,🔴 Poor — Resume needs significant keyword work,3,51,"api development, python, rest api","a chance, a degree, a keen eye, a related field, a team environment",2,2026-06-09 21:20
+resume2.pdf,jd_python_05.txt,22.7,33.6,11.9,🔴 Poor — Resume needs significant keyword work,7,52,"data science, git, llm, python, react","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, api integrations",2,2026-06-09 21:20
+resume2.pdf,jd_python_06.txt,18.6,30.1,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",2,2026-06-09 21:21
+resume2.pdf,jd_python_07.txt,19.9,30.3,9.5,🔴 Poor — Resume needs significant keyword work,7,67,"algorithms, django, github, information security, problem solving","30 days, a passionate, a problem end, a value, advanced github features",4,2026-06-09 21:21
+resume2.pdf,jd_python_08.txt,33.9,38.3,29.5,🔴 Poor — Resume needs significant keyword work,13,31,"css, data structures, django, docker, git","a public domain, all details, any graduate
+pg, aws, clarity",3,2026-06-09 21:21
+resume2.pdf,jd_python_09.txt,21.2,26.4,16.1,🔴 Poor — Resume needs significant keyword work,10,52,"api integration, backend development, css, django, git","(core python, any specialization, applicants, availability, b.c.a.",3,2026-06-09 21:21
+resume2.pdf,jd_python_10.txt,22.3,29.4,15.2,🔴 Poor — Resume needs significant keyword work,14,78,"automation, backend development, database, django, json","- ability, - bonus, - familiarity, - knowledge, - passion",3,2026-06-09 21:21
+resume2.pdf,jd_web_01.txt,26.9,36.6,17.3,🔴 Poor — Resume needs significant keyword work,22,105,"agile, api development, automation, backend development, clean code","actionable business insights, agile development workflows, an ownership mindset, analysis, analytics pipelines",3,2026-06-09 21:21
+resume2.pdf,jd_web_02.txt,20.3,31.9,8.6,🔴 Poor — Resume needs significant keyword work,6,64,"data science, docker, git, llm, postgresql","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",2,2026-06-09 21:21
+resume2.pdf,jd_web_03.txt,23.0,32.7,13.3,🔴 Poor — Resume needs significant keyword work,13,85,"agile, api development, css, devops, git","(react, - other, .net, a plus, a related field",4,2026-06-09 21:21
+resume2.pdf,jd_web_04.txt,24.0,36.4,11.6,🔴 Poor — Resume needs significant keyword work,13,99,"algorithms, data structures, django, docker, git","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",3,2026-06-09 21:21
+resume2.pdf,jd_web_05.txt,21.0,31.8,10.3,🔴 Poor — Resume needs significant keyword work,6,52,"agile, generative ai, langchain, microservices, python","(e.g., openai, (offshore, agile development processes, agile methodologies, ai/ml models",4,2026-06-09 21:21
+resume2.pdf,jd_web_06.txt,28.7,38.8,18.5,🔴 Poor — Resume needs significant keyword work,5,22,"backend development, python, pytorch, scikit-learn, tensorflow","- other, ai/ml developers, ai/ml technologies, apis, aws",3,2026-06-09 21:21
+resume2.pdf,jd_web_07.txt,28.0,44.5,11.5,🔴 Poor — Resume needs significant keyword work,6,46,"css, html, javascript, mysql, python","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",2,2026-06-09 21:21
+resume2.pdf,jd_web_08.txt,19.6,34.7,4.5,🔴 Poor — Resume needs significant keyword work,11,232,"agile, api development, collaboration, css, git","(aws/openshift, a align, a clear set, a culture, a high standard",5,2026-06-09 21:21
+resume2.pdf,jd_web_09.txt,16.9,30.9,2.9,🔴 Poor — Resume needs significant keyword work,2,67,"python, react","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",2,2026-06-09 21:22
+resume2.pdf,jd_web_10.txt,21.0,30.0,11.9,🔴 Poor — Resume needs significant keyword work,8,59,"agile, css, django, github, html","0-4 years, a plus
+role, advantage
+experience, all phases, amazon cloud",3,2026-06-09 21:22
+resume3.pdf,jd_01.txt,11.9,22.1,1.7,🔴 Poor — Resume needs significant keyword work,2,113,"java, oracle","a high-level review, a limited level, acts, advanced programming solutions, advisor",4,2026-06-09 21:22
+resume3.pdf,jd_02.txt,13.3,24.5,2.2,🔴 Poor — Resume needs significant keyword work,5,225,"an individual contributor, automation, bash, python, the application","a clear set, a culture, a high standard, a network, a secure configuration",4,2026-06-09 21:22
+resume3.pdf,jd_03.txt,15.6,29.0,2.2,🔴 Poor — Resume needs significant keyword work,2,89,"bash, python","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",3,2026-06-09 21:22
+resume3.pdf,jd_04.txt,11.8,22.3,1.2,🔴 Poor — Resume needs significant keyword work,1,80,automation,"(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",5,2026-06-09 21:22
+resume3.pdf,jd_05.txt,13.5,24.7,2.3,🔴 Poor — Resume needs significant keyword work,5,217,"automation, bash, github, java, python","(docker, + years, .net, a client, a place",6,2026-06-09 21:22
+resume3.pdf,jd_06.txt,19.2,35.6,2.8,🔴 Poor — Resume needs significant keyword work,3,106,"collaboration, python, the application","(degree, 3+ years, adaptability, adcs pki, all candidates",3,2026-06-09 21:22
+resume3.pdf,jd_07.txt,13.7,24.0,3.4,🔴 Poor — Resume needs significant keyword work,5,140,"bash, github, linux, python, scripting","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",3,2026-06-09 21:22
+resume3.pdf,jd_08.txt,15.1,22.5,7.6,🔴 Poor — Resume needs significant keyword work,5,61,"c++, java, machine learning, python, software development","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",3,2026-06-09 21:22
+resume3.pdf,jd_09.txt,11.5,22.9,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",2,2026-06-09 21:23
+resume3.pdf,jd_10.txt,11.4,22.9,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",2,2026-06-09 21:23
+resume3.pdf,jd_11.txt,13.2,26.5,0.0,🔴 Poor — Resume needs significant keyword work,0,68,,"3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",2,2026-06-09 21:23
+resume3.pdf,jd_12.txt,13.2,21.4,5.0,🔴 Poor — Resume needs significant keyword work,7,133,"algorithms, automation, data analysis, github, ml algorithms","(exo, (genai, (neural networks, (required / preferred, 15 years",3,2026-06-09 21:23
+resume3.pdf,jd_13.txt,20.0,30.4,9.6,🔴 Poor — Resume needs significant keyword work,7,66,"automation, git, langchain, numpy, pandas","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",4,2026-06-09 21:23
+resume3.pdf,jd_14.txt,14.1,24.9,3.2,🔴 Poor — Resume needs significant keyword work,6,180,"git, models, prompt engineering, python, research","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",9,2026-06-09 21:23
+resume3.pdf,jd_15.txt,11.9,20.1,3.7,🔴 Poor — Resume needs significant keyword work,5,130,"access, collaboration, langchain, prompt engineering, python","(rag, , profile, -thought, 20 countries, a commitment",4,2026-06-09 21:23
+resume3.pdf,jd_cyber_01.txt,11.9,23.9,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"/b.tech, 2-5 years, any specialization
+pg, attitude, authority",3,2026-06-09 21:23
+resume3.pdf,jd_cyber_02.txt,12.3,24.6,0.0,🔴 Poor — Resume needs significant keyword work,0,98,,"0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",3,2026-06-09 21:23
+resume3.pdf,jd_cyber_03.txt,12.7,21.4,3.9,🔴 Poor — Resume needs significant keyword work,2,49,"bash, excel","6 months, a must
+min, agent-based deployment, b.tech / b.e., channel partners",3,2026-06-09 21:23
+resume3.pdf,jd_cyber_04.txt,10.9,18.6,3.1,🔴 Poor — Resume needs significant keyword work,2,62,"linux, research","a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",3,2026-06-09 21:24
+resume3.pdf,jd_cyber_05.txt,10.6,16.0,5.3,🔴 Poor — Resume needs significant keyword work,1,18,linux,"any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",2,2026-06-09 21:24
+resume3.pdf,jd_cyber_06.txt,9.6,19.1,0.0,🔴 Poor — Resume needs significant keyword work,0,62,,"a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",2,2026-06-09 21:24
+resume3.pdf,jd_cyber_07.txt,7.7,15.5,0.0,🔴 Poor — Resume needs significant keyword work,0,35,,"any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity",3,2026-06-09 21:24
+resume3.pdf,jd_cyber_08.txt,11.1,19.6,2.6,🔴 Poor — Resume needs significant keyword work,1,38,linux,"(cse, b.c.a., b.sc, b.tech / b.e., computer applications",2,2026-06-09 21:24
+resume3.pdf,jd_cyber_09.txt,14.5,28.9,0.0,🔴 Poor — Resume needs significant keyword work,0,60,,"(added advantage, (servers, 1 year, added advantage, analytical skills",2,2026-06-09 21:24
+resume3.pdf,jd_cyber_10.txt,10.3,19.6,1.1,🔴 Poor — Resume needs significant keyword work,1,88,collaboration,"a timely manner, alerts, anomalies, any graduate
+pg, applications",2,2026-06-09 21:24
+resume3.pdf,jd_data_01.txt,11.9,19.0,4.7,🔴 Poor — Resume needs significant keyword work,2,41,"excel, python","a data analyst, actionable insights, analytics, analyzing, any graduate
+pg",3,2026-06-09 21:24
+resume3.pdf,jd_data_02.txt,10.0,19.9,0.0,🔴 Poor — Resume needs significant keyword work,0,27,,"2yr, a desire, a passion, analytics, any graduate
+pg",2,2026-06-09 21:24
+resume3.pdf,jd_data_03.txt,16.1,25.1,7.0,🔴 Poor — Resume needs significant keyword work,6,80,"data analysis, excel, git, machine learning, python","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",4,2026-06-09 21:24
+resume3.pdf,jd_data_04.txt,9.8,19.5,0.0,🔴 Poor — Resume needs significant keyword work,0,28,,"2yr, a desire, a passion, anagoogle suitedata, analytics",2,2026-06-09 21:24
+resume3.pdf,jd_data_05.txt,16.1,25.1,7.0,🔴 Poor — Resume needs significant keyword work,6,80,"data analysis, excel, git, machine learning, python","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",4,2026-06-09 21:25
+resume3.pdf,jd_data_06.txt,14.6,22.2,7.1,🔴 Poor — Resume needs significant keyword work,6,78,"data analysis, excel, git, machine learning, python","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",4,2026-06-09 21:25
+resume3.pdf,jd_data_07.txt,10.7,14.4,7.0,🔴 Poor — Resume needs significant keyword work,5,66,"data analysis, excel, microsoft excel, python, spreadsheets","(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",3,2026-06-09 21:25
+resume3.pdf,jd_data_08.txt,12.0,20.3,3.8,🔴 Poor — Resume needs significant keyword work,2,50,"excel, python","(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",3,2026-06-09 21:25
+resume3.pdf,jd_data_09.txt,12.1,24.2,0.0,🔴 Poor — Resume needs significant keyword work,0,46,,"analysis, any graduate
+pg, changes, confidential data, creation",2,2026-06-09 21:25
+resume3.pdf,jd_data_10.txt,14.2,28.3,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"(deployment, analysis, any graduate
+pg, changes, confidential data",2,2026-06-09 21:25
+resume3.pdf,jd_ml_01.txt,3.9,7.7,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:25
+resume3.pdf,jd_ml_02.txt,18.1,28.3,8.0,🔴 Poor — Resume needs significant keyword work,2,23,"machine learning, python","application, applications, b.c.a., b.tech / b.e., client",2,2026-06-09 21:25
+resume3.pdf,jd_ml_03.txt,14.9,25.4,4.4,🔴 Poor — Resume needs significant keyword work,6,129,"access, c++, java, machine learning, problem solving","(iq, (irs, (mandaveli, 12
+eligible batches, added advantage",3,2026-06-09 21:25
+resume3.pdf,jd_ml_04.txt,11.5,21.8,1.2,🔴 Poor — Resume needs significant keyword work,1,80,python,"a genuine interest, a process engineer, a university degree, act, an ambassador",2,2026-06-09 21:25
+resume3.pdf,jd_ml_05.txt,10.2,17.8,2.6,🔴 Poor — Resume needs significant keyword work,2,74,"machine learning, python","- other, 0 2 years, a passion, a solid understanding, academic projects",3,2026-06-09 21:25
+resume3.pdf,jd_ml_06.txt,14.9,24.8,5.1,🔴 Poor — Resume needs significant keyword work,3,56,"algorithms, machine learning, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",4,2026-06-09 21:26
+resume3.pdf,jd_ml_07.txt,16.6,26.6,6.6,🔴 Poor — Resume needs significant keyword work,9,127,"algorithms, github, langchain, machine learning, mongodb","(langchain, .net, 0-5 years, a remote position, a remote setting",11,2026-06-09 21:26
+resume3.pdf,jd_ml_08.txt,14.2,19.8,8.5,🔴 Poor — Resume needs significant keyword work,6,65,"git, numpy, open source, pandas, prompt engineering","a builder, a clean solution, ambiguity, anything, asset",7,2026-06-09 21:26
+resume3.pdf,jd_ml_09.txt,16.9,30.2,3.6,🔴 Poor — Resume needs significant keyword work,3,80,"automation, outputs, prompt engineering","- other, a willingness, agentic systems, ai agent workflows, ai agents",2,2026-06-09 21:26
+resume3.pdf,jd_ml_10.txt,3.9,7.7,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:26
+resume3.pdf,jd_python_01.txt,13.8,24.5,3.1,🔴 Poor — Resume needs significant keyword work,1,31,python,"- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",3,2026-06-09 21:26
+resume3.pdf,jd_python_02.txt,22.3,38.7,5.8,🔴 Poor — Resume needs significant keyword work,6,97,"collaboration, git, mongodb, python, python development","2 years, a crucial role, a plus, a python developer, a related field",10,2026-06-09 21:26
+resume3.pdf,jd_python_03.txt,16.8,31.7,2.0,🔴 Poor — Resume needs significant keyword work,1,49,python,"a day, a python developer, a team, any graduate
+pg, applications",5,2026-06-09 21:26
+resume3.pdf,jd_python_04.txt,23.0,42.4,3.7,🔴 Poor — Resume needs significant keyword work,2,52,"node.js, python","a chance, a degree, a keen eye, a related field, a team environment",3,2026-06-09 21:26
+resume3.pdf,jd_python_05.txt,22.6,38.3,6.8,🔴 Poor — Resume needs significant keyword work,4,55,"git, llm, python, version control","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, api integrations",4,2026-06-09 21:26
+resume3.pdf,jd_python_06.txt,15.0,23.0,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",2,2026-06-09 21:26
+resume3.pdf,jd_python_07.txt,19.1,32.8,5.4,🔴 Poor — Resume needs significant keyword work,4,70,"algorithms, github, problem solving, python","30 days, a passionate, a problem end, a value, advanced github features",5,2026-06-09 21:27
+resume3.pdf,jd_python_08.txt,24.7,33.5,15.9,🔴 Poor — Resume needs significant keyword work,7,37,"data structures, git, github, linux, machine learning","a public domain, all details, any graduate
+pg, aws, clarity",9,2026-06-09 21:27
+resume3.pdf,jd_python_09.txt,21.3,36.1,6.5,🔴 Poor — Resume needs significant keyword work,4,58,"core python, git, python, version control","(core python, any specialization, api integration, applicants, availability",6,2026-06-09 21:27
+resume3.pdf,jd_python_10.txt,17.6,27.5,7.6,🔴 Poor — Resume needs significant keyword work,7,85,"automation, langchain, numpy, pandas, python","- ability, - bonus, - familiarity, - knowledge, - passion",8,2026-06-09 21:27
+resume3.pdf,jd_web_01.txt,23.5,40.8,6.3,🔴 Poor — Resume needs significant keyword work,8,119,"automation, data analysis, git, linux, python","actionable business insights, agile, agile development workflows, an ownership mindset, analysis",8,2026-06-09 21:27
+resume3.pdf,jd_web_02.txt,21.4,38.6,4.3,🔴 Poor — Resume needs significant keyword work,3,67,"git, llm, python","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",4,2026-06-09 21:27
+resume3.pdf,jd_web_03.txt,27.9,48.6,7.1,🔴 Poor — Resume needs significant keyword work,7,91,"git, github, java, mongodb, node.js","(react, - other, .net, a plus, a related field",7,2026-06-09 21:27
+resume3.pdf,jd_web_04.txt,22.0,36.1,8.0,🔴 Poor — Resume needs significant keyword work,9,103,"algorithms, data structures, git, github, java","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",8,2026-06-09 21:27
+resume3.pdf,jd_web_05.txt,22.1,37.2,6.9,🔴 Poor — Resume needs significant keyword work,4,54,"java, langchain, node.js, python","(e.g., openai, (offshore, agile, agile development processes, agile methodologies",4,2026-06-09 21:27
+resume3.pdf,jd_web_06.txt,16.5,29.4,3.7,🔴 Poor — Resume needs significant keyword work,1,26,python,"- other, ai/ml developers, ai/ml technologies, apis, aws",6,2026-06-09 21:27
+resume3.pdf,jd_web_07.txt,18.1,32.3,3.8,🔴 Poor — Resume needs significant keyword work,2,50,"mongodb, python","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",5,2026-06-09 21:27
+resume3.pdf,jd_web_08.txt,25.9,47.6,4.1,🔴 Poor — Resume needs significant keyword work,10,233,"an individual contributor, c++, collaboration, git, java","(aws/openshift, a align, a clear set, a culture, a high standard",6,2026-06-09 21:28
+resume3.pdf,jd_web_09.txt,26.4,45.5,7.2,🔴 Poor — Resume needs significant keyword work,5,64,"express, mongodb, node.js, python, scripts","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",3,2026-06-09 21:28
+resume3.pdf,jd_web_10.txt,20.9,37.3,4.5,🔴 Poor — Resume needs significant keyword work,3,64,"github, mongodb, python","0-4 years, a plus
+role, advantage
+experience, agile, all phases",6,2026-06-09 21:28
+resume4.pdf,jd_01.txt,14.8,26.9,2.6,🔴 Poor — Resume needs significant keyword work,3,112,"java, react, sql","a high-level review, a limited level, acts, advanced programming solutions, advisor",2,2026-06-09 21:28
+resume4.pdf,jd_02.txt,16.6,31.1,2.2,🔴 Poor — Resume needs significant keyword work,5,225,"bash, development, leadership, problems, python","a clear set, a culture, a high standard, a network, a secure configuration",4,2026-06-09 21:28
+resume4.pdf,jd_03.txt,15.1,26.9,3.3,🔴 Poor — Resume needs significant keyword work,3,88,"bash, development, python","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",3,2026-06-09 21:28
+resume4.pdf,jd_04.txt,18.9,37.8,0.0,🔴 Poor — Resume needs significant keyword work,0,81,,"(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",5,2026-06-09 21:28
+resume4.pdf,jd_05.txt,19.3,36.2,2.3,🔴 Poor — Resume needs significant keyword work,5,217,"bash, github, java, javascript, python","(docker, + years, .net, a client, a place",5,2026-06-09 21:28
+resume4.pdf,jd_06.txt,18.7,36.5,0.9,🔴 Poor — Resume needs significant keyword work,1,108,python,"(degree, 3+ years, adaptability, adcs pki, all candidates",3,2026-06-09 21:28
+resume4.pdf,jd_07.txt,18.1,32.1,4.1,🔴 Poor — Resume needs significant keyword work,6,139,"bash, development, end, github, linux","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",3,2026-06-09 21:28
+resume4.pdf,jd_08.txt,29.4,51.3,7.6,🔴 Poor — Resume needs significant keyword work,5,61,"c++, java, javascript, machine learning, python","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",2,2026-06-09 21:28
+resume4.pdf,jd_09.txt,18.6,37.2,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",2,2026-06-09 21:28
+resume4.pdf,jd_10.txt,12.8,25.7,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",2,2026-06-09 21:28
+resume4.pdf,jd_11.txt,17.8,35.6,0.0,🔴 Poor — Resume needs significant keyword work,0,68,,"3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",2,2026-06-09 21:29
+resume4.pdf,jd_12.txt,20.3,34.2,6.4,🔴 Poor — Resume needs significant keyword work,9,131,"algorithms, end, generative ai, github, llms","(exo, (genai, (neural networks, (required / preferred, 15 years",3,2026-06-09 21:29
+resume4.pdf,jd_13.txt,25.8,46.1,5.5,🔴 Poor — Resume needs significant keyword work,4,69,"git, langchain, llms, python","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",6,2026-06-09 21:29
+resume4.pdf,jd_14.txt,19.0,33.1,4.8,🔴 Poor — Resume needs significant keyword work,9,177,"flask, generative ai, git, llms, nlp","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",5,2026-06-09 21:29
+resume4.pdf,jd_15.txt,18.9,34.7,3.0,🔴 Poor — Resume needs significant keyword work,4,131,"langchain, large language models, nlp, python","(rag, , profile, -thought, 20 countries, a commitment",3,2026-06-09 21:29
+resume4.pdf,jd_cyber_01.txt,20.1,40.2,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"/b.tech, 2-5 years, any specialization
+pg, attitude, authority",3,2026-06-09 21:29
+resume4.pdf,jd_cyber_02.txt,14.5,29.0,0.0,🔴 Poor — Resume needs significant keyword work,0,98,,"0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",3,2026-06-09 21:29
+resume4.pdf,jd_cyber_03.txt,22.6,43.1,2.0,🔴 Poor — Resume needs significant keyword work,1,50,bash,"6 months, a must
+min, agent-based deployment, b.tech / b.e., channel partners",3,2026-06-09 21:29
+resume4.pdf,jd_cyber_04.txt,18.2,33.3,3.1,🔴 Poor — Resume needs significant keyword work,2,62,"linux, technologies","a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",3,2026-06-09 21:29
+resume4.pdf,jd_cyber_05.txt,27.8,50.3,5.3,🔴 Poor — Resume needs significant keyword work,1,18,linux,"any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",2,2026-06-09 21:29
+resume4.pdf,jd_cyber_06.txt,20.0,40.0,0.0,🔴 Poor — Resume needs significant keyword work,0,62,,"a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",2,2026-06-09 21:30
+resume4.pdf,jd_cyber_07.txt,19.5,39.0,0.0,🔴 Poor — Resume needs significant keyword work,0,35,,"any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity",3,2026-06-09 21:30
+resume4.pdf,jd_cyber_08.txt,27.3,52.0,2.6,🔴 Poor — Resume needs significant keyword work,1,38,linux,"(cse, b.c.a., b.sc, b.tech / b.e., computer applications",2,2026-06-09 21:30
+resume4.pdf,jd_cyber_09.txt,26.1,52.1,0.0,🔴 Poor — Resume needs significant keyword work,0,60,,"(added advantage, (servers, 1 year, added advantage, analytical skills",2,2026-06-09 21:30
+resume4.pdf,jd_cyber_10.txt,15.0,28.8,1.1,🔴 Poor — Resume needs significant keyword work,1,88,technologies,"a timely manner, alerts, anomalies, any graduate
+pg, applications",2,2026-06-09 21:30
+resume4.pdf,jd_data_01.txt,18.9,33.1,4.7,🔴 Poor — Resume needs significant keyword work,2,41,"python, sql","a data analyst, actionable insights, analytics, analyzing, any graduate
+pg",2,2026-06-09 21:30
+resume4.pdf,jd_data_02.txt,19.0,37.9,0.0,🔴 Poor — Resume needs significant keyword work,0,27,,"2yr, a desire, a passion, analytics, any graduate
+pg",2,2026-06-09 21:30
+resume4.pdf,jd_data_03.txt,19.1,32.4,5.8,🔴 Poor — Resume needs significant keyword work,5,81,"git, machine learning, python, sql, version control","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",4,2026-06-09 21:30
+resume4.pdf,jd_data_04.txt,18.9,37.7,0.0,🔴 Poor — Resume needs significant keyword work,0,28,,"2yr, a desire, a passion, anagoogle suitedata, analytics",2,2026-06-09 21:30
+resume4.pdf,jd_data_05.txt,19.1,32.4,5.8,🔴 Poor — Resume needs significant keyword work,5,81,"git, machine learning, python, sql, version control","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",4,2026-06-09 21:30
+resume4.pdf,jd_data_06.txt,17.7,29.5,6.0,🔴 Poor — Resume needs significant keyword work,5,79,"git, machine learning, python, sql, version control","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",4,2026-06-09 21:31
+resume4.pdf,jd_data_07.txt,13.2,23.6,2.8,🔴 Poor — Resume needs significant keyword work,2,69,"python, sql","(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",3,2026-06-09 21:31
+resume4.pdf,jd_data_08.txt,20.7,37.5,3.8,🔴 Poor — Resume needs significant keyword work,2,50,"python, sql","(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",2,2026-06-09 21:31
+resume4.pdf,jd_data_09.txt,18.5,37.1,0.0,🔴 Poor — Resume needs significant keyword work,0,46,,"analysis, any graduate
+pg, changes, confidential data, creation",2,2026-06-09 21:31
+resume4.pdf,jd_data_10.txt,16.8,33.7,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"(deployment, analysis, any graduate
+pg, changes, confidential data",2,2026-06-09 21:31
+resume4.pdf,jd_ml_01.txt,8.8,17.6,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:31
+resume4.pdf,jd_ml_02.txt,19.4,30.8,8.0,🔴 Poor — Resume needs significant keyword work,2,23,"machine learning, python","application, applications, b.c.a., b.tech / b.e., client",2,2026-06-09 21:31
+resume4.pdf,jd_ml_03.txt,15.9,27.5,4.4,🔴 Poor — Resume needs significant keyword work,6,129,"c++, development, end, java, machine learning","(iq, (irs, (mandaveli, 12
+eligible batches, access",3,2026-06-09 21:31
+resume4.pdf,jd_ml_04.txt,17.3,33.4,1.2,🔴 Poor — Resume needs significant keyword work,1,80,python,"a genuine interest, a process engineer, a university degree, act, an ambassador",2,2026-06-09 21:31
+resume4.pdf,jd_ml_05.txt,18.0,32.1,3.9,🔴 Poor — Resume needs significant keyword work,3,73,"generative ai, machine learning, python","- other, 0 2 years, a passion, a solid understanding, academic projects",3,2026-06-09 21:31
+resume4.pdf,jd_ml_06.txt,19.7,31.0,8.5,🔴 Poor — Resume needs significant keyword work,5,54,"algorithms, end, machine learning, nlp, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",3,2026-06-09 21:31
+resume4.pdf,jd_ml_07.txt,21.0,32.3,9.6,🔴 Poor — Resume needs significant keyword work,13,123,"algorithms, end, github, langchain, machine learning","(langchain, .net, 0-5 years, a remote position, a remote setting",8,2026-06-09 21:32
+resume4.pdf,jd_ml_08.txt,24.9,42.8,7.0,🔴 Poor — Resume needs significant keyword work,5,66,"git, llms, open source, python, sql","a builder, a clean solution, ambiguity, anything, asset",8,2026-06-09 21:32
+resume4.pdf,jd_ml_09.txt,21.0,40.8,1.2,🔴 Poor — Resume needs significant keyword work,1,82,llms,"- other, a willingness, agentic systems, ai agent workflows, ai agents",2,2026-06-09 21:32
+resume4.pdf,jd_ml_10.txt,8.8,17.6,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:32
+resume4.pdf,jd_python_01.txt,26.9,44.3,9.4,🔴 Poor — Resume needs significant keyword work,3,29,"end, generative ai, python","- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",3,2026-06-09 21:32
+resume4.pdf,jd_python_02.txt,23.0,33.4,12.6,🔴 Poor — Resume needs significant keyword work,13,90,"api integration, css, database management, development, flask","2 years, a crucial role, a plus, a python developer, a related field",6,2026-06-09 21:32
+resume4.pdf,jd_python_03.txt,22.0,38.0,6.0,🔴 Poor — Resume needs significant keyword work,3,47,"flask, javascript, python","a day, a python developer, a team, any graduate
+pg, applications",3,2026-06-09 21:32
+resume4.pdf,jd_python_04.txt,22.4,41.0,3.7,🔴 Poor — Resume needs significant keyword work,2,52,"python, rest api","a chance, a degree, a keen eye, a related field, a team environment",2,2026-06-09 21:32
+resume4.pdf,jd_python_05.txt,27.3,42.7,11.9,🔴 Poor — Resume needs significant keyword work,7,52,"api integrations, git, llm, python, react","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, apis",2,2026-06-09 21:32
+resume4.pdf,jd_python_06.txt,20.9,34.8,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",2,2026-06-09 21:32
+resume4.pdf,jd_python_07.txt,27.3,46.5,8.1,🔴 Poor — Resume needs significant keyword work,6,68,"algorithms, end, flask, github, problem solving","30 days, a passionate, a problem end, a value, advanced github features",4,2026-06-09 21:33
+resume4.pdf,jd_python_08.txt,37.6,50.2,25.0,🔴 Poor — Resume needs significant keyword work,11,33,"css, data structures, git, github, javascript","a public domain, all details, any graduate
+pg, aws, clarity",6,2026-06-09 21:33
+resume4.pdf,jd_python_09.txt,31.0,44.3,17.7,🔴 Poor — Resume needs significant keyword work,11,51,"api integration, backend development, css, flask, git","(core python, any specialization, applicants, availability, b.c.a.",3,2026-06-09 21:33
+resume4.pdf,jd_python_10.txt,18.7,32.1,5.4,🔴 Poor — Resume needs significant keyword work,5,87,"backend development, flask, langchain, mysql, python","- ability, - bonus, - familiarity, - knowledge, - passion",8,2026-06-09 21:33
+resume4.pdf,jd_web_01.txt,21.1,32.8,9.4,🔴 Poor — Resume needs significant keyword work,12,115,"backend development, css, end, git, html","actionable business insights, agile, agile development workflows, an ownership mindset, analysis",7,2026-06-09 21:33
+resume4.pdf,jd_web_02.txt,22.8,40.0,5.7,🔴 Poor — Resume needs significant keyword work,4,66,"git, llm, llms, python","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",4,2026-06-09 21:33
+resume4.pdf,jd_web_03.txt,30.3,45.3,15.3,🔴 Poor — Resume needs significant keyword work,15,83,"backend, css, git, github, html","(react, - other, .net, a plus, a related field",4,2026-06-09 21:33
+resume4.pdf,jd_web_04.txt,29.0,47.2,10.7,🔴 Poor — Resume needs significant keyword work,12,100,"algorithms, data structures, git, github, java","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",5,2026-06-09 21:33
+resume4.pdf,jd_web_05.txt,29.8,44.1,15.5,🔴 Poor — Resume needs significant keyword work,9,49,"end, generative ai, java, langchain, large language models","(e.g., openai, (offshore, agile, agile development processes, agile methodologies",3,2026-06-09 21:33
+resume4.pdf,jd_web_06.txt,28.9,50.4,7.4,🔴 Poor — Resume needs significant keyword work,2,25,"backend development, python","- other, ai/ml developers, ai/ml technologies, apis, aws",6,2026-06-09 21:33
+resume4.pdf,jd_web_07.txt,32.9,50.4,15.4,🔴 Poor — Resume needs significant keyword work,8,44,"backend, css, html, javascript, mongodb","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",2,2026-06-09 21:34
+resume4.pdf,jd_web_08.txt,21.9,38.4,5.3,🔴 Poor — Resume needs significant keyword work,13,230,"c++, css, git, java, javascript","(aws/openshift, a align, a clear set, a culture, a high standard",3,2026-06-09 21:34
+resume4.pdf,jd_web_09.txt,26.4,47.0,5.8,🔴 Poor — Resume needs significant keyword work,4,65,"end, mongodb, python, react","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",2,2026-06-09 21:34
+resume4.pdf,jd_web_10.txt,26.5,42.7,10.4,🔴 Poor — Resume needs significant keyword work,7,60,"css, github, html, javascript, mongodb","0-4 years, a plus
+role, advantage
+experience, agile, all phases",4,2026-06-09 21:34
+resume5.pdf,jd_01.txt,18.9,36.1,1.7,🔴 Poor — Resume needs significant keyword work,2,113,"oracle, react","a high-level review, a limited level, acts, advanced programming solutions, advisor",3,2026-06-09 21:34
+resume5.pdf,jd_02.txt,24.0,45.9,2.2,🔴 Poor — Resume needs significant keyword work,5,225,"aws, bash, development, docker, python","a clear set, a culture, a high standard, a network, a secure configuration",1,2026-06-09 21:34
+resume5.pdf,jd_03.txt,25.9,46.3,5.5,🔴 Poor — Resume needs significant keyword work,5,86,"amazon web services, aws, bash, development, python","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",1,2026-06-09 21:34
+resume5.pdf,jd_04.txt,24.2,42.1,6.2,🔴 Poor — Resume needs significant keyword work,5,76,"aws, devops, docker, iso 27001, nist","(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",2,2026-06-09 21:34
+resume5.pdf,jd_05.txt,21.6,41.0,2.3,🔴 Poor — Resume needs significant keyword work,5,217,"aws, bash, docker, javascript, python","(docker, + years, .net, a client, a place",3,2026-06-09 21:34
+resume5.pdf,jd_06.txt,22.1,42.5,1.8,🔴 Poor — Resume needs significant keyword work,2,107,"python, the system","(degree, 3+ years, adaptability, adcs pki, all candidates",2,2026-06-09 21:34
+resume5.pdf,jd_07.txt,23.9,44.4,3.4,🔴 Poor — Resume needs significant keyword work,5,140,"aws, bash, development, linux, python","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",1,2026-06-09 21:35
+resume5.pdf,jd_08.txt,27.4,50.2,4.5,🔴 Poor — Resume needs significant keyword work,3,63,"c++, javascript, python","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",3,2026-06-09 21:35
+resume5.pdf,jd_09.txt,19.6,39.1,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",1,2026-06-09 21:35
+resume5.pdf,jd_10.txt,17.5,35.1,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",1,2026-06-09 21:35
+resume5.pdf,jd_11.txt,22.6,42.2,2.9,🔴 Poor — Resume needs significant keyword work,2,66,"the system, them","3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",1,2026-06-09 21:35
+resume5.pdf,jd_12.txt,28.1,51.9,4.3,🔴 Poor — Resume needs significant keyword work,6,134,"algorithms, generative ai, llms, nlp, python","(exo, (genai, (neural networks, (required / preferred, 15 years",2,2026-06-09 21:35
+resume5.pdf,jd_13.txt,33.7,61.9,5.5,🔴 Poor — Resume needs significant keyword work,4,69,"aws, docker, llms, python","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",4,2026-06-09 21:35
+resume5.pdf,jd_14.txt,29.7,55.1,4.3,🔴 Poor — Resume needs significant keyword work,8,178,"aws, flask, generative ai, llms, nlp","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",5,2026-06-09 21:35
+resume5.pdf,jd_15.txt,21.7,41.1,2.2,🔴 Poor — Resume needs significant keyword work,3,132,"large language models, nlp, python","(rag, , profile, -thought, 20 countries, a commitment",2,2026-06-09 21:35
+resume5.pdf,jd_cyber_01.txt,21.8,43.6,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"/b.tech, 2-5 years, any specialization
+pg, attitude, authority",2,2026-06-09 21:35
+resume5.pdf,jd_cyber_02.txt,18.8,35.6,2.0,🔴 Poor — Resume needs significant keyword work,2,96,"content, nist","0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",2,2026-06-09 21:36
+resume5.pdf,jd_cyber_03.txt,22.2,42.3,2.0,🔴 Poor — Resume needs significant keyword work,1,50,bash,"6 months, a must
+min, agent-based deployment, b.tech / b.e., channel partners",2,2026-06-09 21:36
+resume5.pdf,jd_cyber_04.txt,16.7,31.9,1.6,🔴 Poor — Resume needs significant keyword work,1,63,linux,"a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",2,2026-06-09 21:36
+resume5.pdf,jd_cyber_05.txt,21.4,37.4,5.3,🔴 Poor — Resume needs significant keyword work,1,18,linux,"any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",1,2026-06-09 21:36
+resume5.pdf,jd_cyber_06.txt,18.1,33.0,3.2,🔴 Poor — Resume needs significant keyword work,2,60,"content, them","a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",1,2026-06-09 21:36
+resume5.pdf,jd_cyber_07.txt,15.5,31.0,0.0,🔴 Poor — Resume needs significant keyword work,0,35,,"any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity",2,2026-06-09 21:36
+resume5.pdf,jd_cyber_08.txt,20.8,39.1,2.6,🔴 Poor — Resume needs significant keyword work,1,38,linux,"(cse, b.c.a., b.sc, b.tech / b.e., computer applications",1,2026-06-09 21:36
+resume5.pdf,jd_cyber_09.txt,23.4,46.8,0.0,🔴 Poor — Resume needs significant keyword work,0,60,,"(added advantage, (servers, 1 year, added advantage, analytical skills",1,2026-06-09 21:36
+resume5.pdf,jd_cyber_10.txt,19.1,35.9,2.2,🔴 Poor — Resume needs significant keyword work,2,87,"fixes, iso 27001","a timely manner, alerts, anomalies, any graduate
+pg, applications",1,2026-06-09 21:36
+resume5.pdf,jd_data_01.txt,20.7,39.2,2.3,🔴 Poor — Resume needs significant keyword work,1,42,python,"a data analyst, actionable insights, analytics, analyzing, any graduate
+pg",2,2026-06-09 21:37
+resume5.pdf,jd_data_02.txt,19.0,38.1,0.0,🔴 Poor — Resume needs significant keyword work,0,27,,"2yr, a desire, a passion, analytics, any graduate
+pg",1,2026-06-09 21:37
+resume5.pdf,jd_data_03.txt,24.0,45.7,2.3,🔴 Poor — Resume needs significant keyword work,2,84,"aws, python","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",5,2026-06-09 21:37
+resume5.pdf,jd_data_04.txt,18.8,37.6,0.0,🔴 Poor — Resume needs significant keyword work,0,28,,"2yr, a desire, a passion, anagoogle suitedata, analytics",1,2026-06-09 21:37
+resume5.pdf,jd_data_05.txt,24.0,45.7,2.3,🔴 Poor — Resume needs significant keyword work,2,84,"aws, python","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",5,2026-06-09 21:37
+resume5.pdf,jd_data_06.txt,22.4,42.4,2.4,🔴 Poor — Resume needs significant keyword work,2,82,"aws, python","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",5,2026-06-09 21:37
+resume5.pdf,jd_data_07.txt,17.9,34.3,1.4,🔴 Poor — Resume needs significant keyword work,1,70,python,"(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",3,2026-06-09 21:37
+resume5.pdf,jd_data_08.txt,22.6,43.2,1.9,🔴 Poor — Resume needs significant keyword work,1,51,python,"(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",2,2026-06-09 21:37
+resume5.pdf,jd_data_09.txt,21.0,42.0,0.0,🔴 Poor — Resume needs significant keyword work,0,46,,"analysis, any graduate
+pg, changes, confidential data, creation",1,2026-06-09 21:38
+resume5.pdf,jd_data_10.txt,22.0,43.9,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"(deployment, analysis, any graduate
+pg, changes, confidential data",1,2026-06-09 21:38
+resume5.pdf,jd_ml_01.txt,6.6,13.1,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,1,2026-06-09 21:38
+resume5.pdf,jd_ml_02.txt,30.7,57.5,4.0,🔴 Poor — Resume needs significant keyword work,1,24,python,"application, applications, b.c.a., b.tech / b.e., client",2,2026-06-09 21:38
+resume5.pdf,jd_ml_03.txt,22.2,42.2,2.2,🔴 Poor — Resume needs significant keyword work,3,132,"c++, development, problem solving","(iq, (irs, (mandaveli, 12
+eligible batches, access",4,2026-06-09 21:38
+resume5.pdf,jd_ml_04.txt,21.1,41.0,1.2,🔴 Poor — Resume needs significant keyword work,1,80,python,"a genuine interest, a process engineer, a university degree, act, an ambassador",1,2026-06-09 21:38
+resume5.pdf,jd_ml_05.txt,25.4,47.0,3.9,🔴 Poor — Resume needs significant keyword work,3,73,"content, generative ai, python","- other, 0 2 years, a passion, a solid understanding, academic projects",3,2026-06-09 21:38
+resume5.pdf,jd_ml_06.txt,25.5,44.1,6.8,🔴 Poor — Resume needs significant keyword work,4,55,"algorithms, content, nlp, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",3,2026-06-09 21:38
+resume5.pdf,jd_ml_07.txt,28.1,51.7,4.4,🔴 Poor — Resume needs significant keyword work,6,130,"algorithms, mongodb, nlp, python, react","(langchain, .net, 0-5 years, a remote position, a remote setting",10,2026-06-09 21:38
+resume5.pdf,jd_ml_08.txt,26.2,48.1,4.2,🔴 Poor — Resume needs significant keyword work,3,68,"aws, llms, python","a builder, a clean solution, ambiguity, anything, asset",8,2026-06-09 21:38
+resume5.pdf,jd_ml_09.txt,30.4,59.7,1.2,🔴 Poor — Resume needs significant keyword work,1,82,llms,"- other, a willingness, agentic systems, ai agent workflows, ai agents",1,2026-06-09 21:38
+resume5.pdf,jd_ml_10.txt,6.6,13.1,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,1,2026-06-09 21:38
+resume5.pdf,jd_python_01.txt,36.1,59.6,12.5,🔴 Poor — Resume needs significant keyword work,4,28,"aws, gemini, generative ai, python","- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",1,2026-06-09 21:38
+resume5.pdf,jd_python_02.txt,34.3,55.0,13.6,🔴 Poor — Resume needs significant keyword work,14,89,"api integration, aws, css, development, devops","2 years, a crucial role, a plus, a python developer, a related field",4,2026-06-09 21:38
+resume5.pdf,jd_python_03.txt,30.3,52.6,8.0,🔴 Poor — Resume needs significant keyword work,4,46,"django, flask, javascript, python","a day, a python developer, a team, any graduate
+pg, applications",1,2026-06-09 21:38
+resume5.pdf,jd_python_04.txt,29.9,54.3,5.6,🔴 Poor — Resume needs significant keyword work,3,51,"node.js, python, rest api","a chance, a degree, a keen eye, a related field, a team environment",1,2026-06-09 21:38
+resume5.pdf,jd_python_05.txt,34.4,63.6,5.1,🔴 Poor — Resume needs significant keyword work,3,56,"content, python, react","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, api integrations",3,2026-06-09 21:39
+resume5.pdf,jd_python_06.txt,27.0,46.9,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",1,2026-06-09 21:39
+resume5.pdf,jd_python_07.txt,32.1,56.1,8.1,🔴 Poor — Resume needs significant keyword work,6,68,"algorithms, aws, django, flask, problem solving","30 days, a passionate, a problem end, a value, advanced github features",1,2026-06-09 21:39
+resume5.pdf,jd_python_08.txt,42.2,63.9,20.5,🟠 Average — Needs improvement before applying,9,35,"aws, css, data structures, django, docker","a public domain, all details, any graduate
+pg, clarity, code reviews",6,2026-06-09 21:39
+resume5.pdf,jd_python_09.txt,32.6,52.3,12.9,🔴 Poor — Resume needs significant keyword work,8,54,"api integration, content, css, django, flask","(core python, any specialization, applicants, availability, b.c.a.",3,2026-06-09 21:39
+resume5.pdf,jd_python_10.txt,30.1,55.9,4.3,🔴 Poor — Resume needs significant keyword work,4,88,"django, flask, openai api, python","- ability, - bonus, - familiarity, - knowledge, - passion",7,2026-06-09 21:39
+resume5.pdf,jd_web_01.txt,33.2,57.7,8.7,🔴 Poor — Resume needs significant keyword work,11,116,"aws, css, devops, django, docker","actionable business insights, agile, agile development workflows, an ownership mindset, analysis",5,2026-06-09 21:39
+resume5.pdf,jd_web_02.txt,37.3,66.0,8.6,🔴 Poor — Resume needs significant keyword work,6,64,"content, docker, gemini, llms, openai","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",3,2026-06-09 21:39
+resume5.pdf,jd_web_03.txt,36.6,62.1,11.2,🔴 Poor — Resume needs significant keyword work,11,87,"aws, backend, css, devops, html","(react, - other, .net, a plus, a related field",5,2026-06-09 21:39
+resume5.pdf,jd_web_04.txt,35.4,62.7,8.0,🔴 Poor — Resume needs significant keyword work,9,103,"algorithms, data structures, django, docker, javascript","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",6,2026-06-09 21:39
+resume5.pdf,jd_web_05.txt,37.2,60.6,13.8,🔴 Poor — Resume needs significant keyword work,8,50,"aws, content, generative ai, large language models, llms","(e.g., openai, (offshore, agile, agile development processes, agile methodologies",3,2026-06-09 21:39
+resume5.pdf,jd_web_06.txt,31.0,54.5,7.4,🔴 Poor — Resume needs significant keyword work,2,25,"aws, python","- other, ai/ml developers, ai/ml technologies, apis, azure",4,2026-06-09 21:39
+resume5.pdf,jd_web_07.txt,33.4,51.4,15.4,🔴 Poor — Resume needs significant keyword work,8,44,"backend, content, css, html, javascript","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",2,2026-06-09 21:39
+resume5.pdf,jd_web_08.txt,30.5,57.8,3.3,🔴 Poor — Resume needs significant keyword work,8,235,"aws, c++, css, javascript, oracle","(aws/openshift, a align, a clear set, a culture, a high standard",4,2026-06-09 21:39
+resume5.pdf,jd_web_09.txt,37.4,64.7,10.1,🔴 Poor — Resume needs significant keyword work,7,62,"express, mongodb, node.js, openai, python","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",1,2026-06-09 21:39
+resume5.pdf,jd_web_10.txt,33.8,55.8,11.9,🔴 Poor — Resume needs significant keyword work,8,59,"aws, css, django, html, javascript","0-4 years, a plus
+role, advantage
+experience, agile, all phases",2,2026-06-09 21:40
+resume6.pdf,jd_01.txt,14.2,24.2,4.3,🔴 Poor — Resume needs significant keyword work,5,110,"java, oracle, react, sql, system design","a high-level review, a limited level, acts, advanced programming solutions, advisor",1,2026-06-09 21:40
+resume6.pdf,jd_02.txt,20.1,38.9,1.3,🔴 Poor — Resume needs significant keyword work,3,227,"automation, aws, python","a clear set, a culture, a high standard, a network, a secure configuration",2,2026-06-09 21:40
+resume6.pdf,jd_03.txt,18.7,34.0,3.3,🔴 Poor — Resume needs significant keyword work,3,88,"amazon web services, aws, python","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",1,2026-06-09 21:40
+resume6.pdf,jd_04.txt,17.7,32.8,2.5,🔴 Poor — Resume needs significant keyword work,2,79,"automation, aws","(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",3,2026-06-09 21:40
+resume6.pdf,jd_05.txt,17.6,31.6,3.6,🔴 Poor — Resume needs significant keyword work,8,214,"automation, aws, engineering teams, github, java","(docker, + years, .net, a client, a place",3,2026-06-09 21:40
+resume6.pdf,jd_06.txt,16.6,31.4,1.8,🔴 Poor — Resume needs significant keyword work,2,107,"operating systems, python","(degree, 3+ years, adaptability, adcs pki, all candidates",2,2026-06-09 21:40
+resume6.pdf,jd_07.txt,21.2,38.2,4.1,🔴 Poor — Resume needs significant keyword work,6,139,"aws, end, github, jira, python","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",2,2026-06-09 21:40
+resume6.pdf,jd_08.txt,21.4,35.3,7.6,🔴 Poor — Resume needs significant keyword work,5,61,"java, javascript, machine learning, python, software development","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",2,2026-06-09 21:40
+resume6.pdf,jd_09.txt,12.5,25.1,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",1,2026-06-09 21:40
+resume6.pdf,jd_10.txt,11.9,23.7,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",1,2026-06-09 21:40
+resume6.pdf,jd_11.txt,13.6,27.2,0.0,🔴 Poor — Resume needs significant keyword work,0,68,,"3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",1,2026-06-09 21:40
+resume6.pdf,jd_12.txt,22.6,38.2,7.1,🔴 Poor — Resume needs significant keyword work,10,130,"algorithms, automation, data analysis, end, generative ai","(exo, (genai, (neural networks, (required / preferred, 15 years",1,2026-06-09 21:40
+resume6.pdf,jd_13.txt,28.7,47.9,9.6,🔴 Poor — Resume needs significant keyword work,7,66,"automation, aws, git, langchain, numpy","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",2,2026-06-09 21:40
+resume6.pdf,jd_14.txt,20.2,33.4,7.0,🔴 Poor — Resume needs significant keyword work,13,173,"agile, analytics, api development, aws, flask","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",3,2026-06-09 21:40
+resume6.pdf,jd_15.txt,15.4,26.4,4.4,🔴 Poor — Resume needs significant keyword work,6,129,"india, langchain, large language models, nlp, python","(rag, , profile, -thought, 20 countries, a commitment",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_01.txt,14.2,26.2,2.1,🔴 Poor — Resume needs significant keyword work,1,46,india,"/b.tech, 2-5 years, any specialization
+pg, attitude, authority",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_02.txt,11.1,21.2,1.0,🔴 Poor — Resume needs significant keyword work,1,97,engineering teams,"0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_03.txt,15.2,30.3,0.0,🔴 Poor — Resume needs significant keyword work,0,51,,"6 months, a must
+min, agent-based deployment, b.tech / b.e., bash",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_04.txt,11.3,21.1,1.6,🔴 Poor — Resume needs significant keyword work,1,63,technologies,"a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",3,2026-06-09 21:41
+resume6.pdf,jd_cyber_05.txt,14.3,28.6,0.0,🔴 Poor — Resume needs significant keyword work,0,19,,"any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_06.txt,12.1,24.3,0.0,🔴 Poor — Resume needs significant keyword work,0,62,,"a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",1,2026-06-09 21:41
+resume6.pdf,jd_cyber_07.txt,11.3,22.6,0.0,🔴 Poor — Resume needs significant keyword work,0,35,,"any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_08.txt,17.5,35.1,0.0,🔴 Poor — Resume needs significant keyword work,0,39,,"(cse, b.c.a., b.sc, b.tech / b.e., computer applications",2,2026-06-09 21:41
+resume6.pdf,jd_cyber_09.txt,16.5,33.0,0.0,🔴 Poor — Resume needs significant keyword work,0,60,,"(added advantage, (servers, 1 year, added advantage, analytical skills",1,2026-06-09 21:41
+resume6.pdf,jd_cyber_10.txt,12.9,24.7,1.1,🔴 Poor — Resume needs significant keyword work,1,88,technologies,"a timely manner, alerts, anomalies, any graduate
+pg, applications",1,2026-06-09 21:41
+resume6.pdf,jd_data_01.txt,19.3,29.3,9.3,🔴 Poor — Resume needs significant keyword work,4,39,"analytics, python, sql, teams","a data analyst, actionable insights, analyzing, any graduate
+pg, any postgraduate
+doctorate",1,2026-06-09 21:41
+resume6.pdf,jd_data_02.txt,16.6,29.6,3.7,🔴 Poor — Resume needs significant keyword work,1,26,analytics,"2yr, a desire, a passion, any graduate
+pg, any postgraduate
+doctorate",1,2026-06-09 21:41
+resume6.pdf,jd_data_03.txt,19.9,29.2,10.5,🔴 Poor — Resume needs significant keyword work,9,77,"analytics, aws, data analysis, git, machine learning","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",1,2026-06-09 21:42
+resume6.pdf,jd_data_04.txt,16.5,29.3,3.6,🔴 Poor — Resume needs significant keyword work,1,27,analytics,"2yr, a desire, a passion, anagoogle suitedata, any graduate",1,2026-06-09 21:42
+resume6.pdf,jd_data_05.txt,19.9,29.2,10.5,🔴 Poor — Resume needs significant keyword work,9,77,"analytics, aws, data analysis, git, machine learning","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",1,2026-06-09 21:42
+resume6.pdf,jd_data_06.txt,18.7,26.6,10.7,🔴 Poor — Resume needs significant keyword work,9,75,"analytics, aws, data analysis, git, machine learning","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",1,2026-06-09 21:42
+resume6.pdf,jd_data_07.txt,14.5,23.5,5.6,🔴 Poor — Resume needs significant keyword work,4,67,"analytics, data analysis, python, sql","(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",1,2026-06-09 21:42
+resume6.pdf,jd_data_08.txt,17.4,29.0,5.8,🔴 Poor — Resume needs significant keyword work,3,49,"analytics, python, sql","(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",1,2026-06-09 21:42
+resume6.pdf,jd_data_09.txt,15.9,31.8,0.0,🔴 Poor — Resume needs significant keyword work,0,46,,"analysis, any graduate
+pg, changes, confidential data, creation",1,2026-06-09 21:42
+resume6.pdf,jd_data_10.txt,16.4,32.8,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"(deployment, analysis, any graduate
+pg, changes, confidential data",1,2026-06-09 21:42
+resume6.pdf,jd_ml_01.txt,2.5,5.1,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,1,2026-06-09 21:42
+resume6.pdf,jd_ml_02.txt,20.8,33.6,8.0,🔴 Poor — Resume needs significant keyword work,2,23,"machine learning, python","application, applications, b.c.a., b.tech / b.e., client",1,2026-06-09 21:42
+resume6.pdf,jd_ml_03.txt,20.9,38.1,3.7,🔴 Poor — Resume needs significant keyword work,5,130,"end, java, machine learning, operating systems, problem solving","(iq, (irs, (mandaveli, 12
+eligible batches, access",3,2026-06-09 21:42
+resume6.pdf,jd_ml_04.txt,14.6,28.0,1.2,🔴 Poor — Resume needs significant keyword work,1,80,python,"a genuine interest, a process engineer, a university degree, act, an ambassador",1,2026-06-09 21:42
+resume6.pdf,jd_ml_05.txt,19.5,35.2,3.9,🔴 Poor — Resume needs significant keyword work,3,73,"generative ai, machine learning, python","- other, 0 2 years, a passion, a solid understanding, academic projects",2,2026-06-09 21:42
+resume6.pdf,jd_ml_06.txt,19.8,31.2,8.5,🔴 Poor — Resume needs significant keyword work,5,54,"algorithms, end, machine learning, nlp, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",2,2026-06-09 21:42
+resume6.pdf,jd_ml_07.txt,26.2,39.9,12.5,🔴 Poor — Resume needs significant keyword work,17,119,"agile, algorithms, end, github, langchain","(langchain, .net, 0-5 years, a remote position, a remote setting",5,2026-06-09 21:42
+resume6.pdf,jd_ml_08.txt,23.7,37.4,9.9,🔴 Poor — Resume needs significant keyword work,7,64,"aws, git, numpy, open source, pandas","a builder, a clean solution, ambiguity, anything, asset",4,2026-06-09 21:42
+resume6.pdf,jd_ml_09.txt,20.9,40.6,1.2,🔴 Poor — Resume needs significant keyword work,1,82,automation,"- other, a willingness, agentic systems, ai agent workflows, ai agents",1,2026-06-09 21:43
+resume6.pdf,jd_ml_10.txt,2.5,5.1,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,1,2026-06-09 21:43
+resume6.pdf,jd_python_01.txt,25.8,39.1,12.5,🔴 Poor — Resume needs significant keyword work,4,28,"aws, end, generative ai, python","- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",1,2026-06-09 21:43
+resume6.pdf,jd_python_02.txt,28.0,43.4,12.6,🔴 Poor — Resume needs significant keyword work,13,90,"aws, css, database management, flask, git","2 years, a crucial role, a plus, a python developer, a related field",4,2026-06-09 21:43
+resume6.pdf,jd_python_03.txt,26.2,46.3,6.0,🔴 Poor — Resume needs significant keyword work,3,47,"flask, javascript, python","a day, a python developer, a team, any graduate
+pg, applications",2,2026-06-09 21:43
+resume6.pdf,jd_python_04.txt,25.9,44.5,7.4,🔴 Poor — Resume needs significant keyword work,4,50,"api development, node.js, python, rest api","a chance, a degree, a keen eye, a related field, a team environment",1,2026-06-09 21:43
+resume6.pdf,jd_python_05.txt,32.5,54.7,10.2,🔴 Poor — Resume needs significant keyword work,6,53,"git, llm, python, react, sql","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, api integrations",1,2026-06-09 21:43
+resume6.pdf,jd_python_06.txt,19.1,31.0,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",1,2026-06-09 21:43
+resume6.pdf,jd_python_07.txt,28.1,45.3,10.8,🔴 Poor — Resume needs significant keyword work,8,66,"algorithms, aws, end, flask, github","30 days, a passionate, a problem end, a value, advanced github features",2,2026-06-09 21:43
+resume6.pdf,jd_python_08.txt,38.9,52.8,25.0,🔴 Poor — Resume needs significant keyword work,11,33,"aws, css, data structures, git, github","a public domain, all details, any graduate
+pg, clarity, code reviews",5,2026-06-09 21:43
+resume6.pdf,jd_python_09.txt,33.8,50.0,17.7,🔴 Poor — Resume needs significant keyword work,11,51,"backend development, core python, css, flask, git","(core python, any specialization, api integration, applicants, availability",2,2026-06-09 21:43
+resume6.pdf,jd_python_10.txt,27.3,44.8,9.8,🔴 Poor — Resume needs significant keyword work,9,83,"automation, backend development, flask, langchain, mysql","- ability, - bonus, - familiarity, - knowledge, - passion",5,2026-06-09 21:43
+resume6.pdf,jd_web_01.txt,29.8,46.2,13.4,🔴 Poor — Resume needs significant keyword work,17,110,"agile, api development, automation, aws, backend development","actionable business insights, agile development workflows, an ownership mindset, analysis, analytics pipelines",5,2026-06-09 21:43
+resume6.pdf,jd_web_02.txt,28.1,49.1,7.1,🔴 Poor — Resume needs significant keyword work,5,65,"git, llm, python, system design, teams","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",3,2026-06-09 21:43
+resume6.pdf,jd_web_03.txt,34.0,48.5,19.4,🔴 Poor — Resume needs significant keyword work,19,79,"agile, api development, aws, backend, bitbucket","(react, - other, .net, a plus, a related field",2,2026-06-09 21:43
+resume6.pdf,jd_web_04.txt,31.9,50.3,13.4,🔴 Poor — Resume needs significant keyword work,15,97,"algorithms, data structures, engineering teams, git, github","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",5,2026-06-09 21:43
+resume6.pdf,jd_web_05.txt,37.8,54.8,20.7,🔴 Poor — Resume needs significant keyword work,12,46,"agile, aws, end, generative ai, india","(e.g., openai, (offshore, agile development processes, agile methodologies, ai/ml models",1,2026-06-09 21:44
+resume6.pdf,jd_web_06.txt,23.0,34.9,11.1,🔴 Poor — Resume needs significant keyword work,3,24,"aws, backend development, python","- other, ai/ml developers, ai/ml technologies, apis, azure",4,2026-06-09 21:44
+resume6.pdf,jd_web_07.txt,28.8,42.2,15.4,🔴 Poor — Resume needs significant keyword work,8,44,"backend, css, html, javascript, mongodb","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",1,2026-06-09 21:44
+resume6.pdf,jd_web_08.txt,30.7,55.2,6.2,🔴 Poor — Resume needs significant keyword work,15,228,"agile, api development, aws, css, git","(aws/openshift, a align, a clear set, a culture, a high standard",2,2026-06-09 21:44
+resume6.pdf,jd_web_09.txt,29.3,48.4,10.1,🔴 Poor — Resume needs significant keyword work,7,62,"end, mern, mongodb, node.js, python","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",1,2026-06-09 21:44
+resume6.pdf,jd_web_10.txt,31.7,48.5,14.9,🔴 Poor — Resume needs significant keyword work,10,57,"agile, aws, css, github, html","0-4 years, a plus
+role, advantage
+experience, all phases, amazon cloud",2,2026-06-09 21:44
+resume7.pdf,jd_01.txt,14.4,26.2,2.6,🔴 Poor — Resume needs significant keyword work,3,112,"oracle, react, sql","a high-level review, a limited level, acts, advanced programming solutions, advisor",3,2026-06-09 21:44
+resume7.pdf,jd_02.txt,31.5,59.5,3.5,🔴 Poor — Resume needs significant keyword work,8,222,"automation, ci/cd, delivery, docker, incident response","a clear set, a culture, a high standard, a network, a secure configuration",3,2026-06-09 21:44
+resume7.pdf,jd_03.txt,24.5,46.7,2.2,🔴 Poor — Resume needs significant keyword work,2,89,"python, terraform","3-5 years, a bachelor’s degree, a cloud engineer, a commitment, a connected community",3,2026-06-09 21:44
+resume7.pdf,jd_04.txt,31.0,50.8,11.1,🔴 Poor — Resume needs significant keyword work,9,72,"automation, cybersecurity, devops, docker, incident response","(aws security specialty, (preferred, (qualys, 5 years experience, a key driver",3,2026-06-09 21:44
+resume7.pdf,jd_05.txt,21.7,38.9,4.5,🔴 Poor — Resume needs significant keyword work,10,212,"automation, ci/cd, cybersecurity, docker, github","(docker, + years, .net, a client, a place",4,2026-06-09 21:44
+resume7.pdf,jd_06.txt,29.4,56.0,2.8,🔴 Poor — Resume needs significant keyword work,3,106,"cybersecurity, operating systems, python","(degree, 3+ years, adaptability, adcs pki, all candidates",2,2026-06-09 21:44
+resume7.pdf,jd_07.txt,29.7,53.9,5.5,🔴 Poor — Resume needs significant keyword work,8,137,"ci/cd, end, github, incident response, kubernetes","(ansible/chef/puppet, (lambda, /itsm, 8+ years, a key contributor",4,2026-06-09 21:44
+resume7.pdf,jd_08.txt,16.5,25.3,7.6,🔴 Poor — Resume needs significant keyword work,5,61,"c++, javascript, machine learning, python, software development","(freelance) role, 3+ years, a crucial part, a part time, a personal laptop",3,2026-06-09 21:44
+resume7.pdf,jd_09.txt,16.6,33.1,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"automotive, automotive/embedded systems, business goals, can, control systems
+ experience",2,2026-06-09 21:44
+resume7.pdf,jd_10.txt,16.9,33.8,0.0,🔴 Poor — Resume needs significant keyword work,0,18,,"a workforce, another, businesses, companies, enhanced digital experiences",2,2026-06-09 21:45
+resume7.pdf,jd_11.txt,18.4,36.8,0.0,🔴 Poor — Resume needs significant keyword work,0,68,,"3 year(s, a proactive mindset, a thoughtful approach, a typical day, access control models",2,2026-06-09 21:45
+resume7.pdf,jd_12.txt,26.1,45.9,6.4,🔴 Poor — Resume needs significant keyword work,9,131,"algorithms, automation, ci/cd, data analysis, end","(exo, (genai, (neural networks, (required / preferred, 15 years",3,2026-06-09 21:45
+resume7.pdf,jd_13.txt,27.1,43.1,11.0,🔴 Poor — Resume needs significant keyword work,8,65,"automation, ci/cd, docker, git, langchain","(incorporated, (rag) pipelines, (supervised/unsupervised learning, .net, a mission",3,2026-06-09 21:45
+resume7.pdf,jd_14.txt,20.5,37.8,3.2,🔴 Poor — Resume needs significant keyword work,6,180,"flask, git, python, react, sql","(e.g., openai, /btech, 4+ years, 6+ years, a demonstrated habit",6,2026-06-09 21:45
+resume7.pdf,jd_15.txt,21.3,39.7,3.0,🔴 Poor — Resume needs significant keyword work,4,131,"ci/cd, cybersecurity, langchain, python","(rag, , profile, -thought, 20 countries, a commitment",3,2026-06-09 21:45
+resume7.pdf,jd_cyber_01.txt,19.3,36.5,2.1,🔴 Poor — Resume needs significant keyword work,1,46,cybersecurity,"/b.tech, 2-5 years, any specialization
+pg, attitude, authority",2,2026-06-09 21:45
+resume7.pdf,jd_cyber_02.txt,21.2,40.4,2.0,🔴 Poor — Resume needs significant keyword work,2,96,"cybersecurity, nist","0 4 years, a plus, a regulated industry, aami tir57, any graduate
+pg",2,2026-06-09 21:45
+resume7.pdf,jd_cyber_03.txt,22.5,41.2,3.9,🔴 Poor — Resume needs significant keyword work,2,49,"cybersecurity, delivery","6 months, a must
+min, agent-based deployment, b.tech / b.e., bash",2,2026-06-09 21:45
+resume7.pdf,jd_cyber_04.txt,18.7,34.2,3.1,🔴 Poor — Resume needs significant keyword work,2,62,"cybersecurity, incident response","a degree, a successful career, a team
+eagerness, access control
+familiarity, all aspects",3,2026-06-09 21:45
+resume7.pdf,jd_cyber_05.txt,17.6,35.2,0.0,🔴 Poor — Resume needs significant keyword work,0,19,,"any specialization, basic knowledge, consulting
+department, cyber security, ethical hacking",3,2026-06-09 21:45
+resume7.pdf,jd_cyber_06.txt,14.7,29.4,0.0,🔴 Poor — Resume needs significant keyword work,0,62,,"a valid passport, additional information, anti-malware software, any certification, any graduate
+pg",2,2026-06-09 21:45
+resume7.pdf,jd_cyber_07.txt,15.6,28.2,2.9,🔴 Poor — Resume needs significant keyword work,1,34,cybersecurity,"any graduate
+pg, collaborate, cross-functional teams, cyber security, cybersecurity incidents",2,2026-06-09 21:45
+resume7.pdf,jd_cyber_08.txt,15.9,31.8,0.0,🔴 Poor — Resume needs significant keyword work,0,39,,"(cse, b.c.a., b.sc, b.tech / b.e., computer applications",3,2026-06-09 21:45
+resume7.pdf,jd_cyber_09.txt,20.9,40.1,1.7,🔴 Poor — Resume needs significant keyword work,1,59,firewall,"(added advantage, (servers, 1 year, added advantage, analytical skills",2,2026-06-09 21:45
+resume7.pdf,jd_cyber_10.txt,21.1,40.0,2.2,🔴 Poor — Resume needs significant keyword work,2,87,"incident response, iso 27001","a timely manner, alerts, anomalies, any graduate
+pg, applications",2,2026-06-09 21:45
+resume7.pdf,jd_data_01.txt,16.5,28.4,4.7,🔴 Poor — Resume needs significant keyword work,2,41,"python, sql","a data analyst, actionable insights, analytics, analyzing, any graduate
+pg",2,2026-06-09 21:46
+resume7.pdf,jd_data_02.txt,13.2,26.5,0.0,🔴 Poor — Resume needs significant keyword work,0,27,,"2yr, a desire, a passion, analytics, any graduate
+pg",2,2026-06-09 21:46
+resume7.pdf,jd_data_03.txt,21.3,35.5,7.0,🔴 Poor — Resume needs significant keyword work,6,80,"data analysis, git, machine learning, python, sql","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",3,2026-06-09 21:46
+resume7.pdf,jd_data_04.txt,13.3,26.5,0.0,🔴 Poor — Resume needs significant keyword work,0,28,,"2yr, a desire, a passion, anagoogle suitedata, analytics",2,2026-06-09 21:46
+resume7.pdf,jd_data_05.txt,21.3,35.5,7.0,🔴 Poor — Resume needs significant keyword work,6,80,"data analysis, git, machine learning, python, sql","410 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",3,2026-06-09 21:46
+resume7.pdf,jd_data_06.txt,20.6,34.1,7.1,🔴 Poor — Resume needs significant keyword work,6,78,"data analysis, git, machine learning, python, sql","4-10 lpa, a career, a fast-paced environment, acciojobs clients, actionable insights
+
+collaborate",3,2026-06-09 21:46
+resume7.pdf,jd_data_07.txt,15.3,24.9,5.6,🔴 Poor — Resume needs significant keyword work,4,67,"data analysis, optimization, python, sql","(e.g., statistics, 0-3 years, a plus, a quantitative field, a related field",2,2026-06-09 21:46
+resume7.pdf,jd_data_08.txt,16.5,29.1,3.8,🔴 Poor — Resume needs significant keyword work,2,50,"python, sql","(preferred, +91-9217357470
+
+
+role, 3 years
+salary, a rewarding career, actionable insights",2,2026-06-09 21:46
+resume7.pdf,jd_data_09.txt,17.6,35.2,0.0,🔴 Poor — Resume needs significant keyword work,0,46,,"analysis, any graduate
+pg, changes, confidential data, creation",2,2026-06-09 21:46
+resume7.pdf,jd_data_10.txt,18.5,37.0,0.0,🔴 Poor — Resume needs significant keyword work,0,47,,"(deployment, analysis, any graduate
+pg, changes, confidential data",2,2026-06-09 21:46
+resume7.pdf,jd_ml_01.txt,4.2,8.3,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:46
+resume7.pdf,jd_ml_02.txt,22.7,37.4,8.0,🔴 Poor — Resume needs significant keyword work,2,23,"machine learning, python","application, applications, b.c.a., b.tech / b.e., client",2,2026-06-09 21:46
+resume7.pdf,jd_ml_03.txt,18.9,33.3,4.4,🔴 Poor — Resume needs significant keyword work,6,129,"c++, end, machine learning, operating systems, optimization","(iq, (irs, (mandaveli, 12
+eligible batches, access",4,2026-06-09 21:46
+resume7.pdf,jd_ml_04.txt,16.6,32.0,1.2,🔴 Poor — Resume needs significant keyword work,1,80,python,"a genuine interest, a process engineer, a university degree, act, an ambassador",2,2026-06-09 21:46
+resume7.pdf,jd_ml_05.txt,20.3,38.1,2.6,🔴 Poor — Resume needs significant keyword work,2,74,"machine learning, python","- other, 0 2 years, a passion, a solid understanding, academic projects",3,2026-06-09 21:46
+resume7.pdf,jd_ml_06.txt,22.7,38.6,6.8,🔴 Poor — Resume needs significant keyword work,4,55,"algorithms, end, machine learning, python","0-1 year, a deep understanding, a fintech company, a plus
+
+
+disclaimer, any graduate
+pg",4,2026-06-09 21:46
+resume7.pdf,jd_ml_07.txt,25.6,40.8,10.3,🔴 Poor — Resume needs significant keyword work,14,122,"algorithms, ci/cd, end, github, langchain","(langchain, .net, 0-5 years, a remote position, a remote setting",7,2026-06-09 21:46
+resume7.pdf,jd_ml_08.txt,20.9,33.3,8.5,🔴 Poor — Resume needs significant keyword work,6,65,"git, numpy, open source, pandas, python","a builder, a clean solution, ambiguity, anything, asset",6,2026-06-09 21:46
+resume7.pdf,jd_ml_09.txt,20.7,40.2,1.2,🔴 Poor — Resume needs significant keyword work,1,82,automation,"- other, a willingness, agentic systems, ai agent workflows, ai agents",2,2026-06-09 21:46
+resume7.pdf,jd_ml_10.txt,4.2,8.3,0.0,🔴 Poor — Resume needs significant keyword work,0,0,,,2,2026-06-09 21:46
+resume7.pdf,jd_python_01.txt,24.0,41.9,6.2,🔴 Poor — Resume needs significant keyword work,2,30,"end, python","- other, a fast-paced environment, agentic aibackend development, ai solutions, anthropic",3,2026-06-09 21:47
+resume7.pdf,jd_python_02.txt,28.7,44.9,12.6,🔴 Poor — Resume needs significant keyword work,13,90,"ci/cd, css, devops, docker, flask","2 years, a crucial role, a plus, a python developer, a related field",5,2026-06-09 21:47
+resume7.pdf,jd_python_03.txt,22.1,38.2,6.0,🔴 Poor — Resume needs significant keyword work,3,47,"flask, javascript, python","a day, a python developer, a team, any graduate
+pg, applications",3,2026-06-09 21:47
+resume7.pdf,jd_python_04.txt,20.9,38.0,3.7,🔴 Poor — Resume needs significant keyword work,2,52,"python, rest api","a chance, a degree, a keen eye, a related field, a team environment",2,2026-06-09 21:47
+resume7.pdf,jd_python_05.txt,30.8,51.5,10.2,🔴 Poor — Resume needs significant keyword work,6,53,"git, llm, python, react, sql","ai-driven systems, ai-powered tools, ai/ml, any graduate
+pg, api integrations",2,2026-06-09 21:47
+resume7.pdf,jd_python_06.txt,21.7,36.4,7.1,🔴 Poor — Resume needs significant keyword work,1,13,python,"0-3 years
+location, consulting
+department, full time, it services, job description",2,2026-06-09 21:47
+resume7.pdf,jd_python_07.txt,28.2,46.9,9.5,🔴 Poor — Resume needs significant keyword work,7,67,"algorithms, end, flask, github, oops","30 days, a passionate, a problem end, a value, advanced github features",4,2026-06-09 21:47
+resume7.pdf,jd_python_08.txt,35.1,47.4,22.7,🔴 Poor — Resume needs significant keyword work,10,34,"css, data structures, docker, git, github","a public domain, all details, any graduate
+pg, aws, clarity",6,2026-06-09 21:47
+resume7.pdf,jd_python_09.txt,28.3,42.0,14.5,🔴 Poor — Resume needs significant keyword work,9,53,"core python, css, flask, git, html","(core python, any specialization, api integration, applicants, availability",3,2026-06-09 21:47
+resume7.pdf,jd_python_10.txt,26.0,43.3,8.7,🔴 Poor — Resume needs significant keyword work,8,84,"automation, flask, langchain, mysql, numpy","- ability, - bonus, - familiarity, - knowledge, - passion",6,2026-06-09 21:47
+resume7.pdf,jd_web_01.txt,28.0,44.2,11.8,🔴 Poor — Resume needs significant keyword work,15,112,"automation, ci/cd, css, data analysis, devops","actionable business insights, agile, agile development workflows, an ownership mindset, analysis",6,2026-06-09 21:47
+resume7.pdf,jd_web_02.txt,28.6,50.1,7.1,🔴 Poor — Resume needs significant keyword work,5,65,"ci/cd, docker, git, llm, python","a strong plus, ai agents, ai apis, ai-driven products, ai/ml",3,2026-06-09 21:47
+resume7.pdf,jd_web_03.txt,26.6,40.0,13.3,🔴 Poor — Resume needs significant keyword work,13,85,"backend, ci/cd, css, devops, git","(react, - other, .net, a plus, a related field",5,2026-06-09 21:47
+resume7.pdf,jd_web_04.txt,25.7,42.5,8.9,🔴 Poor — Resume needs significant keyword work,10,102,"algorithms, data structures, docker, git, github","(cse, a plus, ai-assisted workflows, ai/ml, ambitious engineers",6,2026-06-09 21:47
+resume7.pdf,jd_web_05.txt,34.0,57.8,10.3,🔴 Poor — Resume needs significant keyword work,6,52,"ci/cd, end, langchain, microservices, python","(e.g., openai, (offshore, agile, agile development processes, agile methodologies",4,2026-06-09 21:47
+resume7.pdf,jd_web_06.txt,21.5,39.3,3.7,🔴 Poor — Resume needs significant keyword work,1,26,python,"- other, ai/ml developers, ai/ml technologies, apis, aws",6,2026-06-09 21:47
+resume7.pdf,jd_web_07.txt,21.8,30.0,13.5,🔴 Poor — Resume needs significant keyword work,7,45,"backend, css, html, javascript, mysql","2
+
+
+disclaimer, angular, angular
+
+clear, any graduate
+pg, applicants",2,2026-06-09 21:47
+resume7.pdf,jd_web_08.txt,27.6,51.1,4.1,🔴 Poor — Resume needs significant keyword work,10,233,"c++, css, delivery, git, javascript","(aws/openshift, a align, a clear set, a culture, a high standard",4,2026-06-09 21:47
+resume7.pdf,jd_web_09.txt,26.7,49.0,4.3,🔴 Poor — Resume needs significant keyword work,3,66,"end, python, react","(e.g. livekit, * ability, * direct collaboration, * experience, * experience building",2,2026-06-09 21:48
+resume7.pdf,jd_web_10.txt,24.2,39.5,9.0,🔴 Poor — Resume needs significant keyword work,6,61,"css, github, html, javascript, mysql","0-4 years, a plus
+role, advantage
+experience, agile, all phases",4,2026-06-09 21:48

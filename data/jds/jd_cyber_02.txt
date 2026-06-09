@@ -1,0 +1,68 @@
+Job description
+Duties Responsibilities
+
+Support product cybersecurity activities across the product development lifecycle.
+Assist in identifying and assessing cybersecurity risks related to product software, embedded systems, and connected devices.
+Support vulnerability monitoring activities including reviewing security advisories, vulnerability databases, and threat intelligence sources.
+Assist with tracking and managing cybersecurity vulnerabilities affecting product software components.
+Support the maintenance of Software Bill of Materials (SBOM) records and associated cybersecurity documentation.
+Assist with cybersecurity risk assessments and documentation aligned with applicable risk management processes.
+Support implementation of secure development lifecycle practices within product development teams.
+Assist with documentation and maintenance of cybersecurity artifacts required for regulatory submissions and audits.
+Work with engineering teams to track remediation actions for identified cybersecurity vulnerabilities.
+Support post-market cybersecurity monitoring activities including review of emerging vulnerabilities and potential product impacts.
+Assist with cybersecurity metrics, dashboards, and reporting related to product cybersecurity activities.
+Support internal training and awareness activities related to product cybersecurity best practices.
+Monitor emerging cybersecurity regulations, industry standards, and threat intelligence relevant to medical device cybersecurity.
+Minimum Preferred Qualifications and Experience:
+
+Minimum Qualifications:
+
+Bachelor s degree in Cybersecurity, Computer Science, Engineering, Information Security, or related field required.
+
+0 4 years of experience in cybersecurity, software security, vulnerability management, or related technical field.
+
+Basic understanding of cybersecurity principles and secure software development practices.
+
+Familiarity with vulnerability databases such as CVE and NVD.
+
+Strong analytical and problem-solving skills.
+
+Ability to work cross-functionally with engineering, quality, and compliance teams.
+
+Strong written and verbal communication skills.
+
+Preferred Qualifications:
+
+Experience supporting cybersecurity activities for connected devices, embedded systems, or medical device software.
+
+Familiarity with cybersecurity frameworks such as NIST Cybersecurity Framework, IEC 81001-5-1, AAMI TIR57, or FDA cybersecurity guidance.
+
+Basic understanding of vulnerability scoring systems such as CVSS.
+
+Experience working with software component inventories or SBOMs.
+
+Experience working in a regulated industry such as medical devices, healthcare technology, or manufacturing.
+
+Relevant cybersecurity certifications such as Security+, CEH, or similar are a plus.
+
+Education:
+
+Bachelor s degree in Cybersecurity, Computer Science, Engineering, or related field is required.
+
+Physical requirements/Work Environment
+
+This position is located at our Bengaluru, India office.
+
+
+Disclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Cyber Security
+Industry Type: Medical Devices & Equipment
+Department: IT & Information Security
+Employment Type: Full Time, Permanent
+Role Category: IT Security
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Computer scienceMedical devicesEmbedded systemscyber securityAnalyticalInformation securityHealthcareVulnerabilityRisk managementMonitoring

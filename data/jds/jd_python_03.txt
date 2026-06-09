@@ -1,0 +1,31 @@
+Job description
+We are looking for a Python Developer to join our engineering team and help us develop and maintain various software products. Python Developer responsibilities include writing and testing code, debugging programs and integrating applications with third-party web services. To be successful in this role, you should have experience using server-side logic and work well in a team. Ultimately, you ll build highly responsive web applications that align with our business needs.
+
+A Day in the Life
+Write effective, scalable code
+Develop back-end components to improve responsiveness and overall performance
+Integrate user-facing elements into applications
+Test and debug programs
+Improve functionality of existing systems
+Implement security and data protection solutions
+Assess and prioritize feature requests
+Coordinate with internal teams to understand user requirements and provide technical solutions
+
+What will you need
+Work experience as a Python Developer
+Expertise in at least one popular Python framework (like (Django/Flask)
+Knowledge of object-relational mapping (ORM)
+Familiarity with front-end technologies (like JavaScript and HTML5)
+Team spirit
+Good problem-solving skills
+BSc in Computer Science, Engineering or relevant field
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Computer scienceBackendFront endWeb servicesHP data protectorDjangoDebuggingMachine learningJavascriptPython

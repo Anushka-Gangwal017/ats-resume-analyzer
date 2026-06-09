@@ -1,0 +1,27 @@
+Job description
+GoDigi InfoTech is looking for IT SECURITY LEAD to join our dynamic team and embark on a rewarding career journey
+The IT Security Lead is responsible for overseeing the development, implementation, and management of the organization's information security program
+This role involves identifying security risks, developing strategies to mitigate these risks, and ensuring compliance with relevant regulations and standards
+The IT Security Lead works closely with other IT professionals, management, and external partners to safeguard the organization's data and systems from potential threats
+Key Responsibilities:
+
+Develop and implement an information security strategy and framework in line with the organization's objectives and industry best practices
+Conduct regular risk assessments and vulnerability scans to identify potential security threats and weaknesses in the organization's infrastructure, applications, and processes
+Design and implement security controls, policies, and procedures to protect the organization's data, systems, and networks from unauthorized access, misuse, or damage
+Monitor security logs and alerts to detect and respond to security incidents, breaches, or anomalies in a timely manner
+Lead incident response efforts, including investigation, containment, and recovery activities, in collaboration with relevant stakeholders
+Coordinate with internal teams and external vendors to ensure the timely deployment of security patches, updates, and fixes to mitigate known vulnerabilities
+Provide guidance and support to IT teams and end-users on security best practices, awareness, and training initiatives
+Stay abreast of emerging security threats, technologies, and trends to continuously improve the organization's security posture
+Collaborate with internal auditors, regulators, and external assessors to ensure compliance with relevant laws, regulations, and industry standards (eg, GDPR, PCI DSS, ISO 27001)
+Prepare and present regular reports, metrics, and findings on the organization's security posture, incidents, and remediation efforts to executive management and relevant stakeholders
+Role: Manager Information Security
+Industry Type: Management Consulting
+Department: IT & Information Security
+Employment Type: Full Time, Permanent
+Role Category: IT Security
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+it risk managementit securityrisk managementrisk assessmentisocyber securitynetwork securityowaspsocinformation securityvulnerability managementsiemvulnerability assessmentinternal auditit auditcompliancepenetration testingpci dss

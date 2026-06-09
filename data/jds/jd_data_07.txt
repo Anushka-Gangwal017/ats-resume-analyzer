@@ -1,0 +1,32 @@
+Job description
+We re seeking a motivated Data Analyst to join our data-driven team. You ll play a vital role in extracting meaningful insights from our data, helping to shape strategic decisions and inform business actions. Your expertise in Excel and data analysis will be essential as you explore, organize, and present data to drive informed decision-making across the organization.
+
+Responsibilities
+Gather, cleanse, and organize data from multiple sources, including databases, spreadsheets, and external systems.
+Utilize your Excel skills to analyze data sets and identify patterns, trends, and anomalies.
+Design and develop insightful reports, dashboards, and visualizations using Power BI or similar tools.
+Collaborate with cross-functional teams to understand their data needs and deliver actionable recommendations.
+Support data integration and migration projects, ensuring data integrity and consistency.
+Proactively identify opportunities for data-driven improvements and optimization.
+Qualifications
+Bachelor s degree in a quantitative field (e.g., Statistics, Mathematics, Economics) or relevant experience.
+0-3 years of experience in data analysis or a related field.
+Expert-level proficiency in Microsoft Excel, including advanced functions, pivot tables, and data manipulation techniques.
+Familiarity with Power BI or other data visualization tools.
+Understanding of data integration and migration principles.
+Strong analytical and problem-solving skills.
+Excellent communication and presentation skills, with the ability to translate complex data into actionable insights.
+Nice to Have
+Experience with SQL or other query languages.
+Knowledge of statistical analysis techniques.
+Familiarity with Python or R for data analysis is a plus.
+Role: Data Analyst
+Industry Type: IT Services & Consulting
+Department: Data Science & Analytics
+Employment Type: Full Time, Permanent
+Role Category: Business Intelligence & Analytics
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Data analysisExcelStatistical analysisAnalyticalpower bidata integrityData Analystdata visualizationSQLPython

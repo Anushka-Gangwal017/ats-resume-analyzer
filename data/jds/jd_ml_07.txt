@@ -1,0 +1,52 @@
+Job description
+We are seeking a highly motivated and technically proficient AI Engineer to join our innovative IT Services team. In this role, you will be at the forefront of designing, developing, and deploying intelligent AI-driven solutions that power next-generation applications. You will work on building scalable AI agents, integrating machine learning models into full-stack web applications, and leveraging cloud-native architectures to deliver high-performance, real-time intelligent systems. Your expertise in Python, AI agents, and full-stack development will be instrumental in transforming complex business problems into automated, data-driven solutions. This is a remote position offering the opportunity to collaborate with cross-functional teams on cutting-edge projects that push the boundaries of artificial intelligence and software engineering. The ideal candidate is passionate about innovation, has a strong foundation in data science and machine learning, and thrives in agile, fast-paced environments.
+
+Responsibilities:
+
+Design, develop, and deploy AI agents using Agentic AI frameworks such as LangChain and LangGraph.
+Build and optimize machine learning models using TensorFlow, Python, and NLP techniques for real-world applications.
+Develop and maintain RESTful APIs and web services to integrate AI models into full-stack applications.
+Implement scalable data pipelines for ingestion, processing, and transformation using SQL, Pandas, and data processing tools.
+Work with cloud platforms to deploy, monitor, and manage AI services and infrastructure.
+Collaborate with frontend and backend teams to integrate AI capabilities into frontend applications.
+Ensure data integrity and performance by working with PostgreSQL, MongoDB, MySQL, MSSQL and other database systems.
+Participate in code reviews, version control (GitHub), and CI/CD workflows to maintain high code quality.
+Contribute to the end-to-end lifecycle of AI products from concept and prototyping to deployment and monitoring.
+Stay current with advancements in AI, machine learning, and full-stack development to drive innovation.
+Requirements:
+
+0-5 years of professional experience in AI engineering, machine learning, or full-stack development.
+Proficiency in Python, PHP, .Net and React.js, for full-stack application development.
+Advanced experience with machine learning, natural language processing (NLP), and AI agent frameworks (LangChain, LangGraph).
+Hands-on expertise with TensorFlow, REST API, and web service development.
+Mastery of SQL, PostgreSQL, MongoDB, and data processing using Pandas.
+Proven experience for cloud-based AI model deployment and infrastructure management.
+Strong command of GitHub for version control and collaborative development.
+Deep understanding of AI integration into production applications and system architecture.
+Exceptional problem-solving skills, attention to detail, and ability to work independently in a remote setting.
+Bachelors degree in Computer Science, Data Science, AI, or a related technical field.
+
+Benefits
+
+Flexible Work From Home / Remote opportunity
+Competitive salary based on experience and skills
+Opportunity to work on real-world AI and Machine Learning projects
+Career growth and learning opportunities in AI technologies
+Collaborative and supportive work environment
+Exposure to modern tools, frameworks, and cloud technologies
+Hands-on experience with scalable AI applications
+Performance-based growth opportunities
+Opportunity to contribute to innovative and impactful projects
+
+
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: B.Tech / B.E. in Any Specialization, B.A - Bachelor of Arts in Computer Science, B.Sc in Any Specialization, B.C.A. in Any Specialization
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+aiMachine LearningFullstack DevelopmentData ProcessingPython
+Tensorflow Langchain Artificial Intelligence Natural Language Processing Deep Learning Numpy sql Data Science Pytorch Langgraph Large Language ModelPandasJavascriptMachine Learning Algorithms

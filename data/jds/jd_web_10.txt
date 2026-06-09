@@ -1,0 +1,30 @@
+Job description
+
+Full stack developer should have hands on experience on Python or PHP backend development using Django or Laravel framework, experience on MySQL, MongoDb and also experience in AndroidiOS native programming and at least one front-end technologies like AngularJS, ReactJs etc.
+
+Job summary
+Designing and developing applications for mission-critical systems and delivering high-availability and performance.
+Contributing in all phases of the development lifecycleUse best practices to deliver high quality code; Unit-test code for robustness including edge cases, usability, and general reliability.
+Implement new features and optimize existing ones from draft to implementation
+Continuously discover, evaluate, and implement new technologies to maximize development efficiency.
+Experience required
+B.TechBEB.Sc degree in Computer Science or related technical field.
+0-4 years of software development experience in python or php backend, Android development and related technologies
+Hands on experience in designing and developing applications using php or python platforms.
+Experience in the Django or Laravel Framework
+Excellent knowledge of MySQL relational Database and MongoDb non-relational Databases
+Experience in native AndroidiOS development
+Experience in any frontend technologies like HTML, CSS, JavaScript, AngularJS, etc.
+Experience in memory caching system like Memcached or RedisObject Oriented analysis and design using common design patterns
+Experience working with Amazon cloud, setting up and securing of AWS EC2 instances, working with Amazon SES, SNS and AWS APIs is advantage
+Experience working as part of an agile software development team including interaction with a source code repository (GitHub or SVN)Continuous integration considered a plus
+Role: Back End Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: B.Sc in Chemistry, B.Tech / B.E. in Production and Industrial Engineering
+PG: Any Postgraduate
+Key Skills
+Front endMySQLJavascriptAgilePHPHTMLCustomer supportAnalyticsAndroidPython

@@ -1,0 +1,34 @@
+Job description
+Full Stack Backend Developer (Offshore)1
+Job Title: Full Stack Backend Developer
+Location: India (Offshore)
+
+Job Description:
+
+We are looking for a skilled Full Stack Backend Developer with experience in Generative AI and Large Language Models (LLMs) to build scalable, intelligent applications. The role involves designing backend systems, integrating AI/ML models, and collaborating with cross-functional teams in an offshore delivery setup.
+Key Responsibilities:
+Design and develop scalable backend services and APIs
+Integrate and optimize GenAI/LLM-based solutions into applications
+Collaborate with frontend and data teams for end-to-end delivery
+Ensure performance, security, and reliability of applications
+Participate in code reviews and Agile development processes
+
+Required Skills:
+Strong backend development experience (Python/Node.js/Java)
+Hands-on experience with GenAI, LLMs, and related frameworks (e.g., OpenAI, LangChain)
+Experience with REST APIs, microservices, and cloud platforms (AWS/Azure/GCP)
+Familiarity with databases (SQL/NoSQL)
+Understanding of CI/CD and Agile methodologies
+
+
+Disclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Search Engineer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+BackendNoSQLGCPAgile developmentCloudAgileAWSSQLPythonmicroservices

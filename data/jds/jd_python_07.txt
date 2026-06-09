@@ -1,0 +1,57 @@
+Job description
+
+Job Description: Good understanding of Python / Django / Flask tech stack with exposure to RDBMS. Understanding of OOPs and programming fundamentals. Should be able to write efficient algorithms to solve business problems. Should be flexible to cut across programming languages to solve a problem end to end and work with cross-stack dev team.
+
+Should be ready to work in high availability and complex business systems, with readiness to learn and contribute each day.
+
+
+Experience: 0 to 2 years
+
+
+Location: Gurgaon
+
+
+Qualification: BE / BTECH / MCA / MTECH in Computer Science or related stream
+
+
+Competencies: Drive for results, Very High on Aptitude, ANALYTICALLY SHARP and EAGER to learn new technologies.
+
+
+Job Responsibilities:
+
+Passionate about programming
+Ready to solve real world challenges with efficient coding using open source stack.
+Drive for results, ANALYTICALLY SHARP and EAGER to learn new technologies.
+Ready to work in challenging environment where technology is no bar
+Learn and improvise on the fly as every day would be a new day/new challenges
+
+Who you are:
+
+Understanding project requirements as provided in the Design Documents and develop the application modules to meet the requirements
+Work with developers and architects, to ensure bug free and timely delivery
+Following coding best practices and guidelines.
+Support live systems with enhancements, maintenance and/or bug fixes.
+Conducting unit testing / implementing unit test cases.
+Should be a PASSIONATE about work and delivering quality results.
+Strong programming and problem solving skills.
+Good understanding of OOPs / Python / Django and/or Flask
+Knowledge of AWS serverless stack (Lambda, DynamoDB, SQS, S3) would be a value add
+Knowledge of REST/JSON APIs and/or SOAP/XML webservices
+Experience with Github and advanced Github features (good to have).
+
+
+*Should be available to join within 30 days from the date of offer
+
+
+
+Role: IT & Information Security - Other
+Industry Type: IT Services & Consulting
+Department: IT & Information Security
+Employment Type: Full Time, Permanent
+Role Category: IT & Information Security - Other
+Education
+UG: Any Graduate
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Application ProgrammingGithubProgrammingRest ApiSoftware Development
+S3OOPSJSONSOAPAlgorithmsAws LambdaDjangoXMLRestful WebservicesAWSWeb ServicesFlaskPython

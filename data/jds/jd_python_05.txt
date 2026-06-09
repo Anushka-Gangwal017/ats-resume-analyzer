@@ -1,0 +1,30 @@
+Job description
+Build backend services and APIs using Python and FastAPI.
+Develop and maintain scalable backend systems and monolithic system.
+Implement AI integrations using LLM APIs and RAG pipelines.
+Work with SQL databases and design efficient data models.
+Build API integrations with third-party platforms.
+Collaborate with frontend engineers to support React and Flutter applications.
+Write clean, scalable, and well-tested backend code.
+Participate in architecture discussions and product feature development.
+Bachelors or Masters degree in Computer Science, Engineering, AI/ML, Data Science, or related fields.
+Strong programming skills in Python.
+Familiarity with FastAPI or Python web frameworks.
+Understanding of SQL databases and data modelling.
+Exposure to LLM APIs, RAG systems, or AI-powered tools.
+Familiar with API integrations and backend architecture concepts.
+Basic understanding of DevOps workflows and version control (Git).
+Strong problem-solving mindset and curiosity to build AI-driven systems.
+
+
+Disclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: LLM in Law, Any Postgraduate
+Key Skills
+Computer scienceBackendVersion controlGITdata scienceData modelingProgrammingAutomation systemsSQLPython

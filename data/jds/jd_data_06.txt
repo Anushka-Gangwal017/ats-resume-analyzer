@@ -1,0 +1,102 @@
+Job description
+This role is for AccioJobs clients.
+
+
+Data Analyst | Data Scientist | Data Engineer
+
+
+Location: Chennai , Bengaluru
+
+Job Type: Full-time
+
+Salary Range: 4-10 LPA (based on experience)
+
+
+Apply here: https://go.acciojob.com/T6LVGv
+
+
+About the Role
+
+We are hiring passionate and analytical candidates for Data Analyst, Data Scientist, and Data Engineer roles. You will work on solving real-world business problems using data, analytics, and modern technologies.
+
+You will collaborate with cross-functional teams including Product, Engineering, and Business teams to build data-driven solutions, generate insights, and improve decision-making processes.
+
+This role is ideal for candidates who are eager to build a career in the data domain and gain hands-on experience in a fast-paced environment.
+
+
+Responsibilities
+
+Analyze large datasets to identify trends, patterns, and business insights
+
+Build and maintain dashboards, reports, and visualizations
+
+Write efficient SQL queries for data extraction and analysis
+
+Clean, process, and transform raw data for analysis and reporting
+
+Work with structured and unstructured datasets
+
+Develop and optimize data pipelines and workflows
+
+Support business and product teams with actionable insights
+
+Collaborate with cross-functional teams to solve data-related problems
+
+Ensure data accuracy, consistency, and reliability
+
+
+Requirements
+
+02 years of experience in Data Analytics, Data Science, or Data Engineering
+
+Strong understanding of SQL and databases
+
+Good knowledge of Python and data handling libraries
+
+Familiarity with Excel, data visualization, and reporting tools
+
+Basic understanding of statistics and data analysis concepts
+
+Strong analytical and problem-solving skills
+
+Familiarity with Git/version control
+
+Good communication and collaboration skills
+
+
+Good to Have
+
+Experience with Power BI, Tableau, or similar visualization tools
+
+Knowledge of Machine Learning concepts and workflows
+
+Understanding of ETL pipelines and data warehousing
+
+Familiarity with cloud platforms such as AWS, Azure, or GCP
+
+Exposure to big data tools like Spark or Hadoop
+
+Experience working with APIs and real-time data
+
+
+Selection Process
+
+Round 1: In-person test at AccioJob Skill Centre
+
+Round 2: Profiles of shortlisted candidates from Round 1 will be directly shared with the partner company
+
+
+Apply here: https://go.acciojob.com/T6LVGv
+
+Role: Data Science & Analytics - Other
+Industry Type: Education / Training
+Department: Data Science & Analytics
+Employment Type: Full Time, Permanent
+Role Category: Data Science & Analytics - Other
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Data Analytics
+Power BiStatisticsPythonSQL

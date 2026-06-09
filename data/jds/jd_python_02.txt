@@ -1,0 +1,62 @@
+Job description :
+As a Python Developer, you will play a crucial role in designing, developing, and maintaining various applications. You will collaborate with a talented team of developers, working on both backend and, if applicable, frontend technologies to deliver high-quality software solutions. Your expertise will drive our projects to new heights, ensuring performance, scalability, and security.
+
+
+
+Key Responsibilities :
+Design & Development: Develop, test, and maintain robust and scalable web applications using Python frameworks such as Django, Flask, and FastAPI.
+
+API Integration: Design and implement APIs, ensuring seamless integration with third-party services and front-end applications.
+
+Database Management: Create and manage databases, ensuring optimal performance and security.
+
+Code Quality: Write clean, maintainable, and efficient code following best practices and standards.
+
+Collaboration: Work closely with cross-functional teams to gather requirements and translate them into technical solutions.
+
+Documentation: Create and maintain comprehensive documentation for all developed code and applications.
+
+Troubleshooting: Identify and fix bugs, and optimize application performance.
+
+Continuous Improvement: Stay up-to-date with emerging technologies and industry trends to propose and implement innovative solutions.
+
+
+
+Qualifications :
+Experience: Minimum of 2 years of professional experience in Python development, with hands-on experience in Django, Flask, and FastAPI.
+
+Education: Bachelors degree in Computer Science, Engineering, or a related field, or equivalent practical experience.
+
+Frontend Skills: Basic knowledge of front-end technologies such as HTML, CSS, and JavaScript is a plus.
+
+Database Proficiency: Experience with relational databases (eg, PostgreSQL, MySQL), MongoDB, and ORM (eg, SQLAlchemy).
+
+Version Control: Proficiency with version control systems like Git.
+
+Problem-Solving: Strong analytical and problem-solving skills.
+
+Communication: Excellent verbal and written communication skills.
+
+
+
+Nice to Have :
+
+Frontend Experience: Familiarity with frontend frameworks/libraries such as React, Angular, or Vue.js.
+
+DevOps: Basic understanding of DevOps practices and tools like Docker and CI/CD pipelines.
+
+Cloud Platforms: Experience with cloud platforms such as AWS, Azure, or Google Cloud.
+
+
+
+
+Role: Full Stack Developer
+Industry Type: Management Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+BackendFront endVersion controlPostgresqlMySQLJavascriptHTMLTroubleshootingPython

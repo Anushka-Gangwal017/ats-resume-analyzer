@@ -1,0 +1,21 @@
+Job description
+Good Coding exp in Python
+Proven experience building production-ready AI applications.
+Cloud platforms such as Azure or AWS.
+Azure Document Intelligence.
+OpenAI, Anthropic, Gemini, or similar LLM platforms.
+Ability to independently design and implement AI solutions.
+Experience optimizing existing systems using modern AI technologies.
+Passion for innovation in Generative AI, Computer Vision, and Document Intelligence.
+Ability to work in a fast-paced environment and take ownership of end-to-end development.
+Role: Software Development - Other
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Data ExtractionRAGFastAPIPythonOCR
+Agentic AIBackend Development.Generative AIIntelligent Document ProcessingAI AgentsAzure AIOpenAI

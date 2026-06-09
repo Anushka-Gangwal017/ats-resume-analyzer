@@ -1,0 +1,82 @@
+Job description
+We are looking for ambitious engineers who want to build real products, solve challenging problems, and work closely with experienced technical teams.
+
+
+Role Overview
+
+As a Full Stack Developer, you will contribute to the development of internal platforms, AI-assisted workflows, business applications, and customer-facing products. You will gain hands-on experience across frontend, backend, databases, cloud infrastructure, and modern AI development tools.
+
+This is an excellent opportunity for fresh graduates who want to accelerate their software engineering career through real-world product development.
+
+
+What You Will Do
+
+Build and maintain web applications and internal software platforms.
+Develop frontend interfaces using modern JavaScript frameworks.
+Build backend APIs and business logic.
+Design and interact with relational and NoSQL databases.
+Collaborate with product, operations, and engineering teams.
+Debug, test, and optimize software systems.
+Use modern AI-assisted development tools to improve productivity.
+Participate in code reviews and engineering discussions.
+Learn and apply software engineering best practices.
+Required Qualifications
+
+B.E. / B.Tech. in Computer Science, Information Science, Electronics, AI/ML, or related disciplines.
+Strong understanding of programming fundamentals.
+Knowledge of at least one programming language:
+Python
+JavaScript / TypeScript
+Java
+C++
+Familiarity with data structures and algorithms.
+Basic understanding of databases and APIs.
+Strong problem-solving ability.
+Good communication skills.
+
+Preferred Skills
+
+Must have excellent grasp on algorithms and data structures.
+
+Experience with any of the following is a plus:
+
+React.js
+Django / FastAPI
+Node.js
+PostgreSQL / MySQL
+Git and GitHub
+Docker
+Linux
+REST APIs
+AI coding assistants (ChatGPT, Claude, GitHub Copilot, Cursor)
+
+What Makes You Successful Here
+
+Curiosity and willingness to learn.
+Strong ownership mindset.
+Ability to work independently.
+Attention to detail.
+Desire to build products rather than merely complete tasks.
+Passion for technology and AI.
+
+What We Offer
+
+Direct mentorship from experienced engineers and founders.
+Opportunity to work on production systems from day one.
+Exposure to AI, machine learning, and data-driven products.
+Fast career growth based on performance.
+Opportunity to contribute to products used by global customers.
+Structured learning and skill development.
+Collaborative and innovation-driven work culture.
+
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Temporary/Contractual
+Role Category: Software Development
+Education
+UG: B.Tech / B.E. in Computer Science and Engineering (CSE), Electronics and Communication Engineering (ECE), Information Technology, Electronics And Computer Engineering
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Algorithms
+System DesignJavascriptPythonData Structures And Algorithms

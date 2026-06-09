@@ -1,0 +1,68 @@
+Job description
+About the role
+
+Looking for a full stack developer to work closely across multiple products, including core platform development and AI-based features. The role covers everything from building product features to working on voice and chat agents.
+
+Responsibilities
+
+* Build and maintain web applications using MERN stack (MongoDB, Express, React, Node.js)
+
+* Develop backend systems, APIs, and integrations
+
+* Work on AI features including chat agents and voice agents
+
+* Integrate third-party services (payments, messaging, telephony, etc.)
+
+* Design and implement scalable, reliable systems
+
+* Debug, test, and improve existing systems
+
+* Collaborate directly on product decisions and implementation
+
+Requirements
+
+* Strong experience with MERN stack
+
+* Good knowledge of Python (for AI-related work, scripts, or services)
+
+* Experience building and deploying backend systems and APIs
+
+* Understanding of system design, databases, and performance optimization
+
+* Ability to work independently and ship features end-to-end
+
+Preferred
+
+* Experience with voice AI systems (e.g. LiveKit, Twilio, WebRTC)
+
+* Experience building chat/LLM-based applications
+
+* Familiarity with real-time systems (WebSockets, streaming)
+
+* Experience working with OpenAI or similar APIs
+
+Working style
+
+* Direct collaboration, minimal hierarchy
+
+* Fast-paced environment with frequent iteration
+
+* Focus on building practical, usable systems
+
+How to apply
+
+* Share links to projects or products youve worked on
+
+* Brief note on relevant experience (AI, full stack, or both)
+
+Role: Automation Developer
+Industry Type: Internet (E-Commerce)
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: B.Tech / B.E. in Any Specialization
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+LangchainMean StackFullstack DevelopmentAI agentsConversational Ai
+ExpressNode.JsVoice AIOpen AIlivekitTwilioMongoDBReact.JsWebrtcPython

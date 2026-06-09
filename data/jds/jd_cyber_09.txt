@@ -1,0 +1,32 @@
+Job description
+Certification: CEH/CHFI Certification is Desirable. OSCP/eWPTX and any other industry recognized security certification a plus
+
+Required Skills
+
+Hands-on expert working knowledge on tools like Burp, Nessus, Nmap, Nipper, Metasploit etc., and any other tools (latest)
+Hands-on experience in VAPT, Cloud Security, Web & Mobile Application
+Basic scripting knowledge in any language a plus (Added Advantage)
+Good report making skills (written and verbal communication) and able to face clients directly during projects.
+Experience: Min 1 year of post- qualification experience on Security Testing Projects.
+
+Job Description:
+
+Knowledge of OWASP top10 and any other application/network security frameworks.
+Hands-on VAPT experience of discovering/analyzing application security and network security,
+Good experience on Web Application and Internal/External Network Testing.
+Hands-on experience in Cloud Security.
+Skills on Configuration Review (Servers and/or firewall), policy review, hardening of systems and network, as well as end-point review.
+Experience of Application Code Review and Testing tools (Added Advantage)
+Excellent communication and analytical skills to face clients directly during projects.
+Able to review cyber-attack surface and suggest safeguards and carry out cyber investigations
+Willingness to Travel
+Role: Cyber Security
+Industry Type: Law Enforcement / Security Services
+Department: IT & Information Security
+Employment Type: Full Time, Permanent
+Role Category: IT Security
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Analystcyber security analystpolicy regulations

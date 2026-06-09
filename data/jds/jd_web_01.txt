@@ -1,0 +1,63 @@
+Job description
+Get Daily Job Internship Updates. Download Our App And Apply Instantly.
+Download our mobile app to receive the latest job and internship updates every day. Apply quickly and stay ahead. Click the button below to download the app.
+
+Job description
+
+Were looking for a skilled Full Stack Data Platform Engineer who thrives at the intersection of software development, modern data infrastructure, and internal tools.
+Youll help architect and build robust APIs, manage databases like PostgreSQL and Supabase, and contribute to the frontend when needed all while enabling automation and actionable business insights.
+This role combines backend craftsmanship with data intuition to power internal tools, data reporting pipelines, and intelligent automation systems.
+
+Key responsibilities:
+
+Application API Development
+Design and maintain scalable backend services using Python (Django).
+Build and optimize RESTful or GraphQL APIs for internal and external use.
+Integrate and manage PostgreSQL/Supabase databases.
+Occasionally contribute to frontend tasks (React, Vue, or basic HTML/CSS/JS).
+Ensure performance, security, and reliability across the stack.
+Database Engineering
+Design and normalize database schemas for scale and performance.
+Implement backup, restore, and security protocols.
+Monitor and optimize query performance for large-scale datasets.
+API System Integration
+Develop and document APIs for seamless service-to-service data exchange.
+Integrate with third-party and internal tools using OAuth, JWT, etc.
+Maintain version control and backward compatibility.
+Data Reporting Analytics
+Build automated and ad-hoc data reports and dashboards.
+Translate business goals into metrics, KPIs, and analytics pipelines.
+Conduct exploratory data analysis (EDA) to uncover trends and anomalies.
+Automation Internal Tooling
+Identify manual workflows and automate them using code or no-code tools.
+Work with cross-functional teams to scale internal processes.
+Build end-to-end automation from data ingestion to insights delivery.
+Other requirements
+
+Strong experience with Python and Django for backend development.
+Deep knowledge of PostgreSQL, Supabase, or equivalent platforms.
+Proficiency in SQL, schema design, and database performance tuning.
+Experience with API development and authentication standards (OAuth/JWT).
+Familiarity with frontend frameworks (React, Vue, JS/HTML/CSS).
+Experience in ETL design, data modeling, and analytics reporting.
+Comfort with Git, CI/CD, and agile development workflows.
+DevOps: Familiarity with Docker, Gunicorn, Nginx, etc.
+Linux/Ubuntu: Server maintenance, shell scripting, and log analysis.
+Data Visualization: Metabase, Redash, or building custom dashboards.
+Cloud Platforms: Experience with AWS, GCP, or Vercel deployments.
+Excellent communication and async collaboration abilities.
+Self-starter with strong problem-solving and an ownership mindset.
+Ability to translate technical solutions into business value.
+Passion for clean code, system scalability, and impactful automation
+
+
+Role: Full Stack Developer
+Industry Type: Management Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Performance tuningAutomationData analysisLinuxData modelingShell scriptingHTMLInternshipSQLPython

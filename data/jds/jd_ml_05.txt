@@ -1,0 +1,30 @@
+Job description
+We are seeking a motivated Associate Machine Learning Engineer to join our AI/ML team. The ideal candidate will assist in building, training, evaluating, and deploying machine learning models while working closely with senior engineers and product teams. This role provides an excellent opportunity to gain hands-on experience in machine learning, deep learning, data engineering, MLOps, and AI-powered application development.
+
+The candidate should possess strong programming skills in Python, a solid understanding of machine learning concepts, and a passion for solving business problems using data-driven approaches.
+
+0 2 years of experience, including fresh graduates with ML internships or academic projects.
+
+Develop, train, and evaluate machine learning models for real-world business applications.
+Perform data collection, cleaning, preprocessing, and feature engineering.
+Assist in deploying ML models into production environments.
+Build and maintain APIs for serving machine learning models.
+Monitor model performance and improve accuracy and efficiency.
+Work with structured and unstructured datasets.
+Collaborate with software engineers, product managers, and data teams.
+Document experiments, model performance metrics, and implementation details.
+Participate in code reviews and follow software engineering best practices.
+Stay updated with advancements in Machine Learning, Generative AI, and MLOps.
+
+
+Disclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Software Development - Other
+Industry Type: Travel & Tourism
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate, B.Tech / B.E. in Any Specialization
+PG: M.Tech in Any Specialization, MS/M.Sc(Science) in Any Specialization, MCA in Computers
+Key Skills
+GITMachine learningData collectionProgrammingData structuresDeploymentApplication developmentBusiness applicationsSQLPython

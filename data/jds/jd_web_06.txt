@@ -1,0 +1,20 @@
+Job description
+Raygain Technologies is hiring Full Stack & AI/ML Developers with strong knowledge of Python technologies and modern web development. Candidates should have experience in backend development, frontend frameworks, APIs, databases & AI/ML technologies.
+
+Required Candidate profile
+
+• TensorFlow / PyTorch / Scikit-learn
+• Generative AI / LLM Knowledge
+• Cloud Platforms (AWS / Azure / GCP)
+• Real-time Application Development
+Role: Software Development - Other
+Industry Type: Software Product
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: B.Tech / B.E. in Any Specialization
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Python Development
+CSSAI/ML

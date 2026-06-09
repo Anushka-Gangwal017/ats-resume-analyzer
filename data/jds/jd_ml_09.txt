@@ -1,0 +1,23 @@
+Job description
+Design and improve AI-assisted workflows for SEO research, keyword clustering, content brief generation, drafting, metadata generation, internal linking logic, content optimization, publishing support, and tuning/operating AI agents used in SEO and content workflows.
+Translate operational needs into structured prompts, templates, instructions, and repeatable systems, testing outputs, identifying failure modes, and improving workflow reliability.
+Help design human-in-the-loop review systems for quality control and document workflows, processes, and prompt libraries.
+Monitor emerging AI tools and recommend improvements to internal workflows, contributing to experiments on how AI agents can accelerate content production without reducing quality.
+Collaborate with founders and internal operators to contribute to AI workflow design and operational execution.
+Job Requirements
+Strong interest in AI tools, LLMs, automation, and agentic systems, with a technical or structured academic background (engineering, computer science, data, information systems, etc.).
+Comfort working with AI tools such as ChatGPT, Claude, or similar platforms, and the ability to think in systems rather than isolated tasks.
+Curiosity and willingness to experiment with new tools and workflows, along with strong written English and attention to detail.
+Structured thinking and documentation discipline, and the ability to work independently in fast-moving environments.
+Execution mindset with a willingness to test, iterate, and improve systems, showing initiative, curiosity, and the ability to learn quickly.
+Hands-on experience designing AI-assisted operational systems, practical knowledge of AI agent workflows and prompt engineering, understanding of SEO automation and AI-assisted content pipelines.
+Role: Software Development - Other
+Industry Type: Advertising & Marketing
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+innovationpythonautomationcomputer scienceseomachine learningartificial intelligence

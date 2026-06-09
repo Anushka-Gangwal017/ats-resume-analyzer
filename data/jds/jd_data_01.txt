@@ -1,0 +1,40 @@
+Job Description:
+We are looking for a Data Analyst to join our growing team. The ideal candidate will be responsible for collecting, analyzing, and interpreting data to support business decision-making.
+
+
+Key Responsibilities:
+
+Analyze large datasets and generate actionable insights.
+Create dashboards, reports, and visualizations.
+Perform data cleaning, validation, and quality checks.
+Work with stakeholders to understand reporting requirements.
+Prepare periodic MIS and business reports.
+Support data-driven decision-making across teams.
+
+Required Skills:
+
+SQL (mandatory)
+Advanced Excel
+Power BI or Tableau
+Basic knowledge of Python (preferred)
+Strong analytical and problem-solving skills
+Good communication skills
+
+
+Freshers with relevant internships/projects can apply.
+
+Apply Now....
+
+Role: Data Science & Analytics - Other
+Industry Type: IT Services & Consulting
+Department: Data Science & Analytics
+Employment Type: Full Time, Permanent
+Role Category: Data Science & Analytics - Other
+Education
+UG: Diploma in Any Specialization, Any Graduate
+PG: Any Postgraduate
+Doctorate: Any Doctorate
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+Power BiMS OfficeSQLGoogle SuiteData Analytics
+Large DatabasesGoogle Data StudioData ManagementData CleansingTableauLookerMachine LearningStatisticsData Analysis ExpressionsMS Office SuiteData AnalysisData VisualizationPython

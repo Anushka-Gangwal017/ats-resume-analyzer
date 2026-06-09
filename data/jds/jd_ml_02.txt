@@ -1,0 +1,13 @@
+ob description
+Interact with overseas clients and ensure timely and quality delivery of applications. Review and help clients complete business analysis and gather requirements. Design the architecture for application using latest cutting edge technologies. Manage and co-ordinate with developers, QA and client for smooth delivery of application.
+
+Role: Back End Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: B.Tech / B.E. in Production and Industrial Engineering, B.C.A. in Computer Applications (General)
+PG: MCA in Computers
+Key Skills
+QA Architecture Business analysis Machine learning HR Management Python

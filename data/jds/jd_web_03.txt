@@ -1,0 +1,34 @@
+Job description
+Develop and maintain both frontend and backend components of web applications.
+Work closely with the product and design teams to create seamless user experiences.
+Collaborate on the architecture and implementation of new features, ensuring scalability and performance.
+Write clean, maintainable, and efficient code, adhering to best practices.
+Participate in code reviews to maintain high code quality and share knowledge with the team.
+Continuously improve application performance, troubleshoot, and debug issues.
+Stay up to date with the latest technologies and trends in web development.
+Required Skills:
+Frontend : Strong experience with modern frontend frameworks and libraries (React, Angular, Vue.js, Javascript, HTML, CSS etc.)
+Backend : Familiarity with backend technologies such as Node.js, Python, Java, .Net, C#, Ruby, or PHP.
+Databases : Understanding of both relational and NoSQL databases (e.g., MySQL, PostgreSQL, MongoDB).
+Version Control : Proficiency with Git and GitHub/Bitbucket.
+API Development : Experience with RESTful APIs and possibly GraphQL.
+Problem-Solving : Strong analytical and debugging skills.
+Testing : Familiarity with testing frameworks and methodologies.
+DevOps : Exposure to CI/CD pipelines and cloud platforms (AWS, Azure, or GCP) is a plus.
+Agile : Understanding of Agile methodologies and collaborative development practices.
+Preferred Qualifications:
+Bachelors or Masters degree in Computer Science, Engineering, or a related field from IIT, NIT, or a Tier 1 institution.
+Experience with modern JavaScript libraries and frameworks (React, Angular, Vue.js).
+Familiarity with cloud infrastructure and services (AWS, Azure, Google Cloud).
+Exposure to mobile app development (React Native, Flutter) is a plus.
+Passion for learning new technologies and continuously improving coding skills.
+Role: Software Development - Other
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+continuous integration css ci/cdvue.jsbitbucketreact.jsgitjavapostgresqlgcpdevopsdebugginghtmlmysqlgraphqlmongodbagile methodologyc#restcdgithubpythonreact nativejavascriptnosqlrubyangularnode.jsflutterphp.netagileaws

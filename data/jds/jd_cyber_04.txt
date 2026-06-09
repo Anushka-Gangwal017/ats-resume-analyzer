@@ -1,0 +1,32 @@
+Job description
+As a Cyber Security Intern Trainee, you will have the opportunity to gain hands-on experience in the field of cybersecurity
+Under the guidance of our experienced cybersecurity professionals, you will be exposed to various aspects of information security, vulnerability management, and threat detection
+This internship program is designed to provide you with practical knowledge and skills that are valuable for a successful career in cybersecurity
+Key Responsibilities
+
+Security Monitoring: Assist in monitoring security alerts and incidents; participate in incident response activities to mitigate and contain security threats
+Vulnerability Management: Support vulnerability assessments and penetration testing activities; help identify, prioritize, and remediate security vulnerabilities in systems and applications
+Security Awareness: Contribute to security awareness initiatives, including creating and promoting security best practices among employees
+Documentation: Document security processes, procedures, and guidelines; maintain up-to-date records of security configurations and assets
+Security Tools: Familiarize yourself with security tools and technologies used for monitoring, detection, and prevention; assist in the evaluation and implementation of new security solutions
+Collaboration: Collaborate with cross-functional teams to ensure security measures are integrated into all aspects of the organization's operations
+Research: Stay informed about the latest cybersecurity threats, trends, and technologies; conduct research to enhance the organization's security posture
+Qualifications:
+
+Currently pursuing a degree in Computer Science, Information Technology, Cybersecurity, or a related field
+Basic understanding of cybersecurity concepts, including network security, encryption, authentication, and access control
+Familiarity with common operating systems (Windows, Linux) and network protocols
+Strong analytical and problem-solving skills
+Excellent communication and interpersonal skills
+Ability to work independently and as part of a team
+Eagerness to learn and adapt to new technologies and methodologies
+Role: Cyber Security
+Industry Type: IT Services & Consulting
+Department: IT & Information Security
+Employment Type: Full Time, Permanent
+Role Category: IT Security
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+Operations researchLinuxInformation securityAnalyticalNetwork securityWindowsInformation technologyInternshipPenetration testing

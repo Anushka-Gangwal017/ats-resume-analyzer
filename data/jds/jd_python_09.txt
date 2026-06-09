@@ -1,0 +1,36 @@
+Job description
+We are seeking a motivated Python Developer with expertise in the Flask framework to join our development team. Candidates with strong knowledge of Core Python and experience with Django will also be considered.
+The ideal candidate should be passionate about backend development, API integration, and building scalable, high-performance web applications.
+Design, develop, test, and maintain web applications using Flask
+Build scalable and secure backend solutions
+Integrate and manage RESTful APIs and web services
+Work with SQL and NoSQL databases and optimize queries for performance
+Collaborate with front-end developers to ensure smooth system integration
+Write clean, efficient, and well-documented code
+Debug, troubleshoot, and resolve performance or functionality issues
+Educational Qualification:
+MSC / MCS / MCA / BCA / IT
+M.Sc IT
+B.Tech (Computer Science / Electronics)
+Any equivalent IT qualification
+Must-Have Skills:
+Strong proficiency in Python (Core Python)
+Hands-on experience with the Flask framework
+Understanding of RESTful APIs and backend web development concepts
+Experience working with SQL and NoSQL databases
+Knowledge of Django
+Familiarity with HTML , CSS , and JavaScript
+Exposure to version control systems such as Git
+
+
+Disclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.
+Role: Full Stack Developer
+Industry Type: IT Services & Consulting
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: B.C.A. in Computer Applications (General)
+PG: MS/M.Sc(Science) in Any Specialization, MCA in Computers
+Key Skills
+Computer scienceBackendFront endVersion controlWeb developmentSystem integrationJavascriptHTMLSQLPython
