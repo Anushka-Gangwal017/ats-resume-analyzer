@@ -12,6 +12,13 @@ import os
 import sys
 import json
 from datetime import datetime
+from jd_classifier import classify_jd, get_level_badge_colour
+from keyword_extractor import (
+    extract_keywords_from_resume,
+    extract_keywords_from_jd,
+    extract_keywords_from_text,
+    normalize_keywords,
+)
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -148,6 +155,18 @@ def run_full_analysis(resume_pdf_path, jd_text):
     except Exception as e:
         errors.append(f"Keyword extraction warning: {e}")
 
+        # ── JD Classification ──────────────────────────────────
+    print("  [3b/6] Classifying JD difficulty...")
+    try:
+        jd_classification = classify_jd(jd_text)
+        results["jd_classification"] = jd_classification
+    except Exception as e:
+        results["jd_classification"] = {
+            "level": "Unknown", "confidence": "Low",
+            "signals_found": [], "warning": None,
+            "degree_required": None,
+        }
+
     # ── STEP 4: Gap analysis ──────────────────────────────────
     print("  [4/6] Analysing keyword gap...")
     gap_report     = {}
@@ -170,6 +189,35 @@ def run_full_analysis(resume_pdf_path, jd_text):
             "total_resume_keywords": 0,
             "grade": "Could not calculate",
         }
+        # ── Section-level keyword scores ─────────────────────
+        section_keyword_scores = {}
+        section_names = [
+            'skills', 'experience', 'projects',
+            'summary', 'certifications', 'research'
+        ]
+        for sec_name in section_names:
+            sec_text = sections.get(sec_name, '').strip()
+            if sec_text and len(sec_text) > 10:
+                # Get keywords from just this section
+                sec_kw = extract_keywords_from_text(sec_text)
+                sec_kw_norm = normalize_keywords(sec_kw)
+                # Score this section against JD
+                if jd_kw:
+                    sec_matched = set(sec_kw_norm) & set(jd_kw)
+                    sec_score   = round(
+                        len(sec_matched) / len(set(jd_kw)) * 100,
+                        1
+                    )
+                else:
+                    sec_score = 0
+                section_keyword_scores[sec_name] = {
+                    "score"  : sec_score,
+                    "matched": sorted(sec_matched
+                               if jd_kw else []),
+                    "keywords_found": sorted(sec_kw_norm),
+                }
+
+        results["section_keyword_scores"] = section_keyword_scores
         results["section_report"] = {}
         results["keyword_score"]  = 0
 

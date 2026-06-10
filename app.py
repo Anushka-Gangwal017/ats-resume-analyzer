@@ -51,153 +51,237 @@ def safe_get(d, *keys, default=None):
     return d if d is not None else default
 
 
-def clean_results_for_template(raw):
-    """
-    Converts the raw pipeline output into a flat dict
-    that is 100% safe to pass to Jinja2 templates.
-    Every key has a typed default — no missing variables.
-    """
-    r = {}
-
-    # ── Scores ────────────────────────────────────────────────
-    sb = safe_get(raw, "score_breakdown", default={})
-    r["final_score"]    = float(
-        safe_get(sb, "final_score", default=0) or 0
-    )
-    r["semantic_score"] = float(
-        safe_get(sb, "semantic_score_pct", default=0) or 0
-    )
-    r["keyword_score"]  = float(
-        safe_get(sb, "keyword_score_pct", default=0) or 0
-    )
-    r["final_grade"]    = str(
-        safe_get(raw, "final_grade",
-                 default="Analysis complete") or ""
-    )
-
-    # Score colour + label
-    sc = r["final_score"]
-    if sc >= 75:
-        r["score_colour"] = "#16A34A"
-        r["score_label"]  = "Strong Match"
-    elif sc >= 50:
-        r["score_colour"] = "#D97706"
-        r["score_label"]  = "Average Match"
-    else:
-        r["score_colour"] = "#DC2626"
-        r["score_label"]  = "Needs Work"
-
-    # ── Keywords ──────────────────────────────────────────────
-    gap = safe_get(raw, "gap_report", default={})
-    r["matched_keywords"] = list(
-        safe_get(gap, "matched_keywords", default=[]) or []
-    )
-    r["missing_keywords"] = list(
-        safe_get(gap, "missing_keywords", default=[]) or []
-    )
-    r["extra_keywords"]   = list(
-        safe_get(gap, "extra_keywords", default=[]) or []
-    )[:8]
-    r["matched_count"]    = int(
-        safe_get(gap, "matched_count", default=0) or 0
-    )
-    r["missing_count"]    = int(
-        safe_get(gap, "missing_count", default=0) or 0
-    )
-
-    # ── Soft / synonym matches ────────────────────────────────
-    syns = safe_get(raw, "synonym_analysis", default={})
-    raw_soft = safe_get(syns, "soft_matches", default=[])
-    r["soft_matches"] = [
-        {
-            "resume_keyword": str(
-                m.get("resume_keyword", "")
-            ),
-            "jd_keyword"    : str(m.get("jd_keyword", "")),
-            "similarity"    : float(
-                m.get("similarity", 0) or 0
-            ),
-            "note"          : str(m.get("note", "")),
-        }
-        for m in (raw_soft or [])
-        if isinstance(m, dict)
-    ]
-
-    # ── Section report ────────────────────────────────────────
-    raw_sec = safe_get(raw, "section_report", default={})
-    r["section_report"] = {
-        str(k): {
-            "status": str(
-                v.get("status", "") if isinstance(v, dict)
-                else ""
-            ),
-            "length": int(
-                v.get("length", 0) if isinstance(v, dict)
-                else 0
-            ),
-            "note"  : str(
-                v.get("note", "") if isinstance(v, dict)
-                else str(v)
-            ),
-        }
-        for k, v in (raw_sec or {}).items()
+def clean_for_template(raw):
+    """Converts pipeline output to Jinja2-safe flat dict."""
+    
+    # Start with ALL keys having safe defaults
+    # This prevents any KeyError or scoping issues
+    r = {
+        "final_score"           : 0.0,
+        "semantic_score"        : 0.0,
+        "keyword_score"         : 0.0,
+        "final_grade"           : "",
+        "score_colour"          : "#DC2626",
+        "score_label"           : "Needs Work",
+        "matched_keywords"      : [],
+        "missing_keywords"      : [],
+        "extra_keywords"        : [],
+        "matched_count"         : 0,
+        "missing_count"         : 0,
+        "soft_matches"          : [],
+        "section_report"        : {},
+        "section_similarities"  : {},
+        "section_keyword_scores": {},
+        "suggestions"           : [],
+        "high_priority_count"   : 0,
+        "verb_verdict"          : "",
+        "weak_verbs"            : [],
+        "strong_verbs"          : [],
+        "quant_verdict"         : "",
+        "resume_filename"       : "resume.pdf",
+        "analysed_at"           : "",
+        "jd_level"              : "Unknown",
+        "jd_confidence"         : "Low",
+        "jd_warning"            : None,
+        "jd_signals"            : [],
+        "jd_level_colour"       : "#6B7280",
+        "analysis_id"           : None,
+        "saved_to_db"           : False,
     }
 
-    # ── Section similarities ──────────────────────────────────
-    raw_sim = safe_get(
-        raw, "section_similarities", default={}
-    )
-    r["section_similarities"] = {
-        str(k): round(float(v or 0) * 100, 1)
-        for k, v in (raw_sim or {}).items()
-    }
+    try:
+        # ── Scores ───────────────────────────────────────────
+        sb = safe_get(raw, "score_breakdown", default={})
+        r["final_score"]    = float(
+            safe_get(sb, "final_score",         default=0) or 0
+        )
+        r["semantic_score"] = float(
+            safe_get(sb, "semantic_score_pct",  default=0) or 0
+        )
+        r["keyword_score"]  = float(
+            safe_get(sb, "keyword_score_pct",   default=0) or 0
+        )
+        r["final_grade"] = str(
+            safe_get(raw, "final_grade", default="") or ""
+        )
 
-    # ── Suggestions ───────────────────────────────────────────
-    raw_sugg = safe_get(raw, "suggestions", default=[])
-    if isinstance(raw_sugg, list):
-        r["suggestions"] = [
-            str(s.get("message", s))
-            if isinstance(s, dict) else str(s)
-            for s in raw_sugg
+        sc = r["final_score"]
+        if sc >= 75:
+            r["score_colour"] = "#16A34A"
+            r["score_label"]  = "Strong Match"
+        elif sc >= 50:
+            r["score_colour"] = "#D97706"
+            r["score_label"]  = "Average Match"
+        else:
+            r["score_colour"] = "#DC2626"
+            r["score_label"]  = "Needs Work"
+
+        # ── Keywords ─────────────────────────────────────────
+        gap = safe_get(raw, "gap_report", default={})
+        r["matched_keywords"] = list(
+            safe_get(gap, "matched_keywords", default=[]) or []
+        )
+        r["missing_keywords"] = list(
+            safe_get(gap, "missing_keywords", default=[]) or []
+        )
+        r["extra_keywords"] = list(
+            safe_get(gap, "extra_keywords", default=[]) or []
+        )[:8]
+        r["matched_count"] = int(
+            safe_get(gap, "matched_count", default=0) or 0
+        )
+        r["missing_count"] = int(
+            safe_get(gap, "missing_count", default=0) or 0
+        )
+
+        # ── Soft matches ─────────────────────────────────────
+        syns     = safe_get(raw, "synonym_analysis", default={})
+        raw_soft = safe_get(syns, "soft_matches",    default=[])
+        r["soft_matches"] = [
+            {
+                "resume_keyword": str(
+                    m.get("resume_keyword", "")
+                ),
+                "jd_keyword"    : str(m.get("jd_keyword", "")),
+                "similarity"    : float(
+                    m.get("similarity", 0) or 0
+                ),
+                "note"          : str(m.get("note", "")),
+            }
+            for m in (raw_soft or [])
+            if isinstance(m, dict)
         ]
-    else:
-        r["suggestions"] = []
 
-    r["high_priority_count"] = int(
-        safe_get(raw, "high_priority_count", default=0)
-        or 0
-    )
+        # ── Section report ────────────────────────────────────
+        raw_sec = safe_get(raw, "section_report", default={})
+        r["section_report"] = {
+            str(k): {
+                "status": str(
+                    v.get("status", "")
+                    if isinstance(v, dict) else ""
+                ),
+                "length": int(
+                    v.get("length", 0)
+                    if isinstance(v, dict) else 0
+                ),
+                "note": str(
+                    v.get("note", "")
+                    if isinstance(v, dict) else str(v)
+                ),
+            }
+            for k, v in (raw_sec or {}).items()
+        }
 
-    # ── Verb analysis ─────────────────────────────────────────
-    verb = safe_get(raw, "verb_analysis", default={})
-    r["verb_verdict"]  = str(
-        safe_get(verb, "overall_verdict", default="") or ""
-    )
-    r["weak_verbs"]    = list(
-        safe_get(verb, "weak_found", default=[]) or []
-    )
-    r["strong_verbs"]  = list(
-        safe_get(verb, "strong_found", default=[]) or []
-    )
+        # ── Section similarities ──────────────────────────────
+        raw_sim = safe_get(
+            raw, "section_similarities", default={}
+        )
+        r["section_similarities"] = {
+            str(k): round(float(v or 0) * 100, 1)
+            for k, v in (raw_sim or {}).items()
+        }
 
-    # ── Quantification ────────────────────────────────────────
-    quant = safe_get(raw, "quant_analysis", default={})
-    r["quant_verdict"] = str(
-        safe_get(quant, "verdict", default="") or ""
-    )
+        # ── Section keyword scores (Day 14) ───────────────────
+        raw_sks = safe_get(
+            raw, "section_keyword_scores", default={}
+        )
+        r["section_keyword_scores"] = {
+            str(k): {
+                "score"  : float(
+                    v.get("score", 0) or 0
+                    if isinstance(v, dict) else 0
+                ),
+                "matched": list(
+                    v.get("matched", []) or []
+                    if isinstance(v, dict) else []
+                ),
+            }
+            for k, v in (raw_sks or {}).items()
+        }
 
-    # ── Metadata ──────────────────────────────────────────────
-    meta = safe_get(raw, "metadata", default={})
-    r["resume_filename"] = str(
-        safe_get(meta, "resume_file",
-                 default="resume.pdf") or "resume.pdf"
-    )
-    r["analysed_at"] = str(
-        safe_get(meta, "analysed_at", default="") or ""
-    )
+        # ── Suggestions ───────────────────────────────────────
+        raw_sugg = safe_get(raw, "suggestions", default=[])
+        if isinstance(raw_sugg, list):
+            r["suggestions"] = [
+                str(s.get("message", s))
+                if isinstance(s, dict) else str(s)
+                for s in raw_sugg
+            ]
+        else:
+            r["suggestions"] = []
+
+        r["high_priority_count"] = int(
+            safe_get(raw, "high_priority_count", default=0)
+            or 0
+        )
+
+        # ── Verb analysis ─────────────────────────────────────
+        verb = safe_get(raw, "verb_analysis", default={})
+        r["verb_verdict"] = str(
+            safe_get(verb, "overall_verdict", default="") or ""
+        )
+        r["weak_verbs"]   = list(
+            safe_get(verb, "weak_found",   default=[]) or []
+        )
+        r["strong_verbs"] = list(
+            safe_get(verb, "strong_found", default=[]) or []
+        )
+
+        # ── Quantification ────────────────────────────────────
+        quant = safe_get(raw, "quant_analysis", default={})
+        r["quant_verdict"] = str(
+            safe_get(quant, "verdict", default="") or ""
+        )
+
+        # ── Metadata ──────────────────────────────────────────
+        meta = safe_get(raw, "metadata", default={})
+        r["resume_filename"] = str(
+            safe_get(
+                meta, "resume_file", default="resume.pdf"
+            ) or "resume.pdf"
+        )
+        r["analysed_at"] = str(
+            safe_get(meta, "analysed_at", default="") or ""
+        )
+
+        # ── JD classification ─────────────────────────────────
+        jd_cls = safe_get(
+            raw, "jd_classification", default={}
+        )
+        r["jd_level"]      = str(
+            jd_cls.get("level",      "Unknown")
+            if isinstance(jd_cls, dict) else "Unknown"
+        )
+        r["jd_confidence"] = str(
+            jd_cls.get("confidence", "Low")
+            if isinstance(jd_cls, dict) else "Low"
+        )
+        r["jd_warning"]    = (
+            jd_cls.get("warning", None)
+            if isinstance(jd_cls, dict) else None
+        )
+        r["jd_signals"]    = list(
+            jd_cls.get("signals_found", []) or []
+            if isinstance(jd_cls, dict) else []
+        )
+        colours = {
+            "Entry"  : "#16A34A",
+            "Mid"    : "#D97706",
+            "Senior" : "#DC2626",
+            "Unknown": "#6B7280",
+        }
+        r["jd_level_colour"] = colours.get(
+            r["jd_level"], "#6B7280"
+        )
+
+    except Exception as e:
+        # If anything goes wrong, log it but
+        # always return r with safe defaults
+        print(f"  clean_for_template warning: {e}")
+        import traceback
+        traceback.print_exc()
 
     return r
-
 
 # ── ROUTES ────────────────────────────────────────────────────
 
@@ -245,7 +329,7 @@ def analyze():
             flash(f"Analysis failed: {raw['error']}")
             return redirect(url_for("home"))
 
-        cleaned = clean_results_for_template(raw)
+        cleaned = clean_for_template(raw)
 
     except Exception as e:
         import traceback

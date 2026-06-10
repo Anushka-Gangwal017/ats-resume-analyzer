@@ -168,6 +168,22 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
         {% if high_priority_count > 0 %}
         <span style="background:var(--red-light);color:var(--red);padding:2px 8px;border-radius:4px;font-weight:600;font-size:0.78rem">{{ high_priority_count }} critical fixes</span>
         {% endif %}
+        <span style="background:{{ jd_level_colour }}18;
+             color:{{ jd_level_colour }};
+             border:1px solid {{ jd_level_colour }}40;
+             padding:2px 10px;border-radius:4px;
+             font-weight:600;font-size:.75rem">
+  {{ jd_level }} level JD
+</span>
+
+{% if jd_warning %}
+<div style="background:#FFFBEB;border:1px solid #FDE68A;
+            border-radius:8px;padding:.75rem 1rem;
+            font-size:.85rem;color:#92400E;
+            margin-top:.875rem;line-height:1.6">
+  {{ jd_warning }}
+</div>
+{% endif %}
       </div>
       <div class="bars">
         <div class="bar-row">
@@ -230,24 +246,72 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
   </div>
   {% endif %}
 
-  <!-- SECTION STRENGTH -->
-  <div class="card" style="margin-bottom:1.25rem">
-    <div class="card-title">
-      <i class="ti ti-layout-list" style="color:var(--blue)" aria-hidden="true"></i>
-      Resume section strength
-    </div>
-    <div class="sec-grid">
-      {% for sec_name, info in section_report.items() %}
-      <div class="sec-item {{ 'good' if 'Good' in info.status else ('weak' if 'Weak' in info.status else 'missing') }}">
-        <div class="sec-top">
-          <span class="sec-name">{{ sec_name }}</span>
-          <i class="ti {{ 'ti-check' if 'Good' in info.status else ('ti-alert-triangle' if 'Weak' in info.status else 'ti-x') }}" style="font-size:14px" aria-hidden="true"></i>
-        </div>
-        <div class="sec-note">{{ info.note }}</div>
+<!-- ── SECTION STRENGTH + SCORES ────────────── -->
+<div class="card" style="margin-bottom:1.25rem">
+  <div class="card-title">
+    <i class="ti ti-layout-list"
+       style="color:var(--blue)"
+       aria-hidden="true"></i>
+    Resume section strength
+    <span class="title-sub">
+      How well each section matches this JD
+    </span>
+  </div>
+
+  {% for sec_name, info in section_report.items() %}
+  <div style="padding:.875rem 0;
+              border-bottom:.5px solid var(--gray3)">
+    <div style="display:flex;align-items:center;
+                justify-content:space-between;
+                margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem">
+
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:.78rem;font-weight:600;
+                     text-transform:uppercase;
+                     letter-spacing:.05em;color:var(--gray6)">
+          {{ sec_name }}
+        </span>
+        <span style="font-size:.75rem">
+          {{ info.status }}
+        </span>
       </div>
-      {% endfor %}
+
+      {% if section_keyword_scores and
+            sec_name in section_keyword_scores %}
+        {% set ss = section_keyword_scores[sec_name] %}
+        <span style="font-size:.82rem;font-weight:600;
+          color:{% if ss.score >= 65 %}var(--green)
+                {% elif ss.score >= 40 %}var(--amber)
+                {% else %}var(--red){% endif %}">
+          {{ ss.score }}% match
+        </span>
+      {% endif %}
+
+    </div>
+
+    {% if section_keyword_scores and
+          sec_name in section_keyword_scores %}
+      {% set ss = section_keyword_scores[sec_name] %}
+      <div style="height:6px;background:var(--gray2);
+                  border-radius:3px;overflow:hidden;
+                  margin-bottom:.4rem">
+        <div style="height:6px;border-radius:3px;
+          width:{{ ss.score }}%;
+          background:{% if ss.score >= 65 %}var(--green)
+                     {% elif ss.score >= 40 %}var(--amber)
+                     {% else %}var(--red){% endif %};
+          transition:width 1.2s ease">
+        </div>
+      </div>
+    {% endif %}
+
+    <div style="font-size:.76rem;color:var(--gray4)">
+      {{ info.note }}
     </div>
   </div>
+  {% endfor %}
+
+</div>
 
   <!-- SECTION SIMILARITY + SUGGESTIONS in two col -->
   <div class="two-col">

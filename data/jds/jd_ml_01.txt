@@ -1,0 +1,16 @@
+Job description
+Programming: Advanced proficiency in Python (essential) and C++ (preferred for
+optimization).
+• Frameworks: Deep expertise in PyTorch or TensorFlow.
+• Libraries: Strong command over OpenCV, NumPy, and image processing techniques.
+Role: Machine Learning Engineer
+Industry Type: Electronics Manufacturing (Electronic Manufacturing Services (EMS))
+Department: Data Science & Analytics
+Employment Type: Full Time, Permanent
+Role Category: Data Science & Machine Learning
+Education
+UG: Any Graduate
+Key Skills
+Skills highlighted with ‘‘ are preferred keyskills
+AI/ML Engineer
+Tensorflow C++ Artificial Intelligence Natural Language Processing Machine Learning Deep Learning Numpy Pytorch Pandas Aiml Computer Vision Python

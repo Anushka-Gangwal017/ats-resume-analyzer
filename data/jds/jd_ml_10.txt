@@ -1,0 +1,42 @@
+Job description
+Definedge Securities Broking is looking for AI Developer to join our dynamic team and embark on a rewarding career journey The AI Developer will be responsible for designing, developing, and implementing artificial intelligence (AI) and machine learning (ML) models and algorithms to solve complex business problems
+
+They will work closely with cross-functional teams to understand business requirements, identify opportunities for AI and ML solutions, and develop prototypes and production-ready models
+
+Key Responsibilities: Design, develop, and implement AI and ML models and algorithms to solve complex business problems
+
+Develop and implement prototypes and production-ready models using programming languages such as Python, R, or Java
+
+Perform data analysis, data preparation, and feature engineering to create datasets that are appropriate for AI and ML models
+
+Perform model selection, optimization, and evaluation to ensure that models meet business requirements and are accurate and reliable
+
+Develop and implement data pipelines, data storage solutions, and data visualization tools to support AI and ML models
+
+Deploy models to production environments and monitor their performance and accuracy over time
+
+Experience in AI and ML development
+
+Strong programming skills in languages such as Python, R, or Java
+
+Familiarity with AI and ML frameworks such as TensorFlow, PyTorch, or Keras
+
+Experience with data analysis, data preparation, and feature engineering
+
+Knowledge of data storage solutions and data visualization tools
+
+Experience with cloud computing platforms such as AWS, Azure, or Google Cloud
+
+Excellent problem-solving, critical thinking, and communication skills
+
+Disclaimer: This job description has been sourced from a public domain and may have been modified by Naukri.com to improve clarity for our users. We encourage job seekers to verify all details directly with the employer via their official channels before applying.
+Role: Software Development - Other
+Industry Type: Financial Services
+Department: Engineering - Software & QA
+Employment Type: Full Time, Permanent
+Role Category: Software Development
+Education
+UG: Any Graduate
+PG: Any Postgraduate
+Key Skills
+algorithms python data analysis natural language processing neural networksmicrosoft azureanalysismachine learningartificial intelligencedeep learningrtensorflowjavagcpcomputer visionpytorchkerasawsprogrammingcommunication skillsml
