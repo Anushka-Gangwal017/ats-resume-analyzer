@@ -7,75 +7,212 @@
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-logo">📄 ATS Analyzer</div>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-      </div>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-dot"></div>
+      ResumeIQ
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="#" onclick="history.back()">← Back</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <div style="max-width:750px;margin:3rem auto;
-              padding:0 1.5rem;">
+<div style="max-width:760px;margin:3rem auto;
+            padding:0 1.5rem 4rem">
 
-    <h1 style="margin-bottom:1rem;">About this project</h1>
+  <h1 style="font-size:2rem;font-weight:700;
+             color:#0A0F1E;margin-bottom:.5rem">
+    About ResumeIQ
+  </h1>
+  <p style="color:#6B7280;font-size:1rem;
+            margin-bottom:2.5rem">
+    An AI-powered ATS resume analyzer built for
+    Indian job seekers
+  </p>
 
-    <p style="margin-bottom:1rem;color:#555;">
-      This tool was built as an internship project under
-      faculty guidance at MIT-ADT University, Pune.
-    </p>
-
-    <h2 style="margin:1.5rem 0 0.5rem;">
+  <!-- The problem -->
+  <div style="background:#fff;border:1px solid #E5E7EB;
+              border-radius:12px;padding:1.75rem;
+              margin-bottom:1.25rem">
+    <h2 style="font-size:1.1rem;font-weight:600;
+               color:#0A0F1E;margin-bottom:.875rem;
+               display:flex;align-items:center;gap:8px">
+      <span style="background:#EFF6FF;color:#2563EB;
+                   width:32px;height:32px;border-radius:8px;
+                   display:inline-flex;align-items:center;
+                   justify-content:center;font-size:16px">
+        <i class="ti ti-alert-circle"
+           aria-hidden="true"></i>
+      </span>
       The problem
     </h2>
-    <p style="color:#555;margin-bottom:1rem;">
-      Over 88% of employers report that qualified
-      candidates are filtered out by ATS systems because
-      their resume doesn't match the exact keywords in a
-      job description — not because they lack the skills.
-      This tool solves that.
+    <p style="color:#6B7280;line-height:1.75;
+              font-size:.95rem">
+      A 2021 Harvard Business School study found that
+      <strong style="color:#111827">88% of employers
+      say qualified candidates are filtered out by ATS
+      systems</strong> — not because they lack skills,
+      but because their resume doesn't match the exact
+      keywords the system is looking for. In India,
+      this problem is worse because most ATS tools are
+      trained on US job market vocabulary, not Naukri
+      or LinkedIn India.
     </p>
-
-    <h2 style="margin:1.5rem 0 0.5rem;">
-      What makes it different
-    </h2>
-    <ul style="color:#555;padding-left:1.5rem;
-               line-height:1.9;">
-      <li>Uses AI semantic matching (not just keywords)</li>
-      <li>Has a skill normalization graph trained on
-          Indian job market vocabulary</li>
-      <li>Detects soft matches — understands that
-          'DSA' and 'data structures' mean the same
-          thing</li>
-      <li>Section-level scoring for detailed feedback</li>
-    </ul>
-
-    <h2 style="margin:1.5rem 0 0.5rem;">
-      Built by
-    </h2>
-    <p style="color:#555;">
-      Anushka Gangwal — B.E. CSE (AI & Analytics),
-      2nd Year, MIT-ADT University, Pune.
-    </p>
-
-    <a href="/"
-       style="display:inline-block;margin-top:2rem;
-              background:#2e86de;color:#fff;
-              padding:0.7rem 1.8rem;border-radius:8px;
-              text-decoration:none;font-weight:600;">
-      ← Back to Analyzer
-    </a>
-
   </div>
 
-  <footer>
-    <p>
-      Built by Anushka Gangwal ·
-      MIT-ADT University, Pune · 2026
-    </p>
-  </footer>
+  <!-- What makes it different -->
+  <div style="background:#fff;border:1px solid #E5E7EB;
+              border-radius:12px;padding:1.75rem;
+              margin-bottom:1.25rem">
+    <h2 style="font-size:1.1rem;font-weight:600;
+               color:#0A0F1E;margin-bottom:1rem;
+               display:flex;align-items:center;gap:8px">
+      <span style="background:#F0FDF4;color:#16A34A;
+                   width:32px;height:32px;border-radius:8px;
+                   display:inline-flex;align-items:center;
+                   justify-content:center;font-size:16px">
+        <i class="ti ti-sparkles"
+           aria-hidden="true"></i>
+      </span>
+      What makes ResumeIQ different
+    </h2>
+    <div style="display:flex;flex-direction:column;
+                gap:.875rem">
+      <div style="display:flex;gap:12px;
+                  align-items:flex-start">
+        <div style="width:6px;height:6px;
+                    background:#2563EB;border-radius:50%;
+                    margin-top:7px;flex-shrink:0"></div>
+        <div>
+          <strong style="font-size:.9rem;color:#111827">
+            AI semantic matching
+          </strong>
+          <span style="font-size:.9rem;color:#6B7280">
+            — understands that "DSA" means
+            "data structures", that "ML" means
+            "machine learning". Not just keyword counting.
+          </span>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;
+                  align-items:flex-start">
+        <div style="width:6px;height:6px;
+                    background:#16A34A;border-radius:50%;
+                    margin-top:7px;flex-shrink:0"></div>
+        <div>
+          <strong style="font-size:.9rem;color:#111827">
+            Skill normalization engine
+          </strong>
+          <span style="font-size:.9rem;color:#6B7280">
+            — 150+ mappings of informal student phrases
+            to exact industry terms used on Naukri and
+            LinkedIn India. This is the core research
+            innovation of the project.
+          </span>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;
+                  align-items:flex-start">
+        <div style="width:6px;height:6px;
+                    background:#D97706;border-radius:50%;
+                    margin-top:7px;flex-shrink:0"></div>
+        <div>
+          <strong style="font-size:.9rem;color:#111827">
+            Section-level scoring
+          </strong>
+          <span style="font-size:.9rem;color:#6B7280">
+            — individual scores for Skills, Experience,
+            Projects, and Summary so you know exactly
+            which section to improve.
+          </span>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;
+                  align-items:flex-start">
+        <div style="width:6px;height:6px;
+                    background:#7C3AED;border-radius:50%;
+                    margin-top:7px;flex-shrink:0"></div>
+        <div>
+          <strong style="font-size:.9rem;color:#111827">
+            India JD trained
+          </strong>
+          <span style="font-size:.9rem;color:#6B7280">
+            — evaluated on 50 real job descriptions
+            collected from Naukri.com and LinkedIn India
+            across 5 domains.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech stack -->
+  <div style="background:#fff;border:1px solid #E5E7EB;
+              border-radius:12px;padding:1.75rem;
+              margin-bottom:1.25rem">
+    <h2 style="font-size:1.1rem;font-weight:600;
+               color:#0A0F1E;margin-bottom:1rem;
+               display:flex;align-items:center;gap:8px">
+      <span style="background:#FFFBEB;color:#D97706;
+                   width:32px;height:32px;border-radius:8px;
+                   display:inline-flex;align-items:center;
+                   justify-content:center;font-size:16px">
+        <i class="ti ti-code"
+           aria-hidden="true"></i>
+      </span>
+      Technology
+    </h2>
+    <div style="display:grid;
+                grid-template-columns:1fr 1fr;
+                gap:.5rem">
+      {% for tech in [
+        ('Python 3', 'Core language'),
+        ('Flask', 'Web framework'),
+        ('sentence-transformers', 'AI semantic matching'),
+        ('spaCy', 'NLP keyword extraction'),
+        ('MiniLM-L6-v2', 'Embedding model'),
+        ('scikit-learn', 'ML utilities'),
+        ('pdfplumber', 'PDF parsing'),
+        ('fpdf2', 'PDF report generation'),
+        ('SQLite', 'Database'),
+        ('Chart.js', 'Score visualisation'),
+      ] %}
+      <div style="display:flex;align-items:center;
+                  gap:8px;padding:.375rem 0">
+        <div style="width:5px;height:5px;
+                    background:#2563EB;border-radius:50%">
+        </div>
+        <span style="font-size:.875rem;
+                     color:#111827;font-weight:500">
+          {{ tech[0] }}
+        </span>
+        <span style="font-size:.8rem;color:#9CA3AF">
+          — {{ tech[1] }}
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Built by -->
+  <div style="background:#0A0F1E;border-radius:12px;
+              padding:1.75rem;color:#9CA3AF">
+    <div style="font-size:1rem;font-weight:600;
+                color:#fff;margin-bottom:.375rem">
+      Built by Anushka Gangwal
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    ResumeIQ · Built by Anushka Gangwal ·
+    MIT-ADT University, Pune · 2026
+  </p>
+</footer>
 
 </body>
 </html>

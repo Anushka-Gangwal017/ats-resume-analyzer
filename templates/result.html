@@ -171,6 +171,22 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
   </div>
 </nav>
 
+{% if saved_to_db %}
+<div style="background:#F0FDF4;border-bottom:1px solid
+            #BBF7D0;padding:.625rem 1.5rem;
+            font-size:.85rem;color:#16A34A;
+            display:flex;align-items:center;gap:8px;
+            justify-content:center">
+  <i class="ti ti-check" aria-hidden="true"></i>
+  Analysis saved to your account
+  <a href="/history"
+     style="color:#16A34A;font-weight:600;
+            margin-left:.5rem;text-decoration:underline">
+    View history →
+  </a>
+</div>
+{% endif %}
+
 <div class="page">
 
   <!-- SCORE HERO -->

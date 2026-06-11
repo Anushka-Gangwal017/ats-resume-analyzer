@@ -155,12 +155,16 @@ footer{background:var(--navy);padding:3rem 2rem;color:#9CA3AF;font-size:0.85rem}
       <div class="nav-brand-dot"></div>
       ResumeIQ
     </a>
-    <div class="nav-links">
-      <a href="#how-it-works">How it works</a>
-      <a href="#why">Why ResumeIQ</a>
-      <a href="#faq">FAQ</a>
-      <a href="#analyze" class="nav-cta">Analyze free</a>
-    </div>
+  <div class="nav-links">
+    <a href="#how-it-works">How it works</a>
+    <a href="#why">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="#analyze" class="nav-cta">
+      Analyze free
+    </a>
+  </div>
+  </div>
+</nav>
   </div>
 </nav>
 
@@ -206,13 +210,31 @@ footer{background:var(--navy);padding:3rem 2rem;color:#9CA3AF;font-size:0.85rem}
     <h2 class="section-title">Analyze your resume now</h2>
     <p class="section-sub">No signup. No credit card. Your PDF is deleted immediately after analysis.</p>
 
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        {% for msg in messages %}
-          <div class="flash"><i class="ti ti-alert-circle" aria-hidden="true"></i>{{ msg }}</div>
-        {% endfor %}
-      {% endif %}
-    {% endwith %}
+{% with messages = get_flashed_messages(
+    with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div style="
+        background:{% if category == 'error' %}
+          #FEF2F2{% else %}#F0FDF4{% endif %};
+        border:1px solid {% if category == 'error' %}
+          #FECACA{% else %}#BBF7D0{% endif %};
+        color:{% if category == 'error' %}
+          #DC2626{% else %}#16A34A{% endif %};
+        border-radius:8px;
+        padding:.75rem 1rem;
+        font-size:.875rem;
+        margin-bottom:1rem;
+        display:flex;
+        align-items:center;
+        gap:8px;">
+        <i class="ti ti-info-circle"
+           aria-hidden="true"></i>
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
 
     <form action="/analyze" method="POST" enctype="multipart/form-data" class="upload-form" id="main-form">
       <div class="form-panel">
