@@ -6,15 +6,20 @@
 #   3. Every key has a safe default — no KeyError in Jinja2
 #   4. Dark mode CSS variable support added
 # ─────────────────────────────────────────────────────────────
-
 import os
 import sys
 import uuid
+from flask import send_file
+import tempfile
 
 # ── MUST be before src imports ────────────────────────────────
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.abspath(__file__)), 'src'
 ))
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'src'
+))
+from report_generator import generate_report
 
 from flask import (
     Flask, render_template, request,
@@ -305,6 +310,7 @@ def analyze():
     if not allowed_file(f.filename):
         flash("Only PDF files are allowed.")
         return redirect(url_for("home"))
+    
 
     # Validate JD text
     jd_text = request.form.get("jd_text", "").strip()
@@ -359,6 +365,101 @@ def health():
         "project": "ResumeIQ",
         "version": "1.0",
     })
+
+@app.route("/download-report", methods=["POST"])
+def download_report():
+    """Generates PDF report from posted form data."""
+    try:
+        import json
+        import tempfile
+
+        def safe_json(key, default):
+            """Safely parse JSON from form, return default on error."""
+            raw = request.form.get(key, "")
+            if not raw or raw.strip() in ("", "None", "null"):
+                return default
+            try:
+                return json.loads(raw)
+            except Exception:
+                return default
+
+        def safe_float(key, default=0.0):
+            try:
+                return float(request.form.get(key, default))
+            except Exception:
+                return default
+
+        def safe_int(key, default=0):
+            try:
+                return int(request.form.get(key, default))
+            except Exception:
+                return default
+
+        def safe_str(key, default=""):
+            val = request.form.get(key, default)
+            return val if val and val != "None" else default
+
+        results = {
+            "final_score"    : safe_float("final_score"),
+            "semantic_score" : safe_float("semantic_score"),
+            "keyword_score"  : safe_float("keyword_score"),
+            "final_grade"    : safe_str("final_grade"),
+            "score_label"    : safe_str("score_label"),
+            "resume_filename": safe_str(
+                "resume_filename", "resume.pdf"
+            ),
+            "analysed_at"    : safe_str("analysed_at"),
+            "jd_level"       : safe_str(
+                "jd_level", "Unknown"
+            ),
+            "jd_warning"     : safe_str("jd_warning") or None,
+            "matched_keywords": safe_json(
+                "matched_keywords", []
+            ),
+            "missing_keywords": safe_json(
+                "missing_keywords", []
+            ),
+            "matched_count"  : safe_int("matched_count"),
+            "missing_count"  : safe_int("missing_count"),
+            "soft_matches"   : safe_json("soft_matches", []),
+            "section_report" : safe_json(
+                "section_report", {}
+            ),
+            "section_keyword_scores": safe_json(
+                "section_keyword_scores", {}
+            ),
+            "suggestions"    : safe_json("suggestions", []),
+            "verb_verdict"   : safe_str("verb_verdict"),
+            "high_priority_count": safe_int(
+                "high_priority_count"
+            ),
+        }
+
+        # Generate PDF in temp file
+        tmp = tempfile.NamedTemporaryFile(
+            suffix=".pdf", delete=False
+        )
+        tmp.close()
+
+        generate_report(results, tmp.name)
+
+        resume_name = results["resume_filename"].replace(
+            ".pdf", ""
+        )
+        download_name = f"ResumeIQ_{resume_name}_Report.pdf"
+
+        return send_file(
+            tmp.name,
+            as_attachment=True,
+            download_name=download_name,
+            mimetype="application/pdf"
+        )
+
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        flash(f"Could not generate report: {e}")
+        return redirect(url_for("home"))
 
 
 if __name__ == "__main__":

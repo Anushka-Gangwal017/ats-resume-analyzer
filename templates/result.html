@@ -34,7 +34,34 @@ body{font-family:'Inter',sans-serif;background:var(--gray1);color:var(--gray7);l
 
 /* SCORE HERO */
 .score-hero{background:var(--white);border:1px solid var(--gray3);border-radius:var(--radius-xl);padding:2rem;display:flex;gap:2.5rem;align-items:center;margin-bottom:1.25rem}
-.score-ring-wrap{flex-shrink:0;position:relative;width:140px;height:140px}
+.score-ring-wrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.score-number-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.score-num {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  display: block;
+}
+
+.score-denom {
+  font-size: 0.8rem;
+  color: var(--gray4);
+}
 .score-svg{width:140px;height:140px;transform:rotate(-90deg)}
 .ring-bg{fill:none;stroke:var(--gray2);stroke-width:12}
 .ring-fill{fill:none;stroke-width:12;stroke-linecap:round}
@@ -147,58 +174,114 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
 <div class="page">
 
   <!-- SCORE HERO -->
-  <div class="score-hero">
-    <div class="score-ring-wrap">
-      <svg class="score-svg" viewBox="0 0 140 140">
-        <circle class="ring-bg" cx="70" cy="70" r="56"/>
-        <circle class="ring-fill" cx="70" cy="70" r="56"
-          id="ring" style="stroke:{{ score_colour }}"/>
-      </svg>
-      <div class="score-inner">
+<!-- ── TOP SCORE CARD ──────────────────────── -->
+<div class="score-hero">
+
+  <div class="score-left">
+<div class="score-ring-wrap"
+     style="position:relative;width:160px;
+            height:160px;flex-shrink:0">
+  <canvas id="scoreChart"
+          width="160"
+          height="160"
+          style="display:block">
+  </canvas>
+  <div class="score-number-overlay"
+       style="position:absolute;top:50%;left:50%;
+              transform:translate(-50%,-50%);
+              text-align:center;pointer-events:none">
         <span class="score-num" id="score-num">0</span>
         <span class="score-denom">/100</span>
       </div>
     </div>
-    <div class="score-right">
-      <div class="score-label" style="color:{{ score_colour }}">{{ score_label }}</div>
-      <div class="score-sublabel">{{ final_grade }}</div>
-      <div class="score-meta">
-        <span><i class="ti ti-file-text" aria-hidden="true"></i>{{ resume_filename }}</span>
-        <span><i class="ti ti-clock" aria-hidden="true"></i>{{ analysed_at }}</span>
-        {% if high_priority_count > 0 %}
-        <span style="background:var(--red-light);color:var(--red);padding:2px 8px;border-radius:4px;font-weight:600;font-size:0.78rem">{{ high_priority_count }} critical fixes</span>
-        {% endif %}
-        <span style="background:{{ jd_level_colour }}18;
-             color:{{ jd_level_colour }};
-             border:1px solid {{ jd_level_colour }}40;
-             padding:2px 10px;border-radius:4px;
-             font-weight:600;font-size:.75rem">
-  {{ jd_level }} level JD
-</span>
+  </div>
 
-{% if jd_warning %}
-<div style="background:#FFFBEB;border:1px solid #FDE68A;
-            border-radius:8px;padding:.75rem 1rem;
-            font-size:.85rem;color:#92400E;
-            margin-top:.875rem;line-height:1.6">
-  {{ jd_warning }}
-</div>
-{% endif %}
+  <div class="score-right">
+    <div class="score-label-big"
+         style="color:{{ score_colour }}">
+      {{ score_label }}
+    </div>
+    <div class="score-sublabel">
+      {{ final_grade }}
+    </div>
+    <div class="score-meta">
+      <span>
+        <i class="ti ti-file-text"
+           aria-hidden="true"></i>
+        {{ resume_filename }}
+      </span>
+      <span>
+        <i class="ti ti-clock"
+           aria-hidden="true"></i>
+        {{ analysed_at }}
+      </span>
+      <span style="
+        background:{{ jd_level_colour }}18;
+        color:{{ jd_level_colour }};
+        border:1px solid {{ jd_level_colour }}40;
+        padding:2px 10px;border-radius:4px;
+        font-weight:600;font-size:.75rem">
+        {{ jd_level }} level JD
+      </span>
+      {% if high_priority_count > 0 %}
+      <span style="background:#FEF2F2;color:#DC2626;
+                   padding:2px 8px;border-radius:4px;
+                   font-weight:600;font-size:.75rem">
+        {{ high_priority_count }} critical fixes
+      </span>
+      {% endif %}
+    </div>
+
+    {% if jd_warning %}
+    <div style="background:#FFFBEB;
+                border:1px solid #FDE68A;
+                border-radius:8px;
+                padding:.75rem 1rem;
+                font-size:.85rem;color:#92400E;
+                margin-bottom:1rem;line-height:1.6">
+      {{ jd_warning }}
+    </div>
+    {% endif %}
+
+    <div class="bars">
+      <div class="bar-row">
+        <span class="bar-label">
+          <i class="ti ti-brain"
+             style="font-size:13px;margin-right:4px"
+             aria-hidden="true"></i>
+          AI semantic
+        </span>
+        <div class="bar-track">
+          <div class="bar-fill"
+               style="width:{{ semantic_score }}%;
+                      background:#7C3AED">
+          </div>
+        </div>
+        <span class="bar-pct">
+          {{ semantic_score }}%
+        </span>
       </div>
-      <div class="bars">
-        <div class="bar-row">
-          <span class="bar-label"><i class="ti ti-brain" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>AI semantic</span>
-          <div class="bar-track"><div class="bar-fill" style="width:{{ semantic_score }}%;background:var(--purple)"></div></div>
-          <span class="bar-pct">{{ semantic_score }}%</span>
+      <div class="bar-row">
+        <span class="bar-label">
+          <i class="ti ti-key"
+             style="font-size:13px;margin-right:4px"
+             aria-hidden="true"></i>
+          Keyword match
+        </span>
+        <div class="bar-track">
+          <div class="bar-fill"
+               style="width:{{ keyword_score }}%;
+                      background:#2563EB">
+          </div>
         </div>
-        <div class="bar-row">
-          <span class="bar-label"><i class="ti ti-key" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>Keyword match</span>
-          <div class="bar-track"><div class="bar-fill" style="width:{{ keyword_score }}%;background:var(--blue)"></div></div>
-          <span class="bar-pct">{{ keyword_score }}%</span>
-        </div>
+        <span class="bar-pct">
+          {{ keyword_score }}%
+        </span>
       </div>
     </div>
+
   </div>
+</div>
 
   <!-- KEYWORDS -->
   <div class="two-col">
@@ -375,6 +458,78 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
     {% endif %}
   </div>
 
+  <!-- ── DOWNLOAD REPORT ────────────────────── -->
+<div class="card" style="margin-bottom:1.25rem;
+                          text-align:center;
+                          padding:1.75rem">
+  <i class="ti ti-file-download"
+     style="font-size:2rem;color:var(--blue);
+            display:block;margin-bottom:.75rem"
+     aria-hidden="true"></i>
+  <div style="font-size:1rem;font-weight:600;
+              color:var(--navy);margin-bottom:.375rem">
+    Download your report
+  </div>
+  <div style="font-size:.875rem;color:var(--gray4);
+              margin-bottom:1.25rem">
+    Get a PDF summary of this analysis to
+    share or keep for reference
+  </div>
+
+  <form method="POST" action="/download-report">
+  <input type="hidden" name="final_score"
+         value="{{ final_score }}">
+  <input type="hidden" name="semantic_score"
+         value="{{ semantic_score }}">
+  <input type="hidden" name="keyword_score"
+         value="{{ keyword_score }}">
+  <input type="hidden" name="final_grade"
+         value="{{ final_grade | e }}">
+  <input type="hidden" name="score_label"
+         value="{{ score_label | e }}">
+  <input type="hidden" name="resume_filename"
+         value="{{ resume_filename | e }}">
+  <input type="hidden" name="analysed_at"
+         value="{{ analysed_at | e }}">
+  <input type="hidden" name="jd_level"
+         value="{{ jd_level | e }}">
+  <input type="hidden" name="jd_warning"
+         value="{{ jd_warning | e if jd_warning else '' }}">
+  <input type="hidden" name="matched_count"
+         value="{{ matched_count }}">
+  <input type="hidden" name="missing_count"
+         value="{{ missing_count }}">
+  <input type="hidden" name="high_priority_count"
+         value="{{ high_priority_count }}">
+  <input type="hidden" name="verb_verdict"
+         value="{{ verb_verdict | e }}">
+  <input type="hidden" name="matched_keywords"
+         value="{{ matched_keywords | tojson | e }}">
+  <input type="hidden" name="missing_keywords"
+         value="{{ missing_keywords | tojson | e }}">
+  <input type="hidden" name="soft_matches"
+         value="{{ soft_matches | tojson | e }}">
+  <input type="hidden" name="section_report"
+         value="{{ section_report | tojson | e }}">
+  <input type="hidden" name="section_keyword_scores"
+         value="{{ section_keyword_scores | tojson | e }}">
+  <input type="hidden" name="suggestions"
+         value="{{ suggestions | tojson | e }}">
+
+  <button type="submit"
+          style="background:var(--blue);color:#fff;
+                 font-family:inherit;font-size:.95rem;
+                 font-weight:600;padding:.875rem 2rem;
+                 border:none;border-radius:8px;
+                 cursor:pointer;display:inline-flex;
+                 align-items:center;gap:8px;
+                 transition:all .15s">
+    <i class="ti ti-download" aria-hidden="true"></i>
+    Download PDF Report
+  </button>
+</form>
+</div>
+
   <!-- CTA -->
   <div class="cta-row">
     <a href="/" class="btn-primary"><i class="ti ti-refresh" aria-hidden="true"></i> Analyze another resume</a>
@@ -387,21 +542,78 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
   ResumeIQ · Built by Anushka Gangwal · MIT-ADT University, Pune · B.E. CSE (AI & Analytics) · 2026
 </footer>
 
+<!-- Chart.js from CDN — no install needed -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-const target = {{ final_score }};
-const ring   = document.getElementById('ring');
-const numEl  = document.getElementById('score-num');
-const circum = 2 * Math.PI * 56;
-ring.style.strokeDasharray  = circum;
-ring.style.strokeDashoffset = circum;
-let cur = 0;
-const steps = 60, dur = 1400, inc = target / steps, intv = dur / steps;
-const t = setInterval(() => {
-  cur += inc;
-  if (cur >= target) { cur = target; clearInterval(t); }
-  numEl.textContent = Math.round(cur);
-  ring.style.strokeDashoffset = circum - (cur / 100) * circum;
-}, intv);
+document.addEventListener('DOMContentLoaded', function() {
+
+  const finalScore  = parseFloat("{{ final_score }}") || 0;
+  const scoreColour = "{{ score_colour }}";
+  const numEl       = document.getElementById('score-num');
+  const canvas      = document.getElementById('scoreChart');
+
+  if (!canvas) {
+    console.error('Canvas not found');
+    return;
+  }
+
+  const ctx = canvas.getContext('2d');
+
+  // Determine track colour based on theme
+  const trackColour = '#E5E7EB';
+
+  // Create chart starting at 0
+  const scoreChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data            : [0, 100],
+        backgroundColor : [scoreColour, trackColour],
+        borderWidth     : 0,
+        borderRadius    : 8,
+        hoverOffset     : 0,
+      }]
+    },
+    options: {
+      cutout      : '75%',
+      responsive  : false,
+      animation   : false,
+      plugins: {
+        legend  : { display: false },
+        tooltip : { enabled: false },
+      },
+      events: [],
+    }
+  });
+
+  // Animate count up
+  let current   = 0;
+  const steps   = 60;
+  const duration = 1500;
+  const step_ms  = duration / steps;
+  const increment = finalScore / steps;
+
+  const timer = setInterval(function() {
+    current += increment;
+    if (current >= finalScore) {
+      current = finalScore;
+      clearInterval(timer);
+    }
+
+    const rounded = Math.round(current);
+    if (numEl) numEl.textContent = rounded;
+
+    scoreChart.data.datasets[0].data = [
+      current,
+      Math.max(0, 100 - current)
+    ];
+    scoreChart.update('none');
+
+  }, step_ms);
+
+  // Dark mode
+  const root  = document.documentElement;
+  const saved = localStorage.getItem('theme') || 'light';
+  root.setAttribute('data-theme', saved);
+});
 </script>
-</body>
-</html>
