@@ -27,4 +27,4 @@ Education
 UG: Any Graduate
 PG: LLM in Law, Any Postgraduate
 Key Skills
-Computer scienceAutomationBackendGITMobile developmentPostgresqlArchitectural designSystem designMobile applicationsPython
+Computer Science, Automation, Backend Development, Git, Mobile Development, PostgreSQL, Architectural Design, System Design, Mobile Applications, Python

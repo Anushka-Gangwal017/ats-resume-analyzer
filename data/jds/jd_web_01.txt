@@ -60,4 +60,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Performance tuningAutomationData analysisLinuxData modelingShell scriptingHTMLInternshipSQLPython
+Performance Tuning, Automation, Data Analysis, Linux, Data Modeling, Shell Scripting, HTML, Internship, SQL, Python

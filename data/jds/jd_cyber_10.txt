@@ -24,4 +24,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-it risk managementit securityrisk managementrisk assessmentisocyber securitynetwork securityowaspsocinformation securityvulnerability managementsiemvulnerability assessmentinternal auditit auditcompliancepenetration testingpci dss
+IT Risk Management, IT Security, Information Security, Cybersecurity, Network Security, Risk Assessment, Risk Management, Vulnerability Management, Vulnerability Assessment, Penetration Testing, SIEM, SOC, OWASP, PCI DSS, ISO 27001, Compliance, Internal Audit, IT Audit

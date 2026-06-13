@@ -48,4 +48,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Technical trainingProject developmentBackendUsageCodingMySQLJavascriptHTMLMongoDBPython
+Technical Training, Project Development, Backend Development, Usage, Coding, MySQL, JavaScript, HTML, MongoDB, Python

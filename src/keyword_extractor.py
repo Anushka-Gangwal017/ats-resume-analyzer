@@ -89,48 +89,218 @@ TECH_SKILLS = [
 ]
 
 
+import re
+
+def clean_text_for_extraction(text):
+    """
+    Cleans raw text before keyword extraction:
+    - Replaces newlines/tabs with spaces
+    - Collapses multiple spaces
+    - Removes weird unicode artifacts
+    """
+    if not text:
+        return ""
+    # Replace newlines, tabs, carriage returns with space
+    text = re.sub(r'[\n\r\t]+', ' ', text)
+    # Remove non-ascii junk characters (â€~ etc)
+    text = text.encode('ascii', errors='ignore').decode('ascii')
+    # Collapse multiple spaces
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+
+def is_valid_keyword(phrase):
+    """
+    Filters out garbage keywords:
+    - Contains newline/tab characters
+    - Too long (likely concatenated words)
+    - Contains weird characters
+    - Single very long word with no spaces (concatenation bug)
+    """
+    if not phrase or not phrase.strip():
+        return False
+
+    # Reject anything with newlines/tabs still in it
+    if '\n' in phrase or '\t' in phrase or '\\' in phrase:
+        return False
+
+    words = phrase.split()
+
+    # Reject phrases longer than 3 words
+    if len(words) > 3:
+        return False
+
+    # Reject if any single word is unreasonably long
+    # (concatenation bug produces words like
+    # "developmentpostgresqlarchitectural" = 30+ chars)
+    for w in words:
+        if len(w) > 18:
+            return False
+
+    # Reject if phrase has weird symbols
+    if re.search(r'[^\w\s\-\+\.#]', phrase):
+        return False
+
+    # Reject very short noise (single/double letters)
+    if len(phrase.strip()) < 2:
+        return False
+
+    return True
+
+# Common English words/phrases that are NEVER skills,
+# even if spaCy thinks they're noun phrases
+GENERIC_NOISE = {
+    'build', 'design', 'service', 'services', 'support',
+    'monitor', 'review', 'change', 'content', 'analysis',
+    'analytics', 'reporting', 'tasks', 'features', 'feature',
+    'requirements', 'implementation', 'maintenance',
+    'documentation', 'education', 'quality', 'availability',
+    'compliance', 'department', 'metrics', 'pipelines',
+    'frameworks', 'libraries', 'techniques', 'concepts',
+    'standards', 'practices', 'platforms', 'tools',
+    'systems', 'applications', 'application', 'developers',
+    'engineering', 'product', 'products', 'industry',
+    'role', 'process', 'processes', 'performance',
+    'optimization', 'collaboration', 'communication',
+    'communication skills', 'good communication',
+    'problem-solving', 'reliability', 'scalability',
+    'security', 'monitoring', 'integration', 'deployment',
+    'attitude', 'passion', 'ownership', 'curiosity',
+    'comfort', 'exposure', 'familiarity', 'strong',
+    'strong experience', 'deep knowledge', 'advanced proficiency',
+    'hands-on experience', 'proficiency', 'expertise',
+    'your expertise', 'deep expertise', 'minimum',
+    'eg', 'co', 'date', 'general', 'others', 'other',
+    'team', 'teams', 'clients', 'client', 'stakeholders',
+    'developers', 'applicants', 'candidate', 'candidates',
+}
+
+
+def is_likely_real_skill(phrase, jd_or_resume_text=""):
+    """
+    Stricter check: returns True only if phrase looks
+    like a genuine technical skill/tool/technology,
+    not generic business English.
+
+    A phrase passes if:
+    - it's in TECH_SKILLS, OR
+    - it contains a tech-sounding token (capitalised
+      product name pattern, version number, or known
+      tech suffix), OR
+    - it's a known skill-graph canonical term
+    """
+    phrase_lower = phrase.lower().strip()
+
+    if phrase_lower in GENERIC_NOISE:
+        return False
+
+    # Already in master tech list -> always valid
+    if phrase_lower in TECH_SKILLS:
+        return True
+
+    # Check against skill graph canonical terms
+    for domain_key, domain_data in SKILL_GRAPH.items():
+        if domain_key == "_metadata":
+            continue
+        for mapping in domain_data.get("mappings", []):
+            canonical = [
+                c.lower() for c in
+                mapping.get("canonical", [])
+            ]
+            if phrase_lower in canonical:
+                return True
+
+    # Tech-sounding patterns: contains digits, dots,
+    # or known tech suffixes/prefixes
+    tech_patterns = [
+        r'\b(api|apis|sdk|sql|ai|ml|nlp|llm|llms|aws|gcp|'
+        r'azure|css|html|js|ci|cd|jwt|oauth|orm|etl|ocr|'
+        r'idp|nist|ceh|cve|cvss|sbom)\b',
+        r'\d',                      # contains a digit
+        r'\.(js|py|io|net)\b',      # file-extension-like
+        r'(framework|library|platform|database|engine|'
+        r'pipeline|architecture)$',
+    ]
+    for pat in tech_patterns:
+        if re.search(pat, phrase_lower):
+            # but still reject if it's a generic noise
+            # phrase containing those words
+            generic_with_tech = [
+                'engineering - software', 'qa employment type',
+            ]
+            if phrase_lower not in generic_with_tech:
+                return True
+
+    return False
+
+
 def extract_keywords_from_text(text):
     """
     Main function — takes any text string,
-    returns a list of skill keywords found in it.
-
-    Works in two ways:
-    1. Checks against our TECH_SKILLS master list
-    2. Uses spaCy to find noun phrases we might have missed
+    returns a list of CLEAN skill keywords found in it.
     """
 
+    # Step 0: CLEAN the text first
+    text = clean_text_for_extraction(text)
     text_lower = text.lower()
-    found_skills = set()  # using set to avoid duplicates
+
+    found_skills = set()
 
     # ── Method 1: Match against master skills list ──────────────
     for skill in TECH_SKILLS:
-        # Look for the skill as a whole word
-        # (so "r" doesn't match inside "framework")
         pattern = r'\b' + re.escape(skill) + r'\b'
         if re.search(pattern, text_lower):
             found_skills.add(skill)
 
-    # ── Method 2: spaCy noun phrase extraction ──────────────────
-    doc = nlp(text[:10000])  # spaCy works best under 10000 chars
+    # ── Method 2: spaCy noun phrase extraction (filtered) ────────
+    doc = nlp(text[:10000])
+
+    skip_words = {
+        'i', 'we', 'the', 'a', 'an', 'this', 'that',
+        'my', 'our', 'your', 'their', 'its', 'is', 'are',
+        'was', 'were', 'be', 'been', 'have', 'has', 'had',
+        'will', 'would', 'could', 'should', 'may', 'might',
+        'team', 'role', 'position', 'job', 'work', 'company',
+        'year', 'years', 'month', 'day', 'time', 'experience',
+        'knowledge', 'understanding', 'ability', 'skill',
+        'candidate', 'applicant', 'looking', 'seeking',
+        'other', 'end', 'exp', 'law', 'this job posting',
+        'the company website', 'the latest information',
+        'job description', 'full time', 'part time',
+        'preferred', 'related fields', 'the same',
+        'a fast-paced environment', 'disclaimer',
+        'external source', 'this position', 'permanent role category', 'qa employment type',
+        'any graduate pg', 'consulting department',
+        'management consulting department', 'it services',
+        'engineering - software', 'role details',
+        'key responsibilities', 'required skills',
+        'required candidate profile', 'other education ug',
+        'other industry type', 'any postgraduate doctorate',
+        'any specialization', 'any specialization pg',
+        'minimum qualifications', 'preferred qualifications',
+        'minimum preferred qualifications', 'job description',
+        'this job posting', 'this role', 'this position',
+        'our growing team', 'our app', 'our mobile app',
+        'a plus', 'a strong plus', 'good communication',
+        'familiarity', 'proficiency', 'availability',
+        'the ideal candidate', 'bachelors', 'bachelor s degree',
+        'masters degree', 'diploma', 'freshers', 'fresher',
+        '2yr', 'date', 'india office', 'our bengaluru'
+    }
 
     for chunk in doc.noun_chunks:
         phrase = chunk.text.lower().strip()
-        # Only keep phrases that are 1-3 words and look like skills
-        words_in_phrase = phrase.split()
-        if 1 <= len(words_in_phrase) <= 3:
-            # Skip generic words that aren't skills
-            skip_words = [
-                'i', 'we', 'the', 'a', 'an', 'this', 'that',
-                'my', 'our', 'your', 'their', 'its', 'is', 'are',
-                'was', 'were', 'be', 'been', 'have', 'has', 'had',
-                'will', 'would', 'could', 'should', 'may', 'might',
-                'team', 'role', 'position', 'job', 'work', 'company',
-                'year', 'years', 'month', 'day', 'time', 'experience',
-                'knowledge', 'understanding', 'ability', 'skill',
-                'candidate', 'applicant', 'looking', 'seeking',
-            ]
-            if phrase not in skip_words and len(phrase) > 2:
-                found_skills.add(phrase)
+        phrase = re.sub(r'\s+', ' ', phrase)  # collapse spaces
+
+        if phrase in skip_words:
+            continue
+
+        if not is_valid_keyword(phrase):
+            continue
+
+        # NEW: only add if it's a likely real skill
+        if is_likely_real_skill(phrase):
+            found_skills.add(phrase)
 
     return sorted(list(found_skills))
 

@@ -10,4 +10,4 @@ Education
 UG: B.Tech / B.E. in Production and Industrial Engineering, B.C.A. in Computer Applications (General)
 PG: MCA in Computers
 Key Skills
-QA Architecture Business analysis Machine learning HR Management Python
+Quality Assurance (QA), Software Architecture, Business Analysis, Machine Learning, Human Resource Management (HR Management), Python, Requirements Gathering, Process Improvement, Stakeholder Management

@@ -39,4 +39,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-algorithms python data analysis natural language processing neural networksmicrosoft azureanalysismachine learningartificial intelligencedeep learningrtensorflowjavagcpcomputer visionpytorchkerasawsprogrammingcommunication skillsml
+Artificial Intelligence (AI), Machine Learning (ML), Deep Learning, Natural Language Processing (NLP), Computer Vision, Neural Networks, Data Analysis, Algorithms, Python, R, Java, TensorFlow, PyTorch, Keras, AWS, Microsoft Azure, Google Cloud Platform (GCP), Programming, Model Development, Model Training, Model Evaluation, Communication Skills

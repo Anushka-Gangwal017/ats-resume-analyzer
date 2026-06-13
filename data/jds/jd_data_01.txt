@@ -35,6 +35,4 @@ UG: Diploma in Any Specialization, Any Graduate
 PG: Any Postgraduate
 Doctorate: Any Doctorate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Power BiMS OfficeSQLGoogle SuiteData Analytics
-Large DatabasesGoogle Data StudioData ManagementData CleansingTableauLookerMachine LearningStatisticsData Analysis ExpressionsMS Office SuiteData AnalysisData VisualizationPython
+Power BI, SQL, Python, Data Analytics, Data Analysis, Data Visualization, Data Management, Data Cleansing, Statistics, Machine Learning, Tableau, Looker, Google Data Studio, DAX (Data Analysis Expressions), Large Database Management, Google Workspace, Microsoft Office Suite

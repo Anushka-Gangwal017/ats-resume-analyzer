@@ -63,6 +63,4 @@ Role Category: Software Development
 Education
 UG: B.Tech / B.E. in Any Specialization
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-LangchainMean StackFullstack DevelopmentAI agentsConversational Ai
-ExpressNode.JsVoice AIOpen AIlivekitTwilioMongoDBReact.JsWebrtcPython
+LangChain, MEAN Stack, Full Stack Development, AI Agents, Conversational AI, Express.js, Node.js, Voice AI, OpenAI, LiveKit, Twilio, MongoDB, React.js, WebRTC, Python

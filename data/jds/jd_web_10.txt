@@ -27,4 +27,4 @@ Education
 UG: B.Sc in Chemistry, B.Tech / B.E. in Production and Industrial Engineering
 PG: Any Postgraduate
 Key Skills
-Front endMySQLJavascriptAgilePHPHTMLCustomer supportAnalyticsAndroidPython
+Front-End Development, MySQL, JavaScript, Agile, PHP, HTML, Customer Support, Analytics, Android Development, Python

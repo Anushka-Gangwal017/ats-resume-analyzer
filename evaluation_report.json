@@ -1,0 +1,265 @@
+{
+  "total_cases": 10,
+  "avg_precision": 85.0,
+  "avg_recall": 100.0,
+  "avg_f1": 89.3,
+  "per_case_results": [
+    {
+      "case_id": 1,
+      "resume": "resume1.pdf",
+      "jd": "jd_python_01.txt",
+      "metrics": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "true_positives": [
+          "agentic ai",
+          "ai agents",
+          "ai application development",
+          "ai solutions",
+          "aws",
+          "azure",
+          "azure ai",
+          "backend development",
+          "computer vision",
+          "fastapi",
+          "generative ai",
+          "idp",
+          "large language models",
+          "llms",
+          "modern ai technologies",
+          "ocr",
+          "openai api",
+          "production-ready ai applications",
+          "similar llm platforms"
+        ],
+        "false_positives": [],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 2,
+      "resume": "resume1.pdf",
+      "jd": "jd_python_02.txt",
+      "metrics": {
+        "precision": 90.0,
+        "recall": 100.0,
+        "f1": 94.7,
+        "true_positives": [
+          "angular",
+          "api integration",
+          "apis",
+          "aws",
+          "azure",
+          "ci/cd",
+          "devops",
+          "django",
+          "docker",
+          "fastapi",
+          "flask",
+          "google cloud",
+          "javascript",
+          "orm",
+          "postgresql",
+          "react",
+          "vue",
+          "vue.js"
+        ],
+        "false_positives": [
+          "2 years",
+          "professional experience"
+        ],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 3,
+      "resume": "resume1.pdf",
+      "jd": "jd_data_01.txt",
+      "metrics": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "true_positives": [
+          "data cleaning",
+          "data management",
+          "data science",
+          "power bi",
+          "statistics",
+          "tableau"
+        ],
+        "false_positives": [],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 4,
+      "resume": "resume1.pdf",
+      "jd": "jd_data_02.txt",
+      "metrics": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "true_positives": [
+          "dashboard development",
+          "data management",
+          "data science",
+          "power bi",
+          "tableau"
+        ],
+        "false_positives": [],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 5,
+      "resume": "resume1.pdf",
+      "jd": "jd_ml_01.txt",
+      "metrics": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "true_positives": [
+          "ai",
+          "artificial intelligence",
+          "c++",
+          "computer vision",
+          "data science",
+          "model evaluation",
+          "model training",
+          "natural language processing",
+          "nlp"
+        ],
+        "false_positives": [],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 6,
+      "resume": "resume1.pdf",
+      "jd": "jd_ml_02.txt",
+      "metrics": {
+        "precision": 50.0,
+        "recall": 100.0,
+        "f1": 66.7,
+        "true_positives": [
+          "software architecture"
+        ],
+        "false_positives": [
+          "the architecture"
+        ],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 7,
+      "resume": "resume1.pdf",
+      "jd": "jd_cyber_01.txt",
+      "metrics": {
+        "precision": 25.0,
+        "recall": 100.0,
+        "f1": 40.0,
+        "true_positives": [
+          "cloud security"
+        ],
+        "false_positives": [
+          "2-5 years",
+          "b2b sales",
+          "top 1000 companies"
+        ],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 8,
+      "resume": "resume1.pdf",
+      "jd": "jd_cyber_02.txt",
+      "metrics": {
+        "precision": 90.0,
+        "recall": 100.0,
+        "f1": 94.7,
+        "true_positives": [
+          "aami tir57",
+          "ceh",
+          "cve",
+          "cvss",
+          "information security",
+          "nist",
+          "nist cybersecurity framework",
+          "sbom",
+          "vulnerability management"
+        ],
+        "false_positives": [
+          "4 years"
+        ],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 9,
+      "resume": "resume1.pdf",
+      "jd": "jd_web_01.txt",
+      "metrics": {
+        "precision": 94.7,
+        "recall": 100.0,
+        "f1": 97.3,
+        "true_positives": [
+          "api development",
+          "aws",
+          "backend development",
+          "ci/cd",
+          "clean code",
+          "devops",
+          "django",
+          "docker",
+          "document apis",
+          "etl design",
+          "gcp",
+          "graphql",
+          "jwt",
+          "oauth",
+          "postgresql",
+          "react",
+          "robust apis",
+          "vue"
+        ],
+        "false_positives": [
+          "self-starter"
+        ],
+        "false_negatives": []
+      }
+    },
+    {
+      "case_id": 10,
+      "resume": "resume1.pdf",
+      "jd": "jd_web_02.txt",
+      "metrics": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "true_positives": [
+          "ai",
+          "ai agents",
+          "ai apis",
+          "ai-driven products",
+          "apis",
+          "backend architecture",
+          "backend development",
+          "ci/cd",
+          "data science",
+          "docker",
+          "fastapi",
+          "integrate ai services",
+          "llm",
+          "llms",
+          "postgresql",
+          "redis",
+          "rest apis",
+          "system design"
+        ],
+        "false_positives": [],
+        "false_negatives": []
+      }
+    }
+  ]
+}

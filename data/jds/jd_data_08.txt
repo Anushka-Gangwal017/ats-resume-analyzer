@@ -63,6 +63,4 @@ Role Category: Data Science & Analytics - Other
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Data Analytics
-Power BiArtificial IntelligenceData AnalysisStatistical ModelingData VisualizationMachine LearningStatisticsSQLPython
+Data Analytics, Data Analysis, Data Visualization, Statistical Modeling, Statistics, Machine Learning, Artificial Intelligence (AI), SQL, Python, Power BI, Business Intelligence, Dashboard Development, Predictive Analytics

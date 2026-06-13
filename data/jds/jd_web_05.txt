@@ -31,4 +31,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-BackendNoSQLGCPAgile developmentCloudAgileAWSSQLPythonmicroservices
+Backend Development, NoSQL, GCP, Agile Development, Cloud Computing, Agile, AWS, SQL, Python, Microservices

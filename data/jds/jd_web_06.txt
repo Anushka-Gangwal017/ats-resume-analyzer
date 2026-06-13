@@ -15,6 +15,4 @@ Role Category: Software Development
 Education
 UG: B.Tech / B.E. in Any Specialization
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Python Development
-CSSAI/ML
+Python Development, CSS, AI/ML

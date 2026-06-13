@@ -66,6 +66,4 @@ Role Category: Research & Development - Other
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-AIMachine LearningData Sciencefull stackPython
-TensorflowJavaC++Artificial IntelligenceNeural NetworksDeep LearningPytorchfresherAimldeveloperMl
+Artificial Intelligence (AI), Machine Learning (ML), Data Science, Deep Learning, Neural Networks, TensorFlow, PyTorch, Python, Java, C++, Full Stack Development, AI/ML Engineering, Model Development, Model Training, Computer Vision, Natural Language Processing (NLP)

@@ -31,4 +31,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-continuous integration css ci/cdvue.jsbitbucketreact.jsgitjavapostgresqlgcpdevopsdebugginghtmlmysqlgraphqlmongodbagile methodologyc#restcdgithubpythonreact nativejavascriptnosqlrubyangularnode.jsflutterphp.netagileaws
+Continuous Integration, CSS, CI/CD, Vue.js, Bitbucket, React.js, Git, Java, PostgreSQL, GCP, DevOps, Debugging, HTML, MySQL, GraphQL, MongoDB, Agile Methodology, C#, REST API, CD, GitHub, Python, React Native, JavaScript, NoSQL, Ruby, Angular, Node.js, Flutter, PHP, .NET, Agile, AWS

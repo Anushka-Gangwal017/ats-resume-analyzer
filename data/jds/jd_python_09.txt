@@ -33,4 +33,4 @@ Education
 UG: B.C.A. in Computer Applications (General)
 PG: MS/M.Sc(Science) in Any Specialization, MCA in Computers
 Key Skills
-Computer scienceBackendFront endVersion controlWeb developmentSystem integrationJavascriptHTMLSQLPython
+Computer Science, Backend Development, Front-End Development, Version Control, Web Development, System Integration, JavaScript, HTML, SQL, Python

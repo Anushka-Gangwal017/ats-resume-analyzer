@@ -18,6 +18,4 @@ Education
 UG: B.C.A. in Computer Applications (General), B.Tech / B.E. in Computer Science and Engineering (CSE), Computer Science and Business System, Cyber Security, B.Sc in Computer Science and Technology, Cyber Security, Information Technology (IT)
 PG: MS/M.Sc(Science) in Computers, Cyber Security Engineering, MCA in Computers
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Penetration TestingOWASPVulnerability ManagementKali Linux
-Mobile SecurityWeb Application SecurityOscpVulnerabilityNMAPVulnerability AssessmentVulnerability Scanning
+Penetration Testing, Ethical Hacking, OWASP, Web Application Security, Mobile Application Security, Vulnerability Assessment, Vulnerability Management, Vulnerability Scanning, Kali Linux, Nmap, OSCP, Cybersecurity

@@ -17,4 +17,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-rest python css github python development machine learning javascript sql docker django git postgresql linux oops troubleshooting jsoncode reviewhtml mysql data structures web development aws mongodb
+REST API, Python, CSS, GitHub, Python Development, Machine Learning, JavaScript, SQL, Docker, Django, Git, PostgreSQL, Linux, OOPS, Troubleshooting, JSON, Code Review, HTML, MySQL, Data Structures, Web Development, AWS, MongoDB

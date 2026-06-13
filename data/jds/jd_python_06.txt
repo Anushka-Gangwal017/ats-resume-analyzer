@@ -18,5 +18,5 @@ Role Category: Other
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Software EngineeringPython DevelopmentPython
+Skills highlighted with '' are preferred key skills.
+Software Engineering, Python Development, Python

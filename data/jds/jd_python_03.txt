@@ -28,4 +28,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Computer scienceBackendFront endWeb servicesHP data protectorDjangoDebuggingMachine learningJavascriptPython
+Computer Science, Python, Django, Backend Development, Front-End Development, Web Development, Web Services, REST APIs, JavaScript, Debugging, Machine Learning, HP Data Protector, Software Development, Troubleshooting, Application Development

@@ -59,4 +59,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Computer scienceAutomationBackendPostgresqlDjangoMySQLDebuggingWorkflowJSONPython
+Computer Science, Automation, Backend Development, PostgreSQL, Django, MySQL, Debugging, Workflow Automation, JSON, Python

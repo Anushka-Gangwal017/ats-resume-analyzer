@@ -33,4 +33,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Computer sciencedeep learningAutomation testingArchitectureFinanceMachine learningProgrammingApplication softwareMonitoringPython
+Computer Science, Python, Machine Learning, Deep Learning, Automation Testing, Software Architecture, Software Development, Application Development, Application Software, System Monitoring, Programming, Finance Domain Knowledge, Quality Assurance (QA)

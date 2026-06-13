@@ -16,6 +16,4 @@ Role Category: Software Development
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Data ExtractionRAGFastAPIPythonOCR
-Agentic AIBackend Development.Generative AIIntelligent Document ProcessingAI AgentsAzure AIOpenAI
+Python, FastAPI, Backend Development, Data Extraction, OCR (Optical Character Recognition), Retrieval-Augmented Generation (RAG), Generative AI, Agentic AI, AI Agents, Large Language Models (LLMs), OpenAI API, Azure AI, Intelligent Document Processing (IDP), Document Understanding, Information Extraction, Prompt Engineering, AI Application Development

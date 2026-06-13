@@ -47,6 +47,4 @@ Role Category: Software Development
 Education
 UG: B.Tech / B.E. in Any Specialization, B.A - Bachelor of Arts in Computer Science, B.Sc in Any Specialization, B.C.A. in Any Specialization
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-aiMachine LearningFullstack DevelopmentData ProcessingPython
-Tensorflow Langchain Artificial Intelligence Natural Language Processing Deep Learning Numpy sql Data Science Pytorch Langgraph Large Language ModelPandasJavascriptMachine Learning Algorithms
+Artificial Intelligence (AI), Machine Learning (ML), Data Science, Deep Learning, Natural Language Processing (NLP), Large Language Models (LLMs), Generative AI, LangChain, LangGraph, TensorFlow, PyTorch, NumPy, Pandas, Python, SQL, JavaScript, Full Stack Development, Data Processing, Machine Learning Algorithms, Neural Networks, Prompt Engineering, AI Application Development

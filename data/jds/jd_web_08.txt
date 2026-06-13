@@ -97,4 +97,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-UnixAnalystC++CodingJavascriptAgilePLSQLPerlScrumPython
+Unix, Analyst, C++, Coding, JavaScript, Agile, PL/SQL, Perl, Scrum, Python

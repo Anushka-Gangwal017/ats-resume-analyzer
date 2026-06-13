@@ -52,6 +52,4 @@ Role Category: IT & Information Security - Other
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Application ProgrammingGithubProgrammingRest ApiSoftware Development
-S3OOPSJSONSOAPAlgorithmsAws LambdaDjangoXMLRestful WebservicesAWSWeb ServicesFlaskPython
+Application Programming, GitHub, Programming, REST API, Software Development, S3, OOPS, JSON, SOAP, Algorithms, AWS Lambda, Django, XML, RESTful Web Services, AWS, Web Services, Flask, Python

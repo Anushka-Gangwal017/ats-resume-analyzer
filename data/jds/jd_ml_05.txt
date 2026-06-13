@@ -27,4 +27,4 @@ Education
 UG: Any Graduate, B.Tech / B.E. in Any Specialization
 PG: M.Tech in Any Specialization, MS/M.Sc(Science) in Any Specialization, MCA in Computers
 Key Skills
-GITMachine learningData collectionProgrammingData structuresDeploymentApplication developmentBusiness applicationsSQLPython
+Git, GitHub, Version Control, Machine Learning, Data Collection, Programming, Data Structures and Algorithms (DSA), Application Development, Software Development, Deployment, Business Applications, SQL, Python, Database Management, Problem Solving

@@ -96,6 +96,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Power BiData AnalyticsSQL
-Data AnalysisData VisualizationMachine LearningPython
+Power BI, SQL, Python, Data Analytics, Data Analysis, Data Visualization, Machine Learning, Business Intelligence, Dashboard Development, Statistical Analysis

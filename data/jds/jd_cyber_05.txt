@@ -11,6 +11,4 @@ Role Category: IT Security
 Education
 PG: M.Tech in Any Specialization, MCA in Any Specialization
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Certified Ethical HackerPenetration TestingCehInformation Security
-Ethical HackingWeb Application SecurityOscpOWASPVulnerability ManagementMobile Application Security
+Certified Ethical Hacker (CEH), Penetration Testing, Ethical Hacking, Information Security, Web Application Security, Mobile Application Security, Vulnerability Management, OWASP, OSCP, Cybersecurity

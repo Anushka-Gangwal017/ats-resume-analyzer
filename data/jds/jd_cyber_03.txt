@@ -33,6 +33,4 @@ Education
 UG: B.Tech / B.E. in Computer Science and Business System, Cyber Security
 PG: M.Tech in Computers
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-EdrCyber SecurityTechnical SupportSoftware ImplementationIT Security
-Software Support
+EDR, Cyber Security, Technical Support, Software Implementation, IT Security, Software Support

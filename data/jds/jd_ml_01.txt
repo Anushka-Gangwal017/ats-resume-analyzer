@@ -11,6 +11,4 @@ Role Category: Data Science & Machine Learning
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-AI/ML Engineer
-Tensorflow C++ Artificial Intelligence Natural Language Processing Machine Learning Deep Learning Numpy Pytorch Pandas Aiml Computer Vision Python
+Artificial Intelligence (AI), Machine Learning (ML), Deep Learning, Natural Language Processing (NLP), Computer Vision, TensorFlow, PyTorch, NumPy, Pandas, Python, C++, Neural Networks, Model Training, Model Evaluation, AI/ML Engineering

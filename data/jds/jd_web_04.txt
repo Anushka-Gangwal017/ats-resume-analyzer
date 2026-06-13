@@ -77,6 +77,4 @@ Role Category: Software Development
 Education
 UG: B.Tech / B.E. in Computer Science and Engineering (CSE), Electronics and Communication Engineering (ECE), Information Technology, Electronics And Computer Engineering
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Algorithms
-System DesignJavascriptPythonData Structures And Algorithms
+Algorithms, System Design, JavaScript, Python, Data Structures and Algorithms

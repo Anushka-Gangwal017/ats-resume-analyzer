@@ -24,4 +24,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-metadatapythondata analysisdata managementdata analyticsdata validationconfigurationdata miningdata integritydashboardsmaster data managementcleansingsqldata cleansingexceltableauquality assurancedata visualizationreporting
+Metadata Management, Master Data Management (MDM), Python, SQL, Excel, Tableau, Data Analytics, Data Analysis, Data Management, Data Validation, Data Mining, Data Integrity, Data Cleansing, Data Visualization, Dashboard Development, Reporting, Quality Assurance, Data Governance, Business Intelligence

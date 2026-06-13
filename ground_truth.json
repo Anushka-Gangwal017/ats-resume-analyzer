@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_python_01.txt",
+    "truly_missing_keywords": [
+      "agentic ai", "ai agents", "ai application development",
+      "ai solutions", "aws", "azure", "azure ai",
+      "backend development", "computer vision", "fastapi",
+      "generative ai", "idp", "large language models", "llms",
+      "modern ai technologies", "ocr", "openai api",
+      "production-ready ai applications", "similar llm platforms"
+    ],
+    "notes": "AI/LLM engineering JD - all extracted terms are genuine GenAI stack gaps"
+  },
+  {
+    "id": 2,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_python_02.txt",
+    "truly_missing_keywords": [
+      "angular", "api integration", "apis", "aws", "azure",
+      "ci/cd", "devops", "django", "docker", "fastapi", "flask",
+      "google cloud", "javascript", "orm", "postgresql",
+      "react", "vue", "vue.js"
+    ],
+    "notes": "Full stack python role - web frameworks and devops missing"
+  },
+  {
+    "id": 3,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_data_01.txt",
+    "truly_missing_keywords": [
+      "data cleaning", "data management", "data science",
+      "power bi", "statistics", "tableau"
+    ],
+    "notes": "Data analyst JD - BI/visualisation tools missing"
+  },
+  {
+    "id": 4,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_data_02.txt",
+    "truly_missing_keywords": [
+      "dashboard development", "data management",
+      "data science", "power bi", "tableau"
+    ],
+    "notes": "Similar data analyst JD - same BI gap"
+  },
+  {
+    "id": 5,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_ml_01.txt",
+    "truly_missing_keywords": [
+      "ai", "artificial intelligence", "c++", "computer vision",
+      "data science", "model evaluation", "model training",
+      "natural language processing", "nlp"
+    ],
+    "notes": "ML role - ML frameworks and theory terms missing"
+  },
+  {
+    "id": 6,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_ml_02.txt",
+    "truly_missing_keywords": [
+      "software architecture"
+    ],
+    "notes": "This JD is actually a business analyst role mislabelled as ML - only 1 genuine technical term extracted"
+  },
+  {
+    "id": 7,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_cyber_01.txt",
+    "truly_missing_keywords": [
+      "cloud security"
+    ],
+    "notes": "This JD is actually a sales role mislabelled as cybersecurity - only 1 genuine technical term extracted"
+  },
+  {
+    "id": 8,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_cyber_02.txt",
+    "truly_missing_keywords": [
+      "aami tir57", "ceh", "cve", "cvss", "information security",
+      "nist", "nist cybersecurity framework", "sbom",
+      "vulnerability management"
+    ],
+    "notes": "Medical device cybersecurity JD - specific certs and frameworks missing"
+  },
+  {
+    "id": 9,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_web_01.txt",
+    "truly_missing_keywords": [
+      "api development", "aws", "backend development",
+      "ci/cd", "clean code", "devops", "django", "docker",
+      "document apis", "etl design", "gcp", "graphql", "jwt",
+      "oauth", "postgresql", "react", "robust apis", "vue"
+    ],
+    "notes": "Backend/data engineering JD - extensive tooling gap"
+  },
+  {
+    "id": 10,
+    "resume_file": "data/resumes/resume1.pdf",
+    "jd_file": "data/jds/jd_web_02.txt",
+    "truly_missing_keywords": [
+      "ai", "ai agents", "ai apis", "ai-driven products", "apis",
+      "backend architecture", "backend development", "ci/cd",
+      "data science", "docker", "fastapi",
+      "integrate ai services", "llm", "llms", "postgresql",
+      "redis", "rest apis", "system design"
+    ],
+    "notes": "AI-powered mobile backend JD - mobile + LLM stack missing"
+  }
+]

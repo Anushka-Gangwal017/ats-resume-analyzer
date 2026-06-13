@@ -45,6 +45,4 @@ Role Category: Trading, Asset & Wealth Management
 Education
 UG: Any Graduate
 Key Skills
-Skills highlighted with ‘‘ are preferred keyskills
-Machine LearningData SciencePython
-Predictive ModelingArtificial IntelligenceNatural Language ProcessingRegressionProbabilityStatisticsDeep LearningAlgorithmsLarge Language ModelGCPTime Series AnalysisLow LatencyTime SeriesAWS
+Machine Learning (ML), Data Science, Artificial Intelligence (AI), Deep Learning, Natural Language Processing (NLP), Large Language Models (LLMs), Predictive Modeling, Time Series Analysis, Statistical Analysis, Probability & Statistics, Regression Analysis, Algorithms, Python, AWS, Google Cloud Platform (GCP), Low-Latency Systems, Model Development, Model Training, Model Evaluation

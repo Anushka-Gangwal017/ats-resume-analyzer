@@ -65,4 +65,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-Computer scienceMedical devicesEmbedded systemscyber securityAnalyticalInformation securityHealthcareVulnerabilityRisk managementMonitoring
+Computer Science, Medical Devices, Embedded Systems, Cyber Security, Analytical, Information Security, Healthcare, Vulnerability Management, Risk Management, Monitoring

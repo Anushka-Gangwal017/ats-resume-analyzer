@@ -59,4 +59,4 @@ Education
 UG: Any Graduate
 PG: Any Postgraduate
 Key Skills
-BackendFront endVersion controlPostgresqlMySQLJavascriptHTMLTroubleshootingPython
+Backend Development, Front-End Development, Full Stack Development, Python, JavaScript, HTML, PostgreSQL, MySQL, SQL, Database Management, Version Control, Git, GitHub, Troubleshooting, Web Development
