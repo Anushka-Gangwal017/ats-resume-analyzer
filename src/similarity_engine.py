@@ -4,18 +4,27 @@
 # prevent infinite hanging in Flask
 # ─────────────────────────────────────────────────────────────
 
-from sentence_transformers import SentenceTransformer, util
-
-_model = None   # lazy-load — don't load at import time
+SentenceTransformer = None
+util = None
 
 
 def get_model():
     """Load model only when first needed."""
-    global _model
+    global _model, SentenceTransformer, util
+
     if _model is None:
         print("Loading AI model...")
+
+        from sentence_transformers import SentenceTransformer as ST
+        from sentence_transformers import util as st_util
+
+        SentenceTransformer = ST
+        util = st_util
+
         _model = SentenceTransformer('all-MiniLM-L6-v2')
+
         print("Model loaded!")
+
     return _model
 
 
