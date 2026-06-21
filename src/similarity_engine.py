@@ -6,6 +6,7 @@
 
 SentenceTransformer = None
 util = None
+_model = None
 
 
 def get_model():
