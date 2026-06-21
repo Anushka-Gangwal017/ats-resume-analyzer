@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Database
+resumeiq.db
+
+# User uploads
+uploads/
+
+# Model cache
+.cache/
+sentence_transformers_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Test outputs
+test_report.pdf
+batch_test_results.csv
+batch_test_summary.json
+
+# Logs
+*.log
+results_log.json

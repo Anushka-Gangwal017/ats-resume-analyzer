@@ -17,10 +17,9 @@ def extract_text(pdf_path):
     return full_text
 
 # Change this path to your actual resume file
-resume_path = "data/resumes/resume1.pdf"
-
-extracted = extract_text(resume_path)
-
-print("===== EXTRACTED TEXT FROM RESUME =====")
-print(extracted)
-print("===== TOTAL CHARACTERS:", len(extracted), "=====")
+if __name__ == "__main__":
+    resume_path = "data/resumes/resume1.pdf"
+    extracted = extract_text(resume_path)
+    print("===== EXTRACTED TEXT FROM RESUME =====")
+    print(extracted)
+    print("===== TOTAL CHARACTERS:", len(extracted), "=====")

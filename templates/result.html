@@ -333,7 +333,7 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
       Smart synonym matches
       <span class="count-badge" style="background:var(--purple-light);color:var(--purple);border:1px solid #DDD6FE">{{ soft_matches|length }} detected</span>
     </div>
-    <p style="font-size:0.82rem;color:var(--gray5);margin-bottom:0.875rem">Your resume uses different words that mean the same thing as the JD — AI detected these as equivalent.</p>
+    <p style="font-size:0.82rem;color:var(--gray5);margin-bottom:0.875rem">Your resume uses different words that mean the same thing as the JD - AI detected these as equivalent.</p>
     {% for m in soft_matches %}
     <div class="match-item">
       <span class="match-from">{{ m.resume_keyword }}</span>
@@ -447,7 +447,7 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
       <div>
         <div style="font-size:0.75rem;font-weight:600;color:var(--gray5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">Quantification</div>
         <div class="verdict">{{ quant_verdict }}</div>
-        <div class="check-tip" style="margin-top:4px">Add numbers — "tested on 100+ samples", "achieved 95% accuracy", "reduced time by 30%".</div>
+        <div class="check-tip" style="margin-top:4px">Add numbers - "tested on 100+ samples", "achieved 95% accuracy", "reduced time by 30%".</div>
       </div>
       {% endif %}
     </div>
@@ -462,7 +462,7 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
       <span class="count-badge badge-red">{{ high_priority_count }} critical</span>
       {% endif %}
     </div>
-    <p style="font-size:0.8rem;color:var(--gray4);margin-bottom:1rem">Sorted by priority — fix the critical ones before applying.</p>
+    <p style="font-size:0.8rem;color:var(--gray4);margin-bottom:1rem">Sorted by priority - fix the critical ones before applying.</p>
     {% for s in suggestions %}
     <div class="sugg-item {% if '🔴' in s or 'CRITICAL' in s %}sugg-high{% elif '🟡' in s or '⚠' in s or '⚠️' in s %}sugg-med{% else %}sugg-low{% endif %}">
       {% if '🔴' in s or 'CRITICAL' in s %}<span class="priority-pill p-high">CRITICAL</span>{% elif '🟡' in s or '⚠' in s %}<span class="priority-pill p-med">IMPORTANT</span>{% else %}<span class="priority-pill p-low">TIP</span>{% endif %}
@@ -470,11 +470,18 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
     </div>
     {% endfor %}
     {% if not suggestions %}
-    <div class="sugg-item sugg-low"><span class="priority-pill p-low">GREAT</span> Resume looks strong for this JD — no critical issues found.</div>
+    <div class="sugg-item sugg-low"><span class="priority-pill p-low">GREAT</span> Resume looks strong for this JD - no critical issues found.</div>
     {% endif %}
   </div>
 
   <!-- ── DOWNLOAD REPORT ────────────────────── -->
+<!-- ─────────────────────────────────────────────────────────
+     PASTE THIS INTO result.html
+     Replace the ENTIRE existing download form with this.
+     Find the section with "Download PDF Report" button
+     and replace the whole <div> + <form> block.
+     ───────────────────────────────────────────────────────── -->
+
 <div class="card" style="margin-bottom:1.25rem;
                           text-align:center;
                           padding:1.75rem">
@@ -488,51 +495,12 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
   </div>
   <div style="font-size:.875rem;color:var(--gray4);
               margin-bottom:1.25rem">
-    Get a PDF summary of this analysis to
-    share or keep for reference
+    Get a PDF summary of this analysis
   </div>
 
-  <form method="POST" action="/download-report">
-  <input type="hidden" name="final_score"
-         value="{{ final_score }}">
-  <input type="hidden" name="semantic_score"
-         value="{{ semantic_score }}">
-  <input type="hidden" name="keyword_score"
-         value="{{ keyword_score }}">
-  <input type="hidden" name="final_grade"
-         value="{{ final_grade | e }}">
-  <input type="hidden" name="score_label"
-         value="{{ score_label | e }}">
-  <input type="hidden" name="resume_filename"
-         value="{{ resume_filename | e }}">
-  <input type="hidden" name="analysed_at"
-         value="{{ analysed_at | e }}">
-  <input type="hidden" name="jd_level"
-         value="{{ jd_level | e }}">
-  <input type="hidden" name="jd_warning"
-         value="{{ jd_warning | e if jd_warning else '' }}">
-  <input type="hidden" name="matched_count"
-         value="{{ matched_count }}">
-  <input type="hidden" name="missing_count"
-         value="{{ missing_count }}">
-  <input type="hidden" name="high_priority_count"
-         value="{{ high_priority_count }}">
-  <input type="hidden" name="verb_verdict"
-         value="{{ verb_verdict | e }}">
-  <input type="hidden" name="matched_keywords"
-         value="{{ matched_keywords | tojson | e }}">
-  <input type="hidden" name="missing_keywords"
-         value="{{ missing_keywords | tojson | e }}">
-  <input type="hidden" name="soft_matches"
-         value="{{ soft_matches | tojson | e }}">
-  <input type="hidden" name="section_report"
-         value="{{ section_report | tojson | e }}">
-  <input type="hidden" name="section_keyword_scores"
-         value="{{ section_keyword_scores | tojson | e }}">
-  <input type="hidden" name="suggestions"
-         value="{{ suggestions | tojson | e }}">
-
-  <button type="submit"
+  <button type="button"
+          id="download-report-btn"
+          onclick="downloadReport()"
           style="background:var(--blue);color:#fff;
                  font-family:inherit;font-size:.95rem;
                  font-weight:600;padding:.875rem 2rem;
@@ -543,8 +511,84 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
     <i class="ti ti-download" aria-hidden="true"></i>
     Download PDF Report
   </button>
-</form>
 </div>
+
+<script>
+function downloadReport() {
+  // Build the full results object directly from Jinja2 data
+  // embedded as a JSON script block (see below) —
+  // this avoids broken hidden-input serialization entirely
+  const reportData = window.__resumeiq_report_data__;
+
+  if (!reportData) {
+    alert('Report data not available. Please re-analyze.');
+    return;
+  }
+
+  const btn = document.getElementById('download-report-btn');
+  btn.innerHTML = '<i class="ti ti-loader"></i> Generating...';
+  btn.disabled = true;
+
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = '/download-report';
+
+  Object.keys(reportData).forEach(key => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    const val = reportData[key];
+    input.value = (typeof val === 'object')
+      ? JSON.stringify(val)
+      : String(val);
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+
+  setTimeout(() => {
+    btn.innerHTML = '<i class="ti ti-download"></i> Download PDF Report';
+    btn.disabled = false;
+  }, 2000);
+}
+</script>
+
+<!-- ─────────────────────────────────────────────────────────
+     ALSO ADD THIS RIGHT BEFORE </body> at the very end
+     of result.html — this safely embeds all the Python
+     data as real JSON, not fragile HTML attribute strings
+     ───────────────────────────────────────────────────────── -->
+
+<script id="report-data-json" type="application/json">
+{
+  "final_score": {{ final_score | tojson }},
+  "semantic_score": {{ semantic_score | tojson }},
+  "keyword_score": {{ keyword_score | tojson }},
+  "final_grade": {{ final_grade | tojson }},
+  "score_label": {{ score_label | tojson }},
+  "resume_filename": {{ resume_filename | tojson }},
+  "analysed_at": {{ analysed_at | tojson }},
+  "jd_level": {{ jd_level | tojson }},
+  "jd_warning": {{ (jd_warning or "") | tojson }},
+  "matched_keywords": {{ matched_keywords | tojson }},
+  "missing_keywords": {{ missing_keywords | tojson }},
+  "matched_count": {{ matched_count | tojson }},
+  "missing_count": {{ missing_count | tojson }},
+  "soft_matches": {{ soft_matches | tojson }},
+  "section_report": {{ section_report | tojson }},
+  "section_keyword_scores": {{ section_keyword_scores | tojson }},
+  "suggestions": {{ suggestions | tojson }},
+  "verb_verdict": {{ verb_verdict | tojson }},
+  "quant_verdict": {{ quant_verdict | tojson }},
+  "high_priority_count": {{ high_priority_count | tojson }}
+}
+</script>
+<script>
+  window.__resumeiq_report_data__ = JSON.parse(
+    document.getElementById('report-data-json').textContent
+  );
+</script>
 
   <!-- CTA -->
   <div class="cta-row">

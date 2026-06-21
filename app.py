@@ -366,6 +366,11 @@ def health():
         "version": "1.0",
     })
 
+# ─────────────────────────────────────────────────────────────
+# PASTE THIS INTO app.py — replace the existing
+# /download-report route entirely with this version
+# ─────────────────────────────────────────────────────────────
+
 @app.route("/download-report", methods=["POST"])
 def download_report():
     """Generates PDF report from posted form data."""
@@ -374,24 +379,28 @@ def download_report():
         import tempfile
 
         def safe_json(key, default):
-            """Safely parse JSON from form, return default on error."""
             raw = request.form.get(key, "")
-            if not raw or raw.strip() in ("", "None", "null"):
+            if not raw or raw.strip() in ("", "None", "null", "undefined"):
                 return default
             try:
-                return json.loads(raw)
-            except Exception:
+                parsed = json.loads(raw)
+                return parsed if parsed is not None else default
+            except Exception as e:
+                print(f"  JSON parse failed for '{key}': {e}")
+                print(f"  Raw value was: {raw[:200]}")
                 return default
 
         def safe_float(key, default=0.0):
             try:
-                return float(request.form.get(key, default))
+                val = request.form.get(key, default)
+                return float(val) if val not in (None, "", "None") else default
             except Exception:
                 return default
 
         def safe_int(key, default=0):
             try:
-                return int(request.form.get(key, default))
+                val = request.form.get(key, default)
+                return int(float(val)) if val not in (None, "", "None") else default
             except Exception:
                 return default
 
@@ -405,48 +414,42 @@ def download_report():
             "keyword_score"  : safe_float("keyword_score"),
             "final_grade"    : safe_str("final_grade"),
             "score_label"    : safe_str("score_label"),
-            "resume_filename": safe_str(
-                "resume_filename", "resume.pdf"
-            ),
+            "resume_filename": safe_str("resume_filename", "resume.pdf"),
             "analysed_at"    : safe_str("analysed_at"),
-            "jd_level"       : safe_str(
-                "jd_level", "Unknown"
-            ),
+            "jd_level"       : safe_str("jd_level", "Unknown"),
             "jd_warning"     : safe_str("jd_warning") or None,
-            "matched_keywords": safe_json(
-                "matched_keywords", []
-            ),
-            "missing_keywords": safe_json(
-                "missing_keywords", []
-            ),
+            "matched_keywords": safe_json("matched_keywords", []),
+            "missing_keywords": safe_json("missing_keywords", []),
             "matched_count"  : safe_int("matched_count"),
             "missing_count"  : safe_int("missing_count"),
             "soft_matches"   : safe_json("soft_matches", []),
-            "section_report" : safe_json(
-                "section_report", {}
-            ),
-            "section_keyword_scores": safe_json(
-                "section_keyword_scores", {}
-            ),
+            "section_report" : safe_json("section_report", {}),
+            "section_keyword_scores": safe_json("section_keyword_scores", {}),
             "suggestions"    : safe_json("suggestions", []),
             "verb_verdict"   : safe_str("verb_verdict"),
-            "high_priority_count": safe_int(
-                "high_priority_count"
-            ),
+            "quant_verdict"  : safe_str("quant_verdict"),
+            "high_priority_count": safe_int("high_priority_count"),
         }
 
-        # Generate PDF in temp file
-        tmp = tempfile.NamedTemporaryFile(
-            suffix=".pdf", delete=False
-        )
-        tmp.close()
+        # Debug print — check terminal when you click download
+        print("\n[PDF DEBUG] Data received for report:")
+        print(f"  final_score: {results['final_score']}")
+        print(f"  matched_keywords: {len(results['matched_keywords'])} items")
+        print(f"  missing_keywords: {len(results['missing_keywords'])} items")
+        print(f"  section_report: {len(results['section_report'])} sections")
+        print(f"  suggestions: {len(results['suggestions'])} items")
 
+        tmp = tempfile.NamedTemporaryFile(suffix=".pdf", delete=False)
+        tmp.close()
         generate_report(results, tmp.name)
 
-        resume_name = results["resume_filename"].replace(
-            ".pdf", ""
-        )
-        download_name = f"ResumeIQ_{resume_name}_Report.pdf"
+        # Clean filename for download (strip UUID prefix if present)
+        clean_name = results["resume_filename"]
+        if "_" in clean_name and len(clean_name.split("_")[0]) == 32:
+            clean_name = "_".join(clean_name.split("_")[1:])
+        clean_name = clean_name.replace(".pdf", "")
+
+        download_name = f"ResumeIQ_{clean_name}_Report.pdf"
 
         return send_file(
             tmp.name,
@@ -460,13 +463,12 @@ def download_report():
         traceback.print_exc()
         flash(f"Could not generate report: {e}")
         return redirect(url_for("home"))
-
-
+    
 if __name__ == "__main__":
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    print("\n" + "=" * 50)
+    print("\n" + "="*50)
     print("  ResumeIQ — Web Server")
-    print("=" * 50)
+    print("="*50)
     print("  http://localhost:5000")
-    print("=" * 50 + "\n")
+    print("="*50 + "\n")
+
     app.run(debug=True, host="0.0.0.0", port=5000)
