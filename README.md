@@ -1,10 +1,7 @@
 <div align="center">
-
-<<<<<<< HEAD
-# ResumeIQ - AI-Powered ATS Resume Analyzer
+   
 =======
 # ResumeIQ -AI-Powered ATS Resume Analyzer
->>>>>>> d66ff8e (Day 18 - GitHub README with screenshots, installation guide, architecture diagram, evaluation results)
 
 **Helping Indian job seekers understand why their resumes fail ATS filters**
 
