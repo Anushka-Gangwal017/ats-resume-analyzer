@@ -1,6 +1,5 @@
 <div align="center">
    
-=======
 # ResumeIQ -AI-Powered ATS Resume Analyzer
 
 **Helping Indian job seekers understand why their resumes fail ATS filters**
