@@ -1,6 +1,10 @@
 <div align="center">
 
+<<<<<<< HEAD
 # ResumeIQ - AI-Powered ATS Resume Analyzer
+=======
+# ResumeIQ -AI-Powered ATS Resume Analyzer
+>>>>>>> d66ff8e (Day 18 - GitHub README with screenshots, installation guide, architecture diagram, evaluation results)
 
 **Helping Indian job seekers understand why their resumes fail ATS filters**
 
@@ -61,7 +65,6 @@ Built using Python, Flask, spaCy NLP, and Sentence Transformers (MiniLM-L6-v2).
 | **JD Difficulty Classifier** | Detects Entry / Mid / Senior level jobs and warns freshers accordingly                |
 | **Smart Synonym Matching**   | Identifies when resume uses different words with same meaning as JD                   |
 | **PDF Report Download**      | 3-page professional ATS report with donut chart, keyword analysis, roadmap            |
-| **Improvement Potential**    | Estimates projected score after fixing critical gaps                                  |
 | **India JD Trained**         | Evaluated on 50 real Naukri.com job descriptions across 5 domains                     |
 
 ---
@@ -219,3 +222,36 @@ ats_analyzer/
 │
 └── uploads/                       # Temporary uploaded resumes
 ```
+
+## Research Context
+
+**Research Question:** Why do resumes fail ATS filters despite candidates being qualified?
+
+**Key Finding:** The mismatch is primarily a vocabulary problem - students describe their skills in informal language while ATS systems search for industry-standard terms. The skill normalization engine directly addresses this gap.
+
+**Dataset:** 50 real job descriptions collected from Naukri.com and LinkedIn India across 5 domains: Python Development, Data Analytics, ML/AI Engineering, Cybersecurity, and Full-Stack Web Development.
+
+### References
+
+- Sigelman, M. et al. (2021). _Hidden Workers: Untapped Talent_. Harvard Business School / Burning Glass Institute.
+- Chang, Y. et al. (2020). _BERT-based Resume-Job Description Matching_. arXiv:2009.01484.
+
+---
+
+## Built By
+
+**Anushka Gangwal**
+
+B.Tech Computer Science Engineering (AI & Analytics)  
+MIT-ADT University, Pune  
+CGPA: 9.08
+
+**LinkedIn:**  
+https://linkedin.com/in/anushka-gangwal-020167332
+
+**GitHub:**  
+https://github.com/Anushka-Gangwal017
+
+---
+
+_ResumeIQ - Because qualified candidates deserve to be seen._
