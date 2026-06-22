@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ResumeIQ — ATS Resume Analyzer</title>
+<title>ResumeIQ - ATS Resume Analyzer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
@@ -174,7 +174,7 @@ footer{background:var(--navy);padding:3rem 2rem;color:#9CA3AF;font-size:0.85rem}
     AI-powered · India job market trained
   </div>
   <h1>Is your resume getting past the <span>ATS filter?</span></h1>
-  <p class="hero-sub">Upload your resume and a job description. Get your ATS compatibility score, keyword gap report, and specific suggestions to improve your chances — in under 30 seconds.</p>
+  <p class="hero-sub">Upload your resume and a job description. Get your ATS compatibility score, keyword gap report, and specific suggestions to improve your chances - in under 30 seconds.</p>
   <div class="hero-actions">
     <a href="#analyze" class="btn-primary">
       <i class="ti ti-bolt" aria-hidden="true"></i>
@@ -195,7 +195,7 @@ footer{background:var(--navy);padding:3rem 2rem;color:#9CA3AF;font-size:0.85rem}
 </section>
 
 <div class="trust-bar">
-  <div class="trust-label">Built for Indian job seekers — trained on real Naukri & LinkedIn JDs</div>
+  <div class="trust-label">Built for Indian job seekers - trained on real Naukri & LinkedIn JDs</div>
   <div class="trust-items">
     <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i>No account required</span>
     <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i>Resume never stored</span>
@@ -262,6 +262,35 @@ footer{background:var(--navy);padding:3rem 2rem;color:#9CA3AF;font-size:0.85rem}
         <textarea name="jd_text" id="jd-text" placeholder="Paste the full job description here - from Naukri, LinkedIn, Indeed, or any company careers page.
 
 The more complete the JD, the more accurate your analysis." required minlength="50"></textarea>
+
+<!-- Sample JD button -->
+<div style="margin-top:0.5rem;margin-bottom:0.25rem">
+  <button type="button"
+          id="sample-jd-btn"
+          onclick="loadSampleJD()"
+          style="background:none;
+                 border:1px solid var(--gray3);
+                 border-radius:6px;
+                 padding:0.35rem 0.875rem;
+                 font-family:inherit;
+                 font-size:0.78rem;
+                 font-weight:500;
+                 color:var(--gray5);
+                 cursor:pointer;
+                 display:inline-flex;
+                 align-items:center;
+                 gap:6px;
+                 transition:all 0.15s">
+    <i class="ti ti-bolt" style="font-size:13px"></i>
+    Try a sample JD
+  </button>
+  <span style="font-size:0.72rem;
+               color:var(--gray4);
+               margin-left:0.5rem">
+    Pre-fills with a real Python Developer JD
+  </span>
+</div>
+
         <div class="char-bar">
           <span class="char-count" id="char-count">0 characters</span>
           <span class="char-ok" id="char-ok"><i class="ti ti-check" style="font-size:14px;vertical-align:-2px"></i> Looks good</span>
@@ -288,17 +317,17 @@ The more complete the JD, the more accurate your analysis." required minlength="
       <div class="step">
         <div class="step-num">1</div>
         <h3>Parse your resume</h3>
-        <p>We extract text from your PDF and identify sections — Skills, Experience, Projects, Education — automatically.</p>
+        <p>We extract text from your PDF and identify sections - Skills, Experience, Projects, Education - automatically.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Analyse the JD</h3>
+        <h3>Analyze the JD</h3>
         <p>The job description is parsed for required keywords, skill terms, and seniority signals using NLP.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <h3>AI semantic match</h3>
-        <p>Our model computes semantic similarity — so "DSA" still matches "data structures" even when words differ.</p>
+        <p>Our model computes semantic similarity - so "DSA" still matches "data structures" even when words differ.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
@@ -318,7 +347,7 @@ The more complete the JD, the more accurate your analysis." required minlength="
       <div class="feature">
         <div class="feature-icon blue"><i class="ti ti-brain" aria-hidden="true"></i></div>
         <h3>Semantic AI matching</h3>
-        <p>Uses sentence-transformers (MiniLM) to understand meaning — not just exact keyword matches. "ML engineer" matches "machine learning developer".</p>
+        <p>Uses sentence-transformers (MiniLM) to understand meaning - not just exact keyword matches. "ML engineer" matches "machine learning developer".</p>
       </div>
       <div class="feature">
         <div class="feature-icon green"><i class="ti ti-git-branch" aria-hidden="true"></i></div>
@@ -328,7 +357,7 @@ The more complete the JD, the more accurate your analysis." required minlength="
       <div class="feature">
         <div class="feature-icon amber"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
         <h3>Section-level scoring</h3>
-        <p>Get individual scores for your Skills, Experience, Projects, and Summary sections — so you know exactly where to improve.</p>
+        <p>Get individual scores for your Skills, Experience, Projects, and Summary sections - so you know exactly where to improve.</p>
       </div>
       <div class="feature">
         <div class="feature-icon blue"><i class="ti ti-india" aria-hidden="true"></i></div>
@@ -343,7 +372,7 @@ The more complete the JD, the more accurate your analysis." required minlength="
       <div class="feature">
         <div class="feature-icon amber"><i class="ti ti-list-check" aria-hidden="true"></i></div>
         <h3>Actionable suggestions</h3>
-        <p>Every suggestion is prioritised — critical fixes first, nice-to-haves last. No generic advice, only specific improvements.</p>
+        <p>Every suggestion is prioritised - critical fixes first, nice-to-haves last. No generic advice, only specific improvements.</p>
       </div>
     </div>
   </div>
@@ -417,7 +446,7 @@ The more complete the JD, the more accurate your analysis." required minlength="
     <h2 class="section-title" style="text-align:center;margin-bottom:2rem">Common questions</h2>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What is an ATS and why does it matter? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
-      <div class="faq-a">An Applicant Tracking System (ATS) is software that companies use to automatically filter resumes before a human recruiter sees them. A 2021 Harvard Business School study found that 88% of employers say qualified candidates are screened out by ATS because their resume doesn't match the exact search terms — not because they lack the skills. Your ATS score tells you how likely your resume is to pass this filter.</div>
+      <div class="faq-a">An Applicant Tracking System (ATS) is software that companies use to automatically filter resumes before a human recruiter sees them. A 2021 Harvard Business School study found that 88% of employers say qualified candidates are screened out by ATS because their resume doesn't match the exact search terms - not because they lack the skills. Your ATS score tells you how likely your resume is to pass this filter.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Is my resume stored or shared? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
@@ -425,11 +454,11 @@ The more complete the JD, the more accurate your analysis." required minlength="
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What makes this different from just counting keywords? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
-      <div class="faq-a">Most ATS checkers simply count how many words from the JD appear in your resume. ResumeIQ uses AI semantic matching — it understands that "DSA" means "data structures", that "ML" means "machine learning", and that "built a Python tool" signals "Python development". Our skill normalization graph maps 150+ informal student phrases to the exact terms Indian recruiters search for.</div>
+      <div class="faq-a">Most ATS checkers simply count how many words from the JD appear in your resume. ResumeIQ uses AI semantic matching - it understands that "DSA" means "data structures", that "ML" means "machine learning", and that "built a Python tool" signals "Python development". Our skill normalization graph maps 150+ informal student phrases to the exact terms Indian recruiters search for.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What score should I aim for? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
-      <div class="faq-a">Aim for 70 or above for roles you are applying to. A score above 75 means strong keyword and semantic alignment. Below 50 means your resume needs significant keyword work before applying. Remember — the score is a guide, not a guarantee. A high score means your resume is more likely to reach a human recruiter.</div>
+      <div class="faq-a">Aim for 70 or above for roles you are applying to. A score above 75 means strong keyword and semantic alignment. Below 50 means your resume needs significant keyword work before applying. Remember - the score is a guide, not a guarantee. A high score means your resume is more likely to reach a human recruiter.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Why is the analysis taking 15–30 seconds? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
@@ -496,12 +525,64 @@ textarea.addEventListener('input', function() {
 });
 
 document.getElementById('main-form').addEventListener('submit', function() {
-  submitBtn.innerHTML = '<i class="ti ti-loader" style="animation:spin 1s linear infinite"></i> Analysing — please wait';
+  submitBtn.innerHTML = '<i class="ti ti-loader" style="animation:spin 1s linear infinite"></i> Analyzing - please wait';
   submitBtn.disabled = true;
 });
 
 function toggleFaq(el) {
   el.closest('.faq-item').classList.toggle('open');
+}
+
+function loadSampleJD() {
+  const sampleJD = `We are looking for a Python Developer to join our engineering team.
+
+Responsibilities:
+- Develop and maintain Python-based backend services and REST APIs
+- Work with Flask or Django frameworks to build scalable web applications
+- Write clean, well-documented, and testable code
+- Collaborate with cross-functional teams to define and ship new features
+- Optimize application performance and database queries
+- Integrate third-party APIs and services
+
+Required Skills:
+- Strong proficiency in Python (2+ years of experience)
+- Experience with Flask or Django
+- Knowledge of REST API design and development
+- Familiarity with SQL databases (PostgreSQL or MySQL)
+- Version control using Git and GitHub
+- Understanding of Docker and CI/CD pipelines
+- Problem-solving skills and DSA fundamentals
+
+Good to have:
+- Experience with cloud platforms (AWS or Azure)
+- Knowledge of data structures and algorithms
+- Familiarity with Agile development practices
+
+Qualifications:
+- Bachelor's degree in Computer Science or related field
+- 0-2 years of experience (freshers welcome)`;
+
+  const textarea = document.getElementById('jd-text');
+  textarea.value = sampleJD;
+
+  // Trigger the character counter update
+  textarea.dispatchEvent(new Event('input'));
+
+  // Visual feedback on the button
+  const btn = document.getElementById('sample-jd-btn');
+  btn.innerHTML = '<i class="ti ti-check" style="font-size:13px"></i> Sample JD loaded';
+  btn.style.color = 'var(--green, #16A34A)';
+  btn.style.borderColor = 'var(--green, #16A34A)';
+
+  // Reset button text after 2 seconds
+  setTimeout(() => {
+    btn.innerHTML = '<i class="ti ti-bolt" style="font-size:13px"></i> Try a sample JD';
+    btn.style.color = 'var(--gray5)';
+    btn.style.borderColor = 'var(--gray3)';
+  }, 2000);
+
+  // Scroll textarea into view smoothly
+  textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 const style = document.createElement('style');
