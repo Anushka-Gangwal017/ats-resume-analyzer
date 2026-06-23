@@ -259,6 +259,42 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
     </div>
     {% endif %}
 
+<div style="display:flex;gap:1.5rem;margin-bottom:.875rem;
+            flex-wrap:wrap">
+  <div>
+    <div style="font-size:.72rem;color:var(--gray4);
+                font-weight:500;margin-bottom:2px">
+      Keyword Match
+    </div>
+    <div style="font-size:1.1rem;font-weight:700;
+                color:var(--blue)">
+      {{ keyword_score }}%
+    </div>
+  </div>
+  <div style="width:1px;background:var(--gray3)"></div>
+  <div>
+    <div style="font-size:.72rem;color:var(--gray4);
+                font-weight:500;margin-bottom:2px">
+      Semantic Match
+    </div>
+    <div style="font-size:1.1rem;font-weight:700;
+                color:var(--purple,#7C3AED)">
+      {{ semantic_score }}%
+    </div>
+  </div>
+  <div style="width:1px;background:var(--gray3)"></div>
+  <div>
+    <div style="font-size:.72rem;color:var(--gray4);
+                font-weight:500;margin-bottom:2px">
+      Missing Skills
+    </div>
+    <div style="font-size:1.1rem;font-weight:700;
+                color:var(--red)">
+      {{ missing_count }}
+    </div>
+  </div>
+</div>
+
     <div class="bars">
       <div class="bar-row">
         <span class="bar-label">
@@ -295,6 +331,37 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
         </span>
       </div>
     </div>
+    <!-- Top missing skills inline in score card -->
+{% if missing_keywords %}
+<div style="margin-top:1rem;padding-top:1rem;
+            border-top:1px solid var(--gray3)">
+
+  <div style="font-size:.72rem;font-weight:600;
+              color:var(--gray5);text-transform:uppercase;
+              letter-spacing:.06em;margin-bottom:.5rem">
+    Top Missing Skills
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:5px">
+    {% for kw in missing_keywords[:5] %}
+    <span style="font-size:.75rem;font-weight:500;
+                 padding:3px 9px;border-radius:20px;
+                 background:var(--red-light);
+                 color:var(--red);
+                 border:1px solid var(--red-mid)">
+      {{ kw }}
+    </span>
+    {% endfor %}
+    {% if missing_count > 5 %}
+    <span style="font-size:.75rem;color:var(--gray4);
+                 padding:3px 6px;align-self:center">
+      +{{ missing_count - 5 }} more
+    </span>
+    {% endif %}
+  </div>
+
+</div>
+{% endif %}
 
   </div>
 </div>
