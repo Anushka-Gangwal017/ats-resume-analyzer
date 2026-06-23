@@ -98,14 +98,54 @@ textarea::placeholder{color:var(--gray4)}
 /* WHY SECTION */
 .why-section{padding:5rem 2rem;background:var(--white)}
 .why-inner{max-width:960px;margin:0 auto}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
-.feature{padding:1.5rem}
-.feature-icon{width:40px;height:40px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:1rem}
-.feature-icon.blue{background:var(--blue-light);color:var(--blue)}
-.feature-icon.green{background:var(--green-light);color:var(--green)}
-.feature-icon.amber{background:var(--amber-light);color:var(--amber)}
-.feature h3{font-size:0.95rem;font-weight:600;color:var(--navy);margin-bottom:0.4rem}
-.feature p{font-size:0.85rem;color:var(--gray5);line-height:1.65}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+ 
+.feature {
+  background: var(--white);
+  border: 1px solid var(--gray3);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+ 
+.feature:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+ 
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 0.25rem;
+  flex-shrink: 0;
+}
+ 
+.feature-icon.blue  { background: var(--blue-light); color: var(--blue); }
+.feature-icon.green { background: var(--green-light); color: var(--green); }
+.feature-icon.amber { background: var(--amber-light); color: var(--amber); }
+.feature h3 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin: 0; line-height: 1.3; }
+ .feature p { font-size: 0.82rem; color: var(--gray5); line-height: 1.5; margin: 0; }
+ 
+@media(max-width: 768px) {
+  .features-grid { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 480px) {
+  .features-grid { grid-template-columns: 1fr; }
+}
 
 /* COMPARE TABLE */
 .compare-section{padding:5rem 2rem;background:var(--gray1);border-top:1px solid var(--gray3)}
@@ -313,29 +353,59 @@ The more complete the JD, the more accurate your analysis." required minlength="
     <div class="section-eyebrow">The process</div>
     <h2 class="section-title">How it works</h2>
     <p class="section-sub">Four steps from upload to actionable report</p>
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Parse your resume</h3>
-        <p>We extract text from your PDF and identify sections - Skills, Experience, Projects, Education - automatically.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Analyze the JD</h3>
-        <p>The job description is parsed for required keywords, skill terms, and seniority signals using NLP.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>AI semantic match</h3>
-        <p>Our model computes semantic similarity - so "DSA" still matches "data structures" even when words differ.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>Get your report</h3>
-        <p>ATS score out of 100, keyword gaps, section strength, and ranked suggestions to improve your resume.</p>
-      </div>
+<div class="steps-grid">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div style="font-size:1.75rem;margin-bottom:0.625rem">
+      <i class="ti ti-file-text"
+         style="color:var(--blue)"
+         aria-hidden="true"></i>
     </div>
+    <h3>Parse your resume</h3>
+    <p>We extract text from your PDF and identify
+       sections - Skills, Experience, Projects,
+       Education - automatically.</p>
   </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div style="font-size:1.75rem;margin-bottom:0.625rem">
+      <i class="ti ti-clipboard-list"
+         style="color:var(--blue)"
+         aria-hidden="true"></i>
+    </div>
+    <h3>Analyse the JD</h3>
+    <p>The job description is parsed for required
+       keywords, skill terms, and seniority signals
+       using NLP.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div style="font-size:1.75rem;margin-bottom:0.625rem">
+      <i class="ti ti-brain"
+         style="color:var(--blue)"
+         aria-hidden="true"></i>
+    </div>
+    <h3>Semantic Matching</h3>
+    <p>Our model computes semantic similarity - so
+       "DSA" still matches "data structures" even
+       when words differ.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div style="font-size:1.75rem;margin-bottom:0.625rem">
+      <i class="ti ti-chart-bar"
+         style="color:var(--blue)"
+         aria-hidden="true"></i>
+    </div>
+    <h3>ATS Report & Recommendations</h3>
+    <p>ATS score out of 100, keyword gaps, section
+       strength, and ranked suggestions to improve
+       your resume.</p>
+  </div>
+</div>
 </section>
 
 <section class="why-section" id="why">
@@ -343,39 +413,58 @@ The more complete the JD, the more accurate your analysis." required minlength="
     <div class="section-eyebrow">Why ResumeIQ</div>
     <h2 class="section-title">More than a keyword counter</h2>
     <p class="section-sub">Most tools just count matching words. We go deeper.</p>
-    <div class="features-grid">
-      <div class="feature">
-        <div class="feature-icon blue"><i class="ti ti-brain" aria-hidden="true"></i></div>
-        <h3>Semantic AI matching</h3>
-        <p>Uses sentence-transformers (MiniLM) to understand meaning - not just exact keyword matches. "ML engineer" matches "machine learning developer".</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon green"><i class="ti ti-git-branch" aria-hidden="true"></i></div>
-        <h3>Skill normalization engine</h3>
-        <p>Our custom skill graph maps 150+ informal student phrases to the exact terms Indian recruiters search for on Naukri and LinkedIn.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon amber"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
-        <h3>Section-level scoring</h3>
-        <p>Get individual scores for your Skills, Experience, Projects, and Summary sections - so you know exactly where to improve.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon blue"><i class="ti ti-india" aria-hidden="true"></i></div>
-        <h3>India JD trained</h3>
-        <p>Trained on real job descriptions from Naukri.com and LinkedIn India. Understands Indian tech industry vocabulary.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon green"><i class="ti ti-lock" aria-hidden="true"></i></div>
-        <h3>Private by design</h3>
-        <p>Your resume is deleted immediately after analysis. No account needed. No data stored. No emails to verify.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon amber"><i class="ti ti-list-check" aria-hidden="true"></i></div>
-        <h3>Actionable suggestions</h3>
-        <p>Every suggestion is prioritised - critical fixes first, nice-to-haves last. No generic advice, only specific improvements.</p>
-      </div>
+<!-- ── FEATURES GRID — replace your existing features-grid div with this ── -->
+ 
+<div class="features-grid">
+ 
+  <div class="feature">
+    <div class="feature-icon blue">
+      <i class="ti ti-brain" aria-hidden="true"></i>
     </div>
+    <h3>AI Semantic Matching</h3>
+    <p>"ML engineer" matches "machine learning developer"</p>
   </div>
+ 
+  <div class="feature">
+    <div class="feature-icon green">
+      <i class="ti ti-git-branch" aria-hidden="true"></i>
+    </div>
+    <h3>Skill Normalization</h3>
+    <p>150+ mappings from student phrases to recruiter terms</p>
+  </div>
+ 
+  <div class="feature">
+    <div class="feature-icon amber">
+      <i class="ti ti-chart-bar" aria-hidden="true"></i>
+    </div>
+    <h3>Section-Level Scoring</h3>
+    <p>Separate scores for Skills, Projects, Experience, Summary</p>
+  </div>
+ 
+  <div class="feature">
+    <div class="feature-icon blue">
+      <i class="ti ti-world" aria-hidden="true"></i>
+    </div>
+    <h3>India JD Trained</h3>
+    <p>Built on 50 real Naukri and LinkedIn India job descriptions</p>
+  </div>
+ 
+  <div class="feature">
+    <div class="feature-icon green">
+      <i class="ti ti-lock" aria-hidden="true"></i>
+    </div>
+    <h3>Private by Design</h3>
+    <p>Resume deleted immediately after analysis. No account needed</p>
+  </div>
+ 
+  <div class="feature">
+    <div class="feature-icon amber">
+      <i class="ti ti-list-check" aria-hidden="true"></i>
+    </div>
+    <h3>Actionable Suggestions</h3>
+    <p>Critical fixes first, optional improvements last</p>
+  </div>
+</div>
 </section>
 
 <section class="compare-section">
@@ -437,6 +526,12 @@ The more complete the JD, the more accurate your analysis." required minlength="
         </tr>
       </tbody>
     </table>
+    <p style="font-size:0.72rem;color:var(--gray4);
+           margin-top:0.75rem;text-align:right;
+           font-style:italic">
+  Based on publicly available feature information as of June 2026.
+  Competitor details may have changed.
+</p>
   </div>
 </section>
 
@@ -472,7 +567,7 @@ The more complete the JD, the more accurate your analysis." required minlength="
     <div>
       <div class="footer-brand">ResumeIQ</div>
       <p>AI-powered ATS resume analyzer<br>trained on Indian job market data.</p>
-      <p class="footer-copy">Built by Anushka Gangwal · MIT-ADT University, Pune<br>B.E. CSE (AI & Analytics) · 2026</p>
+      <p class="footer-copy">Built by Anushka Gangwal · MIT-ADT University, Pune<br>B.Tech CSE</p>
     </div>
     <div>
       <h4 class="footer-col">Product</h4>
@@ -486,9 +581,9 @@ The more complete the JD, the more accurate your analysis." required minlength="
     <div>
       <h4 class="footer-col">Research</h4>
       <div class="footer-links">
-        <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=61232" target="_blank">Harvard HBS Hidden Workers study</a>
+        <a href="https://www.edligo.net/job-search-tips/i-analyzed-1000-rejected-resumes-heres-what-ats-actually-sees-and-its-not-what-you-think/" target="_blank">ATS Screening Research</a>
         <a href="https://www.jobscan.co/blog/8-things-you-need-to-know-about-applicant-tracking-systems/" target="_blank">How ATS systems work</a>
-        <a href="https://arxiv.org/abs/2009.01484" target="_blank">Resume-JD matching (BERT paper)</a>
+        <a href="https://talentbusinesspartners.com/en-us/article/how-nlp-beats-traditional-resume-screening-a-technical-analysis" target="_blank">Semantic Matching Research</a>
       </div>
     </div>
   </div>
