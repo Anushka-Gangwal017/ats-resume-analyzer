@@ -91,6 +91,78 @@ def score_band(score):
     else:
         return RED, RED_BG, RED_BD, "Needs Work"
 
+def build_strengths(results):
+    """
+    Builds a list of max 5 genuine strength strings
+    from the results dict. Mirrors the Jinja2 logic
+    in result.html so PDF and web show same content.
+    """
+    sec_rep      = results.get("section_report", {})
+    verb_verdict = results.get("verb_verdict", "")
+    quant_verdict= results.get("quant_verdict", "")
+    matched_count= int(results.get("matched_count", 0))
+    soft         = results.get("soft_matches", [])
+
+    def sec_good(name):
+        info = sec_rep.get(name, {})
+        if not isinstance(info, dict):
+            return False
+        return "Good" in info.get("status", "")
+
+    strengths = []
+
+    # 1. Skills
+    if sec_good("skills"):
+        strengths.append(
+            "Strong technical skills section - "
+            "keywords and tools clearly listed"
+        )
+
+    # 2. Research OR Projects (not both)
+    if sec_good("research"):
+        strengths.append(
+            "Research experience present - adds "
+            "strong academic and technical credibility"
+        )
+    elif sec_good("projects"):
+        strengths.append(
+            "Well-documented project descriptions - "
+            "shows practical hands-on experience"
+        )
+
+    # 3. Certifications
+    if sec_good("certifications"):
+        strengths.append(
+            "Relevant certifications present - "
+            "compensates for limited work experience"
+        )
+
+    # 4. Quantification OR verbs (better one wins)
+    if quant_verdict and (
+        "Good" in quant_verdict or "Excellent" in quant_verdict
+    ):
+        strengths.append(
+            "Quantified achievements with real numbers - "
+            "makes impact concrete and measurable"
+        )
+    elif verb_verdict and (
+        "Good" in verb_verdict
+        or "Excellent" in verb_verdict
+        or "strong" in verb_verdict
+    ):
+        strengths.append(
+            "Strong action verbs throughout - "
+            "built, developed, implemented, designed"
+        )
+
+    # 5. Keyword alignment
+    if matched_count >= 5:
+        strengths.append(
+            f"{matched_count} keywords already matched - "
+            f"solid baseline alignment with this JD"
+        )
+
+    return strengths[:5]
 
 def readiness_band(score):
     if score >= 75:
@@ -435,6 +507,36 @@ def generate_report(results, output_path):
     pdf.multi_cell(174, 4.6, ct(summary_text))
 
     y += 22 + 6
+
+    # ── Resume Strengths (page 1) ──────────────────────────────
+    strengths = build_strengths(results)
+    if strengths:
+        # Manual page break check
+        if y + len(strengths) * 8 + 20 > pdf.h - pdf.b_margin:
+           pdf.add_page()
+           y = pdf.get_y()
+        y = section_eyebrow(pdf, "Resume Strengths", 15, y,
+                            GREEN_DARK)
+        for s in strengths:
+            # Green circle check icon (drawn as filled circle
+            # + white dot approximation)
+            pdf.set_fill_color(*GREEN_BG)
+            pdf.set_draw_color(*GREEN_BD)
+            pdf.set_line_width(0.3)
+            pdf.ellipse(17, y + 0.8, 4, 4, style="DF")
+            pdf.set_font("Helvetica", "B", 7)
+            pdf.set_text_color(*GREEN)
+            pdf.set_xy(17.8, y + 0.6)
+            pdf.cell(2.5, 4, "v")
+
+            # Strength text
+            pdf.set_font("Helvetica", "", 8.5)
+            pdf.set_text_color(*INK)
+            pdf.set_xy(24, y)
+            pdf.multi_cell(166, 5, ct(s))
+            y = pdf.get_y() + 2
+
+        y += 2
 
     # ── Top strengths / top gaps (two columns) ───────────────
     col_w = (180 - 6) / 2
