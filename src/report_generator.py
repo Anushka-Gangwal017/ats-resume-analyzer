@@ -204,18 +204,17 @@ class ResumeIQPDF(FPDF):
         self.set_y(19)
 
     def footer(self):
-        self.set_y(-14)
+        self.set_y(-12)
         self.set_draw_color(*LINE)
         self.set_line_width(0.25)
         self.line(15, self.get_y(), 195, self.get_y())
-        self.ln(2)
-        self.set_font("Helvetica", "", 7)
+        self.ln(1.8)
+        self.set_font("Helvetica", "", 6.8)
         self.set_text_color(*SLATE_LIGHT)
-        self.cell(60, 5, "ResumeIQ  |  AI-Powered ATS Resume Analyzer")
-        self.cell(70, 5,
-            f"Report ID: {self.report_id}", align="C")
-        self.cell(50, 5,
-            f"Page {self.page_no()} of {{nb}}", align="R")
+        self.cell(95, 4.5, "Powered by ResumeIQ AI Engine")
+        self.cell(80, 4.5,
+           f"Page {self.page_no()} of {{nb}}",
+           align="R")
 
 
 def filled_rect(pdf, x, y, w, h, rgb, border_rgb=None, border_w=0.3):
