@@ -396,6 +396,96 @@ def normalize_keywords(keywords):
                         expanded.add(c)
 
     return sorted(list(expanded))
+
+# ── Keyword category groups ───────────────────────────────────
+KEYWORD_CATEGORIES = {
+    "Cloud & DevOps": [
+        "aws", "azure", "gcp", "google cloud", "docker",
+        "kubernetes", "ci/cd", "devops", "terraform",
+        "jenkins", "heroku", "render", "vercel", "cloud",
+        "cloud platforms", "cloud computing",
+    ],
+    "Backend": [
+        "flask", "django", "fastapi", "spring boot",
+        "node.js", "express", "rest api", "api development",
+        "backend development", "microservices", "graphql",
+        "nginx", "redis", "celery", "rabbitmq",
+    ],
+    "Frontend": [
+        "react", "angular", "vue", "vue.js", "javascript",
+        "typescript", "html", "css", "bootstrap", "tailwind",
+        "next.js", "jquery", "webpack",
+    ],
+    "Database": [
+        "sql", "mysql", "postgresql", "mongodb", "sqlite",
+        "oracle", "redis", "cassandra", "dynamodb", "orm",
+        "database", "nosql", "firebase",
+    ],
+    "AI / ML": [
+        "machine learning", "deep learning", "nlp",
+        "natural language processing", "tensorflow",
+        "pytorch", "scikit-learn", "keras", "transformers",
+        "computer vision", "llm", "llms", "generative ai",
+        "langchain", "openai api", "huggingface",
+        "model training", "model deployment",
+    ],
+    "Data": [
+        "pandas", "numpy", "matplotlib", "seaborn",
+        "tableau", "power bi", "data analysis",
+        "data science", "data visualization", "excel",
+        "statistics", "etl", "spark", "hadoop",
+        "data engineering", "dax", "looker",
+    ],
+    "Security": [
+        "cybersecurity", "cyber security", "nist",
+        "penetration testing", "vapt", "siem",
+        "vulnerability management", "ceh", "ethical hacking",
+        "network security", "owasp", "firewall", "soc",
+    ],
+    "Languages": [
+        "python", "java", "javascript", "c++", "c",
+        "golang", "rust", "kotlin", "swift", "php",
+        "ruby", "scala", "r", "matlab",
+    ],
+    "Tools & Practices": [
+        "git", "github", "jira", "agile", "scrum",
+        "linux", "bash", "system design", "architecture",
+        "oop", "dsa", "data structures", "algorithms",
+        "unit testing", "tdd", "figma",
+    ],
+}
+
+
+def categorize_keywords(keyword_list):
+    """
+    Takes a flat list of keywords and returns a dict of
+    { category_name: [keywords] } with only non-empty
+    categories. Keywords that don't match any category
+    go into 'Other'.
+    """
+    categorized = {cat: [] for cat in KEYWORD_CATEGORIES}
+    categorized["Other"] = []
+    assigned = set()
+
+    for kw in keyword_list:
+        kw_lower = kw.strip().lower()
+        found = False
+        for cat, terms in KEYWORD_CATEGORIES.items():
+            if kw_lower in terms:
+                categorized[cat].append(kw)
+                assigned.add(kw_lower)
+                found = True
+                break
+        if not found:
+            categorized["Other"].append(kw)
+
+    # Remove empty categories and 'Other' if empty
+    result = {
+        cat: kws for cat, kws in categorized.items()
+        if kws
+    }
+    return result
+
 # ══════════════════════════════════════════════════════════════
 # TEST — run this file directly to see it working
 # ══════════════════════════════════════════════════════════════

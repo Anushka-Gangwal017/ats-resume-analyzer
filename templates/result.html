@@ -1,214 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your ATS Report — ResumeIQ</title>
+<title>Your ATS Report - ResumeIQ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0A0F1E;--blue:#2563EB;--blue2:#1D4ED8;--blue-light:#EFF6FF;--blue-mid:#BFDBFE;
+  --navy:#0A0F1E;--blue:#2563EB;--blue2:#1D4ED8;
+  --blue-light:#EFF6FF;--blue-mid:#BFDBFE;
   --green:#16A34A;--green-light:#F0FDF4;--green-mid:#BBF7D0;
   --red:#DC2626;--red-light:#FEF2F2;--red-mid:#FECACA;
   --amber:#D97706;--amber-light:#FFFBEB;--amber-mid:#FDE68A;
-  --purple:#7C3AED;--purple-light:#F5F3FF;
+  --purple:#7C3AED;--purple-light:#F5F3FF;--purple-mid:#DDD6FE;
   --gray1:#F9FAFB;--gray2:#F3F4F6;--gray3:#E5E7EB;
   --gray4:#9CA3AF;--gray5:#6B7280;--gray6:#374151;--gray7:#111827;
   --white:#FFFFFF;--radius:8px;--radius-lg:12px;--radius-xl:16px;
 }
-body{font-family:'Inter',sans-serif;background:var(--gray1);color:var(--gray7);line-height:1.6}
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray3);padding:0 2rem}
-.nav-inner{max-width:1000px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between}
-.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.1rem;color:var(--navy);text-decoration:none}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--gray1);
+     color:var(--gray7);line-height:1.6}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.nav{position:sticky;top:0;z-index:100;
+     background:rgba(255,255,255,.95);backdrop-filter:blur(12px);
+     border-bottom:1px solid var(--gray3);padding:0 2rem}
+.nav-inner{max-width:860px;margin:0 auto;height:60px;
+           display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:8px;font-weight:700;
+           font-size:1.1rem;color:var(--navy);text-decoration:none}
 .nav-brand-dot{width:8px;height:8px;background:var(--blue);border-radius:50%}
-.nav-links{display:flex;align-items:center;gap:0.5rem}
-.nav-links a{color:var(--gray5);font-size:0.88rem;font-weight:500;padding:0.45rem 0.875rem;border-radius:var(--radius);text-decoration:none;transition:all 0.15s;display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;align-items:center;gap:.25rem}
+.nav-links a{color:var(--gray5);font-size:.88rem;font-weight:500;
+             padding:.45rem .875rem;border-radius:var(--radius);
+             text-decoration:none;transition:all .15s;
+             display:flex;align-items:center;gap:5px}
 .nav-links a:hover{color:var(--gray7);background:var(--gray2)}
-.nav-cta{background:var(--blue)!important;color:var(--white)!important}
+.nav-cta{background:var(--blue)!important;color:#fff!important}
 .nav-cta:hover{background:var(--blue2)!important}
 
-.page{max-width:1000px;margin:0 auto;padding:2rem 1.5rem 4rem}
+/* ── PAGE ────────────────────────────────────────────────── */
+.page{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
 
-/* SCORE HERO */
-.score-hero{background:var(--white);border:1px solid var(--gray3);border-radius:var(--radius-xl);padding:2rem;display:flex;gap:2.5rem;align-items:center;margin-bottom:1.25rem}
-.score-ring-wrap {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  flex-shrink: 0;
-}
+/* ── CARD ────────────────────────────────────────────────── */
+.card{background:var(--white);border:1px solid var(--gray3);
+      border-radius:var(--radius-xl);padding:1.5rem;
+      margin-bottom:1.25rem}
+.card-title{font-size:.9rem;font-weight:600;color:var(--gray6);
+            margin-bottom:1rem;display:flex;align-items:center;
+            gap:7px;flex-wrap:wrap}
+.card-title i{font-size:17px}
+.count-badge{font-size:.72rem;font-weight:600;padding:2px 9px;
+             border-radius:20px}
+.badge-green{background:var(--green-light);color:var(--green);
+             border:1px solid var(--green-mid)}
+.badge-red{background:var(--red-light);color:var(--red);
+           border:1px solid var(--red-mid)}
+.badge-blue{background:var(--blue-light);color:var(--blue);
+            border:1px solid var(--blue-mid)}
+.badge-amber{background:var(--amber-light);color:var(--amber);
+             border:1px solid var(--amber-mid)}
 
-.score-number-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  pointer-events: none;
-}
-
-.score-num {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1;
-  display: block;
-}
-
-.score-denom {
-  font-size: 0.8rem;
-  color: var(--gray4);
-}
-.score-svg{width:140px;height:140px;transform:rotate(-90deg)}
-.ring-bg{fill:none;stroke:var(--gray2);stroke-width:12}
-.ring-fill{fill:none;stroke-width:12;stroke-linecap:round}
-.score-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.score-num{font-size:2.25rem;font-weight:700;color:var(--navy);line-height:1}
-.score-denom{font-size:0.8rem;color:var(--gray4);margin-top:2px}
-.score-right{flex:1}
-.score-label{font-size:1.5rem;font-weight:700;margin-bottom:4px}
-.score-sublabel{font-size:0.9rem;color:var(--gray5);margin-bottom:1.25rem}
-.score-meta{font-size:0.78rem;color:var(--gray4);margin-bottom:1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+/* ── SCORE HERO ──────────────────────────────────────────── */
+.score-hero{background:var(--white);border:1px solid var(--gray3);
+            border-radius:var(--radius-xl);padding:2rem;
+            margin-bottom:1.25rem;
+            display:flex;gap:2rem;align-items:flex-start}
+.score-ring-wrap{flex-shrink:0;position:relative;
+                 width:140px;height:140px}
+.score-number-overlay{position:absolute;top:50%;left:50%;
+                      transform:translate(-50%,-50%);text-align:center}
+.score-num{font-size:2.1rem;font-weight:700;color:var(--navy);
+           line-height:1;display:block}
+.score-denom{font-size:.78rem;color:var(--gray4)}
+.score-right{flex:1;min-width:0}
+.score-label-big{font-size:1.375rem;font-weight:700;margin-bottom:3px}
+.score-sublabel{font-size:.88rem;color:var(--gray5);margin-bottom:.875rem}
+.score-meta{font-size:.76rem;color:var(--gray4);
+            display:flex;align-items:center;gap:.875rem;
+            flex-wrap:wrap;margin-bottom:1rem}
 .score-meta span{display:flex;align-items:center;gap:4px}
-.bars{display:flex;flex-direction:column;gap:8px}
-.bar-row{display:flex;align-items:center;gap:10px}
-.bar-label{font-size:0.78rem;color:var(--gray5);width:110px;flex-shrink:0}
-.bar-track{flex:1;height:6px;background:var(--gray2);border-radius:3px;overflow:hidden}
-.bar-fill{height:6px;border-radius:3px;transition:width 1.2s ease}
-.bar-pct{font-size:0.78rem;font-weight:600;color:var(--gray6);width:32px;text-align:right}
+.meta-badge{font-size:.72rem;font-weight:600;padding:2px 9px;
+            border-radius:4px}
 
-/* TWO COL */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
-.card{background:var(--white);border:1px solid var(--gray3);border-radius:var(--radius-xl);padding:1.5rem}
-.card-title{font-size:0.88rem;font-weight:600;color:var(--gray6);margin-bottom:1rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.card-title i{font-size:16px}
-.count-badge{font-size:0.72rem;font-weight:600;padding:2px 8px;border-radius:20px;margin-left:2px}
-.badge-green{background:var(--green-light);color:var(--green);border:1px solid var(--green-mid)}
-.badge-red{background:var(--red-light);color:var(--red);border:1px solid var(--red-mid)}
-.badge-blue{background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-mid)}
-.badge-amber{background:var(--amber-light);color:var(--amber);border:1px solid var(--amber-mid)}
+/* ── STAT ROW ────────────────────────────────────────────── */
+.stat-row{display:flex;gap:1.5rem;margin-bottom:1.125rem;
+          padding-bottom:1.125rem;border-bottom:1px solid var(--gray3)}
+.stat-item{}
+.stat-label{font-size:.72rem;color:var(--gray4);
+            font-weight:500;margin-bottom:2px}
+.stat-value{font-size:1.2rem;font-weight:700;line-height:1}
+
+/* ── BARS ────────────────────────────────────────────────── */
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.bar-label{font-size:.78rem;color:var(--gray5);
+           width:115px;flex-shrink:0;
+           display:flex;align-items:center;gap:4px}
+.bar-track{flex:1;height:6px;background:var(--gray2);
+           border-radius:3px;overflow:hidden}
+.bar-fill{height:6px;border-radius:3px}
+.bar-pct{font-size:.78rem;font-weight:600;
+         color:var(--gray6);width:36px;text-align:right}
+
+/* ── TOP MISSING PILLS inline ────────────────────────────── */
+.top-missing-row{margin-top:.875rem;padding-top:.875rem;
+                 border-top:1px solid var(--gray3)}
+.top-missing-label{font-size:.72rem;font-weight:600;
+                   color:var(--gray5);text-transform:uppercase;
+                   letter-spacing:.06em;margin-bottom:.5rem}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
-.pill{font-size:0.78rem;font-weight:500;padding:4px 10px;border-radius:20px}
-.pill-green{background:var(--green-light);color:var(--green);border:1px solid var(--green-mid)}
-.pill-red{background:var(--red-light);color:var(--red);border:1px solid var(--red-mid)}
-.pill-blue{background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-mid)}
-.pill-gray{background:var(--gray2);color:var(--gray5);border:1px solid var(--gray3)}
-.empty-state{font-size:0.85rem;color:var(--gray4);font-style:italic}
+.pill{font-size:.78rem;font-weight:500;
+      padding:4px 10px;border-radius:20px}
+.pill-green{background:var(--green-light);color:var(--green);
+            border:1px solid var(--green-mid)}
+.pill-red{background:var(--red-light);color:var(--red);
+          border:1px solid var(--red-mid)}
+.pill-blue{background:var(--blue-light);color:var(--blue);
+           border:1px solid var(--blue-mid)}
+.pill-gray{background:var(--gray2);color:var(--gray5);
+           border:1px solid var(--gray3)}
+.pill-purple{background:var(--purple-light);color:var(--purple);
+             border:1px solid var(--purple-mid)}
 
-/* SMART MATCHES */
-.match-item{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--purple-light);border-radius:var(--radius);font-size:0.85rem;margin-bottom:6px;flex-wrap:wrap}
-.match-from{background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-mid);font-weight:500;font-size:0.78rem;padding:3px 8px;border-radius:4px}
-.match-sym{color:var(--purple);font-weight:700;font-size:1rem}
-.match-to{background:var(--green-light);color:var(--green);border:1px solid var(--green-mid);font-weight:500;font-size:0.78rem;padding:3px 8px;border-radius:4px}
-.match-pct{margin-left:auto;font-size:0.72rem;color:var(--purple);font-weight:600;background:var(--purple-light);border:1px solid #DDD6FE;padding:2px 6px;border-radius:4px}
+/* ── JD WARNING ──────────────────────────────────────────── */
+.jd-warning{background:var(--amber-light);border:1px solid var(--amber-mid);
+            border-radius:var(--radius-lg);padding:.875rem 1.125rem;
+            font-size:.875rem;color:#92400E;margin-bottom:1.25rem;
+            line-height:1.6;display:flex;gap:8px;align-items:flex-start}
 
-/* SECTIONS */
-.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.sec-item{padding:12px;border-radius:var(--radius-lg);border:1px solid var(--gray3)}
+/* ── KEYWORD TWO-COL ─────────────────────────────────────── */
+.kw-grid{display:grid;grid-template-columns:1fr 1fr;
+         gap:1.25rem;margin-bottom:1.25rem}
+
+/* ── CATEGORY LABEL ─────────────────────────────────────── */
+.cat-label{font-size:.7rem;font-weight:700;color:var(--gray5);
+           text-transform:uppercase;letter-spacing:.07em;
+           margin-bottom:.375rem;margin-top:.625rem;
+           display:flex;align-items:center;gap:5px}
+.cat-label:first-child{margin-top:0}
+.cat-line{width:3px;height:10px;border-radius:2px;
+          background:var(--red);opacity:.5}
+.cat-line-green{background:var(--green)}
+
+/* ── SMART MATCHES ───────────────────────────────────────── */
+.match-item{display:flex;align-items:center;gap:8px;
+            padding:7px 10px;background:var(--purple-light);
+            border-radius:var(--radius);font-size:.85rem;
+            margin-bottom:5px;flex-wrap:wrap}
+.match-chip{font-weight:500;font-size:.78rem;
+            padding:3px 8px;border-radius:4px}
+.match-from{background:var(--blue-light);color:var(--blue);
+            border:1px solid var(--blue-mid)}
+.match-to{background:var(--green-light);color:var(--green);
+          border:1px solid var(--green-mid)}
+.match-pct{margin-left:auto;font-size:.72rem;color:var(--purple);
+           font-weight:600;background:var(--purple-light);
+           border:1px solid var(--purple-mid);
+           padding:2px 6px;border-radius:4px}
+
+/* ── SECTION STRENGTH ────────────────────────────────────── */
+.sec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.875rem}
+.sec-item{padding:1rem;border-radius:var(--radius-lg);
+          border:1px solid var(--gray3)}
 .sec-item.good{background:var(--green-light);border-color:var(--green-mid)}
 .sec-item.weak{background:var(--amber-light);border-color:var(--amber-mid)}
 .sec-item.missing{background:var(--red-light);border-color:var(--red-mid)}
-.sec-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
-.sec-name{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em}
+.sec-top{display:flex;justify-content:space-between;
+         align-items:center;margin-bottom:4px}
+.sec-name{font-size:.75rem;font-weight:700;
+          text-transform:uppercase;letter-spacing:.05em}
 .sec-item.good .sec-name{color:var(--green)}
 .sec-item.weak .sec-name{color:var(--amber)}
 .sec-item.missing .sec-name{color:var(--red)}
-.sec-note{font-size:0.76rem;color:var(--gray5);line-height:1.45}
+.sec-note{font-size:.78rem;color:var(--gray5);line-height:1.5}
+.sec-kw-score{font-size:.82rem;font-weight:700}
+.sec-bar-track{height:4px;background:rgba(0,0,0,.08);
+               border-radius:2px;margin-top:6px;overflow:hidden}
+.sec-bar-fill{height:4px;border-radius:2px}
 
-/* SIM BARS */
-.sim-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.sim-label{font-size:0.82rem;color:var(--gray5);width:90px;flex-shrink:0;text-transform:capitalize}
-.sim-track{flex:1;height:8px;background:var(--gray2);border-radius:4px;overflow:hidden}
-.sim-fill{height:8px;border-radius:4px;transition:width 1.2s ease}
-.sim-pct{font-size:0.78rem;font-weight:600;color:var(--gray6);width:36px;text-align:right}
+/* ── SECTION RELEVANCE BARS ──────────────────────────────── */
+.sim-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.sim-label{font-size:.85rem;font-weight:500;color:var(--gray6);
+           width:100px;flex-shrink:0;text-transform:capitalize}
+.sim-track{flex:1;height:14px;background:var(--gray2);
+           border-radius:6px;overflow:hidden}
+.sim-fill{height:14px;border-radius:6px;transition:width 1.2s ease}
+.sim-pct{font-size:.85rem;font-weight:700;color:var(--gray6);
+         width:38px;text-align:right}
 
-/* SUGGESTIONS */
-.sugg-item{padding:10px 14px;border-radius:var(--radius);font-size:0.875rem;line-height:1.55;margin-bottom:6px;border-left:3px solid}
+/* ── QUICK CHECKS ────────────────────────────────────────── */
+.check-section-label{font-size:.72rem;font-weight:700;
+                     color:var(--gray5);text-transform:uppercase;
+                     letter-spacing:.06em;margin-bottom:.5rem}
+.check-verdict{font-size:.875rem;color:var(--gray6);
+               margin-bottom:.5rem}
+
+/* ── SUGGESTIONS ─────────────────────────────────────────── */
+.sugg-item{padding:10px 14px;border-radius:var(--radius);
+           font-size:.875rem;line-height:1.55;
+           margin-bottom:6px;border-left:3px solid}
 .sugg-high{background:#FFF5F5;border-color:var(--red);color:var(--gray6)}
 .sugg-med{background:var(--amber-light);border-color:var(--amber);color:var(--gray6)}
 .sugg-low{background:var(--green-light);border-color:var(--green);color:var(--gray6)}
-.priority-pill{font-size:0.68rem;font-weight:600;padding:1px 6px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.priority-pill{font-size:.68rem;font-weight:700;padding:1px 6px;
+               border-radius:3px;margin-right:6px;vertical-align:middle}
 .p-high{background:var(--red-mid);color:var(--red)}
 .p-med{background:var(--amber-mid);color:var(--amber)}
 .p-low{background:var(--green-mid);color:var(--green)}
 
-/* CHECK CARDS */
-.verdict{font-size:0.9rem;margin-bottom:0.625rem;line-height:1.5}
-.check-tip{font-size:0.8rem;color:var(--gray5);line-height:1.6}
+/* ── DOWNLOAD ────────────────────────────────────────────── */
+.download-card{background:var(--blue-light);
+               border:1px solid var(--blue-mid);
+               border-radius:var(--radius-xl);
+               padding:1.5rem;margin-bottom:1.25rem;
+               display:flex;align-items:center;
+               justify-content:space-between;gap:1.5rem;
+               flex-wrap:wrap}
+.download-info{}
+.download-title{font-size:1rem;font-weight:600;
+                color:var(--navy);margin-bottom:.25rem}
+.download-sub{font-size:.82rem;color:var(--gray5)}
+.download-btn{background:var(--blue);color:#fff;
+              font-family:inherit;font-size:.9rem;
+              font-weight:600;padding:.75rem 1.5rem;
+              border:none;border-radius:var(--radius-lg);
+              cursor:pointer;display:flex;align-items:center;
+              gap:8px;transition:all .15s;white-space:nowrap}
+.download-btn:hover{background:var(--blue2);transform:translateY(-1px)}
 
-/* CTA */
-.cta-row{text-align:center;padding:2.5rem 0 1rem}
-.btn-primary{background:var(--blue);color:var(--white);font-weight:600;font-size:0.95rem;padding:0.875rem 2rem;border-radius:var(--radius-lg);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.15s}
+/* ── BOTTOM CTA ──────────────────────────────────────────── */
+.cta-row{text-align:center;padding:2rem 0 1rem;
+         display:flex;align-items:center;
+         justify-content:center;gap:.875rem;flex-wrap:wrap}
+.btn-primary{background:var(--blue);color:#fff;font-weight:600;
+             font-size:.95rem;padding:.875rem 2rem;
+             border-radius:var(--radius-lg);text-decoration:none;
+             display:inline-flex;align-items:center;gap:8px;
+             transition:all .15s}
 .btn-primary:hover{background:var(--blue2);transform:translateY(-1px)}
-.btn-ghost{color:var(--gray6);font-weight:500;font-size:0.9rem;padding:0.875rem 1.5rem;border-radius:var(--radius-lg);text-decoration:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--gray3);transition:all 0.15s;margin-left:0.75rem}
+.btn-ghost{color:var(--gray6);font-weight:500;font-size:.9rem;
+           padding:.875rem 1.5rem;border-radius:var(--radius-lg);
+           text-decoration:none;display:inline-flex;
+           align-items:center;gap:6px;
+           border:1px solid var(--gray3);transition:all .15s}
 .btn-ghost:hover{background:var(--gray2)}
 
-footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-align:center}
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer{background:var(--navy);padding:3rem 2rem 2rem;
+       color:#9CA3AF;font-size:.85rem}
+.footer-inner{max-width:860px;margin:0 auto}
+.footer-top{display:flex;gap:3rem;flex-wrap:wrap;
+            margin-bottom:2rem;padding-bottom:2rem;
+            border-bottom:1px solid #1F2937}
+.footer-brand-name{font-size:1.1rem;font-weight:700;
+                   color:#fff;margin-bottom:.5rem;
+                   display:flex;align-items:center;gap:8px}
+.footer-dot{width:8px;height:8px;background:var(--blue);
+            border-radius:50%}
+.footer-col-title{font-size:.72rem;font-weight:600;color:#fff;
+                  text-transform:uppercase;letter-spacing:.08em;
+                  margin-bottom:.875rem}
+.footer-links{display:flex;flex-direction:column;gap:.45rem}
+.footer-links a{color:#9CA3AF;text-decoration:none;
+                font-size:.85rem;transition:color .15s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;
+               flex-wrap:wrap;gap:.75rem}
+.footer-copy{color:#4B5563;font-size:.78rem}
 
-@media(max-width:768px){
-  .score-hero{flex-direction:column;text-align:center}
-  .two-col,.sec-grid{grid-template-columns:1fr}
-  .score-meta{justify-content:center}
+@media(max-width:700px){
+  .score-hero{flex-direction:column}
+  .kw-grid{grid-template-columns:1fr}
+  .sec-grid{grid-template-columns:1fr}
+  .stat-row{flex-wrap:wrap;gap:1rem}
+  .download-card{flex-direction:column;text-align:center}
 }
 </style>
 </head>
 <body>
 
+<!-- ── NAV ─────────────────────────────────────────────── -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="/" class="nav-brand">
-      <div class="nav-brand-dot"></div>
-      ResumeIQ
+      <div class="nav-brand-dot"></div>ResumeIQ
     </a>
     <div class="nav-links">
-      <a href="/"><i class="ti ti-arrow-left" aria-hidden="true"></i> New analysis</a>
+      <a href="/"><i class="ti ti-arrow-left"></i>New analysis</a>
       <a href="#suggestions">Suggestions</a>
-      <a href="/" class="nav-cta"><i class="ti ti-refresh" aria-hidden="true"></i> Analyze again</a>
+      <a href="/" class="nav-cta">
+        <i class="ti ti-refresh"></i>Analyze again
+      </a>
     </div>
   </div>
 </nav>
 
-{% if saved_to_db %}
-<div style="background:#F0FDF4;border-bottom:1px solid
-            #BBF7D0;padding:.625rem 1.5rem;
-            font-size:.85rem;color:#16A34A;
-            display:flex;align-items:center;gap:8px;
-            justify-content:center">
-  <i class="ti ti-check" aria-hidden="true"></i>
-  Analysis saved to your account
-  <a href="/history"
-     style="color:#16A34A;font-weight:600;
-            margin-left:.5rem;text-decoration:underline">
-    View history →
-  </a>
-</div>
-{% endif %}
-
 <div class="page">
 
-  <!-- SCORE HERO -->
-<!-- ── TOP SCORE CARD ──────────────────────── -->
+<!-- ════════════════════════════════════════════════════════
+     SCORE HERO
+═════════════════════════════════════════════════════════ -->
 <div class="score-hero">
-
-  <div class="score-left">
-<div class="score-ring-wrap"
-     style="position:relative;width:160px;
-            height:160px;flex-shrink:0">
-  <canvas id="scoreChart"
-          width="160"
-          height="160"
-          style="display:block">
-  </canvas>
-  <div class="score-number-overlay"
-       style="position:absolute;top:50%;left:50%;
-              transform:translate(-50%,-50%);
-              text-align:center;pointer-events:none">
-        <span class="score-num" id="score-num">0</span>
-        <span class="score-denom">/100</span>
-      </div>
+  <div class="score-ring-wrap">
+    <canvas id="scoreChart" width="140" height="140"
+            style="display:block"></canvas>
+    <div class="score-number-overlay">
+      <span class="score-num" id="score-num">0</span>
+      <span class="score-denom">/100</span>
     </div>
   </div>
 
@@ -217,530 +318,759 @@ footer{background:var(--navy);padding:2rem;color:#6B7280;font-size:0.82rem;text-
          style="color:{{ score_colour }}">
       {{ score_label }}
     </div>
-    <div class="score-sublabel">
-      {{ final_grade }}
-    </div>
+    <div class="score-sublabel">{{ final_grade }}</div>
+
     <div class="score-meta">
       <span>
-        <i class="ti ti-file-text"
-           aria-hidden="true"></i>
+        <i class="ti ti-file-text"></i>
         {{ resume_filename }}
       </span>
       <span>
-        <i class="ti ti-clock"
-           aria-hidden="true"></i>
+        <i class="ti ti-clock"></i>
         {{ analysed_at }}
       </span>
-      <span style="
-        background:{{ jd_level_colour }}18;
-        color:{{ jd_level_colour }};
-        border:1px solid {{ jd_level_colour }}40;
-        padding:2px 10px;border-radius:4px;
-        font-weight:600;font-size:.75rem">
+      <span class="meta-badge"
+            style="background:{{ jd_level_colour }}18;
+                   color:{{ jd_level_colour }};
+                   border:1px solid {{ jd_level_colour }}40">
         {{ jd_level }} level JD
       </span>
       {% if high_priority_count > 0 %}
-      <span style="background:#FEF2F2;color:#DC2626;
-                   padding:2px 8px;border-radius:4px;
-                   font-weight:600;font-size:.75rem">
+      <span class="meta-badge"
+            style="background:var(--red-light);
+                   color:var(--red)">
         {{ high_priority_count }} critical fixes
       </span>
       {% endif %}
     </div>
 
-    {% if jd_warning %}
-    <div style="background:#FFFBEB;
-                border:1px solid #FDE68A;
-                border-radius:8px;
-                padding:.75rem 1rem;
-                font-size:.85rem;color:#92400E;
-                margin-bottom:1rem;line-height:1.6">
-      {{ jd_warning }}
+    <!-- Three inline stats -->
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-label">Keyword Match</div>
+        <div class="stat-value"
+             style="color:var(--blue)">
+          {{ keyword_score }}%
+        </div>
+      </div>
+      <div style="width:1px;background:var(--gray3)"></div>
+      <div class="stat-item">
+        <div class="stat-label">Semantic Match</div>
+        <div class="stat-value"
+             style="color:var(--purple)">
+          {{ semantic_score }}%
+        </div>
+      </div>
+      <div style="width:1px;background:var(--gray3)"></div>
+      <div class="stat-item">
+        <div class="stat-label">Missing Skills</div>
+        <div class="stat-value"
+             style="color:var(--red)">
+          {{ missing_count }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Score bars -->
+    <div class="bar-row">
+      <span class="bar-label">
+        <i class="ti ti-brain"
+           style="font-size:13px;color:var(--purple)"></i>
+        AI semantic
+      </span>
+      <div class="bar-track">
+        <div class="bar-fill"
+             style="width:{{ semantic_score }}%;
+                    background:var(--purple)"></div>
+      </div>
+      <span class="bar-pct">{{ semantic_score }}%</span>
+    </div>
+    <div class="bar-row">
+      <span class="bar-label">
+        <i class="ti ti-key"
+           style="font-size:13px;color:var(--blue)"></i>
+        Keyword match
+      </span>
+      <div class="bar-track">
+        <div class="bar-fill"
+             style="width:{{ keyword_score }}%;
+                    background:var(--blue)"></div>
+      </div>
+      <span class="bar-pct">{{ keyword_score }}%</span>
+    </div>
+
+    <!-- Top missing skills -->
+    {% if missing_keywords %}
+    <div class="top-missing-row">
+      <div class="top-missing-label">Top Missing Skills</div>
+      <div class="pills">
+        {% for kw in missing_keywords[:6] %}
+        <span class="pill pill-red">{{ kw }}</span>
+        {% endfor %}
+        {% if missing_count > 6 %}
+        <span style="font-size:.75rem;color:var(--gray4);
+                     align-self:center">
+          +{{ missing_count - 6 }} more
+        </span>
+        {% endif %}
+      </div>
     </div>
     {% endif %}
 
-<div style="display:flex;gap:1.5rem;margin-bottom:.875rem;
-            flex-wrap:wrap">
-  <div>
-    <div style="font-size:.72rem;color:var(--gray4);
-                font-weight:500;margin-bottom:2px">
-      Keyword Match
-    </div>
-    <div style="font-size:1.1rem;font-weight:700;
-                color:var(--blue)">
-      {{ keyword_score }}%
-    </div>
-  </div>
-  <div style="width:1px;background:var(--gray3)"></div>
-  <div>
-    <div style="font-size:.72rem;color:var(--gray4);
-                font-weight:500;margin-bottom:2px">
-      Semantic Match
-    </div>
-    <div style="font-size:1.1rem;font-weight:700;
-                color:var(--purple,#7C3AED)">
-      {{ semantic_score }}%
-    </div>
-  </div>
-  <div style="width:1px;background:var(--gray3)"></div>
-  <div>
-    <div style="font-size:.72rem;color:var(--gray4);
-                font-weight:500;margin-bottom:2px">
-      Missing Skills
-    </div>
-    <div style="font-size:1.1rem;font-weight:700;
-                color:var(--red)">
-      {{ missing_count }}
-    </div>
   </div>
 </div>
 
-    <div class="bars">
-      <div class="bar-row">
-        <span class="bar-label">
-          <i class="ti ti-brain"
-             style="font-size:13px;margin-right:4px"
-             aria-hidden="true"></i>
-          AI semantic
-        </span>
-        <div class="bar-track">
-          <div class="bar-fill"
-               style="width:{{ semantic_score }}%;
-                      background:#7C3AED">
-          </div>
-        </div>
-        <span class="bar-pct">
-          {{ semantic_score }}%
-        </span>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">
-          <i class="ti ti-key"
-             style="font-size:13px;margin-right:4px"
-             aria-hidden="true"></i>
-          Keyword match
-        </span>
-        <div class="bar-track">
-          <div class="bar-fill"
-               style="width:{{ keyword_score }}%;
-                      background:#2563EB">
-          </div>
-        </div>
-        <span class="bar-pct">
-          {{ keyword_score }}%
-        </span>
-      </div>
-    </div>
-    <!-- Top missing skills inline in score card -->
-{% if missing_keywords %}
-<div style="margin-top:1rem;padding-top:1rem;
-            border-top:1px solid var(--gray3)">
-
-  <div style="font-size:.72rem;font-weight:600;
-              color:var(--gray5);text-transform:uppercase;
-              letter-spacing:.06em;margin-bottom:.5rem">
-    Top Missing Skills
-  </div>
-
-  <div style="display:flex;flex-wrap:wrap;gap:5px">
-    {% for kw in missing_keywords[:5] %}
-    <span style="font-size:.75rem;font-weight:500;
-                 padding:3px 9px;border-radius:20px;
-                 background:var(--red-light);
-                 color:var(--red);
-                 border:1px solid var(--red-mid)">
-      {{ kw }}
-    </span>
-    {% endfor %}
-    {% if missing_count > 5 %}
-    <span style="font-size:.75rem;color:var(--gray4);
-                 padding:3px 6px;align-self:center">
-      +{{ missing_count - 5 }} more
-    </span>
-    {% endif %}
-  </div>
-
+<!-- JD Warning -->
+{% if jd_warning %}
+<div class="jd-warning">
+  <i class="ti ti-alert-triangle"
+     style="flex-shrink:0;margin-top:2px"></i>
+  <span>{{ jd_warning }}</span>
 </div>
 {% endif %}
 
+<!-- ══ RESUME STRENGTHS ══════════════════════════════════ -->
+<div class="card">
+  <div class="card-title">
+    <i class="ti ti-shield-check"
+       style="color:var(--green)"></i>
+    Resume Strengths
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:.625rem">
+
+{% set strengths = [] %}
+
+    {# 1. Skills section #}
+    {% if section_report and 'skills' in section_report
+       and 'Good' in section_report['skills'].status %}
+      {% set _ = strengths.append(
+        "Strong technical skills section - keywords
+         and tools clearly listed"
+      ) %}
+    {% endif %}
+
+    {# 2. Projects OR Research (pick whichever exists, not both) #}
+    {% if section_report and 'research' in section_report
+       and 'Good' in section_report['research'].status %}
+      {% set _ = strengths.append(
+        "Research experience present - adds strong
+         academic and technical credibility"
+      ) %}
+    {% elif section_report and 'projects' in section_report
+       and 'Good' in section_report['projects'].status %}
+      {% set _ = strengths.append(
+        "Well-documented project descriptions - shows
+         practical hands-on experience"
+      ) %}
+    {% endif %}
+
+    {# 3. Certifications #}
+    {% if section_report and 'certifications' in section_report
+       and 'Good' in section_report['certifications'].status %}
+      {% set _ = strengths.append(
+        "Relevant certifications present - compensates
+         for limited work experience"
+      ) %}
+    {% endif %}
+
+    {# 4. Action verbs OR Quantification (pick whichever is better) #}
+    {% if quant_verdict and (
+       'Good' in quant_verdict or 'Excellent' in quant_verdict) %}
+      {% set _ = strengths.append(
+        "Quantified achievements with real numbers - makes
+         impact concrete and measurable"
+      ) %}
+    {% elif verb_verdict and (
+       'Good' in verb_verdict or 'Excellent' in verb_verdict
+       or 'strong' in verb_verdict) %}
+      {% set _ = strengths.append(
+        "Strong action verbs throughout - built,
+         developed, implemented, designed"
+      ) %}
+    {% endif %}
+
+    {# 5. Keyword alignment (only if decent match) #}
+    {% if matched_count and matched_count|int >= 5 %}
+      {% set _ = strengths.append(
+        matched_count|string + " keywords already matched
+         - solid baseline alignment with this JD"
+      ) %}
+    {% endif %}
+
+    {# Show strengths or fallback #}
+    {% if strengths %}
+      {% for s in strengths %}
+      <div style="display:flex;align-items:flex-start;
+                  gap:10px">
+        <div style="width:20px;height:20px;
+                    background:var(--green-light);
+                    border:1px solid var(--green-mid);
+                    border-radius:50%;display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    flex-shrink:0;margin-top:1px">
+          <i class="ti ti-check"
+             style="font-size:11px;
+                    color:var(--green)"></i>
+        </div>
+        <span style="font-size:.875rem;
+                     color:var(--gray6);
+                     line-height:1.55">
+          {{ s }}
+        </span>
+      </div>
+      {% endfor %}
+    {% else %}
+      <div style="display:flex;align-items:flex-start;
+                  gap:10px">
+        <div style="width:20px;height:20px;
+                    background:var(--green-light);
+                    border:1px solid var(--green-mid);
+                    border-radius:50%;display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    flex-shrink:0;margin-top:1px">
+          <i class="ti ti-check"
+             style="font-size:11px;
+                    color:var(--green)"></i>
+        </div>
+        <span style="font-size:.875rem;
+                     color:var(--gray6);
+                     line-height:1.55">
+          Resume is structured and readable -
+          clear section headings detected
+        </span>
+      </div>
+    {% endif %}
+
   </div>
 </div>
 
-  <!-- KEYWORDS -->
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title">
-        <i class="ti ti-circle-check" style="color:var(--green)" aria-hidden="true"></i>
-        Matched keywords
-        <span class="count-badge badge-green">{{ matched_count }} found</span>
-      </div>
-      <div class="pills">
-        {% for kw in matched_keywords %}<span class="pill pill-green">{{ kw }}</span>{% endfor %}
-        {% if not matched_keywords %}<span class="empty-state">No exact matches — check soft matches below</span>{% endif %}
-      </div>
+<!-- ════════════════════════════════════════════════════════
+     KEYWORDS - full width, two equal columns
+═════════════════════════════════════════════════════════ -->
+<div class="kw-grid">
+
+  <!-- Matched -->
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title">
+      <i class="ti ti-circle-check"
+         style="color:var(--green)"></i>
+      Matched keywords
+      <span class="count-badge badge-green">
+        {{ matched_count }} found
+      </span>
     </div>
-    <div class="card">
-      <div class="card-title">
-        <i class="ti ti-circle-x" style="color:var(--red)" aria-hidden="true"></i>
-        Missing keywords
-        <span class="count-badge badge-red">{{ missing_count }} missing</span>
-      </div>
-      <div class="pills">
-        {% for kw in missing_keywords %}<span class="pill pill-red">{{ kw }}</span>{% endfor %}
-        {% if not missing_keywords %}<span class="empty-state" style="color:var(--green)">No missing keywords — great match!</span>{% endif %}
-      </div>
+    <div class="pills">
+      {% for kw in matched_keywords %}
+      <span class="pill pill-green">{{ kw }}</span>
+      {% endfor %}
+      {% if not matched_keywords %}
+      <span style="font-size:.85rem;color:var(--gray4);
+                   font-style:italic">
+        No exact matches found
+      </span>
+      {% endif %}
     </div>
   </div>
 
-  <!-- SMART MATCHES -->
-  {% if soft_matches %}
-  <div class="card" style="margin-bottom:1.25rem">
+  <!-- Missing - grouped by category -->
+  <div class="card" style="margin-bottom:0">
     <div class="card-title">
-      <i class="ti ti-arrows-exchange" style="color:var(--purple)" aria-hidden="true"></i>
-      Smart synonym matches
-      <span class="count-badge" style="background:var(--purple-light);color:var(--purple);border:1px solid #DDD6FE">{{ soft_matches|length }} detected</span>
+      <i class="ti ti-circle-x"
+         style="color:var(--red)"></i>
+      Missing keywords
+      <span class="count-badge badge-red">
+        {{ missing_count }} missing
+      </span>
     </div>
-    <p style="font-size:0.82rem;color:var(--gray5);margin-bottom:0.875rem">Your resume uses different words that mean the same thing as the JD - AI detected these as equivalent.</p>
-    {% for m in soft_matches %}
-    <div class="match-item">
-      <span class="match-from">{{ m.resume_keyword }}</span>
-      <span class="match-sym">≈</span>
-      <span class="match-to">{{ m.jd_keyword }}</span>
-      <span class="match-pct">{{ (m.similarity * 100)|int }}% similar</span>
+
+    {% if missing_by_category %}
+      {% for category, kws in missing_by_category.items() %}
+      <div class="cat-label">
+        <div class="cat-line"></div>
+        {{ category }}
+      </div>
+      <div class="pills" style="margin-bottom:.25rem">
+        {% for kw in kws %}
+        <span class="pill pill-red">{{ kw }}</span>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    {% elif missing_keywords %}
+      <div class="pills">
+        {% for kw in missing_keywords %}
+        <span class="pill pill-red">{{ kw }}</span>
+        {% endfor %}
+      </div>
+    {% else %}
+      <span style="font-size:.85rem;color:var(--green);
+                   font-style:italic">
+        No missing keywords - great match!
+      </span>
+    {% endif %}
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SMART SYNONYM MATCHES
+═════════════════════════════════════════════════════════ -->
+{% if soft_matches %}
+<div class="card">
+  <div class="card-title">
+    <i class="ti ti-arrows-exchange"
+       style="color:var(--purple)"></i>
+    Smart synonym matches
+    <span class="count-badge"
+          style="background:var(--purple-light);
+                 color:var(--purple);
+                 border:1px solid var(--purple-mid)">
+      {{ soft_matches|length }} detected
+    </span>
+  </div>
+  <p style="font-size:.82rem;color:var(--gray5);
+            margin-bottom:.875rem">
+    AI detected these as equivalent - exact words differ
+    but meaning is the same
+  </p>
+  {% for m in soft_matches %}
+  <div class="match-item">
+    <span class="match-chip match-from">
+      {{ m.resume_keyword }}
+    </span>
+    <span style="color:var(--purple);font-weight:700">≈</span>
+    <span class="match-chip match-to">
+      {{ m.jd_keyword }}
+    </span>
+    <span class="match-pct">
+      {{ (m.similarity * 100)|int }}% similar
+    </span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION STRENGTH - full width grid
+═════════════════════════════════════════════════════════ -->
+{% if section_report %}
+<div class="card">
+  <div class="card-title">
+    <i class="ti ti-layout-list"
+       style="color:var(--blue)"></i>
+    Resume section strength
+    <span style="font-size:.78rem;color:var(--gray4);
+                 font-weight:400;margin-left:4px">
+      How well each section matches this JD
+    </span>
+  </div>
+  <div class="sec-grid">
+    {% for sec_name, info in section_report.items() %}
+    {% set status = info.status %}
+    {% set is_good = 'Good' in status %}
+    {% set is_missing = 'Missing' in status %}
+    {% set is_weak = 'Weak' in status %}
+    {% set sec_score = section_keyword_scores[sec_name].score
+       if section_keyword_scores and sec_name in section_keyword_scores
+       else none %}
+    <div class="sec-item
+      {% if is_good %}good
+      {% elif is_missing %}missing
+      {% else %}weak{% endif %}">
+      <div class="sec-top">
+        <span class="sec-name">{{ sec_name }}</span>
+        {% if sec_score is not none %}
+        <span class="sec-kw-score"
+              style="color:
+              {% if sec_score >= 65 %}var(--green)
+              {% elif sec_score >= 40 %}var(--amber)
+              {% else %}var(--red){% endif %}">
+          {{ sec_score|int }}%
+        </span>
+        {% else %}
+        <i class="ti
+          {% if is_good %}ti-check
+          {% elif is_missing %}ti-x
+          {% else %}ti-alert-triangle{% endif %}"
+           style="font-size:14px"></i>
+        {% endif %}
+      </div>
+      <div class="sec-note">{{ info.note }}</div>
+      {% if sec_score is not none %}
+      <div class="sec-bar-track">
+        <div class="sec-bar-fill"
+             style="width:{{ sec_score }}%;
+             background:
+             {% if sec_score >= 65 %}var(--green)
+             {% elif sec_score >= 40 %}var(--amber)
+             {% else %}var(--red){% endif %}">
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════
+     SECTION RELEVANCE + QUICK CHECKS
+     Two equal columns - both have enough space now
+═════════════════════════════════════════════════════════ -->
+<div style="display:grid;grid-template-columns:1fr 1fr;
+            gap:1.25rem;margin-bottom:1.25rem">
+
+  <!-- Section relevance bars -->
+  {% if section_similarities %}
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title">
+      <i class="ti ti-chart-bar"
+         style="color:var(--blue)"></i>
+      Section relevance to JD
+    </div>
+    {% for sec, pct in section_similarities.items()
+       |sort(attribute='1', reverse=true) %}
+    <div class="sim-row">
+      <span class="sim-label">{{ sec|capitalize }}</span>
+      <div class="sim-track">
+        <div class="sim-fill"
+             style="width:{{ pct }}%;
+             background:
+             {% if pct >= 65 %}var(--green)
+             {% elif pct >= 45 %}var(--amber)
+             {% else %}var(--red){% endif %}">
+        </div>
+      </div>
+      <span class="sim-pct">{{ pct }}%</span>
     </div>
     {% endfor %}
   </div>
   {% endif %}
 
-<!-- ── SECTION STRENGTH + SCORES ────────────── -->
-<div class="card" style="margin-bottom:1.25rem">
-  <div class="card-title">
-    <i class="ti ti-layout-list"
-       style="color:var(--blue)"
-       aria-hidden="true"></i>
-    Resume section strength
-    <span class="title-sub">
-      How well each section matches this JD
-    </span>
-  </div>
-
-  {% for sec_name, info in section_report.items() %}
-  <div style="padding:.875rem 0;
-              border-bottom:.5px solid var(--gray3)">
-    <div style="display:flex;align-items:center;
-                justify-content:space-between;
-                margin-bottom:.5rem;flex-wrap:wrap;gap:.5rem">
-
-      <div style="display:flex;align-items:center;gap:8px">
-        <span style="font-size:.78rem;font-weight:600;
-                     text-transform:uppercase;
-                     letter-spacing:.05em;color:var(--gray6)">
-          {{ sec_name }}
-        </span>
-        <span style="font-size:.75rem">
-          {{ info.status }}
-        </span>
-      </div>
-
-      {% if section_keyword_scores and
-            sec_name in section_keyword_scores %}
-        {% set ss = section_keyword_scores[sec_name] %}
-        <span style="font-size:.82rem;font-weight:600;
-          color:{% if ss.score >= 65 %}var(--green)
-                {% elif ss.score >= 40 %}var(--amber)
-                {% else %}var(--red){% endif %}">
-          {{ ss.score }}% match
-        </span>
-      {% endif %}
-
+  <!-- Quick checks -->
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title">
+      <i class="ti ti-check-box"
+         style="color:var(--green)"></i>
+      Quick checks
     </div>
 
-    {% if section_keyword_scores and
-          sec_name in section_keyword_scores %}
-      {% set ss = section_keyword_scores[sec_name] %}
-      <div style="height:6px;background:var(--gray2);
-                  border-radius:3px;overflow:hidden;
-                  margin-bottom:.4rem">
-        <div style="height:6px;border-radius:3px;
-          width:{{ ss.score }}%;
-          background:{% if ss.score >= 65 %}var(--green)
-                     {% elif ss.score >= 40 %}var(--amber)
-                     {% else %}var(--red){% endif %};
-          transition:width 1.2s ease">
-        </div>
+    {% if verb_verdict %}
+    <div style="margin-bottom:1rem">
+      <div class="check-section-label">Action Verbs</div>
+      <div class="check-verdict">{{ verb_verdict }}</div>
+      {% if strong_verbs %}
+      <div class="pills" style="margin-top:4px">
+        {% for v in strong_verbs[:5] %}
+        <span class="pill pill-green"
+              style="font-size:.72rem">{{ v }}</span>
+        {% endfor %}
       </div>
+      {% endif %}
+      {% if weak_verbs %}
+      <div class="pills" style="margin-top:4px">
+        {% for v in weak_verbs %}
+        <span class="pill pill-red"
+              style="font-size:.72rem">{{ v }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
     {% endif %}
 
-    <div style="font-size:.76rem;color:var(--gray4)">
-      {{ info.note }}
+    {% if quant_verdict %}
+    <div>
+      <div class="check-section-label">Quantification</div>
+      {% if "Good" in quant_verdict or "Excellent" in quant_verdict %}
+      <div style="display:inline-flex;align-items:center;gap:5px;
+                  background:var(--green-light);
+                  border:1px solid var(--green-mid);
+                  color:var(--green);font-size:.78rem;
+                  font-weight:600;padding:2px 9px;
+                  border-radius:20px;margin-bottom:.5rem">
+        <i class="ti ti-circle-check" style="font-size:12px"></i>Good
+      </div>
+      {% else %}
+      <div style="display:inline-flex;align-items:center;gap:5px;
+                  background:var(--amber-light);
+                  border:1px solid var(--amber-mid);
+                  color:var(--amber);font-size:.78rem;
+                  font-weight:600;padding:2px 9px;
+                  border-radius:20px;margin-bottom:.5rem">
+        <i class="ti ti-alert-circle" style="font-size:12px"></i>
+        Needs more
+      </div>
+      {% endif %}
+      {% set raw = quant_verdict %}
+      {% if "found" in raw %}
+        {% set examples_part = raw.split("found")[-1]
+                                  .replace(":","").strip()
+                                  .strip("[]'\" ") %}
+        {% set example_list = examples_part.split(",") %}
+        <div style="display:flex;flex-direction:column;gap:3px">
+          {% for ex in example_list[:4] %}
+          {% set clean = ex.strip().strip("'\"[] ") %}
+          {% if clean %}
+          <div style="display:flex;align-items:center;gap:6px;
+                      font-size:.82rem;color:var(--gray6)">
+            <div style="width:4px;height:4px;border-radius:50%;
+                        background:var(--blue);flex-shrink:0"></div>
+            {{ clean }}
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div style="font-size:.82rem;color:var(--gray5)">
+          {{ quant_verdict }}
+        </div>
+      {% endif %}
+      {% if "Good" not in quant_verdict
+            and "Excellent" not in quant_verdict %}
+      <div style="margin-top:.5rem;font-size:.78rem;
+                  color:var(--gray4);line-height:1.55">
+        Try: "tested on 100+ samples",
+        "achieved 95% accuracy"
+      </div>
+      {% endif %}
     </div>
+    {% endif %}
+
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     SUGGESTIONS - full width
+═════════════════════════════════════════════════════════ -->
+{% if suggestions %}
+<div class="card" id="suggestions">
+  <div class="card-title">
+    <i class="ti ti-bulb"
+       style="color:var(--amber)"></i>
+    Suggestions to improve your resume
+    {% if high_priority_count > 0 %}
+    <span class="count-badge badge-red">
+      {{ high_priority_count }} critical
+    </span>
+    {% endif %}
+  </div>
+  <p style="font-size:.8rem;color:var(--gray4);
+            margin-bottom:1rem">
+    Sorted by priority - fix the critical ones
+    before applying
+  </p>
+  {% for s in suggestions %}
+  <div class="sugg-item
+    {% if '🔴' in s or 'CRITICAL' in s %}sugg-high
+    {% elif '🟡' in s or 'IMPORTANT' in s %}sugg-med
+    {% else %}sugg-low{% endif %}">
+    {% if '🔴' in s or 'CRITICAL' in s %}
+    <span class="priority-pill p-high">CRITICAL</span>
+    {% elif '🟡' in s or 'IMPORTANT' in s %}
+    <span class="priority-pill p-med">IMPORTANT</span>
+    {% else %}
+    <span class="priority-pill p-low">TIP</span>
+    {% endif %}
+    {{ s }}
   </div>
   {% endfor %}
+</div>
+{% endif %}
 
+<!-- ════════════════════════════════════════════════════════
+     DOWNLOAD REPORT
+═════════════════════════════════════════════════════════ -->
+<div class="download-card">
+  <div class="download-info">
+    <div class="download-title">
+      <i class="ti ti-file-download"
+         style="margin-right:6px;color:var(--blue)"></i>
+      Download your full report
+    </div>
+    <div class="download-sub">
+      PDF with score breakdown, keyword analysis,
+      and improvement roadmap
+    </div>
+  </div>
+
+  <form method="POST" action="/download-report"
+        id="download-form">
+    <script id="report-data-json" type="application/json">
+    {
+      "final_score": {{ final_score | tojson }},
+      "semantic_score": {{ semantic_score | tojson }},
+      "keyword_score": {{ keyword_score | tojson }},
+      "final_grade": {{ final_grade | tojson }},
+      "score_label": {{ score_label | tojson }},
+      "resume_filename": {{ resume_filename | tojson }},
+      "analysed_at": {{ analysed_at | tojson }},
+      "jd_level": {{ jd_level | tojson }},
+      "jd_warning": {{ (jd_warning or "") | tojson }},
+      "matched_keywords": {{ matched_keywords | tojson }},
+      "missing_keywords": {{ missing_keywords | tojson }},
+      "matched_count": {{ matched_count | tojson }},
+      "missing_count": {{ missing_count | tojson }},
+      "soft_matches": {{ soft_matches | tojson }},
+      "section_report": {{ section_report | tojson }},
+      "section_keyword_scores": {{ section_keyword_scores | tojson }},
+      "suggestions": {{ suggestions | tojson }},
+      "verb_verdict": {{ verb_verdict | tojson }},
+      "quant_verdict": {{ quant_verdict | tojson }},
+      "high_priority_count": {{ high_priority_count | tojson }}
+    }
+    </script>
+
+    <button type="button"
+            class="download-btn"
+            onclick="downloadReport()">
+      <i class="ti ti-download"></i>
+      Download PDF Report
+    </button>
+  </form>
 </div>
 
-  <!-- SECTION SIMILARITY + SUGGESTIONS in two col -->
-  <div class="two-col">
-    {% if section_similarities %}
-    <div class="card">
-      <div class="card-title">
-        <i class="ti ti-chart-bar" style="color:var(--blue)" aria-hidden="true"></i>
-        Section relevance to this JD
-      </div>
-      {% for sec, pct in section_similarities.items()|sort(attribute='1',reverse=true) %}
-      <div class="sim-row">
-        <span class="sim-label">{{ sec|capitalize }}</span>
-        <div class="sim-track"><div class="sim-fill" style="width:{{ pct }}%;background:{% if pct >= 65 %}var(--green){% elif pct >= 45 %}var(--amber){% else %}var(--red){% endif %}"></div></div>
-        <span class="sim-pct">{{ pct }}%</span>
-      </div>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-    <div class="card">
-      <div class="card-title">
-        <i class="ti ti-check-box" style="color:var(--green)" aria-hidden="true"></i>
-        Quick checks
-      </div>
-      {% if verb_verdict %}
-      <div style="margin-bottom:0.875rem">
-        <div style="font-size:0.75rem;font-weight:600;color:var(--gray5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">Action verbs</div>
-        <div class="verdict">{{ verb_verdict }}</div>
-        {% if strong_verbs %}<div class="pills" style="margin-top:4px">{% for v in strong_verbs[:5] %}<span class="pill pill-green" style="font-size:0.72rem">{{ v }}</span>{% endfor %}</div>{% endif %}
-        {% if weak_verbs %}<div class="pills" style="margin-top:4px">{% for v in weak_verbs %}<span class="pill pill-red" style="font-size:0.72rem">{{ v }}</span>{% endfor %}</div>{% endif %}
-      </div>
-      {% endif %}
-      {% if quant_verdict %}
-      <div>
-        <div style="font-size:0.75rem;font-weight:600;color:var(--gray5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px">Quantification</div>
-        <div class="verdict">{{ quant_verdict }}</div>
-        <div class="check-tip" style="margin-top:4px">Add numbers - "tested on 100+ samples", "achieved 95% accuracy", "reduced time by 30%".</div>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-
-  <!-- SUGGESTIONS -->
-  <div class="card" id="suggestions">
-    <div class="card-title" style="margin-bottom:0.5rem">
-      <i class="ti ti-bulb" style="color:var(--amber)" aria-hidden="true"></i>
-      Suggestions to improve your resume
-      {% if high_priority_count > 0 %}
-      <span class="count-badge badge-red">{{ high_priority_count }} critical</span>
-      {% endif %}
-    </div>
-    <p style="font-size:0.8rem;color:var(--gray4);margin-bottom:1rem">Sorted by priority - fix the critical ones before applying.</p>
-    {% for s in suggestions %}
-    <div class="sugg-item {% if '🔴' in s or 'CRITICAL' in s %}sugg-high{% elif '🟡' in s or '⚠' in s or '⚠️' in s %}sugg-med{% else %}sugg-low{% endif %}">
-      {% if '🔴' in s or 'CRITICAL' in s %}<span class="priority-pill p-high">CRITICAL</span>{% elif '🟡' in s or '⚠' in s %}<span class="priority-pill p-med">IMPORTANT</span>{% else %}<span class="priority-pill p-low">TIP</span>{% endif %}
-      {{ s }}
-    </div>
-    {% endfor %}
-    {% if not suggestions %}
-    <div class="sugg-item sugg-low"><span class="priority-pill p-low">GREAT</span> Resume looks strong for this JD - no critical issues found.</div>
-    {% endif %}
-  </div>
-
-  <!-- ── DOWNLOAD REPORT ────────────────────── -->
-<!-- ─────────────────────────────────────────────────────────
-     PASTE THIS INTO result.html
-     Replace the ENTIRE existing download form with this.
-     Find the section with "Download PDF Report" button
-     and replace the whole <div> + <form> block.
-     ───────────────────────────────────────────────────────── -->
-
-<div class="card" style="margin-bottom:1.25rem;
-                          text-align:center;
-                          padding:1.75rem">
-  <i class="ti ti-file-download"
-     style="font-size:2rem;color:var(--blue);
-            display:block;margin-bottom:.75rem"
-     aria-hidden="true"></i>
-  <div style="font-size:1rem;font-weight:600;
-              color:var(--navy);margin-bottom:.375rem">
-    Download your report
-  </div>
-  <div style="font-size:.875rem;color:var(--gray4);
-              margin-bottom:1.25rem">
-    Get a PDF summary of this analysis
-  </div>
-
-  <button type="button"
-          id="download-report-btn"
-          onclick="downloadReport()"
-          style="background:var(--blue);color:#fff;
-                 font-family:inherit;font-size:.95rem;
-                 font-weight:600;padding:.875rem 2rem;
-                 border:none;border-radius:8px;
-                 cursor:pointer;display:inline-flex;
-                 align-items:center;gap:8px;
-                 transition:all .15s">
-    <i class="ti ti-download" aria-hidden="true"></i>
-    Download PDF Report
-  </button>
+<!-- ════════════════════════════════════════════════════════
+     BOTTOM CTA
+═════════════════════════════════════════════════════════ -->
+<div class="cta-row">
+  <a href="/" class="btn-primary">
+    <i class="ti ti-refresh"></i>
+    Analyze another resume
+  </a>
+  <a href="/" class="btn-ghost">
+    <i class="ti ti-home"></i>
+    Home
+  </a>
 </div>
 
-<script>
-function downloadReport() {
-  // Build the full results object directly from Jinja2 data
-  // embedded as a JSON script block (see below) —
-  // this avoids broken hidden-input serialization entirely
-  const reportData = window.__resumeiq_report_data__;
+</div><!-- end .page -->
 
-  if (!reportData) {
-    alert('Report data not available. Please re-analyze.');
-    return;
-  }
-
-  const btn = document.getElementById('download-report-btn');
-  btn.innerHTML = '<i class="ti ti-loader"></i> Generating...';
-  btn.disabled = true;
-
-  const form = document.createElement('form');
-  form.method = 'POST';
-  form.action = '/download-report';
-
-  Object.keys(reportData).forEach(key => {
-    const input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = key;
-    const val = reportData[key];
-    input.value = (typeof val === 'object')
-      ? JSON.stringify(val)
-      : String(val);
-    form.appendChild(input);
-  });
-
-  document.body.appendChild(form);
-  form.submit();
-
-  setTimeout(() => {
-    btn.innerHTML = '<i class="ti ti-download"></i> Download PDF Report';
-    btn.disabled = false;
-  }, 2000);
-}
-</script>
-
-<!-- ─────────────────────────────────────────────────────────
-     ALSO ADD THIS RIGHT BEFORE </body> at the very end
-     of result.html — this safely embeds all the Python
-     data as real JSON, not fragile HTML attribute strings
-     ───────────────────────────────────────────────────────── -->
-
-<script id="report-data-json" type="application/json">
-{
-  "final_score": {{ final_score | tojson }},
-  "semantic_score": {{ semantic_score | tojson }},
-  "keyword_score": {{ keyword_score | tojson }},
-  "final_grade": {{ final_grade | tojson }},
-  "score_label": {{ score_label | tojson }},
-  "resume_filename": {{ resume_filename | tojson }},
-  "analysed_at": {{ analysed_at | tojson }},
-  "jd_level": {{ jd_level | tojson }},
-  "jd_warning": {{ (jd_warning or "") | tojson }},
-  "matched_keywords": {{ matched_keywords | tojson }},
-  "missing_keywords": {{ missing_keywords | tojson }},
-  "matched_count": {{ matched_count | tojson }},
-  "missing_count": {{ missing_count | tojson }},
-  "soft_matches": {{ soft_matches | tojson }},
-  "section_report": {{ section_report | tojson }},
-  "section_keyword_scores": {{ section_keyword_scores | tojson }},
-  "suggestions": {{ suggestions | tojson }},
-  "verb_verdict": {{ verb_verdict | tojson }},
-  "quant_verdict": {{ quant_verdict | tojson }},
-  "high_priority_count": {{ high_priority_count | tojson }}
-}
-</script>
-<script>
-  window.__resumeiq_report_data__ = JSON.parse(
-    document.getElementById('report-data-json').textContent
-  );
-</script>
-
-  <!-- CTA -->
-  <div class="cta-row">
-    <a href="/" class="btn-primary"><i class="ti ti-refresh" aria-hidden="true"></i> Analyze another resume</a>
-    <a href="/" class="btn-ghost"><i class="ti ti-home" aria-hidden="true"></i> Home</a>
-  </div>
-
-</div>
-
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+═════════════════════════════════════════════════════════ -->
 <footer>
-  ResumeIQ · Built by Anushka Gangwal · MIT-ADT University, Pune · B.E. CSE (AI & Analytics) · 2026
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div style="flex:1;min-width:180px">
+        <div class="footer-brand-name">
+          <div class="footer-dot"></div>ResumeIQ
+        </div>
+        <p style="color:#6B7280;font-size:.82rem;
+                  line-height:1.7">
+          AI-powered ATS resume analyzer<br>
+          trained on Indian job market data.
+        </p>
+        <p style="margin-top:.75rem;color:#4B5563;
+                  font-size:.78rem">
+          Built by Anushka Gangwal<br>
+          MIT-ADT University, Pune · 2026
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Product</div>
+        <div class="footer-links">
+          <a href="/#analyze">Analyze Resume</a>
+          <a href="/#how-it-works">How it Works</a>
+          <a href="/#why">Features</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/sample-report">Sample Report</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Research</div>
+        <div class="footer-links">
+          <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=61232"
+             target="_blank">
+            ATS Screening Research
+          </a>
+          <a href="https://www.jobscan.co/blog/8-things-you-need-to-know-about-applicant-tracking-systems/"
+             target="_blank">
+            How ATS Systems Work
+          </a>
+          <a href="https://arxiv.org/abs/2009.01484"
+             target="_blank">
+            Semantic Matching Research
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<!-- Chart.js from CDN — no install needed -->
+<!-- ════════════════════════════════════════════════════════
+     SCRIPTS
+═════════════════════════════════════════════════════════ -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-
   const finalScore  = parseFloat("{{ final_score }}") || 0;
   const scoreColour = "{{ score_colour }}";
   const numEl       = document.getElementById('score-num');
   const canvas      = document.getElementById('scoreChart');
-
-  if (!canvas) {
-    console.error('Canvas not found');
-    return;
-  }
-
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  // Determine track colour based on theme
-  const trackColour = '#E5E7EB';
-
-  // Create chart starting at 0
-  const scoreChart = new Chart(ctx, {
+  const chart = new Chart(ctx, {
     type: 'doughnut',
     data: {
       datasets: [{
-        data            : [0, 100],
-        backgroundColor : [scoreColour, trackColour],
-        borderWidth     : 0,
-        borderRadius    : 8,
-        hoverOffset     : 0,
+        data: [0, 100],
+        backgroundColor: [scoreColour, '#E5E7EB'],
+        borderWidth: 0,
+        borderRadius: 8,
+        hoverOffset: 0,
       }]
     },
     options: {
-      cutout      : '75%',
-      responsive  : false,
-      animation   : false,
-      plugins: {
-        legend  : { display: false },
-        tooltip : { enabled: false },
-      },
+      cutout: '75%', responsive: false, animation: false,
+      plugins: { legend:{display:false}, tooltip:{enabled:false} },
       events: [],
     }
   });
 
-  // Animate count up
-  let current   = 0;
-  const steps   = 60;
-  const duration = 1500;
-  const step_ms  = duration / steps;
-  const increment = finalScore / steps;
-
-  const timer = setInterval(function() {
-    current += increment;
-    if (current >= finalScore) {
-      current = finalScore;
-      clearInterval(timer);
-    }
-
-    const rounded = Math.round(current);
-    if (numEl) numEl.textContent = rounded;
-
-    scoreChart.data.datasets[0].data = [
-      current,
-      Math.max(0, 100 - current)
-    ];
-    scoreChart.update('none');
-
-  }, step_ms);
-
-  // Dark mode
-  const root  = document.documentElement;
-  const saved = localStorage.getItem('theme') || 'light';
-  root.setAttribute('data-theme', saved);
+  let cur = 0;
+  const steps = 60, dur = 1400;
+  const inc = finalScore / steps;
+  const t = setInterval(function() {
+    cur += inc;
+    if (cur >= finalScore) { cur = finalScore; clearInterval(t); }
+    numEl.textContent = Math.round(cur);
+    chart.data.datasets[0].data = [cur, Math.max(0, 100 - cur)];
+    chart.update('none');
+  }, dur / steps);
 });
+
+function downloadReport() {
+  const data = window.__report_data__;
+  if (!data) { alert('Report data missing. Please re-analyze.'); return; }
+  const btn = document.querySelector('.download-btn');
+  btn.innerHTML = '<i class="ti ti-loader"></i> Generating...';
+  btn.disabled = true;
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = '/download-report';
+  Object.keys(data).forEach(k => {
+    const inp = document.createElement('input');
+    inp.type = 'hidden'; inp.name = k;
+    inp.value = typeof data[k] === 'object'
+      ? JSON.stringify(data[k]) : String(data[k]);
+    form.appendChild(inp);
+  });
+  document.body.appendChild(form);
+  form.submit();
+  setTimeout(() => {
+    btn.innerHTML = '<i class="ti ti-download"></i> Download PDF Report';
+    btn.disabled = false;
+  }, 2500);
+}
+
+window.__report_data__ = JSON.parse(
+  document.getElementById('report-data-json').textContent
+);
 </script>
+
+</body>
+</html>

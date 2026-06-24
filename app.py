@@ -286,6 +286,15 @@ def clean_for_template(raw):
         import traceback
         traceback.print_exc()
 
+        # Categorized missing keywords for grouped display
+    try:
+        from keyword_extractor import categorize_keywords
+        r["missing_by_category"] = categorize_keywords(
+            r["missing_keywords"]
+        )
+    except Exception:
+        r["missing_by_category"] = {}
+
     return r
 
 # ── ROUTES ────────────────────────────────────────────────────
