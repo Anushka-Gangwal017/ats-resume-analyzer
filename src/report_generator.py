@@ -826,6 +826,87 @@ def generate_report(results, output_path):
 
     y += 34 + 6
 
+    # ── Recruiter Snapshot ────────────────────────────────────
+    if y + 65 > pdf.h - pdf.b_margin:
+        pdf.add_page()
+        y = pdf.get_y()
+
+    # Section heading
+    pdf.set_font("Helvetica", "B", 9.5)
+    pdf.set_text_color(*NAVY)
+    pdf.set_xy(15, y)
+    pdf.cell(180, 7, "RECRUITER SNAPSHOT",
+             new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+    y += 8
+    pdf.set_draw_color(*LINE)
+    pdf.set_line_width(0.3)
+    pdf.line(15, y, 195, y)
+    y += 4
+
+    # Calculate ratings
+    if kw >= 65:
+        tech_fit, tech_color = "Strong",   GREEN
+    elif kw >= 40:
+        tech_fit, tech_color = "Moderate", AMBER
+    else:
+        tech_fit, tech_color = "Low",      RED
+
+    has_exp = (
+        isinstance(sec_rep.get("experience"), dict)
+        and "Good" in sec_rep.get(
+            "experience", {}
+        ).get("status", "")
+    )
+    if has_exp and score >= 65:
+        exp_fit, exp_color = "Strong",   GREEN
+    elif has_exp or score >= 50:
+        exp_fit, exp_color = "Moderate", AMBER
+    else:
+        exp_fit, exp_color = "Low",      RED
+
+    if score >= 75:
+        prob, prob_color = "High",   GREEN
+    elif score >= 50:
+        prob, prob_color = "Medium", AMBER
+    else:
+        prob, prob_color = "Low",    RED
+
+    rows = [
+        ("Technical Fit",         tech_fit,       tech_color),
+        ("Experience Fit",        exp_fit,        exp_color),
+        ("Keyword Coverage",      f"{int(kw)}%",  BLUE),
+        ("Interview Probability", prob,            prob_color),
+    ]
+
+    ROW_H = 10
+    for i, (label, value, color) in enumerate(rows):
+        row_bg = PANEL_BG if i % 2 == 0 else WHITE
+
+        # Row background
+        filled_rect(pdf, 15, y, 180, ROW_H, row_bg)
+
+        # Label
+        pdf.set_font("Helvetica", "", 8.5)
+        pdf.set_text_color(*SLATE)
+        pdf.set_xy(20, y + 1.8)
+        pdf.cell(90, 6, ct(label))
+
+        # Coloured value — right aligned
+        pdf.set_font("Helvetica", "B", 8.5)
+        pdf.set_text_color(*color)
+        pdf.set_xy(20, y + 1.8)
+        pdf.cell(170, 6, ct(value), align="R")
+
+        y += ROW_H
+
+    # Border around the whole table
+    pdf.set_draw_color(*LINE)
+    pdf.set_line_width(0.3)
+    pdf.rect(15, y - ROW_H * len(rows),
+             180, ROW_H * len(rows))
+
+    y += 8
+
     # ── Final recommendation ──────────────────────────────────
     y = section_eyebrow(pdf, "Final Recommendation", 15, y, NAVY)
     filled_rect(pdf, 15, y, 180, 26, NAVY_LIGHT)
