@@ -672,37 +672,95 @@ def generate_report(results, output_path):
 
     # ── Keyword analysis (two columns of pills) ───────────────
     y = card_title(pdf, "Keyword Analysis", 15, y)
-    pdf.set_font("Helvetica", "", 8.5)
-    pdf.set_text_color(*SLATE)
-    pdf.set_xy(15, y)
-    pdf.cell(180, 5, f"Matched: {m_count}      Missing: {x_count}")
-    y += 7
+
+    total_kw = m_count + x_count
+    coverage = round(m_count / total_kw * 100) if total_kw > 0 else 0
 
     col_w3 = (180 - 6) / 2
-    left_x, right_x = 15, 15 + col_w3 + 6
+    left_x = 15
+    right_x = left_x + col_w3 + 6
+
+# ---------- Coverage Badge (Top Right) ----------
+    cov_color = GREEN if coverage >= 65 else (AMBER if coverage >= 40 else RED)
+
+    badge_w = 52
+    badge_h = 6.5
+
+    filled_rect(pdf, 195 - badge_w, y - 5.5, badge_w, badge_h, cov_color)
 
     pdf.set_font("Helvetica", "B", 8.5)
-    pdf.set_text_color(*GREEN_DARK)
-    pdf.set_xy(left_x, y)
-    pdf.cell(col_w3, 5, f"MATCHED ({m_count})")
-    pdf.set_text_color(*RED)
-    pdf.set_xy(right_x, y)
-    pdf.cell(col_w3, 5, f"MISSING ({x_count})")
+    pdf.set_text_color(*WHITE)
+    pdf.set_xy(195 - badge_w, y - 5)
+    pdf.cell(badge_w, 5.5, f"Coverage {coverage}%", align="C")
+
     y += 6
 
-    y_left  = chip_row(pdf, matched_kw, left_x, y, col_w3, GREEN_DARK, GREEN_BG, font_sz=7.5, h=5, max_items=24) if matched_kw else y + 5
-    y_right = chip_row(pdf, missing_kw, right_x, y, col_w3, RED, RED_BG, font_sz=7.5, h=5, max_items=24) if missing_kw else y + 5
+
+# --------------------------------------------------------
+# Column Headings
+# --------------------------------------------------------
+
+    pdf.set_font("Helvetica", "B", 9)
+    pdf.set_text_color(*SLATE)
+
+    pdf.set_xy(left_x, y)
+    pdf.cell(col_w3, 5, f"Matched Keywords ({m_count})")
+
+    pdf.set_xy(right_x, y)
+    pdf.cell(col_w3, 5, f"Missing Keywords ({x_count})")
+
+    y += 6
+
+
+# --------------------------------------------------------
+# Keyword Chips
+# --------------------------------------------------------
+
+    y_left = (
+        chip_row(
+           pdf,
+           matched_kw,
+           left_x,
+           y,
+           col_w3,
+           GREEN_DARK,
+           GREEN_BG,
+           font_sz=7.5,
+           h=5,
+           max_items=24,
+        )
+        if matched_kw
+        else y + 5
+    )
+
+    y_right = (
+        chip_row(
+           pdf,
+           missing_kw,
+           right_x,
+           y,
+           col_w3,
+           RED,
+           RED_BG,
+           font_sz=7.5,
+           h=5,
+           max_items=24,
+        )
+        if missing_kw
+        else y + 5
+    )
 
     if not matched_kw:
-        pdf.set_font("Helvetica", "I", 8)
-        pdf.set_text_color(*SLATE)
-        pdf.set_xy(left_x, y)
-        pdf.cell(col_w3, 5, "None found")
+       pdf.set_font("Helvetica", "I", 8)
+       pdf.set_text_color(*SLATE)
+       pdf.set_xy(left_x, y)
+       pdf.cell(col_w3, 5, "None found")
+
     if not missing_kw:
-        pdf.set_font("Helvetica", "I", 8)
-        pdf.set_text_color(*GREEN)
-        pdf.set_xy(right_x, y)
-        pdf.cell(col_w3, 5, "Great match!")
+       pdf.set_font("Helvetica", "I", 8)
+       pdf.set_text_color(*GREEN)
+       pdf.set_xy(right_x, y)
+       pdf.cell(col_w3, 5, "Great match!")
 
     y = max(y_left, y_right) + 6
 
@@ -812,17 +870,101 @@ def generate_report(results, output_path):
         pdf.set_xy(18, vy)
         pdf.cell(col_w4 - 6, 4, "Weak: " + ", ".join(weak_verbs[:5]))
 
-    # Quantification box
+# ── Quantification box ────────────────────────────────────
     qx = 15 + col_w4 + 6
-    filled_rect(pdf, qx, y, col_w4, 34, PANEL_BG, border_rgb=LINE, border_w=0.3)
+    filled_rect(pdf, qx, y, col_w4, 34, PANEL_BG,
+                border_rgb=LINE, border_w=0.3)
+
+    # Title
+# Title
+# --------------------------------------------------
+# Title
+# --------------------------------------------------
+
     pdf.set_font("Helvetica", "B", 9)
     pdf.set_text_color(*NAVY)
     pdf.set_xy(qx + 3, y + 2.5)
-    pdf.cell(col_w4 - 6, 5, "Quantification")
-    pdf.set_font("Helvetica", "", 7.8)
-    pdf.set_text_color(*SLATE)
-    pdf.set_xy(qx + 3, y + 8)
-    pdf.multi_cell(col_w4 - 6, 3.9, ct(quant_verdict)[:200])
+    pdf.cell(50, 5, "Quantification")
+
+# --------------------------------------------------
+# Status Badge (same line as title)
+# --------------------------------------------------
+
+    quant_good = (
+       "Good" in quant_verdict
+        or "Excellent" in quant_verdict
+    )
+
+    badge_color = GREEN if quant_good else AMBER
+    badge_text = "Good" if quant_good else "Needs More"
+
+    badge_w = 22
+    badge_h = 5
+
+    filled_rect(
+       pdf,
+       qx + col_w4 - badge_w - 3,
+       y + 2.3,
+       badge_w,
+       badge_h,
+       GREEN_BG if quant_good else AMBER_BG,
+       border_rgb=GREEN_BD if quant_good else AMBER_BD,
+       border_w=0.3
+    )
+
+    pdf.set_font("Helvetica", "B", 7)
+    pdf.set_text_color(*badge_color)
+    pdf.set_xy(
+       qx + col_w4 - badge_w - 3,
+       y + 2.7
+    )
+    pdf.cell(
+       badge_w,
+       4,
+       badge_text,
+       align="C"
+    )
+
+    # Extract examples from quant_verdict
+    # e.g. "Good quantification - 9 metrics found:
+    #       ['9', '08', '600M']"
+    import re as _re
+    examples = []
+    raw_q = quant_verdict or ""
+    # Try to find list-like content after "found:"
+    match = _re.search(
+        r'found[:\s]+\[?([^\]]+)\]?', raw_q, _re.I
+    )
+    if match:
+        parts = match.group(1).split(",")
+        for p in parts:
+            cleaned = p.strip().strip("'\" ")
+            if cleaned and len(cleaned) <= 20:
+                examples.append(cleaned)
+
+    if examples:
+        pdf.set_font("Helvetica", "B", 7)
+        pdf.set_text_color(*SLATE)
+        pdf.set_xy(qx + 3, y + 15)
+        pdf.cell(col_w4 - 6, 4, "Examples detected:")
+        ey = y + 19
+        for ex in examples[:3]:
+            pdf.set_font("Helvetica", "", 7.5)
+            pdf.set_text_color(*INK)
+            pdf.set_fill_color(*BLUE)
+            pdf.ellipse(qx + 4, ey + 1.5, 1.8, 1.8,
+                        style="F")
+            pdf.set_xy(qx + 7, ey)
+            pdf.cell(col_w4 - 10, 4, ct(ex))
+            ey += 4.5
+    else:
+        pdf.set_font("Helvetica", "", 7.5)
+        pdf.set_text_color(*SLATE)
+        pdf.set_xy(qx + 3, y + 15)
+        pdf.multi_cell(
+            col_w4 - 6, 3.9,
+            ct(quant_verdict)[:120]
+        )
 
     y += 34 + 6
 
