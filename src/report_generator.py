@@ -683,18 +683,21 @@ def generate_report(results, output_path):
 # ---------- Coverage Badge (Top Right) ----------
     cov_color = GREEN if coverage >= 65 else (AMBER if coverage >= 40 else RED)
 
-    badge_w = 52
-    badge_h = 6.5
+# Compact coverage badge
 
-    filled_rect(pdf, 195 - badge_w, y - 5.5, badge_w, badge_h, cov_color)
+    badge_w = 42
+    badge_h = 6
 
-    pdf.set_font("Helvetica", "B", 8.5)
+    filled_rect(pdf, 195 - badge_w, y - 7, badge_w, badge_h, cov_color)
+
+    pdf.set_font("Helvetica", "B", 8)
     pdf.set_text_color(*WHITE)
-    pdf.set_xy(195 - badge_w, y - 5)
-    pdf.cell(badge_w, 5.5, f"Coverage {coverage}%", align="C")
+
+    pdf.set_xy(195 - badge_w, y - 6.5)
+
+    pdf.cell(badge_w, 5, f"{coverage}% Match", align="C")
 
     y += 6
-
 
 # --------------------------------------------------------
 # Column Headings
@@ -875,8 +878,6 @@ def generate_report(results, output_path):
     filled_rect(pdf, qx, y, col_w4, 34, PANEL_BG,
                 border_rgb=LINE, border_w=0.3)
 
-    # Title
-# Title
 # --------------------------------------------------
 # Title
 # --------------------------------------------------
@@ -943,20 +944,19 @@ def generate_report(results, output_path):
                 examples.append(cleaned)
 
     if examples:
-        pdf.set_font("Helvetica", "B", 7)
-        pdf.set_text_color(*SLATE)
-        pdf.set_xy(qx + 3, y + 15)
-        pdf.cell(col_w4 - 6, 4, "Examples detected:")
-        ey = y + 19
-        for ex in examples[:3]:
-            pdf.set_font("Helvetica", "", 7.5)
-            pdf.set_text_color(*INK)
-            pdf.set_fill_color(*BLUE)
-            pdf.ellipse(qx + 4, ey + 1.5, 1.8, 1.8,
-                        style="F")
-            pdf.set_xy(qx + 7, ey)
-            pdf.cell(col_w4 - 10, 4, ct(ex))
-            ey += 4.5
+
+    # Examples list
+       ey = y + 14
+
+       for ex in examples[:3]:
+           pdf.set_font("Helvetica", "", 7.5)
+           pdf.set_text_color(*INK)
+           pdf.set_fill_color(*BLUE)
+           pdf.ellipse(qx + 4, ey + 1.5, 1.8, 1.8, style="F")
+           pdf.set_xy(qx + 7, ey)
+           pdf.cell(col_w4 - 10, 4, ct(ex))
+
+           ey += 4.5
     else:
         pdf.set_font("Helvetica", "", 7.5)
         pdf.set_text_color(*SLATE)
@@ -1083,21 +1083,9 @@ def generate_report(results, output_path):
 
     y += 26 + 6
 
-    # ── Tech stack footer note ─────────────────────────────────
-    pdf.set_font("Helvetica", "B", 7.5)
-    pdf.set_text_color(*SLATE)
-    pdf.set_xy(15, y)
-    pdf.cell(180, 4.5, "TECHNOLOGY STACK")
-    y += 5
-    pdf.set_font("Helvetica", "", 7.5)
-    pdf.set_text_color(*SLATE_LIGHT)
-    pdf.set_xy(15, y)
-    pdf.multi_cell(180, 4,
-        "Sentence Transformers Semantic Matching   |   "
-        "Skill Graph Normalization (150+ mappings)   |   "
-        "Custom ATS Scoring Engine   |   spaCy NLP Pipeline")
-
+        # Save PDF
     pdf.output(output_path)
+
     return output_path
 
 

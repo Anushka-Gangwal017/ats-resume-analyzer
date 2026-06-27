@@ -375,6 +375,10 @@ def health():
         "version": "1.0",
     })
 
+@app.route("/sample-report")
+def sample_report():
+    return render_template("sample_report.html")
+
 # ─────────────────────────────────────────────────────────────
 # PASTE THIS INTO app.py — replace the existing
 # /download-report route entirely with this version
