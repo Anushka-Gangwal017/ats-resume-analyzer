@@ -240,7 +240,7 @@ ats_analyzer/
 
 B.Tech Computer Science Engineering (AI & Analytics)  
 MIT-ADT University, Pune  
-CGPA: 9.08
+CGPA: 9.14
 
 **LinkedIn:**  
 https://linkedin.com/in/anushka-gangwal-020167332
