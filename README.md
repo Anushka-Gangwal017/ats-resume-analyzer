@@ -179,6 +179,10 @@ Open your browser at:
 http://localhost:5000
 ```
 
+## Demo Video
+
+https://drive.google.com/file/d/16wWI47LdBRQs52DSIUjglR21kxP9eUnl/view?usp=drive_link
+
 ---
 
 ## Project Structure
