@@ -51,6 +51,12 @@ Built using Python, Flask, spaCy NLP, and Sentence Transformers (MiniLM-L6-v2).
 
 ---
 
+## Demo Video
+
+https://drive.google.com/file/d/16wWI47LdBRQs52DSIUjglR21kxP9eUnl/view?usp=drive_link
+
+---
+
 ## Key Features
 
 | Feature                      | Description                                                                           |
@@ -178,10 +184,6 @@ Open your browser at:
 ```text
 http://localhost:5000
 ```
-
-## Demo Video
-
-https://drive.google.com/file/d/16wWI47LdBRQs52DSIUjglR21kxP9eUnl/view?usp=drive_link
 
 ---
 
